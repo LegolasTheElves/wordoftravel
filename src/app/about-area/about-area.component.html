@@ -2,7 +2,7 @@
 <section class="default-banner">
 
   <!--Carousel-->
-  <div id="carousel-wot" class="carousel slide" data-ride="carousel">
+  <div id="carousel-wot" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
       <li data-target="#carousel-wot" data-slide-to="0" class="active"></li>
@@ -12,148 +12,123 @@
       <li data-target="#carousel-wot" data-slide-to="4"></li>
     </ol>
 
-    <!--.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active ad1">
-        <div class="captionhome text-white">
-          <div class="titlecaptionhome">Relax by the peaceful, crystal-clear</div>
-          <p class="placecaptionhome text-uppercase">BOHINJ LAKE</p>
-          <p class="countrycaptionhome text-uppercase">SLOVENIA, EUROPE</p>
-        </div>
-      </div>
+    <div class="carousel-caption">
+      <div class="container">
+        <div class="row justify-content-center align-items-center hero-text">
+          <div class="col-md-12">
 
-      <div class="carousel-caption">
-        <div class="container">
-          <div class="row justify-content-center align-items-center" style="height: 385px">
-            <div class="col-md-12">
+            <div class="banner-content text-center">
+              <div class="textmedium text-white mb-10">Read about real experiences,</div>
+              <div class="textbold text-uppercase text-white mb-30">written by real travellers</div>
 
-              <div class="banner-content text-center">
-                <div class="textmedium text-white mb-10">Read about real experiences,</div>
-                <div class="textbold text-uppercase text-white mb-30">written by real travellers</div>
-
-                <div class="row no-margin">
-                  <div class="col-md-12">
-                    <div class="input-group">
-
-                      <input type="hidden" name="search_param" value="all" id="search_param">
-
-                      <div class="input-group-btn search-panel text-center align-content-center">
-
-                        <button class="search-panel btn1" type="button">
-                          <object id="svg1" data="./assets/svg/btn_pin.svg" type="image/svg+xml" width="51" height="25"></object>
-                        </button>
-                      </div>
+              <div class="row no-margin">
+                <div class="col-md-12 search-form-container">
+                  <div class="input-group">
 
 
-                      <input type="text" class="form-control" name="x" value="Where to?">
+
+                    <div class="input-group-btn search-panel text-center align-content-center">
+
+                      <button class="search-panel btn1" type="button">
+                        <object id="svg1" data="./assets/svg/btn_pin.svg" type="image/svg+xml" width="51" height="25"></object>
+                      </button>
+                    </div>
 
 
-                      <div class="input-group-btn search-panel text-center align-content-center">
+                    <input type="text" class="form-control" name="x" value="Where to?">
 
-                        <button class="search-panel btn2 btn-default" type="button">
-                          <object id="svg1" data="./assets/svg/btn_search.svg" type="image/svg+xml" width="51" height="25"></object>
-                        </button>
-                      </div>
 
-                      <div class="input-group-btn search-panel">
-                        <button type="button" class="search-panel btn3 btn-default" data-toggle="dropdown">
+                    <div class="input-group-btn search-panel text-center align-content-center">
+
+                      <button class="search-panel btn2 btn-default" type="button">
+                        <object id="svg1" data="./assets/svg/btn_search.svg" type="image/svg+xml" width="51" height="25"></object>
+                      </button>
+                    </div>
+
+
+                    <div class="input-group-btn search-panel">
+
+                      <div class="dropdown">
+                        <button type="button" id="recent-button" class="search-panel btn3 btn-default">
+
                           <span id="search_concept">RECENT</span>
                           <span class="searchdown">
                             <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
                           </span>
-
                         </button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li>
-                            <a href="#contains">1</a>
-                          </li>
-                          <li>
-                            <a href="#its_equal">2</a>
-                          </li>
-                          <li>
-                            <a href="#greather_than">3</a>
-                          </li>
-                          <li>
-                            <a href="#less_than">4</a>
-                          </li>
-                          <li class="divider"></li>
-                          <li>
-                            <a href="#all">5</a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="input-group-btn search-panel">
-                        <button type="button" class="search-panel btn4 btn-default" data-toggle="dropdown">
-                          <span id="search_concept">NEAR ME</span>
-                          <span class="searchdown">
-                            <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
-                          </span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li>
-                            <a href="#contains">1</a>
-                          </li>
-                          <li>
-                            <a href="#its_equal">2</a>
-                          </li>
-                          <li>
-                            <a href="#greather_than">3</a>
-                          </li>
-                          <li>
-                            <a href="#less_than">4</a>
-                          </li>
-                          <li class="divider"></li>
-                          <li>
-                            <a href="#all">5</a>
-                          </li>
-                        </ul>
                       </div>
                     </div>
+
+                    <div class="input-group-btn search-panel">
+                      <button type="button" class="search-panel btn4 btn-default" data-toggle="dropdown">
+                        <span id="search_concept">NEAR ME</span>
+                        <span class="searchdown">
+                          <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
+                        </span>
+                      </button>
+                    </div>
                   </div>
+                  <div class="dropdown-menu" id="autocorrect-menu">
+                    <a class="dropdown-item" href="#">Brisbane, Australia</a>
+                    <a class="dropdown-item" href="#">Melbourne, Australia</a>
+                    <a class="dropdown-item" href="#">Perth, Australia</a>
+                    <a class="dropdown-item" href="#">Sydney, Australia</a>
+                    <a class="dropdown-item" href="#">Wodonga, Australia</a>
+                  </div>
+                  <div class="clearfix"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active ad1">
+        <div class="captionhome text-white">
+          <div class="titlecaptionhome">Short description of the location</div>
+          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
+          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
+        </div>
+      </div>
+
 
       <div class="carousel-item ad2">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">Ang isla sa Siargao, nindota a</div>
-          <p class="placecaptionhome text-uppercase">SIARGAO</p>
-          <p class="countrycaptionhome text-uppercase">PHILIPPINES, ASIA</p>
+          <div class="titlecaptionhome">Short description of the location</div>
+          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
+          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
         </div>
       </div>
-      <div class="carousel-item ad1">
+      <div class="carousel-item ad3">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">Road to happiness, weeehhh</div>
-          <p class="placecaptionhome text-uppercase">UNSA IMONG SUD-AN</p>
-          <p class="countrycaptionhome text-uppercase">SUDAN, AFRICA</p>
+          <div class="titlecaptionhome">Short description of the location</div>
+          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
+          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
         </div>
       </div>
-      <div class="carousel-item ad2">
+      <div class="carousel-item ad4">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">You're so road, ayeeehhh</div>
-          <p class="placecaptionhome text-uppercase">KUNG WAY PAGKAON, WAY</p>
-          <p class="countrycaptionhome text-uppercase">GHANA, AFRICA</p>
+          <div class="titlecaptionhome">Short description of the location</div>
+          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
+          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
         </div>
       </div>
-      <div class="carousel-item ad1">
+      <div class="carousel-item ad5">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">Way gana ikaon sa kan-on </div>
-          <p class="placecaptionhome text-uppercase">kun way</p>
-          <p class="countrycaptionhome text-uppercase">PARIS, FRANCE, EUROPE</p>
+          <div class="titlecaptionhome">Short description of the location</div>
+          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
+          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
         </div>
       </div>
     </div>
     <!--/.Slides-->
-    <ul>
-      <a class="buttondownhome" href="#secvice">
-        <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="20" height="10"></object>
-      </a>
-    </ul>
+
+    <a class="buttondownhome" href="#secvice">
+      <object id="svg1" data="./assets/svg/btn_banner_arrow.svg" type="image/svg+xml" width="30" height="35"></object>
+    </a>
+
 
   </div>
   <!--/.Carousel Wrapper-->
@@ -163,7 +138,7 @@
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-4 col-md-6 ">
           <div class="single-feature">
-            <object id="svg1" data="./assets/svg/banner-img-1.svg" type="image/svg+xml" width="91" height="76"></object>
+            <object id="svg1" data="./assets/svg/banner-img-1.svg" type="image/svg+xml" width="90"></object>
             <br/>
             <br/>
             <h4 class="aboutheader">RESEARCH YOUR NEXT DESTINATION,</h4>
@@ -173,7 +148,7 @@
         </div>
         <div class="col-lg-4 col-mdfeature-6 ">
           <div class="single-feature">
-            <object id="svg1" data="./assets/svg/banner-img-2.svg" type="image/svg+xml" width="91" height="76"></object>
+            <object id="svg1" data="./assets/svg/banner-img-2.svg" type="image/svg+xml" width="90"></object>
             <br/>
             <br/>
             <h4 class="aboutheader">GET INSPIRED AND FIND DESTINATIONS</h4>
@@ -182,7 +157,7 @@
         </div>
         <div class="col-lg-4 col-md-6 ">
           <div class="single-feature">
-            <object id="svg1" data="./assets/svg/banner-img-3.svg" type="image/svg+xml" width="91" height="76"></object>
+            <object id="svg1" data="./assets/svg/banner-img-3.svg" type="image/svg+xml" width="90"></object>
             <br/>
             <br/>
             <div class="aboutcontent">Follow all your favourite </div>
@@ -195,10 +170,12 @@
     <div class="row d-flex justify-content-center">
       <div class="menu-content pb-40 col-lg-8">
         <div class="title text-center">
-          <div class="textbold1 mb-70">Real Travellers, Real Experience</div>
+          <div class="textbold1 mb-30">Real Travellers, Real Experience</div>
+
         </div>
+
       </div>
     </div>
-
   </section>
+
   <!-- End About Area -->

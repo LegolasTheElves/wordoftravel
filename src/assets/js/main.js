@@ -1,6 +1,46 @@
 $(document).ready(function () {
+  $('#recent-button').on('click',function(){
+    $('#autocorrect-menu').attr('style','display:inline-table !important');
+  });
+
+  $('#recent-button').on('focusout',function(){
+    $('#autocorrect-menu').attr('style','');
+  });
+
+  $('.dropdown-item').each(function(){
+    $(this).on('click', function(){
+      $('#autocorrect-menu').attr('style','');
+    });
+  });
+
+  $('#signup').on('click',function(e){
+    e.preventDefault();
+    $('#profile').attr('style','display:inline !important');
+    $(this).attr('style','display:none !important');
+  });
+
+  $('.pop-close').on('click',function(){
+    $('#modal-container').attr('style','');
+    $( ".divpop" ).animate( {right:-330} );
+  });
+  
+  $('.pop-close').on('click',function(){
+    $('#modal-container').attr('style','');
+    $( ".divpop" ).animate( {right:-330} );
+  });
+
+  $('#profile').on('click',function(e){
+    e.preventDefault();
+    $('#modal-container').attr('style','display:block !important');
+    $( ".divpop" ).animate( {right:0} );
+  });
+
+});
+
+
+$(document).ready(function () {
     $('#myCarousel').carousel({
-        interval: 10000
+        interval: 5000
     })
     $('.fdi-Carousel .item').each(function () {
         var next = $(this).next();
@@ -16,6 +56,32 @@ $(document).ready(function () {
             $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
     });
+
+
+    $("#destination-rot-container").on("slide.bs.carousel", function(e) {
+      var $e = $(e.relatedTarget);
+      var idx = $e.index();
+      var itemsPerSlide = 10;
+      var totalItems = $(".carousel-item").length;
+
+      if (idx >= totalItems - (itemsPerSlide - 1)) {
+          var it = itemsPerSlide - (totalItems - idx);
+          for (var i = 0; i < it; i++) {
+          // append slides to end
+          console.log(totalItems);
+          if (e.direction == "left") {
+              $(".carousel-item")
+              .eq(i)
+              .appendTo(".carousel-inner");
+          } else {
+              $(".carousel-item")
+              .eq(0)
+              .appendTo(".carousel-inner");
+          }
+          }
+      }
+      });
+        
 });
 
 
@@ -28,23 +94,16 @@ $(document).ready(function(){
 	header_height_static = $(".site-header.static").outerHeight(),
 	fitscreen 			 = window_height - header_height;
 
-
 	$(".fullscreen").css("height", window_height)
 	$(".fitscreen").css("height", fitscreen);
 
   //-------- Active Sticky Js ----------//
   $(".default-header").sticky({topSpacing:0});
 
-
      if(document.getElementById("default-select")){
           $('select').niceSelect();
     };
 
-  
-
-  // $('.navbar-nav>li>a').on('click', function(){
-  //     $('.navbar-collapse').collapse('hide');
-  // });
 
 
 
@@ -86,56 +145,6 @@ $(document).ready(function(){
         });
       }
     }
-    });
-
-       
+    });       
 
  });
-
- //start try 1
- var $list = $('#list').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 20,
-    gutter: 20,
-    percentPosition: true
-  });
-        
-
-  // bind event
-  $list.masonry( 'on', 'layoutComplete', function() {
-    console.log('layout is complete....');
-  });
-  // trigger initial layout
-  $list.masonry();
-
-  //start try 2
-
-  $(function(){
-  
-    var $container1= $('#container1'),
-        $body = $('body'),
-        colW = 60,
-        columns = null;
-    
-    $container1.isotope({
-      // disable window resizing
-      resizable: false,
-      masonry: {
-        columnWidth: colW
-      }
-    });
-    
-    $(window).smartresize(function(){
-      // check if columns has changed
-      var currentColumns = Math.floor( ( $body.width() -100 ) / colW );
-      if ( currentColumns !== columns ) {
-        // set new column count
-        columns = currentColumns;
-        // apply width to container manually, then trigger relayout
-        $container1.width( columns * colW )
-          .isotope('reLayout');
-      }
-      
-    }).smartresize(); // trigger resize to set container width
-    
-  });
