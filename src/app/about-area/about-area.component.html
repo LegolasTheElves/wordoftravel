@@ -12,77 +12,7 @@
       <li data-target="#carousel-wot" data-slide-to="4"></li>
     </ol>
 
-    <div class="carousel-caption">
-      <div class="container">
-        <div class="row justify-content-center align-items-center hero-text">
-          <div class="col-md-12">
-
-            <div class="banner-content text-center">
-              <div class="textmedium text-white mb-10">Read about real experiences,</div>
-              <div class="textbold text-uppercase text-white mb-30">written by real travellers</div>
-
-              <div class="row no-margin">
-                <div class="col-md-12 search-form-container">
-                  <div class="input-group">
-
-
-
-                    <div class="input-group-btn search-panel text-center align-content-center">
-
-                      <button class="search-panel btn1" type="button">
-                        <object id="svg1" data="./assets/svg/btn_pin.svg" type="image/svg+xml" width="51" height="25"></object>
-                      </button>
-                    </div>
-
-
-                    <input type="text" class="form-control" name="x" placeholder="Where to?">
-
-                    <div class="input-group-btn search-panel text-center align-content-center">
-                      <div class="dropdown">
-                        <button class="search-panel btn2 btn-default" type="button" id="search-button">
-                          <object id="svg1" data="./assets/svg/btn_search.svg" type="image/svg+xml" width="51" height="25"></object>
-                        </button>
-                      </div>
-                    </div>
-
-
-                    <div class="input-group-btn search-panel">
-
-                      <div class="dropdown">
-                        <button type="button" id="recent-button" class="search-panel btn3 btn-default">
-
-                          <span id="search_concept">RECENT</span>
-                          <span class="searchdown">
-                            <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="input-group-btn search-panel">
-                      <button type="button" class="pointer search-panel btn4 btn-default" data-toggle="dropdown" id="nearme-button">
-                        <span id="search_concept">NEAR ME</span>
-                        <span class="searchdown">
-                          <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="dropdown-menu" id="autocorrect-menu">
-                    <a class="dropdown-item" href="#">Brisbane, Australia</a>
-                    <a class="dropdown-item" href="#">Melbourne, Australia</a>
-                    <a class="dropdown-item" href="#">Perth, Australia</a>
-                    <a class="dropdown-item" href="#">Sydney, Australia</a>
-                    <a class="dropdown-item" href="#">Wodonga, Australia</a>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   <app-travel-search></app-travel-search>
 
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">

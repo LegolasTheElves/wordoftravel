@@ -17,11 +17,13 @@ import { BloggerComponent } from './blogger/blogger.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ArticlepageComponent } from './articlepage/articlepage.component';
 import { SigninComponent } from './signin/signin.component';
+import { TravelSearchComponent } from './travel-search/travel-search.component';
 
 //service
 import { TravelArticleService } from './travel-articles/travelArticle.service';
 import { TravelDestinationService } from './featured-destination/travelDestination.service';
 import { HomeSearchService } from './about-area/home-search.service';
+import { SearchService } from './travel-search/search.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { HomeSearchService } from './about-area/home-search.service';
     BloggerComponent,
     ArticlepageComponent,
     SigninComponent,
+    TravelSearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { HomeSearchService } from './about-area/home-search.service';
   providers: [
     TravelArticleService,
     TravelDestinationService,
-    HomeSearchService
+    HomeSearchService,
+    SearchService
   ],
   bootstrap: [AppComponent]
 })
