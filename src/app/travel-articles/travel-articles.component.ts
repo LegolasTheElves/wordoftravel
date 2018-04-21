@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TravelArticleService } from '../travel-articles/travelArticle.service'
-import { TravelArticle } from '../travel-articles/travelArticle';
+import { TravelArticle } from './travelArticle';
 
 @Component({
   selector: 'app-travel-articles',

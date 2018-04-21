@@ -35,14 +35,14 @@
                     </div>
 
 
-                    <input type="text" class="form-control" name="x" value="Where to?">
-
+                    <input type="text" class="form-control" name="x" placeholder="Where to?">
 
                     <div class="input-group-btn search-panel text-center align-content-center">
-
-                      <button class="search-panel btn2 btn-default" type="button">
-                        <object id="svg1" data="./assets/svg/btn_search.svg" type="image/svg+xml" width="51" height="25"></object>
-                      </button>
+                      <div class="dropdown">
+                        <button class="search-panel btn2 btn-default" type="button" id="search-button">
+                          <object id="svg1" data="./assets/svg/btn_search.svg" type="image/svg+xml" width="51" height="25"></object>
+                        </button>
+                      </div>
                     </div>
 
 
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="input-group-btn search-panel">
-                      <button type="button" class="search-panel btn4 btn-default" data-toggle="dropdown">
+                      <button type="button" class="pointer search-panel btn4 btn-default" data-toggle="dropdown" id="nearme-button">
                         <span id="search_concept">NEAR ME</span>
                         <span class="searchdown">
                           <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
@@ -85,40 +85,19 @@
     </div>
 
     <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active ad1">
+      <div class="carousel-item active">
+        <img src="https://d2aixmiphfue7s.cloudfront.net/fimages/{{activeItem.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
           <div class="titlecaptionhome">Short description of the location</div>
           <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
           <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
         </div>
       </div>
-
-
-      <div class="carousel-item ad2">
+      <div *ngFor="let homeSearch of homeSearches;" class="carousel-item">
+        <img src="https://d2aixmiphfue7s.cloudfront.net/fimages/{{homeSearch.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
           <div class="titlecaptionhome">Short description of the location</div>
-          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
-          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
-        </div>
-      </div>
-      <div class="carousel-item ad3">
-        <div class="captionhome text-white">
-          <div class="titlecaptionhome">Short description of the location</div>
-          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
-          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
-        </div>
-      </div>
-      <div class="carousel-item ad4">
-        <div class="captionhome text-white">
-          <div class="titlecaptionhome">Short description of the location</div>
-          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
-          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
-        </div>
-      </div>
-      <div class="carousel-item ad5">
-        <div class="captionhome text-white">
-          <div class="titlecaptionhome">Short description of the location</div>
-          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
+          <p class="placecaptionhome text-uppercase">{{homeSearch.LocationName}}</p>
           <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
         </div>
       </div>

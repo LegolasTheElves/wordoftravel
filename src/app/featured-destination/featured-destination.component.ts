@@ -27,7 +27,7 @@ export class FeaturedDestinationComponent implements OnInit {
         destinations => {
           let featuredDestinations = destinations.rsltCol;
           for(let destination of featuredDestinations){
-            console.log(JSON.stringify(destination));
+            //console.log(JSON.stringify(destination));
             if(destination.Orientation == "L"){
               console.log('found wide');
               this.wideDestination = destination;

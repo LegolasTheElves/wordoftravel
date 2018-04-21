@@ -21,6 +21,7 @@ import { SigninComponent } from './signin/signin.component';
 //service
 import { TravelArticleService } from './travel-articles/travelArticle.service';
 import { TravelDestinationService } from './featured-destination/travelDestination.service';
+import { HomeSearchService } from './about-area/home-search.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TravelDestinationService } from './featured-destination/travelDestinati
   ],
   providers: [
     TravelArticleService,
-    TravelDestinationService
+    TravelDestinationService,
+    HomeSearchService
   ],
   bootstrap: [AppComponent]
 })
