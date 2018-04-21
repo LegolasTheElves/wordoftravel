@@ -16,7 +16,7 @@ export class HomeSearchService {
 
   getHomesearches(): Observable<HomeSearch[]> {
     return this.http.get<HomeSearch[]>(this._travelUrl)
-      .do(data => console.log('All:' + JSON.stringify(data)))
+      //.do(data => console.log('All:' + JSON.stringify(data)))
       .catch(this.handleError);
   }
   //Error Handler

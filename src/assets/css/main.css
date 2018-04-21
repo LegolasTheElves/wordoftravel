@@ -3036,6 +3036,7 @@ table .img {
   font-weight: 700;
   font-size: 22px;
   color: #063160;
+  border: none;
   border-color: white;
   height: 50px;
 }
@@ -3431,6 +3432,7 @@ z-index: 1;
 
   
   .boxcontent {
+    width: 95%;
       position: absolute;
      text-align: center;
      bottom: 0;

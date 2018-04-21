@@ -88,17 +88,17 @@
       <div class="carousel-item active">
         <img src="https://d2aixmiphfue7s.cloudfront.net/fimages/{{activeItem.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">Short description of the location</div>
-          <p class="placecaptionhome text-uppercase">MAIN LOCATION</p>
-          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
+          <div class="titlecaptionhome">{{activeItem.TextLine1}}</div>
+          <p class="placecaptionhome text-uppercase">{{activeItem.LocationName}}</p>
+          <p class="countrycaptionhome text-uppercase">{{activeItem.TextLine3}}</p>
         </div>
       </div>
       <div *ngFor="let homeSearch of homeSearches;" class="carousel-item">
         <img src="https://d2aixmiphfue7s.cloudfront.net/fimages/{{homeSearch.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">Short description of the location</div>
+          <div class="titlecaptionhome">{{homeSearch.TextLine1}}</div>
           <p class="placecaptionhome text-uppercase">{{homeSearch.LocationName}}</p>
-          <p class="countrycaptionhome text-uppercase">CITY, COUNTRY</p>
+          <p class="countrycaptionhome text-uppercase">{{homeSearch.TextLine3}}</p>
         </div>
       </div>
     </div>
