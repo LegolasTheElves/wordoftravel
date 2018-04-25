@@ -21,7 +21,7 @@ export class TravelArticlesComponent implements OnInit {
     this.travelApiService.getTravelArticle()
       .subscribe(
         travels => {
-          this.travels = travels.rsltCol;
+          this.travels = travels['rsltCol'];
         },
         error => this.errorMessage = <any>error);
   }

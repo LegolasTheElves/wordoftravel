@@ -15,7 +15,7 @@ export class TravelArticleService {
 
   getTravelArticle(): Observable<TravelArticle[]> {
     return this.http.get<TravelArticle[]>(this._travelUrl)
-      //.do(data => console.log('All:' + JSON.stringify(data)))
+      .do(data => console.log('All:' + JSON.stringify(data)))
       .catch(this.handleError);
   }
   //Error Handler

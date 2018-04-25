@@ -25,7 +25,7 @@ export class FeaturedDestinationComponent implements OnInit {
     this.travelDestinationService.getTravelDestination()
       .subscribe(
         destinations => {
-          let featuredDestinations = destinations.rsltCol;
+          let featuredDestinations = destinations['rsltCol'];
           for(let destination of featuredDestinations){
             //console.log(JSON.stringify(destination));
             if(destination.Orientation == "L"){

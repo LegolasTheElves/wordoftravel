@@ -22,7 +22,7 @@ export class AboutAreaComponent implements OnInit {
     this.homeSearchService.getHomesearches()
     .subscribe(
       homeSearches => {
-        let result = homeSearches.rsltCol;
+        let result = homeSearches['rsltCol'];
         this.activeItem = result.shift();
         this.homeSearches = result;
       },
