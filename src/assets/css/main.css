@@ -167,6 +167,11 @@ td, th {
   border-radius: 0px;
 }
 
+
+.row{
+  margin-left:unset;
+  margin-right:unset;
+}
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
@@ -206,15 +211,19 @@ td, th {
 }
 
 .fz-16 {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .fz-18 {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .fz-30 {
   font-size: 30px;
+}
+
+.fz-36{
+  font-size: 36px !important;
 }
 
 .fz-48 {
@@ -342,7 +351,7 @@ td, th {
 }
 
 .mr-10 {
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 
 .mr-20 {
@@ -600,8 +609,12 @@ td, th {
   text-align: left;
 }
 
-.text-rigth {
+.text-right {
   text-align: right;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .buttonright {
@@ -905,18 +918,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .genric-btn.default {
   color: #222222;
-  background: #f9f9ff;
+  background: #f0efef;
   border: 1px solid transparent;
 }
 
 .genric-btn.default:hover {
-  border: 1px solid #f9f9ff;
-  background: #fff;
+  border: 1px solid #ebebeb;
+  background: #ebebeb;
 }
 
 .genric-btn.default-border {
-  border: 1px solid #f9f9ff;
-  background: #fff;
+  border: 1px solid #ebebeb;
+  background: #ebebeb;
 }
 
 .genric-btn.default-border:hover {
@@ -1047,20 +1060,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .genric-btn.link {
   color: #222222;
-  background: #f9f9ff;
+  background: #f0efef;
   text-decoration: underline;
   border: 1px solid transparent;
 }
 
 .genric-btn.link:hover {
   color: #222222;
-  border: 1px solid #f9f9ff;
+  border: 1px solid #ebebeb;
   background: #fff;
 }
 
 .genric-btn.link-border {
   color: #222222;
-  border: 1px solid #f9f9ff;
+  border: 1px solid #f0efef;
   background: #fff;
   text-decoration: underline;
 }
@@ -1891,7 +1904,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-  padding: 0rem 1.6rem;
+  padding: 0rem 1.6rem .6rem;
 }
 
 .menu-bar {
@@ -1922,10 +1935,17 @@ padding-top: 25px;
     font-size: 14px;
     letter-spacing: 0.9px;
 }
+
+.navbar-toggler{
+  background-color:#ebebeb;
+  height:10px;
+}
     
 .navbar-light .navbar-toggler {
   color: rgba(255, 255, 255, 0.5);
   border-color: rgba(0, 0, 0, 0.38);
+  background-color:#ebebeb;
+  height:10px;
 }
 
 .is-sticky .default-header .navbar-nav a:hover {
@@ -1966,6 +1986,7 @@ padding-top: 25px;
 }
 
 @media (max-width: 992px) {
+
   .navbar-nav {
     margin-top: 10px;
   }
@@ -2111,23 +2132,12 @@ padding-top: 25px;
   z-index: 100;
 }
 
-@media (max-width: 992px) {
-  .default-header {
-    background-color: #000000c2;
-    padding-top: 5px;
-  }
-  .default-header a:hover {
-    color: #133560;
-
-  }
-}
-
 .sticky-wrapper {
   height: 48px !important;
 }
 
 .is-sticky .default-header {
-  margin-top: -5px;
+    margin-top: -5px;
    padding: 10px 0 0 0;
     animation: slide-down 0.2s;
     /* opacity: 1; */
@@ -2162,7 +2172,7 @@ padding-top: 25px;
   border-color: white;
 }
 
-@media (min-width: 768px) {
+
   .dropdown .dropdown-menu {
     display: block;
     opacity: 0.9;
@@ -3036,7 +3046,6 @@ table .img {
   font-weight: 700;
   font-size: 22px;
   color: #063160;
-  border: none;
   border-color: white;
   height: 50px;
 }
@@ -3130,6 +3139,11 @@ table .img {
   border-radius: 0.75rem;
 }
 
+.img-no-border-radius{
+  border-radius: 0rem;
+  width: 100%;
+}
+
 
 /* ---- grid-item ---- */
 
@@ -3186,6 +3200,7 @@ table .img {
 #container1 {
   padding: 20px;
   margin: 0px auto;
+  min-height: 600px;
 }
 
 .item {
@@ -3277,6 +3292,17 @@ table .img {
   left: 0 !important; 
 } 
 
+#carousel-wot .carousel-inner .carousel-item:after {
+  content:'\A';
+  position:absolute;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.2);
+  opacity:1;
+  cursor:pointer;
+}
+
+
 .carousel-fade .carousel-item {
   opacity: 0.3;
   transition-duration: .4s;
@@ -3303,8 +3329,15 @@ table .img {
   transform: translate3d(0, 0, 0);
  }
  
- .destination-rot-container{
+ #destination-rot-container{
   display:flex;
+}
+
+#destination-container{
+  display:none;
+  height: 317px;
+  width: inherit;
+  overflow: -webkit-paged-x;
 }
 
 /*
@@ -3362,7 +3395,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
     bottom: 0;
     width: 20%;
     height: 15%;
-  
+    z-index: 100;
 }
 
 .titlecaptionhome {
@@ -3432,13 +3465,11 @@ z-index: 1;
 
   
   .boxcontent {
-    width: 95%;
       position: absolute;
      text-align: center;
      bottom: 0;
-     margin-left: 10px;
-     margin-right: 10px;
      margin-bottom: 10px;
+     width:100%;
      }
 
      .boxcontent2 {
@@ -3488,10 +3519,25 @@ z-index: 1;
 
 
 .box:hover{
+  cursor:pointer;
+}
+
+.box:after {
+  content:'\A';
+  position:absolute;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  cursor:pointer;
+}
+.box:hover:after {
+  opacity:1;
   border: 3px solid #BBB;
   cursor:pointer;
-  opacity: .8;
-  border-radius: 0.85em;
+  border-radius: 0.65em;
 }
 
 .featured_destination2 {
@@ -3602,6 +3648,8 @@ z-index: 1;
   font-size: 10px;
   font-weight: 400;
   line-height: 1.5em;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .featuredlocation {
@@ -3609,6 +3657,7 @@ z-index: 1;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.5em;
+  text-transform: uppercase;
 }
 
 .featuredcountry {
@@ -3633,6 +3682,7 @@ z-index: 1;
   cursor:pointer;
   opacity: .8;
 }
+
 
 /* Buttons css */
 
@@ -4076,6 +4126,8 @@ hr {
 .search-form-container {
   padding-left: 0px !important;
   padding-right: 0px !important;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 /* POPUP */
@@ -4294,6 +4346,26 @@ fieldset[disabled] .btn-poplogout.active {
   border:3px solid #BBB;
   cursor:pointer;
   opacity: 0.9;
+}
+
+
+
+.travel-article-thumb:after {
+  content:'\A';
+  position:absolute;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  cursor:pointer;
+}
+
+.travel-article-thumb:hover:after {
+  opacity:1;
+  border: 3px solid #BBB;
+  cursor:pointer;
 }
 
 #profile{
@@ -4644,6 +4716,374 @@ fieldset[disabled] .btn-poplogout.active {
     right:20px;
   }
 }
+
+
+
+
+/*mobile responsive css */
+
+
+@media (max-width: 849px) {
+  .form-control {
+    font-size: 15px !important;
+    margin-left: -15px;
+  }
+  .btn3 {
+    font-size: 10px;
+    width: 80px !important;
+  }
+
+  .btn4 {
+    font-size: 10px;
+    width: 80px !important;
+  }
+
+  .searchdown {
+    position: absolute;
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .form-control {
+    font-size: 15px !important;
+    margin-left: -15px;
+    border-radius: 0.45em !important;
+  }
+
+  .btn1 {
+    display: none;
+  }
+ 
 }
 
 
+@media (max-width: 493px) {
+
+  .form-control {
+    padding: 10px;
+    font-size: 11px !important;
+  }
+
+  .btn2 {    
+    display: none;
+  }
+ 
+}
+
+@media (max-width: 390px) {
+
+  .form-control {
+    padding: 10px;
+    font-size: 11px !important;
+  }
+
+  .btn2 {
+    display: none;
+  }
+ 
+}
+
+@media (max-width: 767px) {
+
+  #navbarSupportedContent {
+    text-align: center;
+  }
+
+  .destination-rotator-arrow {
+    margin-right: 15% !important;
+  }
+    .destination-rotator-arrow-left {
+      margin-left: 13% !important;
+  }
+  .destination-rotator-cards {
+    z-index: 98;
+    height: 435px;
+    height: 320px;
+  }
+  .titlecolor {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .titlecolor1 {
+  justify-content: center;
+  text-align: center;
+  }
+  .text-right {
+    text-align: center !important;
+  }
+
+  .is-sticky .default-header {
+    margin-top: 0px;
+  }
+
+  .textmedium {
+    font-size: 18px !important;
+  }
+
+  .textbold {
+    font-size: 20px !important;
+    letter-spacing: 0px !important;
+    line-height: 1em !important;
+  }
+
+  .subheadtext {
+    letter-spacing: 0px;
+  }
+
+  .titlecaptionhome {
+    font-size: 9px !important;
+    letter-spacing: 0px !important;
+  }
+
+  .captionhome {
+    width: 70% !important;
+  }
+
+  .forjquery {
+    justify-content: center;
+  }
+
+}
+
+
+@media (max-width: 992px) {
+  .carousel-caption{
+    width:100%;
+    left:unset;
+    right:unset;
+  }
+  .default-header {
+    background-color: #133560;
+    padding-top: 5px;
+  }
+  .default-header a:hover {
+    color: #133560;
+  }
+  .section-gap {
+    padding-top: 20px;
+  }
+  .pb-40 {
+    padding-bottom: 0px;
+  }
+  .single-feature {
+  padding: 20px 0px;
+  }
+  .aboutheader {
+    font-size: 17px;
+  }
+  .aboutcontent {
+    font-size: 12px;
+  }
+  .mb-40 {
+    margin-bottom: 0px;
+  }
+  .textbold1 {
+    font-size: 20px;
+    letter-spacing: 0em;
+    margin-top: 10px;
+  }
+  .mb-80 {
+    margin-bottom: 40px;
+  }
+  .mb-30 {
+    margin-bottom: 10px;
+  }
+  .mb-60 {
+    margin-bottom: 30px;
+  }
+
+  .titlecolor1 {
+    font-size: 19px;
+    letter-spacing: 0em;
+    justify-content: center;
+  }
+
+  .titlecolor {
+    font-size: 19px;
+    letter-spacing: 0em;
+    justify-content: center;
+    margin: 0px 0px !important;
+  }
+
+  .subheadtext {
+    font-size: 12px;
+    margin-top: -6px;
+    line-height: 16px;
+  }
+
+  .is-sticky .navbar-toggler {
+    margin-right: 0px;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin: unset;
+  }
+
+  .container {
+  margin: 0px !important
+  }
+
+  .btn-readmore {
+    padding-top: 8px !important; 
+    padding-bottom: 8px !important;
+  }
+
+  .is-sticky .navbar-brand {
+    margin-left: -30px;
+  }
+
+  .btn1 {
+    margin-left: -16px;
+    padding-left: 0px;
+  }
+
+  .btn2 {
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+
+  .form-control {
+    height: 40px;
+  }
+
+  .search-panel{
+    height: 40px;
+  }
+
+  .input-group {
+    height: 40px;
+  }
+
+
+  .col-md-3.col-12.mb-40 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 0 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  .articles-header {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 11px;
+    letter-spacing: 0px;
+  }
+
+  .travelabox {
+    width: 96.5%;
+    margin: auto 5px;
+    text-align: initial;
+    overflow: hidden;
+  }
+
+  .articles-subheader {
+    line-height: 1em !important;
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+
+  .articles-content {
+    height: 26px;
+    overflow: hidden;
+    line-height: 1.3em !important;
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .sub-headertext {
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: 500;
+  }
+
+  .contenttext {
+    margin-top: -10px;
+    font-size: 15px;
+  }
+
+  .wrapper1 {
+    overflow: -webkit-paged-x;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: 50% 50% 50% 50% 50%;
+    grid-template-rows: 150px 150px;
+  }
+
+  .featuredcountry {
+    font-size: 10px;
+  }
+
+  .featuredlocation {
+    font-size: 12px;
+  }
+
+  .featuredtitle {
+    font-size: 7px;
+  }
+
+  .row.no-margin {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar-light .navbar-toggler {
+    background-image: url(../img/icon-hamburger.png);
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+  }
+
+  .dropdown-menu a {
+    padding: 3px 45px 5px 45px;
+    font-size: 12px !important;
+    
+  }
+
+  .dropdown-menu {
+    margin-left: -15px;
+    margin-right: 25px;
+    padding-right: 103px;
+    margin-top: -10px;
+  }
+
+  #navbarSupportedContent {
+    text-align: center;
+  }
+
+  .btn-addtravelbloggers {
+    margin-left: 0px !important;
+  }
+
+  .btn-addtravelbloggers1 {
+    margin-left: 0px !important;
+  }
+
+  .col-md-2.mb-40.great-destinations {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 0 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  #destination-container {
+    height: 317px;
+      width: inherit;
+      overflow: -webkit-paged-x;
+      display: inline-block !important;
+    
+  }
+
+  .boxart.d-flex.float-left.destination-rotator-cards.carousel-inner {
+    display: none !important;
+  }
+
+  #destination-rot-container{
+    display:none !important;
+  }
+
+}

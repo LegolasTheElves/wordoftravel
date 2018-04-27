@@ -2,14 +2,10 @@
 
 $(window).scroll(function () {
   if ($(document).scrollTop() == 0) {
-      $('.default-header').removeClass('tiny');
-      $('#menu-spacing').addClass('nav-margin-top');
       $('.navbar-brand img').attr('src', './assets/svg/logo-white.svg');
       $('.navbar-brand img').attr('height', '45');
      
   } else {
-      $('.default-headerr').addClass('tiny');
-      $('#menu-spacing').removeClass('nav-margin-top');
       $('.navbar-brand img').attr('src', './assets/svg/logo-colored.svg');
       $('.navbar-brand img').attr('height', '35');
   }
@@ -17,12 +13,28 @@ $(window).scroll(function () {
 
 $(window).scroll(function () {
   if ($(document).scrollTop() == 0) {
-      $('.default-header').removeClass('tiny');
-      $('#menu-spacing').addClass('nav-margin-top');
       $('.forjquery a').attr('class', 'btn-addtravelbloggers');
   } else {
-      $('.default-headerr').addClass('tiny');
-      $('#menu-spacing').removeClass('nav-margin-top');
+      $('.forjquery a').attr('class', 'btn-addtravelbloggers1');
+  }
+}); 
+
+
+$(window).scroll(function () {
+  if ($(document).scrollTop() == 0) {
+    $('.navbar-brand-search img').attr('src', './assets/svg/logo-white.svg');
+      $('.navbar-brand-search img').attr('height', '45');
+     
+  } else {
+    $('.navbar-brand-search img').attr('src', './assets/svg/logo-colored.svg');
+      $('.navbar-brand-search img').attr('height', '35');
+  }
+}); 
+
+$(window).scroll(function () {
+  if ($(document).scrollTop() == 0) {
+      $('.forjquery a').attr('class', 'btn-addtravelbloggers');
+  } else {
       $('.forjquery a').attr('class', 'btn-addtravelbloggers1');
   }
 }); 

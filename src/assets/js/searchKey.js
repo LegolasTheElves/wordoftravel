@@ -1,0 +1,30 @@
+$(function () {
+  $("#searchKey").autocomplete({
+    /*select: function (evt, suggestion) {
+        alert("ALERT FOR TESTING ONLY. REDIRECT TO " + suggestion.item.value + " [placeid: " + suggestion.item.id +
+            "]");
+        var strSelectedPlace = suggestion.item.value.toLowerCase() + "-" + suggestion.item.id;
+        window.location.href = "http://wordoftravel.com/destinations/" + strSelectedPlace;
+    },*/
+    source: function (request, response) {
+      $.ajax({
+        url: "https://places-api.wordoftravel.com/v1/cities/suggestions/" + request.term,
+        method: "GET",
+        crossDomain: true,
+        // dataType: "JSON",
+        // data: JSON.stringify(postData),
+        success: function (data) {
+          response($.map(data.suggest["asciiName-suggestion"][0].options, function (item) {
+            return {
+              label: item.text + '  (' + item._source.countryCode + ')',
+              id: item._id,
+              value: item.text
+            }
+          }));
+        },
+      });
+    },
+    minLength: 2,
+    delay: 0
+  })
+});

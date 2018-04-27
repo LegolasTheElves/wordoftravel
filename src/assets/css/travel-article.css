@@ -1,0 +1,133 @@
+.box-list-wrapper img{
+    width: 100%;
+    border-radius: 7px 0px 0px 7px ; 
+}
+.box-list-wrapper li{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.box-list-content{
+    line-height: 14pt;
+    padding:20px;
+}
+.box-list-actions{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.inline-label{
+    display: inline-flex;
+}
+.box-list-actions span{
+    padding-top: 2px;
+    align-self: center;
+}
+.icon{
+    padding-top:8px;
+    margin-left: -10px;
+}
+.icon-circle{
+    background-color: #f2f2f2 !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 8px;
+    margin-right: 10px;
+    border: none;
+}
+button:focus {
+    outline:0;
+}
+button:active {
+    opacity: 0.8;
+}
+#btn-share-icon {
+    content: "";
+    background: url(../svg/icon-share.svg) no-repeat center;
+    background-size: 50%;
+  }
+#btn-favorite-icon {
+    content: "";
+    background: url(../svg/icon-favorite.svg) no-repeat center;
+    background-size: 40%;
+}
+#btn-like-icon {
+    content: "";
+    background: url(../svg/icon-like-unliked.svg) no-repeat center;
+    background-size: 50%;
+}
+
+.box-list-title{
+    font-family: "Raleway";
+    font-weight: 600;
+    font-size: 20px;
+    color: #133560;
+    margin-top: 10px;
+}
+.box-list-subheader{
+    color: #3098d4;
+    font-weight: 400;
+    padding-top: 5px;
+}   
+.box-list-overview{
+    padding-top: 10px;
+}
+.box-list-descriptions{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}   
+.label{
+    color: #133560;
+    font-weight: 600;
+}  
+.tags{
+    font-style: italic;
+}   
+
+.box-list-places{
+    align-self: flex-end;
+}
+.social-icons{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.65fr;
+}
+
+.social-icons > *{
+    justify-content: flex-end;
+}
+
+/* Details */
+
+.social-icons-details{
+    display: inline-flex;
+}
+
+.social-icons-details span{
+    padding-top: 7px !important;
+    padding-right: 30px !important;
+}
+
+.social-icons-details icons{
+    margin-top: 40px;
+    margin-right: 10px !important;
+}
+
+
+/* Popover styling */
+.bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after{
+    border-bottom-color: white !important;
+    text-align: center;
+}
+.svgIcon{
+ margin-right: 10px !important;
+}
+
+.popover{
+    max-width: 100% !important;
+}
+#socialSharePopover{
+    display: none;
+}

@@ -18,53 +18,25 @@
   <link rel="stylesheet" href="./assets/css/bootstrap.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/search.css">
-  <link href="./assets/css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/owl.theme.default.css">
+  <link rel="stylesheet" href="./assets/css/owl-carousel-custom.css">
+  <link rel="stylesheet" href="./assets/css/jquery-ui.css">
 </head>
 
 <body>
   <app-root></app-root>
   <script src="./assets/js/masonry.min.js"></script>
   <script src="./assets/js/jquery-2.2.4.min.js"></script>
+  <script src="./assets/js/popper.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/jquery.magnific-popup.min.js"></script>
   <script src="./assets/js/jquery.sticky.js"></script>
   <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="./assets/js/owl-carousel-custom.js"></script>
   <script src="./assets/js/jquery-ui.js"></script>
-  <script>
-		$(function () {
-			$("#keyword").autocomplete({
-				select: function (evt, suggestion) {
-					alert("ALERT FOR TESTING ONLY. REDIRECT TO " + suggestion.item.value + " [placeid: " + suggestion.item.id +
-						"]");
-					var strSelectedPlace = suggestion.item.value.toLowerCase() + "-" + suggestion.item.id;
-					window.location.href = "http://wordoftravel.com/destinations/" + strSelectedPlace;
-				},
-				source: function (request, response) {
-
-					$.ajax({
-						url: "https://places-api.wordoftravel.com/v1/cities/suggestions/" + request.term,
-						method: "GET",
-						crossDomain: true,
-						// dataType: "JSON",
-						// data: JSON.stringify(postData),
-						success: function (data) {
-							response($.map(data.suggest["asciiName-suggestion"][0].options, function (item) {
-								return {
-									label: item.text + '  (' + item._source.countryCode + ')',
-									id: item._id,
-									value: item.text
-								}
-							}));
-						},
-					});
-				},
-				minLength: 2,
-				delay: 0
-			})
-		});
-	</script>
-
+  <script src="./assets/js/searchKey.js"></script>
 </body>
 
 </html>
