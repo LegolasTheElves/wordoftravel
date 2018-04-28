@@ -3,7 +3,6 @@
   position: absolute;
   top: 330px !important;
   left: 232px !important;
-  padding: 6px 10px 10px 0;
   z-index: 0;
   float: left;
   display: block;
@@ -38,6 +37,7 @@
   color: #555555;
   white-space: nowrap;
   text-decoration: none;
+  padding: 3px 15px 5px 75px;
 }
 
 .ui-state-hover,
@@ -52,7 +52,7 @@
 }
 
 .ui-menu-item {
-  margin-left: 60px !important;
+  margin-left: 80px !important;
   border-bottom: 1px solid #DDDDDD;
   z-index: 2;
   font-size: 14px;
@@ -63,4 +63,5 @@
   font-size: 22px;
   color: #063160;
   border-color: white;
+  padding: 6px 10px 10px 0;
 }

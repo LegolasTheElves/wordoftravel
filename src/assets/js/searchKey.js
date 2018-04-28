@@ -24,7 +24,27 @@ $(function () {
         },
       });
     },
+    appendTo: '#input-source',
+    open: function(){
+      left = 0 - parseInt($('.search-panel').width());
+      $('#ui-id-1').css({
+        left : 0/*, 
+        'text-align': 'left', 
+        'padding-left': '20px', 
+        'margin-top' : '-5px',
+        'z-index': -1,
+        'border': 'none',
+        'padding' : '5px 10px 10px'*/
+      });
+    },
     minLength: 2,
     delay: 0
   })
+});
+
+$(document).ready(function(){
+  jQuery.ui.autocomplete.prototype._resizeMenu = function(){
+    var ul = this.menu.element;
+    ul.outerWidth($('#input-source').width());
+  }
 });
