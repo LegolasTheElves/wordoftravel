@@ -132,9 +132,13 @@
 
 .ui-autocomplete {
   position: absolute;
-  top: 0;
+  top: 45px !important;
+  z-index: -1;
   left: 0;
   cursor: default;
+  border-radius: 0px;
+  border-bottom-right-radius: 0.45em;
+  border-bottom-left-radius: 0.45em;
 }
 
 .ui-button {
@@ -547,14 +551,31 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-menu .ui-menu {
-  margin-top: -3px;
-  position: absolute;
+  display: block;
+  opacity: 0.9;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 .ui-menu .ui-menu-item {
-  border-bottom: 1px solid rgb(248, 9, 9);
+  border-bottom: 1px solid rgba(138, 135, 135, 0.384);
+  margin-left: 72px !important;
+  margin-top: 1px !important;
+  z-index: 2;
+  padding: 3.5px 0 5px 0;
+  font-size: 14px;
+  width: auto !important;
   text-align: left;
-  margin-left: 60px !important;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 22px;
+  color: #063160;
+}
+.ui-menu-item:last-child {
+  border: 0px;
 }
 
 .ui-menu .ui-menu-divider {
@@ -1012,9 +1033,9 @@ body .ui-tooltip {
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-  background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+  background: #e9e6e6b0 url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
   font-weight: bold;
-  color: #063160;
+  color: #121213;
 }
 
 .ui-state-active a,
