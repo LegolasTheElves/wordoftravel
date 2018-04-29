@@ -15,7 +15,7 @@ $(function () {
     colW = 200;
   }
   else if($(window).width() >= 481 && $(window).width() <= 520) {
-    colW = 220;
+    colW = 240;
   }
   else {
     colW = 252;
@@ -49,7 +49,7 @@ $(function () {
       }
       else if ($(window).width() >= 481 && $(window).width() <= 520) {
         columns = 2;
-        $container1.width(columns * 220).isotope('reLayout');
+        $container1.width(columns * 240).isotope('reLayout');
       }
       else {
 
@@ -128,4 +128,16 @@ $(".navbar-toggler").click(function() {
   handlers[counter++].apply(this, Array.prototype.slice.apply(arguments));
   // "wrap around" when all handlers have been called
   counter %= handlers.length;
+});
+
+$(document).ready(function(){
+  $(window).scroll(function() {
+      if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
+          $('#menu-popover').hide();
+      }
+
+      else {
+        $('#menu-popover').show();
+      }
+   });
 });

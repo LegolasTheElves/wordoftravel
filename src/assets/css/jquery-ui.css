@@ -139,6 +139,8 @@
   border-radius: 0px;
   border-bottom-right-radius: 0.45em;
   border-bottom-left-radius: 0.45em;
+  background-color:#fff;
+  opacity: .9;
 }
 
 .ui-button {
@@ -544,7 +546,7 @@ button.ui-button::-moz-focus-inner {
 
 .ui-menu {
   list-style: none;
-  padding: 2px;
+  padding: 0px;
   margin: 0;
   display: block;
   outline: none;
@@ -562,10 +564,10 @@ button.ui-button::-moz-focus-inner {
 
 .ui-menu .ui-menu-item {
   border-bottom: 1px solid rgba(138, 135, 135, 0.384);
-  margin-left: 72px !important;
+  margin-left: 0px !important;
   margin-top: 1px !important;
   z-index: 2;
-  padding: 3.5px 0 5px 0;
+  padding: 4px 0 5px 7%;
   font-size: 14px;
   width: auto !important;
   text-align: left;
@@ -574,6 +576,18 @@ button.ui-button::-moz-focus-inner {
   font-size: 22px;
   color: #063160;
 }
+
+
+.ui-menu .ui-menu-item:hover{
+  background-color: rgba(.7,.7,.7,.1);
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  color:#000;
+} 
+
 .ui-menu-item:last-child {
   border: 0px;
 }
@@ -970,9 +984,10 @@ body .ui-tooltip {
 
 .ui-widget-content {
   border: 1px solid #dddddd;
-  background-color: #ffffffc4;
+  background-color: #ffffff;
   color: #063160;
   font-weight: bold;
+  opacity: .9;
 }
 
 .ui-widget-content a {
@@ -1033,7 +1048,7 @@ body .ui-tooltip {
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-  background: #e9e6e6b0 url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;
+  /*background: #e9e6e694 url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x;*/
   font-weight: bold;
   color: #121213;
 }
@@ -1901,4 +1916,41 @@ body .ui-tooltip {
   opacity: .2;
   filter: Alpha(Opacity=20);
   border-radius: 5px;
+}
+
+/* mobile */
+
+
+
+
+
+@media (max-device-width : 992px){
+  .ui-autocomplete{
+    top: 37px !important;
+    left: -15px !important;
+    width: 330px !important;
+  }
+}
+
+/* iphone 6-8 */
+@media (min-device-width : 375px) and (max-device-width: 667px){
+  .ui-autocomplete{
+    top: 37px !important;
+    left: -15px !important;
+    width: 330px !important;
+  }
+}
+
+/* Galaxy s5 */
+@media (min-device-width : 360px) and (max-device-width: 640px){
+  .ui-autocomplete{
+    width: 315px !important;
+  }
+}
+
+/* iphone 6-8 PLUS */
+@media (min-device-width : 414px) and (max-device-width: 736px){
+  .ui-autocomplete{
+    width: 368px !important;
+  }
 }

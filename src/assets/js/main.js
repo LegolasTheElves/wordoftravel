@@ -1,29 +1,12 @@
 $(document).ready(function () {
 
-  $('#recent-button').on('click',function(){
-    $('#autocorrect-menu').attr('style','display:inline-table !important');
-  });
 
-  $('#recent-button').on('focusout',function(){
-    $('#autocorrect-menu').attr('style','');
-  });
+  $(".buttondownhome").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".carousel-indicators").offset().top
+    }, 500);
+});
 
-  
-  $('#recent-button2').on('click',function(){
-    $('#autocorrect-menu').attr('style','display:inline-table !important');
-  });
-
-  $('#recent-button2').on('focusout',function(){
-    $('#autocorrect-menu').attr('style','');
-  });
-
-  $('#nearme-button').on('click',function(){
-    $('#autocorrect-menu').attr('style','display:inline-table !important');
-  });
-
-  $('#nearme-button').on('focusout',function(){
-    $('#autocorrect-menu').attr('style','');
-  });
 
   $('.dropdown-item').each(function(){
     $(this).on('click', function(){
@@ -243,3 +226,54 @@ $(document).ready(function(){
     });       
 
  });
+
+
+ var searchhandlers = [
+  function() {
+    $('#autocorrect-menu').attr('style','display:inline-table !important;');
+  },
+  function() {
+    $('#autocorrect-menu').attr('style','');
+  }
+];
+
+var counter = 0;
+$("#recent-button").click(function() {
+  searchhandlers[counter++].apply(this, Array.prototype.slice.apply(arguments));
+  counter %= searchhandlers.length;
+});
+
+
+// clicked outside, hide search dropdown 
+//$('#recent-button').on('focusout',function(){
+//  $('#autocorrect-menu').attr('style','');
+//});
+
+var searchhandlers2 = [
+  function() {
+    $('#autocorrect-menu').attr('style','display:inline-table !important;');
+  },
+  function() {
+    $('#autocorrect-menu').attr('style','');
+  }
+];
+
+var counter = 0;
+$("#nearme-button").click(function() {
+  searchhandlers2[counter++].apply(this, Array.prototype.slice.apply(arguments));
+  counter %= searchhandlers2.length;
+});
+
+
+
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 200) {
+    $('#floating-refine').attr('style','display:block !important');
+    $(".floating-refine-search" ).animate( {left:0} );
+  } else {
+    $('#floating-refine').attr('style','');
+    $(".floating-refine-search" ).animate( {left:0} );
+  }
+});
+
