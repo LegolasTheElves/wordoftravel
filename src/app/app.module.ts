@@ -24,6 +24,8 @@ import { TravelArticleService } from './travel-articles/travelArticle.service';
 import { TravelDestinationService } from './featured-destination/travelDestination.service';
 import { HomeSearchService } from './about-area/home-search.service';
 import { SearchService } from './travel-search/search.service';
+import { SearchpageComponent } from './searchpage/searchpage.component';
+import { SearchPageService } from './searchpage/search-page.service';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { SearchService } from './travel-search/search.service';
     ArticlepageComponent,
     SigninComponent,
     TravelSearchComponent,
+    SearchpageComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { SearchService } from './travel-search/search.service';
     TravelArticleService,
     TravelDestinationService,
     HomeSearchService,
-    SearchService
+    SearchService,
+    SearchPageService
   ],
   bootstrap: [AppComponent]
 })

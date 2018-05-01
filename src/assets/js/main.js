@@ -258,10 +258,10 @@ var searchhandlers2 = [
   }
 ];
 
-var counter = 0;
+var countern = 0;
 $("#nearme-button").click(function() {
-  searchhandlers2[counter++].apply(this, Array.prototype.slice.apply(arguments));
-  counter %= searchhandlers2.length;
+  searchhandlers2[countern++].apply(this, Array.prototype.slice.apply(arguments));
+  countern %= searchhandlers2.length;
 });
 
 
@@ -277,3 +277,22 @@ $(document).scroll(function() {
   }
 });
 
+
+
+var menuhandlers = [
+
+  function() {
+    $("html").css("overflow-y","hidden");
+  },
+
+  function() {
+    $("html").css("overflow-y","auto");
+  }
+
+];
+
+var menucounter = 0;
+$(".navbar-toggler").click(function() {
+  menuhandlers[menucounter++].apply(this, Array.prototype.slice.apply(arguments));
+  menucounter %= menuhandlers.length;
+});

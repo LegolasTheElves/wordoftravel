@@ -327,23 +327,27 @@ td, th {
 }
 
 .ml-10 {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 
 .ml-15 {
-  margin-left: 15px;
+  margin-left: 15px !important;
 }
 
 .ml-20 {
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 
 .ml-30 {
-  margin-left: 30px;
+  margin-left: 30px !important;
+}
+
+.ml-40 {
+  margin-left: 40px !important;
 }
 
 .ml-50 {
-  margin-left: 50px;
+  margin-left: 50px !important;
 }
 
 .mr-0 {
@@ -363,15 +367,17 @@ td, th {
 }
 
 .mr-20 {
-  margin-right: 20px;
+  margin-right: 20px !important;
 }
 
 .mr-30 {
-  margin-right: 30px;
+  margin-right: 30px !important;
 }
-
+.mr-40 {
+  margin-right: 40px !important;
+}
 .mr-50 {
-  margin-right: 50px;
+  margin-right: 50px !important;
 }
 
 .mb-0 {
@@ -631,6 +637,9 @@ td, th {
 
 @media (max-width: 992px) {
 
+    .align-items-center {
+      text-align: center;
+    }
   .buttonright {
     text-align: center;
   }
@@ -1909,10 +1918,18 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 400px;
     overflow-x: hidden;
   }
+
+  .navbar-brand-search{
+    padding-left:1.6rem;
+  }
+
+  .navbar-toggler{
+    padding-right:1.6rem;
+  }
 }
 
 .navbar {
-  padding: 0rem 1.6rem .6rem;
+  padding: 0 0 .6rem 0;
 }
 
 .menu-bar {
@@ -2844,6 +2861,7 @@ h6 {
 
   .titlecolor {
     justify-content: center !important;
+    text-align: center;
   }
 }
 
@@ -3405,26 +3423,26 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 .titlecaptionhome {
   font-family: "Raleway";
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   text-align: right;
   letter-spacing: 0.08em;
-  margin-bottom: -10px;
+  margin-bottom: -7px;
 }
 
 
 .placecaptionhome {
   font-family: "Raleway";
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   text-align: right;
   letter-spacing: 0.08em;
-  margin-bottom: -10px;
+  margin-bottom: -7px;
 }
 
 .countrycaptionhome {
   font-family: "Raleway";
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   text-align: right;
   letter-spacing: 0.08em;
@@ -4734,11 +4752,15 @@ fieldset[disabled] .btn-poplogout.active {
 
 
 @media (max-width: 849px) {
+  #search_concept {
+    margin-left: -10px;
+  }
   .form-control {
     font-size: 15px !important;
-    margin-left: -15px;
+    
   }
   .btn3 {
+    margin-left: -5px;
     font-size: 10px;
     width: 80px !important;
   }
@@ -4750,20 +4772,16 @@ fieldset[disabled] .btn-poplogout.active {
 
   .searchdown {
     position: absolute;
-    margin-left: 2px !important;
+    margin-left: 6px !important;
   }
 }
 
 @media (max-width: 580px) {
   .form-control {
     font-size: 15px !important;
-    margin-left: -15px;
     border-radius: 0.45em !important;
   }
 
-  .btn1 {
-    display: none;
-  }
  
 }
 
@@ -4775,23 +4793,15 @@ fieldset[disabled] .btn-poplogout.active {
     font-size: 11px !important;
   }
 
-  .btn2 {    
-    display: none;
-  }
  
 }
 
 @media (max-width: 390px) {
 
   .form-control {
-    padding: 10px;
+    padding: 5px;
     font-size: 11px !important;
-  }
-
-  .btn2 {
-    display: none;
-  }
- 
+  } 
 }
 
 @media (max-width: 767px) {
@@ -4824,6 +4834,7 @@ fieldset[disabled] .btn-poplogout.active {
   text-align: center;
   }
   .text-right {
+    height: 28px;
     text-align: center !important;
   }
 
@@ -4862,6 +4873,17 @@ fieldset[disabled] .btn-poplogout.active {
 
 
 @media (max-width: 992px) {
+  .navbar-toggler:not(:disabled):not(.disabled) {
+    outline: none;
+  }
+
+  .navbar-toggle {
+    border: none;
+    outline: none;
+  }
+  .navbar-nav li a{
+    color: #133560;
+  }
   .carousel-caption{
     width:100%;
     left:unset;
@@ -4939,7 +4961,7 @@ fieldset[disabled] .btn-poplogout.active {
   .container {
   margin: auto;
   }
-z
+
   .btn-readmore {
     padding-top: 8px !important; 
     padding-bottom: 8px !important;
@@ -4949,9 +4971,8 @@ z
     margin-left: 0px;
   }
 
-  .btn1 {
-    margin-left: -16px;
-    padding-left: 0px;
+  .btn1, .btn1-search {
+    padding-left: 0px !important;
   }
 
   .btn2 {
@@ -5013,11 +5034,13 @@ z
     font-size: 16px;
     letter-spacing: 0px;
     font-weight: 500;
+    text-align: center;
   }
 
   .contenttext {
     margin-top: -10px;
     font-size: 15px;
+    text-align: center;
   }
 
   .wrapper1 {
@@ -5054,7 +5077,7 @@ z
   }
 
   .dropdown-menu a {
-    padding: 3px 45px 5px 45px;
+    padding: 3px 45px 5px 70px;
     font-size: 12px !important;
     
   }
@@ -5062,8 +5085,8 @@ z
   .dropdown-menu {
     margin-left: -15px;
     margin-right: 25px;
-    padding-right: 103px;
-    margin-top: -10px;
+    padding-right: 0px;
+    margin-top: -5px;
   }
 
   #navbarSupportedContent {

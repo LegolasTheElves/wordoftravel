@@ -1,3 +1,5 @@
+
+
 $(function () {
 
   var $container1 = $('#container1'),
@@ -109,31 +111,29 @@ $('body').on('click', function (e) {
 });
 
 
+var menuhandlerssearch = [
 
-var handlers = [
-  // on first click:
   function() {
-    $("body").css("overflow","hidden");
+    $("html").css("overflow-y","hidden");
   },
-  // on second click:
+
   function() {
-    $("body").css("overflow","auto");
+    $("html").css("overflow-y","auto");
   }
-  // ...as many more as you want here
+
 ];
 
-var counter = 0;
+var menucountersearch = 0;
 $(".navbar-toggler").click(function() {
-  // call the appropriate function preserving this and any arguments
-  handlers[counter++].apply(this, Array.prototype.slice.apply(arguments));
-  // "wrap around" when all handlers have been called
-  counter %= handlers.length;
+  menuhandlerssearch[menucountersearch++].apply(this, Array.prototype.slice.apply(arguments));
+  menucountersearch %= menuhandlerssearch.length;
 });
 
 $(document).ready(function(){
   $(window).scroll(function() {
       if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
           $('#menu-popover').hide();
+          
       }
 
       else {
@@ -141,3 +141,15 @@ $(document).ready(function(){
       }
    });
 });
+
+$(document).on('click', function(event) {
+  if ($('#search-item-modal').is(':visible')) {
+  if (!$(event.target).closest('.modal-dialog').length) {
+  $("#search-item-modal").modal('hide');
+
+  }
+}
+
+
+});
+
