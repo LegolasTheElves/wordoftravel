@@ -228,6 +228,7 @@ $(document).ready(function(){
  });
 
 
+ $(document).ready(function(){
  var searchhandlers = [
   function() {
     $('#autocorrect-menu').attr('style','display:inline-table !important;');
@@ -296,3 +297,5 @@ $(".navbar-toggler").click(function() {
   menuhandlers[menucounter++].apply(this, Array.prototype.slice.apply(arguments));
   menucounter %= menuhandlers.length;
 });
+
+ });
