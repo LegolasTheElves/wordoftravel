@@ -1936,7 +1936,7 @@ body .ui-tooltip {
 @media (min-device-width : 375px) and (max-device-width: 667px){
   .ui-autocomplete{
     top: 37px !important;
-    left: -15px !important;
+    left: 0px !important;
     width: 330px !important;
   }
 }
@@ -1951,6 +1951,24 @@ body .ui-tooltip {
 /* iphone 6-8 PLUS */
 @media (min-device-width : 414px) and (max-device-width: 736px){
   .ui-autocomplete{
-    width: 368px !important;
+    width: 350px !important;
+  }
+}
+
+/* Note 8 */
+@media (min-device-width : 412px) and (max-device-width: 846px){
+  .ui-autocomplete{
+    width: 350px !important;
+    left: 0px !important;
+  }
+}
+
+
+
+/* S8 */
+@media (min-device-width : 501px) and (max-device-width: 1030px){
+  .ui-autocomplete{
+    width: 440px !important;
+    left:0px !important;
   }
 }

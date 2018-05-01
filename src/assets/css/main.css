@@ -437,7 +437,7 @@ td, th {
 }
 
 .mb-90 {
-  margin-bottom: 90px;
+  margin-bottom: 90px !important;
 }
 
 .mb-100 {
@@ -637,9 +637,9 @@ td, th {
 
 @media (max-width: 992px) {
 
-    .align-items-center {
-      text-align: center;
-    }
+  .align-items-center{
+    text-align: center;
+  }
   .buttonright {
     text-align: center;
   }
@@ -3934,8 +3934,8 @@ fieldset[disabled] .btn-readmore.active {
   letter-spacing: 0px;
   padding-top: 6px;
   padding-bottom: 6px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
 } 
  
 .btn-destreadmore:hover, 
