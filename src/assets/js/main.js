@@ -298,4 +298,10 @@ $(".navbar-toggler").click(function() {
   menucounter %= menuhandlers.length;
 });
 
- });
+$(document).on('click', function(event) {
+  if (!$(event.target).closest('#recent-button').length) {
+    $('#autocorrect-menu').attr('style','');
+    }
+  });
+  
+});
