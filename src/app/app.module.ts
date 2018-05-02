@@ -27,6 +27,7 @@ import { SearchService } from './travel-search/search.service';
 import { SearchpageComponent } from './searchpage/searchpage.component';
 import { SearchPageService } from './searchpage/search-page.service';
 
+import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { SearchPageService } from './searchpage/search-page.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+		NgSelectModule
   ],
   providers: [
     TravelArticleService,

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+/*@import "~@ng-select/ng-select/themes/material.theme.css";*/
+
+/* override default css */
+.ng-select .ng-select-container  {
+		border: none;
+}
+
+.ng-dropdown-panel {
+	line-height: none;
+	height: min-content;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input{
+	top: 0;
+}
+
+.ng-select .ng-arrow-wrapper {
+	display: none;
+}

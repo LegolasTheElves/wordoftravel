@@ -7,7 +7,6 @@ import { TravelSearch } from './travelSearch';
 
 @Injectable()
 export class SearchService {
-  private travelUrl = 'https://api.wordoftravel.com/featuredlocations/HomeFeatured';
   constructor(private http: HttpClient) { }
 
   searchTravel(term: string): Observable<TravelSearch[]> {
@@ -15,11 +14,21 @@ export class SearchService {
       // if not search term, return empty hero array.
       return of([]);
     }
-    let results = this.http.get(`${this.travelUrl}?LocationName=${term}`);
-    
-    console.log(JSON.stringify(results));
+
+  	const travelUrl = 'https://api.wordoftravel.com/featuredlocations/HomeFeatured';
+    let results = this.http.get(`${travelUrl}?LocationName=${term}`);
+
 
     return results['rsltCol'];
+  }
+
+  searchSuggestions(term: string): Observable<any> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+		const url = `https://places-api.wordoftravel.com/v1/cities/suggestions/${term}`;
+		return this.http.get(url);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
