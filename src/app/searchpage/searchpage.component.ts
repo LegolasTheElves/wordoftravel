@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
 import { SearchPageService } from './search-page.service';
+import { SearchPage } from './searchpage';
+
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-searchpage',
@@ -8,17 +10,27 @@ import { SearchPageService } from './search-page.service';
   styleUrls: ['./searchpage.component.css']
 })
 export class SearchpageComponent implements OnInit {
-  results: Object;
-  searchTerm$ = new Subject<string>();
+  errorMessage: string;
+  searchResult: SearchPage[];
+  searchTerm: any;
 
-  constructor(private searchService: SearchPageService) {
-    this.searchService.search(this.searchTerm$)
-      .subscribe(results => {
-        this.results = results.results;
-      });
+  constructor(private searchApiService: SearchPageService, private route: ActivatedRoute) { 
+    this.route.params.subscribe( params => {
+      this.searchTerm = params.term;
+    });
   }
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
+
+  ngOnInit() {
+    this.getSearchResult();
+  }
+
+  getSearchResult(): void {
+    this.searchApiService.getSearch(this.searchTerm)
+      .subscribe(
+        searchResult => {
+          this.searchResult = searchResult['rsltCol'];
+        },
+        error => this.errorMessage = <any>error);
   }
 
 }

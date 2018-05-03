@@ -1,3 +1,5 @@
+
+
 $(function () {
 
   var $container1 = $('#container1'),
@@ -131,7 +133,7 @@ $(document).ready(function(){
   $(window).scroll(function() {
       if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
           $('#menu-popover').hide();
-          $("#menu-popover").popover('hide');
+          
       }
 
       else {

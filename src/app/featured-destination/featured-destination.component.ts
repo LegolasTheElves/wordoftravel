@@ -29,10 +29,10 @@ export class FeaturedDestinationComponent implements OnInit {
           for(let destination of featuredDestinations){
             //console.log(JSON.stringify(destination));
             if(destination.Orientation == "L"){
-              console.log('found wide');
+              //console.log('found wide');
               this.wideDestination = destination;
             } else if(destination.Orientation == "P"){
-              console.log('found tall');
+              //console.log('found tall');
               this.tallDestination = destination;
             } else {
               this.destinations.push(destination);

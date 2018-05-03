@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
     nav:true,
-    navText: ["<img src='wordoftravel/assets/img/img-home-arrow-left.png'>","<img src='wordoftravel/assets/img/img-home-arrow-right.png'>"],
+    navText: ["<img src='./assets/img/img-home-arrow-left.png'>","<img src='./assets/img/img-home-arrow-right.png'>"],
     dots:false,
     loop:true,
     margin:10,

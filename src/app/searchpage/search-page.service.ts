@@ -1,29 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/observable/throw';
+import { SearchPage } from './searchpage';
+
+
 
 @Injectable()
 export class SearchPageService {
 
-private baseUrl: string = 'https://api.wordoftravel.com/destinations/';
-placeid : number;
+private _travelUrl = 'https://api.wordoftravel.com/destinations/';
 
-  constructor(private http: Http) { }
+constructor(private http: HttpClient) {
+   
+ }
 
-  search(terms: Observable<string>) {
-    return terms.debounceTime(400)
-      .distinctUntilChanged()
-      .switchMap(term => this.searchEntries(term));
-  }
-
-  searchEntries(term) {
-    return this.http
-        .get(this.baseUrl + term + '-' + this.placeid)
-        .map(res => res.json());
-  }
+getSearch(term: string): Observable<SearchPage[]> {
+  console.log("Search URL: " + this._travelUrl + term);
+  return this.http.get<SearchPage[]>(this._travelUrl + term)
+    .do(data => console.log('All:' + JSON.stringify(data)))
+    .catch(this.handleError);
+}
+//Error Handler
+private handleError(err: HttpErrorResponse) {
+  console.log(err.message);
+  return Observable.throw(err.message);
+}
 
 }

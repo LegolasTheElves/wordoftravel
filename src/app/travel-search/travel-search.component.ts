@@ -6,6 +6,7 @@ import { of } from 'rxjs/observable/of';
 import {debounceTime, distinctUntilChanged, switchMap, tap} from 'rxjs/operators';
 import { TravelSearch } from './travelSearch';
 import { SearchService } from './search.service';
+import {Router} from "@angular/router";
 
 declare let $: any;
 
@@ -28,7 +29,8 @@ export class TravelSearchComponent implements OnInit {
 
   constructor(
 		private searchService: SearchService,
-		private cd: ChangeDetectorRef
+		private cd: ChangeDetectorRef,
+		private router: Router
 	) { }
 
   // Push a search term into the observable stream.
@@ -81,6 +83,7 @@ export class TravelSearchComponent implements OnInit {
 			// TODO error handling
 			return
 		}
-		console.log( selected );
+		
+		this.router.navigate(['/wordoftravel/destination/',selected.text + "-" + selected._id]);
 	}
 }

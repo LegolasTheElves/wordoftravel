@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/wordoftravel', pathMatch: 'full' },
   { path: 'wordoftravel', component: HomepageComponent },
   { path: 'wordoftravel/article', component: ArticlepageComponent },
-  { path: 'wordoftravel/destination', component:SearchpageComponent}
+  { path: 'wordoftravel/destination/:term', component: SearchpageComponent}
 
 ];
 

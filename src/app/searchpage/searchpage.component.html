@@ -4,21 +4,21 @@
   <div class="floating-refine-search">
     <div id="filter-search">
       <img class="pointer floating-refine-img" src="./assets/img/floating-refine.png" width="50">
-      </div>
+    </div>
   </div>
 </div>
 
 <div class="modal fade" id="search-item-modal" role="dialog">
-  <div>
+  <div id="modalclose">
 
-    <div class="modal-dialog modal-lg" style="margin-top: 7%;">
-      <div class="modal-content" style="margin-top:60px; max-width:249px;">
-        <div class="modal-body" style="padding:0rem; overflow:hidden;border-radius:15px">
-          <img src="./assets/img/img_featured5.jpg" class="img-item-modal" style="margin-left: -23%;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content modal-img">
+        <div class="modal-body modal-img-style">
+          <img src="./assets/img/img_featured5.jpg" class="img-item-modal">
         </div>
 
       </div>
-      <div class="modal-content" style="margin-left:20px; max-width:520px;">
+      <div class="modal-content modal-content-box">
         <div class="modal-arrow"></div>
 
         <div class="modal-header">
@@ -46,13 +46,17 @@
                 <div class="item-flag-right">
                   <div class="tag-content">Add</div>
                   <div class="tag-content">
-                      <div class='bg-svg-icon-flag'><object id='svg1' data='./assets/svg/icon-add.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object></div>
+                    <div class='bg-svg-icon-flag'>
+                      <object id='svg1' data='./assets/svg/icon-add.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
+                    </div>
 
                   </div>
 
                   <div class="tag-content">Flag</div>
                   <div class="tag-content">
-                      <div class='bg-svg-icon-flag'><object id='svg1' data='./assets/svg/icon-flag.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object></div>
+                    <div class='bg-svg-icon-flag'>
+                      <object id='svg1' data='./assets/svg/icon-flag.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -64,12 +68,16 @@
                 <div class="item-flag-right">
                   <div class="tag-content">Add</div>
                   <div class="tag-content">
-                      <div class='bg-svg-icon-flag'><object id='svg1' data='./assets/svg/icon-add.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object></div>
+                    <div class='bg-svg-icon-flag'>
+                      <object id='svg1' data='./assets/svg/icon-add.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
+                    </div>
                   </div>
 
                   <div class="tag-content">Flag</div>
                   <div class="tag-content">
-                      <div class='bg-svg-icon-flag'><object id='svg1' data='./assets/svg/icon-flag.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object></div>
+                    <div class='bg-svg-icon-flag'>
+                      <object id='svg1' data='./assets/svg/icon-flag.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -114,26 +122,34 @@
 
                 <div class="box-item-option">
                   <div class="tag-content-bottom text-uppercase">
-                      <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue
+                    <div class='bg-svg-icon'>
+                      <object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object>
+                    </div>Report Issue
                   </div>
 
                 </div>
                 <div class="box-item-option">
                   <div class="tag-content-bottom text-uppercase">
-                      <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite
+                    <div class='bg-svg-icon'>
+                      <object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;' class='icon-options2'></object>
+                    </div>Favourite
                   </div>
                 </div>
 
                 <div class="box-item-option">
                   <div class="tag-content-bottom text-uppercase">
-                      <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share
+                    <div class='bg-svg-icon'>
+                      <object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object>
+                    </div>Share
                   </div>
                 </div>
                 <div class="box-item-option">
                   <div class="tag-content-bottom text-uppercase">
-                    
-                      <div class='bg-svg-icon-like'><object id='svg1' data='./assets/svg/icon-like-unliked.svg' type='image/svg+xml' class='icon-options-unlike'></object></div>
-                        25 Likes
+
+                    <div class='bg-svg-icon-like'>
+                      <object id='svg1' data='./assets/svg/icon-like-unliked.svg' type='image/svg+xml' class='icon-options-unlike'></object>
+                    </div>
+                    25 Likes
                   </div>
                 </div>
               </div>
@@ -372,7 +388,6 @@
 </div>
 
 
-
 <div id="modal-container">
   <!-- Modal content-->
   <div class="divpop">
@@ -412,12 +427,12 @@
 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-         aria-expanded="false" aria-label="Toggle navigation">
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="text-black lnr lnr-menu"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-          <ul class="search-nav justify-content-end align-items-center navbar-nav ">
+          <ul class="justify-content-end align-items-center navbar-nav nav-search">
             <li>
               <a class="highlight" href="#explore">EXPLORE DESTINATIONS</a>
             </li>
@@ -438,38 +453,79 @@
               </a>
               <a href="#faq" id="signup">SIGN UP</a>
             </li>
-
           </ul>
+
+
           <span class="">
             <a class="btn-addtravelbloggers1 buttonstyle" href="#home">
               ADD TRAVEL BLOG
             </a>
           </span>
-          <span class="">
-            <a id="menu-popover" class="pointer btn-menu-search" data-container="body" data-html="true" data-placement="bottom"
-             data-content="
-                    <div class='menu-search text-uppercase'><a href='#'>Contact Us</a></div>
-                    <div class='menu-search text-uppercase'><a href='#'>Site Map</a></div>
-                    <div class='menu-search text-uppercase'><a href='#'>Terms & Conditions</a></div>
-                    <div class='menu-search text-uppercase mb-20'><a href='#'>Privacy Policy</a></div>
-                    <div class='menu-search'><a class='mr-20' href='#'>
-                      <object id='svg1' data='./assets/svg/icon_social1.svg' type='image/svg+xml' height='15px'></object>
-                    </a>
-                    <a class='mr-20' href='#'>
-                      <object id='svg1' data='./assets/svg/icon_social2.svg' type='image/svg+xml' height='15px'></object>
-                    </a>
-                    <a class='mr-20' href='#'>
-                      <object id='svg1' data='./assets/svg/icon_social3.svg' type='image/svg+xml' height='15px'></object>
-                    </a>
-                    <a class='mr-20' href='#'>
-                      <object id='svg1' data='./assets/svg/icon_social4.svg' type='image/svg+xml' height='15px'></object>
-                    </a></div>
-                    <div class='small-menu-search'><a href='#'>Copyright © 2018 World of Travel</a></div> ">
-              <img class="pointer" src="././assets/img/icon-hamburger.png" width="30">
+          <nav class="navbar-footer navbar-expand-lg  navbar-light" style="background-color: #313131;">
+            <div class="container-fluid-footer">
+              <ul class="footer-style search-nav justify-content-end align-items-center navbar-nav ">
+                <li>
+                  <a class="highlight" href="#explore">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#articles">Site Map</a>
+                </li>
+                <li>
+                  <a href="#secvice">Terms & Conditions</a>
+                </li>
+                <li>
+                  <a href="#gallery">Privacy Policy</a>
+                </li>
+                <li>
+                  <a class='mr-20' href='#'>
+                    <object id='svg1' data='./assets/svg/icon_social1.svg' type='image/svg+xml' height='15px'></object>
+                  </a>
+                  <a class='mr-20' href='#'>
+                    <object id='svg1' data='./assets/svg/icon_social2.svg' type='image/svg+xml' height='15px'></object>
+                  </a>
+                  <a class='mr-20' href='#'>
+                    <object id='svg1' data='./assets/svg/icon_social3.svg' type='image/svg+xml' height='15px'></object>
+                  </a>
+                  <a class='mr-20' href='#'>
+                    <object id='svg1' data='./assets/svg/icon_social4.svg' type='image/svg+xml' height='15px'></object>
+                  </a>
+                </li>
+                <li>
+                  <a class="small-menu-search" href='#' style="text-transform:unset">Copyright &copy;
+                    <script>
+                      document.write(new Date().getFullYear());
+
+                    </script> wordoftravel</a>
+                </li>
+
+              </ul>
+              </div>
+          </nav>
+
+          <span class="formobile">
+            <a id="menu-popover" class="pointer btn-menu-search" data-container="body" data-html="true" data-placement="bottom" data-content="
+											<div class='menu-search text-uppercase'><a href='#'>Contact Us</a></div>
+											<div class='menu-search text-uppercase'><a href='#'>Site Map</a></div>
+											<div class='menu-search text-uppercase'><a href='#'>Terms & Conditions</a></div>
+											<div class='menu-search text-uppercase mb-20'><a href='#'>Privacy Policy</a></div>
+											<div class='menu-search'><a class='mr-20' href='#'>
+												<object id='svg1' data='./assets/svg/icon_social1.svg' type='image/svg+xml' height='15px'></object>
+											</a>
+											<a class='mr-20' href='#'>
+												<object id='svg1' data='./assets/svg/icon_social2.svg' type='image/svg+xml' height='15px'></object>
+											</a>
+											<a class='mr-20' href='#'>
+												<object id='svg1' data='./assets/svg/icon_social3.svg' type='image/svg+xml' height='15px'></object>
+											</a>
+											<a class='mr-20' href='#'>
+												<object id='svg1' data='./assets/svg/icon_social4.svg' type='image/svg+xml' height='15px'></object>
+											</a></div>
+											<div class='small-menu-search'><a href='#'>Copyright © 2018 World of Travel</a></div> ">
+              <img class="pointer" src="./assets/img/icon-hamburger.png" width="30">
             </a>
           </span>
+          </div>
         </div>
-      </div>
 
     </nav>
     <hr class="full-separator">
@@ -478,7 +534,7 @@
 </section>
 
 
-<div class="container mt-80">
+<div class="container mt-60">
   <div class="row justify-content-center align-items-center content-margin">
     <div class="col-md-12">
       <div class="banner-content text-center">
@@ -522,7 +578,7 @@
               <div class="input-group-btn search-panel">
 
                 <div class="dropdown">
-                  <button type="button" id="recent-button2" class="search-panel btn4 btn-default pointer">
+                  <button type="button" class="pointer search-panel btn4 btn-default" data-toggle="dropdown" id="nearme-button">
                     <span id="search_concept">NEAR ME</span>
                     <span class="searchdown">
                       <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
@@ -560,836 +616,63 @@
 
 <div class="mb-60">
   <div id="container1">
-    <div class="filter-search" id="filter-search" style="width:100%">
+   <div class="filter-search" id="filter-search" style="width:100%">
       <img class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
     </div>
-    <a class="pointer" data-toggle="modal" data-target="#search-item-modal">
+    <a *ngFor="let result of searchResult" class="pointer" data-toggle="modal" data-target="#search-item-modal">
       <div class="item w1 h1">
-        <img class="img-fluid img-search" src="./assets/img/img_search1.png" style="height:180px">
-        <div class="wrapper">
-          <div class="content-search">
-            <div class="content-date">
-              <a class="tooltips" href="#">
-                <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-                <span class="text">Quite Recent</span>
-              </a>
+					<img class="img-fluid img-search" src="{{result.ThumbnailImage}}" style="height:310px">
+					<div class="wrapper">
+						<div class="content-search">
+							<div class="content-date">
+								<a class="tooltips" href="#">
+									<object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
+									<span class="text">Quite Recent</span>
+								</a>
 
-              <div class="date-search">3 April 2018</div>
-            </div>
-            <div class="content-title">
-              <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-            </div>
-            <div class="content-user">
-              <div class="profile-user">
-                <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
+								<div class="date-search">{{result.UpdatedDate}}</div>
+							</div>
+							<div class="content-title">
+								<div class="title-search">{{result.Title}}</div>
+							</div>
+							<div class="content-user">
+								<div class="profile-user">
+									<img src="{{result.BloggerImage}}" id="search-user-img"> {{result.Blogger}}
 
-                <a class="tooltips certified" href="#">
-                  <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
+									<a class="tooltips certified" href="#">
+										<object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
 
-                  <span class="text">Certified</span>
-                </a>
-              </div>
-            </div>
-            <div class="content-article">
-              <div class="content-text">
-                In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
+										<span class="text">Certified</span>
+									</a>
+								</div>
+							</div>
+							<div class="content-article">
+								<div class="content-text">
+									{{result.Description}}
 
-              </div>
-            </div>
+								</div>
+							</div>
 
-          </div>
-          <div class="bottom-icons">
-            <a class="unlike-search pointer" href="#">
-              <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-            </a>
-            <div class="mr-10">335</div>
-
-
-            <a class="text-option">
-              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-              <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-            </a>
-
-          </div>
-
-
-        </div>
-
-      </div>
+						</div>
+						<div class="bottom-icons">
+							<a class="like-search pointer" href="#">
+								<object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
+							</a>
+							<div class="mr-10">{{result.RatingLikes}}</div>
+							<a class="text-option">
+								<div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
+								<div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
+								<div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
+								<div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
+								<div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
+							</a>
+						</div>
+					</div>
+				</div>
     </a>
+    
 
-    <a class="pointer" data-toggle="modal" data-target="#search-item-modal">
-      <div class="item w1 h1">
-        <img class="img-fluid img-search" src="./assets/img/img_search2.png" style="height:310px">
-        <div class="wrapper">
-          <div class="content-search">
-            <div class="content-date">
-              <a class="tooltips" href="#">
-                <object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-                <span class="text">Quite Recent</span>
-              </a>
 
-              <div class="date-search">3 April 2018</div>
-            </div>
-            <div class="content-title">
-              <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-            </div>
-            <div class="content-user">
-              <div class="profile-user">
-                <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-                <a class="tooltips certified" href="#">
-                  <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
-
-                  <span class="text">Certified</span>
-                </a>
-              </div>
-            </div>
-            <div class="content-article">
-              <div class="content-text">
-                In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-              </div>
-            </div>
-
-          </div>
-          <div class="bottom-icons">
-            <a class="like-search pointer" href="#">
-              <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-            </a>
-            <div class="mr-10">335</div>
-            <a class="text-option">
-              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-              <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-            </a>
-          </div>
-        </div>
-  
-    </div>
-    </a>
-
-
-    <a class="pointer" data-toggle="modal" data-target="#search-item-modal">
-      <div class="item w1 h1">
-        <img class="img-fluid img-search" src="./assets/img/img_search3.png" style="height:240px">
-        <div class="wrapper">
-          <div class="content-search">
-            <div class="content-date">
-              <a class="tooltips" href="#">
-                <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-                <span class="text">Quite Recent</span>
-              </a>
-
-              <div class="date-search">3 April 2018</div>
-            </div>
-            <div class="content-title">
-              <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-            </div>
-            <div class="content-user">
-              <div class="profile-user">
-                <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-                <a class="tooltips" href="#">
-                  <img src="" class="icon-profile-search">
-                  <span class="text">Certified</span>
-                </a>
-              </div>
-            </div>
-            <div class="content-article">
-              <div class="content-text">
-                In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-              </div>
-            </div>
-
-          </div>
-          <div class="bottom-icons">
-            <a class="like-search pointer" href="#">
-              <object id="svg1" data="./assets/svg/icon-like-liked.svg" type="image/svg+xml" width="41" height="20" class="icon-like-search"></object>
-            </a>
-            <div class="mr-10">335</div>
-            <a class="text-option">
-              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-              <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </a>
-
-
-    <a class="pointer" data-toggle="modal" data-target="#search-item-modal">
-      <div class="item w1 h1">
-        <img class="img-fluid img-search" src="./assets/img/img_search4.png" style="height:240px">
-        <div class="wrapper">
-          <div class="content-search">
-            <div class="content-date">
-              <a class="tooltips" href="#">
-                <object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-                <span class="text">Quite Recent</span>
-              </a>
-
-              <div class="date-search">3 April 2018</div>
-            </div>
-            <div class="content-title">
-              <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-            </div>
-            <div class="content-user">
-              <div class="profile-user">
-                <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-                <a class="tooltips" href="#">
-                  <img src="" class="icon-profile-search">
-                  <span class="text">Certified</span>
-                </a>
-              </div>
-            </div>
-            <div class="content-article">
-              <div class="content-text">
-                In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-              </div>
-            </div>
-
-          </div>
-          <div class="bottom-icons">
-            <a class="like-search pointer" href="#">
-              <object id="svg1" data="./assets/svg/icon-like-liked.svg" type="image/svg+xml" width="41" height="20" class="icon-like-search"></object>
-            </a>
-            <div class="mr-10">335</div>
-            <a class="text-option">
-              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-              <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </a>
-
-    <a class="pointer" data-toggle="modal" data-target="#search-item-modal">
-      <div class="item w1 h1">
-        <img class="img-fluid img-search" src="./assets/img/img_search5.png"  style="height:490px">
-        <div class="wrapper">
-          <div class="content-search">
-            <div class="content-date">
-              <a class="tooltips" href="#">
-                <object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-                <span class="text">Quite Recent</span>
-              </a>
-
-              <div class="date-search">3 April 2018</div>
-            </div>
-            <div class="content-title">
-              <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-            </div>
-            <div class="content-user">
-              <div class="profile-user">
-                <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-                <a class="tooltips" href="#">
-                  <img src="" class="icon-profile-search">
-                  <span class="text">Certified</span>
-                </a>
-              </div>
-            </div>
-            <div class="content-article">
-              <div class="content-text">
-                In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-              </div>
-            </div>
-
-          </div>
-          <div class="bottom-icons">
-            <a class="like-search pointer" href="#">
-              <object id="svg1" data="./assets/svg/icon-like-liked.svg" type="image/svg+xml" width="41" height="20" class="icon-like-search"></object>
-            </a>
-            <div class="mr-10">335</div>
-            <a class="text-option">
-              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-              <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </a>
-
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search6.png" style="height:280px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search8.png" style="height:490px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search9.png" style="height:490px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-liked.svg" type="image/svg+xml" width="41" height="20" class="icon-like-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search7.png" style="height:180px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips quite-recent" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <a class="pointer" data-toggle="modal" data-target="#search-item-modal">
-      <div class="item w1 h1">
-        <img class="img-fluid img-search" src="./assets/img/img_search10.png" style="height:185px">
-        <div class="wrapper">
-          <div class="content-search">
-            <div class="content-date">
-              <a class="tooltips" href="#">
-                <object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-                <span class="text">Quite Recent</span>
-              </a>
-
-              <div class="date-search">3 April 2018</div>
-            </div>
-            <div class="content-title">
-              <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-            </div>
-            <div class="content-user">
-              <div class="profile-user">
-                <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-                <a class="tooltips certified" href="#">
-                  <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
-
-                  <span class="text">Certified</span>
-                </a>
-              </div>
-            </div>
-            <div class="content-article">
-              <div class="content-text">
-                In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-              </div>
-            </div>
-
-          </div>
-          <div class="bottom-icons">
-            <a class="like-search pointer" href="#">
-              <object id="svg1" data="./assets/svg/icon-like-liked.svg" type="image/svg+xml" width="41" height="20" class="icon-like-search"></object>
-            </a>
-            <div class="mr-10">335</div>
-            <a class="text-option">
-              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-              <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-              <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-            </a>
-          </div>
-        </div>
-    </div>
-    </a>
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search3.png" style="height:240px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search5.png" style="height:490px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search4.png" style="height:240px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search1.png" style="height:180px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="item w1 h1">
-      <img class="img-fluid img-search" src="./assets/img/img_search6.png" style="height:280px">
-      <div class="wrapper">
-        <div class="content-search">
-          <div class="content-date">
-            <a class="tooltips" href="#">
-              <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-              <span class="text">Quite Recent</span>
-            </a>
-
-            <div class="date-search">3 April 2018</div>
-          </div>
-          <div class="content-title">
-            <div class="title-search">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
-          </div>
-          <div class="content-user">
-            <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img"> DAVE BUILMER
-
-              <a class="tooltips" href="#">
-                <img src="" class="icon-profile-search">
-                <span class="text">Certified</span>
-              </a>
-            </div>
-          </div>
-          <div class="content-article">
-            <div class="content-text">
-              In id nulla vite ligula fermm mollis praesent egestas temus dui in aliam vestibum vite
-
-            </div>
-          </div>
-
-        </div>
-        <div class="bottom-icons">
-          <a class="like-search pointer" href="#">
-            <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
-          </a>
-          <div class="mr-10">335</div>
-          <a class="text-option">
-            <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div>
-            <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div>
-            <div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div> "></div>
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
-
-<footer class="footer-area">
-  <div class="container">
-    <div class="row justify-content-center align-items-center">
-      <div class="footer-social  align-items-center">
-        <div class="row justify-content-center align-items-center mb-30">
-          <object id="svg1" data="./assets/svg/logo-white.svg" type="image/svg+xml" height="45px"></object>
-        </div>
-        <div class="row justify-content-center align-items-center">
-          <a href="#">
-            <object id="svg1" data="./assets/svg/icon_social1.svg" type="image/svg+xml" height="20px"></object>
-          </a>
-          <a href="#">
-            <object id="svg1" data="./assets/svg/icon_social2.svg" type="image/svg+xml" height="20px"></object>
-          </a>
-          <a href="#">
-            <object id="svg1" data="./assets/svg/icon_social3.svg" type="image/svg+xml" height="20px"></object>
-          </a>
-          <a href="#">
-            <object id="svg1" data="./assets/svg/icon_social4.svg" type="image/svg+xml" height="20px"></object>
-          </a>
-
-        </div>
-
-        <div class="container d-flex">
-          <div class="textboxart text-center">
-            <p>
-              <font color="white">
-                <div class="footerabout">
-                  <a class="text-white" href="">OUR STORY</a>
-                </div>
-                <div class="footerabout">|</div>
-                <div class="footerabout">
-                  <a class="text-white" href="">CONTACT US</a>
-                </div>
-                <div class="footerabout">|</div>
-                <div class="footerabout">
-                  <a class="text-white" href="">SITE MAP</a>
-                </div>
-                <div class="footerabout">|</div>
-                <div class="footerabout">
-                  <a class="text-white" href="">TERMS & CONDITIONS</a>
-                </div>
-                <div class="footerabout">|</div>
-                <div class="footerabout">
-                  <a class="text-white" href="">PRIVACY POLICY</a>
-                </div>
-
-              </font>
-            </p>
-
-          </div>
-        </div>
-
-        <div class="row justify-content-center align-items-center">
-          <p>
-            <font color="white" size="1">Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> World of Travel</font>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+<app-footer> </app-footer>

@@ -26,6 +26,7 @@ import { HomeSearchService } from './about-area/home-search.service';
 import { SearchService } from './travel-search/search.service';
 import { SearchpageComponent } from './searchpage/searchpage.component';
 import { SearchPageService } from './searchpage/search-page.service';
+import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 
 import { NgSelectModule } from '@ng-select/ng-select';
 @NgModule({
@@ -43,6 +44,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     SigninComponent,
     TravelSearchComponent,
     SearchpageComponent,
+    SideNavbarComponent,
   ],
   imports: [
     BrowserModule,

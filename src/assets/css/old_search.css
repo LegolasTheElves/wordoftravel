@@ -485,7 +485,6 @@ font-family: "Raleway";
 
 
 .popover-style {
-  right: 0px !important;
   background-color: #313131;
   color: #ffffff;
   font-family: "Raleway";
@@ -884,8 +883,7 @@ fieldset[disabled] .btn-popapply.active {
   float: left;
 }
 
-.modal-dialog {
-  margin-top: 15vh;
+.modal-dialog{
   width: 900px;
 }
 
@@ -899,7 +897,7 @@ fieldset[disabled] .btn-popapply.active {
   content: "";
   display: block;
   position: fixed;
-  top: 210px;
+  top: 185px;
   left: 258px;
   bottom: auto;
   width: 0;
@@ -1294,14 +1292,6 @@ span.textbutton {
 }
 
 @media (max-width: 992px){
-
-  .is-sticky .default-header .navbar-nav a:hover {
-    border-top: none !important;
-  }
-  
-  .default-header .navbar-nav a:hover {
-    border-top: none !important;
-  }
 
   .modal-footer {
     justify-content: center !important;
@@ -1803,7 +1793,7 @@ span.textbutton {
 }
 
 .modal-img {
-  margin-top: 129px;
+  margin-top: 100px;
   max-width: 249px;
 }
 
