@@ -619,9 +619,9 @@
    <div class="filter-search" id="filter-search" style="width:100%">
       <img class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
     </div>
-    <a *ngFor="let result of searchResult" class="pointer" data-toggle="modal" data-target="#search-item-modal">
+    <a *ngFor="let result of searchResult" class="pointer" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>
       <div class="item w1 h1">
-					<img class="img-fluid img-search" src="{{result.ThumbnailImage}}" style="height:310px">
+					<img class="img-fluid img-search" src="{{result.ThumbnailImage}}" style="min-height:310px;min-width:250px;">
 					<div class="wrapper">
 						<div class="content-search">
 							<div class="content-date">

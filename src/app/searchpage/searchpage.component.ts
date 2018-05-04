@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren } from '@angular/core';
 import { SearchPageService } from './search-page.service';
 import { SearchPage } from './searchpage';
 
 import {ActivatedRoute} from "@angular/router";
+
+declare function loadisotope();
 
 @Component({
   selector: 'app-searchpage',
@@ -14,6 +16,8 @@ export class SearchpageComponent implements OnInit {
   searchResult: SearchPage[];
   searchTerm: any;
 
+  @ViewChildren('isotopeitems') items: any;
+
   constructor(private searchApiService: SearchPageService, private route: ActivatedRoute) { 
     this.route.params.subscribe( params => {
       this.searchTerm = params.term;
@@ -22,6 +26,12 @@ export class SearchpageComponent implements OnInit {
 
   ngOnInit() {
     this.getSearchResult();
+  }
+
+  ngAfterViewInit() {
+    this.items.changes.subscribe(t => {
+      loadisotope();
+    })
   }
 
   getSearchResult(): void {
