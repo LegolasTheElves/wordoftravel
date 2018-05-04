@@ -437,7 +437,7 @@ td, th {
 }
 
 .mb-90 {
-  margin-bottom: 90px;
+  margin-bottom: 90px !important;
 }
 
 .mb-100 {
@@ -637,11 +637,20 @@ td, th {
 
 @media (max-width: 992px) {
 
-    .align-items-center {
-      text-align: center;
-    }
+  .align-items-center{
+    text-align: center;
+  }
   .buttonright {
     text-align: center;
+  }
+
+  #article{
+    padding: 20px 30px 0; 
+    text-align:justify;
+  }
+
+  .inline-label {
+    font-size:12px;
   }
 }
 
@@ -1920,7 +1929,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .navbar-brand-search{
-    padding-left:1.6rem;
+    margin-left: 20px;
+  }
+  
+  .is-sticky .navbar-brand-search{
+    margin-left: 20px;
   }
 
   .navbar-toggler{
@@ -1973,17 +1986,19 @@ padding-top: 25px;
   height:10px;
 }
 
+
 .is-sticky .default-header .navbar-nav a:hover {
   font-weight: 600;
   border-top: 5px solid #a967aa;
-  padding-top: 16px;
+  padding-top: 22px;
 }
 
 .default-header .navbar-nav a:hover {
   font-weight: 600;
   border-top: 5px solid #a967aa;
-  padding-top: 21px;
+  padding-top: 22px;
 }
+
 
 
 .is-sticky .default-header .navbar-nav a .nohover:hover {
@@ -3934,8 +3949,8 @@ fieldset[disabled] .btn-readmore.active {
   letter-spacing: 0px;
   padding-top: 6px;
   padding-bottom: 6px;
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
 } 
  
 .btn-destreadmore:hover, 
@@ -4873,7 +4888,13 @@ fieldset[disabled] .btn-poplogout.active {
 
 
 @media (max-width: 992px) {
+
+  .is-sticky .default-header {
+    padding-top: 5px !important;
+  }
+
   .navbar-toggler:not(:disabled):not(.disabled) {
+    margin-right: 8px !important;
     outline: none;
   }
 
@@ -4968,7 +4989,11 @@ fieldset[disabled] .btn-poplogout.active {
   }
 
   .is-sticky .navbar-brand {
-    margin-left: 0px;
+    margin-left: 20px;
+  }
+
+  .navbar-brand {
+    margin-left: 20px;
   }
 
   .btn1, .btn1-search {
@@ -4977,7 +5002,7 @@ fieldset[disabled] .btn-poplogout.active {
 
   .btn2 {
     padding-right: 0px;
-    padding-top: 0px;
+    padding-top: 6px;
   }
 
   .form-control {
@@ -5160,4 +5185,9 @@ height: 35px;
 .col-lg-5.col-md-8.mb-30 {
   padding-left: 2px !important;
   padding-right: 2px !important;
+}
+
+.nav-search a {
+  color: #133560 !important;
+  
 }

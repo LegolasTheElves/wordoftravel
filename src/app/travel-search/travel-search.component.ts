@@ -17,7 +17,6 @@ declare let $: any;
 })
 export class TravelSearchComponent implements OnInit {
 
-  travel$: Observable<TravelSearch[]>;
 
 	// for suggestions
 	suggestions = [];
@@ -25,32 +24,12 @@ export class TravelSearchComponent implements OnInit {
 	suggestionTypeahead = new Subject<string>();
 	selectedSuggestion;
 
-  private searchTerms = new Subject<string>();
-
   constructor(
 		private searchService: SearchService,
 		private cd: ChangeDetectorRef,
 		private router: Router
 	) { }
-
-  // Push a search term into the observable stream.
-  search(term: string): void {
-    this.searchTerms.next(term);
-  }
-
   ngOnInit(): void {
-    this.travel$ = this.searchTerms
-    .pipe(
-      // wait 300ms after each keystroke before considering the term
-      debounceTime(300),
-
-      // ignore new term if same as previous term
-      distinctUntilChanged(),
-
-      // switch to new search observable each time the term changes
-      switchMap((term: string) => this.searchService.searchTravel(term)),
-    )
-
 		// typehead for pipe
 		this.suggestionTypeahead.pipe(
 			tap(() => this.suggestionsLoading = true),

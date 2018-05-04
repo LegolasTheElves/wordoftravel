@@ -538,8 +538,8 @@ font-family: "Raleway";
   justify-content: center;
   align-content: center;
   float:right;
-  left:-430px; 
-  top: 275px;
+  left:-430px;
+  top: 39vh;
 }
 
 #modal-container-search {
@@ -1344,9 +1344,6 @@ span.textbutton {
     overflow: visible !important;
   }
 
-  .floating-refine-search {
-    display: none !important;
-  }
 
 
 
@@ -1476,12 +1473,12 @@ span.textbutton {
 }
 
   .date-search {
-    font-size: 12px !important;
+    font-size: 11px !important;
     width: 89% !important;
 }
 
 .title-search {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 
@@ -1490,20 +1487,20 @@ span.textbutton {
 }
 
 .content-text {
-  font-size: 8px;
+  font-size: 10px;
   line-height: 11px;
 }
 
 .profile-user {
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 0px;
 }
 
 .content-search {
-  height: 120px;
+  height: 128px;
 }
 .wrapper {
-  height: 160px;
+  height: 170px;
 }
 
 .like-search {
@@ -1516,9 +1513,34 @@ span.textbutton {
 
 }
 
+@media (min-width: 650px) {
 
+  .owl-carousel-icons {
+    display: none !important;
+  }
+  .icons-for-desktop {
+    display: inherit !important;
+    width: 100%;
+    
+  }
+  
+}
+
+@media (max-width: 650px) {
+
+  .icons-for-desktop {
+    display: none !important;
+  }
+  
+  .owl-carousel-icons .owl-nav {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    top: 20% !important;
+  }
+}
 
     @media (min-width: 481px) and  (max-width: 520px) {
+
 
       .modal-header {
         height: 235px;
@@ -1556,9 +1578,9 @@ span.textbutton {
       
       .item {
         float: left;
-        margin-left: 10px;
+        margin-left: 5px;
         margin-bottom: 10px;
-        max-width: 220px !important;
+        max-width: 230px !important;
       }
       
       }
@@ -1581,16 +1603,15 @@ span.textbutton {
 
     @media (min-width: 401px) and  (max-width: 440px) {
       #container1 {
-        padding: 20px 10px;
+        padding: 20px 0px;
         margin: 0px auto;
-
       }
       
       .item {
         float: left;
-        margin-left: 10px;
+        margin-left: 3px;
         margin-bottom: 10px;
-        max-width: 178px !important;
+        max-width: 182px !important;
       }
       
       }
@@ -1619,6 +1640,16 @@ span.textbutton {
       }
       @media (min-width: 360px) and  (max-width: 400px) {
 
+        .content-search {
+          height: 140px;
+        }
+        .wrapper {
+          height: 180px;
+        }
+
+        .profile-user {
+          font-size: 12px;
+        }
 
         .modal-header {
           height: 250px;
@@ -1667,15 +1698,15 @@ span.textbutton {
       }
 
         #container1 {
-          padding: 20px 10px;
+          padding: 20px 0px;
           margin: 0px auto;
         }
         
         .item {
           float: left;
-          margin-left: 0px;
+          margin-left: 3px;
           margin-bottom: 10px;
-          max-width: 145px !important;
+          max-width: 140px !important;
         }
 
      
@@ -1724,29 +1755,11 @@ span.textbutton {
     margin: 0px 1px;
   }
 
-  .dropdown-menu a {
-    padding: 3px 23px 5px 59px;
-}
-
-  .btn1, .btn1-search {
-    display: none;
-  }
-
-  .dropdown-menu a {
-    padding: 3px 45px 5px 15px !important;
-    }
-  
-  input.form-control {
-    padding: 13px !important;
-  }
- 
 }
 
 
 @media (min-device-width: 375px) and (max-device-width: 411px){
-  .dropdown-menu a {
-    padding: 3px 23px 5px 60px !important;
-}
+
   .modal-arrow{  
     top: 200px  !important;
     left: 45%  !important;
@@ -1758,18 +1771,6 @@ span.textbutton {
 
   .tag-content-bottom {
     margin: 0px 3px;
-  }
-
-  .btn1, .btn1-search {
-    display: none;
-  }
-
-  .dropdown-menu a {
-    padding: 3px 45px 5px 15px !important;
-    }
-  
-  input.form-control {
-    padding: 13px !important;
   }
  
 }
@@ -1787,10 +1788,6 @@ span.textbutton {
 
   .modal-header {
     height: 290px;
-  }
-
-  .dropdown-menu a {
-  padding: 3px 45px 5px 64px !important;
   }
 
 }
@@ -1816,3 +1813,16 @@ span.textbutton {
 .modal-content-box {
   top:15px;margin-left:20px; max-width:520px;
 }
+
+.style-close-bottom {
+  top: -300px !important;
+}
+
+@media (max-device-width: 414px){
+.form-control {
+  width: 35% !important;
+}
+}
+
+
+  

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
 @import "~@ng-select/ng-select/themes/default.theme.css";
 /*@import "~@ng-select/ng-select/themes/material.theme.css";*/
 
@@ -16,6 +17,71 @@
 	top: 0;
 }
 
+.ng-select .ng-select-container .ng-value-container .ng-input>input {
+	color: #063160;
+	font-size: 22px !important;
+	font-family: "Raleway";
+	font-weight: 700;
+	width: auto !important;
+}
+
 .ng-select .ng-arrow-wrapper {
 	display: none;
+}
+
+.ng-dropdown-panel .scroll-host {
+	overflow-y: hidden !important;
+  }
+
+
+
+.ng-option-label {
+	border-color: white;
+	color: #063160;
+	font-size: 22px !important;
+	font-family: "Raleway";
+	font-weight: 700;
+	margin-left: 60px !important;
+	z-index: 2;
+	width: auto !important;
+	text-align: left;
+  }
+  
+  .ng-dropdown-panel.ng-select-bottom {
+	border-top-color: none;
+	border-bottom-left-radius: 0.50rem;
+	border-bottom-right-radius: 0.50rem;
+  }
+
+  .ng-dropdown-panel {
+    background-color: #fff;
+	border: none;
+	display: block;
+    opacity: 0.9 !important;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
+  
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    background-color: unset !important;
+	color: #000000;
+}
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+	border-bottom: 1px solid #DDDDDD;
+	padding: 0px 0px;
+  }
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option:last-child {
+	border-bottom: unset;
+  }
+
+  .ng-select .ng-select-container .ng-value-container .ng-placeholder {
+	  color: #063160;
+  }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-disabled {
+    color: #063160;
 }
