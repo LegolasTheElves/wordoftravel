@@ -3,16 +3,6 @@
 }
 
 .ng-select.suggestion .ng-select-container  {
+  
 }
-.ng-dropdown-panel{
-  display:none !important;
-  width: 100%;
-  margin-top: -5px;
-  height: 20px;
-  display: inline-table;
-  opacity: .9;
-  z-index: 9;
-  border-radius: 0px;
-  border-bottom-right-radius: 0.45em;
-  border-bottom-left-radius: 0.45em;
-}
+

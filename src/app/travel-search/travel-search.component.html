@@ -2,34 +2,27 @@
   <div class="container">
     <div class="row justify-content-center align-items-center hero-text">
       <div class="col-md-12">
-
         <div class="banner-content text-center">
           <div class="textmedium text-white mb-10">Read about real experiences,</div>
           <div class="textbold text-uppercase text-white mb-30">written by real travellers</div>
-
           <div class="row no-margin">
             <div class="col-md-12 search-form-container">
               <div class="input-group" id="input-source">
-
-
-
                 <div class="input-group-btn search-panel text-center align-content-center">
-
                   <button class="search-panel btn1" type="button">
                     <object id="svg1" data="./assets/svg/btn_pin.svg" type="image/svg+xml" width="51" height="25"></object>
                   </button>
                 </div>
-
-
-                <ng-select 
-                [items]="suggestions" 
-                bindLabel="text" 
-                autocommplete="off" 
-                [loading]="suggestionsLoading" 
-                [typeahead]="suggestionTypeahead"
-                class="form-control suggestion" 
-                placeholder="Where to?" [clearable]=false 
-                [(ngModel)]="selectedSuggestion">
+                <ng-select
+                 [items]="suggestions"
+                 bindLabel="text"
+                 autocommplete="off"
+                 [loading]="suggestionsLoading" 
+                 [typeahead]="suggestionTypeahead"
+                  class="form-control suggestion" 
+                  placeholder="Where to?" 
+                  [clearable]=false 
+                  [(ngModel)]="selectedSuggestion">
                 </ng-select>
 
 
