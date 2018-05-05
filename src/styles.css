@@ -46,7 +46,7 @@
 	width: auto !important;
 	text-align: left;
   }
-  
+
   .ng-dropdown-panel.ng-select-bottom {
 	border-top-color: none;
 	border-bottom-left-radius: 0.50rem;
@@ -64,7 +64,7 @@
     -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
   }
-  
+
   .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
     background-color: unset !important;
 	color: #000000;
@@ -84,4 +84,9 @@
 
   .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-disabled {
     color: #063160;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+	width: 100% !important;
+	left: 0 !important;
 }

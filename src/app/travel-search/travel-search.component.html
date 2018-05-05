@@ -16,11 +16,12 @@
                  [items]="suggestions"
                  bindLabel="text"
                  autocommplete="off"
-                 [loading]="suggestionsLoading" 
+                 [loading]="suggestionsLoading"
                  [typeahead]="suggestionTypeahead"
-                  class="form-control suggestion" 
-                  placeholder="Where to?" 
-                  [clearable]=false 
+                  class="form-control suggestion"
+                  placeholder="Where to?"
+                  [clearable]=false
+                  appendTo=".search-form-container"
                   [(ngModel)]="selectedSuggestion">
                 </ng-select>
 
