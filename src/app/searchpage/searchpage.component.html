@@ -431,16 +431,18 @@
   
   
                   <ng-select
-                  [items]="suggestions"
-                  bindLabel="text"
-                  autocommplete="off"
-                  [loading]="suggestionsLoading" 
-                  [typeahead]="suggestionTypeahead"
-                   class="form-control suggestion" 
-                   placeholder="{{searchName}}" 
-                   [clearable]=false 
-                   [(ngModel)]="selectedSuggestion">
-                 </ng-select>
+                 [items]="suggestions"
+                 bindLabel="text"
+                 autocommplete="off"
+                 [loading]="suggestionsLoading"
+                 [typeahead]="suggestionTypeahead"
+                  class="form-control suggestion"
+                  placeholder="Where to?"
+                  [clearable]=false
+                  appendTo=".search-form-container"
+                  [(ngModel)]="selectedSuggestion">
+                </ng-select>
+                
               <div class="input-group-btn search-panel text-center align-content-center">
                   <div class="dropdown">
                     <button class="search-panel btn2 btn-default" type="button" id="search-button" (click)="onClickSearch()" routerLink="/wordoftravel/destination/{{selectedSuggestion}}">

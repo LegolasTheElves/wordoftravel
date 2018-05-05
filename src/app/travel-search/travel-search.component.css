@@ -1,3 +1,6 @@
 #search-button {
 	cursor: pointer
 }
+.ng-select.suggestion {
+    text-align: left;
+}

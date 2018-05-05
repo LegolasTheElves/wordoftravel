@@ -91,4 +91,5 @@
 .ng-dropdown-panel.ng-select-bottom {
 	width: 100% !important;
 	left: 0 !important;
+	text-align: left;
 }
