@@ -25,12 +25,10 @@
                   [(ngModel)]="selectedSuggestion">
                 </ng-select>
 
-
-
                 <div class="input-group-btn search-panel text-center align-content-center">
                   <div class="dropdown">
                     <button class="search-panel btn2 btn-default" type="button" id="search-button" (click)="onClickSearch()" routerLink="/wordoftravel/destination/{{selectedSuggestion}}">
-                      <object id="svg1" data="./assets/svg/btn_search.svg" type="image/svg+xml" width="51" height="25"></object>
+                      <fa name="search" size="2x"></fa>
                     </button>
                   </div>
                 </div>

@@ -1,8 +1,3 @@
-.ng-select.suggestion {
-    text-align: left;
+#search-button {
+	cursor: pointer
 }
-
-.ng-select.suggestion .ng-select-container  {
-  
-}
-

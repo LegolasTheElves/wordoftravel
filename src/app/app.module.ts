@@ -29,6 +29,8 @@ import { SearchPageService } from './searchpage/search-page.service';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 
 import { NgSelectModule } from '@ng-select/ng-select';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-		NgSelectModule
+		NgSelectModule,
+		AngularFontAwesomeModule,
   ],
   providers: [
     TravelArticleService,
