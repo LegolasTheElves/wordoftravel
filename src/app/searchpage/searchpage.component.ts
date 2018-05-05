@@ -15,15 +15,17 @@ export class SearchpageComponent implements OnInit {
   errorMessage: string;
   searchResult: SearchPage[];
   searchTerm: any;
+  searchName: any;
 
   @ViewChildren('isotopeitems') items: any;
 
   constructor(private searchApiService: SearchPageService, private route: ActivatedRoute) { 
     this.route.params.subscribe( params => {
       this.searchTerm = params.term;
+      this.searchName = this.searchTerm.split(/[0-9.\-_]+/);
+      
     });
   }
-
   ngOnInit() {
     this.getSearchResult();
   }
