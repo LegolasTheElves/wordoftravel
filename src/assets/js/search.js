@@ -15,7 +15,7 @@ $(function () {
     colW = 240;
   }
   else {
-    colW = 252;
+    colW = 248;
   }
 
 });

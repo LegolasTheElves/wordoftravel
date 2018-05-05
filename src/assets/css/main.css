@@ -3255,11 +3255,12 @@ table .img {
   padding: 20px;
   margin: 0px auto;
   min-height: 600px;
+  overflow: visible;
 }
 
 .item {
   float: left;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   width: 238px;
 }
 
@@ -4796,10 +4797,18 @@ fieldset[disabled] .btn-poplogout.active {
     position: absolute;
     right: 15px;
   }
+
+  .item {
+    margin-bottom: 30px !important;
+  }
 }
 
 
 @media (max-width: 580px) {
+
+.item{
+  margin-bottom: 20px !important;
+}
 
   .content-margin {
     margin-bottom: 70px !important;
