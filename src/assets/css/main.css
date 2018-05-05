@@ -3255,13 +3255,13 @@ table .img {
   padding: 20px;
   margin: 0px auto;
   min-height: 600px;
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .item {
   float: left;
   margin-bottom: 40px;
-  width: 238px;
+  width: 235px;
 }
 
 /* no transition on .isotope container */
