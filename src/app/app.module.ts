@@ -27,6 +27,7 @@ import { TravelDestinationService } from './featured-destination/travelDestinati
 import { HomeSearchService } from './about-area/home-search.service';
 import { SearchService } from './travel-search/search.service';
 import { SearchpageComponent } from './searchpage/searchpage.component';
+import { SearchDetailsComponent } from './searchpage/sub/details/details-component';
 import { SearchPageService } from './searchpage/search-page.service';
 import { PopoverComponent } from './popover/popover.component';
 
@@ -48,6 +49,7 @@ import { PopoverComponent } from './popover/popover.component';
     TravelSearchComponent,
     SearchpageComponent,
     PopoverComponent,
+		SearchDetailsComponent,
   ],
   imports: [
     BrowserModule,

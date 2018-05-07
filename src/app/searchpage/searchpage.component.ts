@@ -25,6 +25,7 @@ export class SearchpageComponent implements OnInit {
   suggestionTypeahead = new Subject<string>();
   selectedSuggestion;
 
+	selectedItem = {};
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -93,4 +94,8 @@ export class SearchpageComponent implements OnInit {
     this.getSearchResult();
   }
 
+	selectItem(item) {
+		this.selectedItem = item;
+		console.log( item );
+	}
 }
