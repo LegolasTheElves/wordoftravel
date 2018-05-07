@@ -45,6 +45,7 @@
     width: 90%;
     height: 35px;
     margin: 0px 0px 0px 18px;
+    overflow: hidden;
 }
 
  .title-search {
@@ -55,6 +56,7 @@
     font-weight: 800;
     letter-spacing: 0rem;
     line-height: 16px;
+    overflow: hidden;
   }
 
  .content-user {
@@ -79,6 +81,7 @@
     letter-spacing: 0rem;
     line-height: 16px;
     margin-top: 4px;
+    overflow: hidden;
   }
 
   .icon-profile-search {
@@ -90,6 +93,8 @@
     width: 88%;
     height: 25px;
     margin: 0px 6%;
+    height: 50px;
+    overflow: hidden;
 }
 
 .content-text {
