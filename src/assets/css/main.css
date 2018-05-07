@@ -3254,14 +3254,14 @@ table .img {
 #container1 {
   padding: 20px;
   margin: 0px auto;
-  min-height: 600px;
-  overflow: visible;
+  min-height: 420px;
+  overflow: visible !important;
 }
 
 .item {
   float: left;
   margin-bottom: 40px;
-  width: 238px;
+  width: 235px;
 }
 
 /* no transition on .isotope container */
