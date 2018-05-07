@@ -444,6 +444,7 @@ font-family: "Raleway";
 }
 
 .subhead-search {
+  text-align: center;
   letter-spacing: 0px;
   font-size: 20px;
   margin: 0 auto 20px auto;

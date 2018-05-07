@@ -114,7 +114,7 @@
   background: transparent;
 }
 
-@media (max-device-width: 580px) {
+@media (max-width: 580px) {
   .ng-dropdown-panel.ng-select-bottom {
     margin-top: 45px !important;
     border-top-left-radius: 0rem !important;
