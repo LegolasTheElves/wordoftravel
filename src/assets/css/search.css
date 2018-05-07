@@ -43,7 +43,7 @@
 
   .content-title {
     width: 90%;
-    height: 35px;
+    height: 47px;
     margin: 0 6%;
     overflow: hidden;
 }
@@ -1809,14 +1809,19 @@ span.textbutton {
 }
 
 .modal-img {
-  margin-top: 129px;
   max-width: 249px;
+  height: 483px;
+  background: none;
+  border: none;
 }
 
 .modal-img-style {
   padding:0rem; 
   overflow:hidden;
   border-radius:15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .modal-content-box {
@@ -1833,5 +1838,7 @@ span.textbutton {
 }
 }
 
-
-  
+.modal-img-style img {
+   border-radius: 15px;
+   vertical-align: middle !important;
+}
