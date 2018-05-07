@@ -437,7 +437,7 @@
                  [loading]="suggestionsLoading"
                  [typeahead]="suggestionTypeahead"
                   class="form-control suggestion"
-                  placeholder="Where to?"
+                  placeholder="{{searchName | titlecase}}"
                   [clearable]=false
                   appendTo=".search-form-container"
                   [(ngModel)]="selectedSuggestion">
@@ -499,7 +499,7 @@
 
 
     </div>
-    <div class="subheadtext subhead-search">{{searchName}}, Everything about {{searchName}}, {{searchName}} Destinations, Bloggers talking about {{searchName}}</div>
+    <div class="subheadtext subhead-search">{{searchName | titlecase}}, Everything about {{searchName | titlecase}}, {{searchName | titlecase}} Destinations, Bloggers talking about {{searchName | titlecase}}</div>
   </div>
 </div>
 <!--End of Search-->
@@ -550,8 +550,6 @@
               <object id="svg1" data="./assets/svg/icon-like-unliked.svg" type="image/svg+xml" width="41" height="20" class="icon-unlike-search"></object>
             </a>
             <div class="mr-10">{{result.RatingLikes}}</div>
-
-
             <a class="text-option">
               <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="
               <div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div>

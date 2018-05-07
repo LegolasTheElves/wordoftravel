@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 //component
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -26,10 +28,9 @@ import { HomeSearchService } from './about-area/home-search.service';
 import { SearchService } from './travel-search/search.service';
 import { SearchpageComponent } from './searchpage/searchpage.component';
 import { SearchPageService } from './searchpage/search-page.service';
-import { SideNavbarComponent } from './side-navbar/side-navbar.component';
+import { PopoverComponent } from './popover/popover.component';
 
-import { NgSelectModule } from '@ng-select/ng-select';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     SigninComponent,
     TravelSearchComponent,
     SearchpageComponent,
-    SideNavbarComponent,
+    PopoverComponent,
   ],
   imports: [
     BrowserModule,
