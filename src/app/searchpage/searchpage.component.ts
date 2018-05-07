@@ -25,7 +25,7 @@ export class SearchpageComponent implements OnInit {
   suggestionTypeahead = new Subject<string>();
   selectedSuggestion;
 
-	selectedItem = {};
+  selectedItem = {};
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -39,7 +39,6 @@ export class SearchpageComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.searchTerm = params.term;
       this.searchName = this.searchTerm.split(/[0-9\-_]+/).join('');
-
     });
   }
   ngOnInit() {
@@ -69,13 +68,13 @@ export class SearchpageComponent implements OnInit {
       //this.suggestionsLoading = false;
     });
   }
-
+  //Load isotope
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       loadisotope();
     })
   }
-
+//Get result from API
   getSearchResult(): void {
     this.searchApiService.getSearch(this.searchTerm)
       .subscribe(
@@ -84,6 +83,7 @@ export class SearchpageComponent implements OnInit {
         },
         error => this.errorMessage = <any>error);
   }
+  //Search in search page
   onClickSearch() {
     const selected = this.selectedSuggestion;
     if (!selected) {
@@ -93,9 +93,9 @@ export class SearchpageComponent implements OnInit {
     this.router.navigate(['/wordoftravel/destination/', selected.text + "-" + selected._id]);
     this.getSearchResult();
   }
-
-	selectItem(item) {
-		this.selectedItem = item;
-		console.log( item );
-	}
+  //Modal popup
+  selectItem(item) {
+    this.selectedItem = item;
+    console.log(item);
+  }
 }

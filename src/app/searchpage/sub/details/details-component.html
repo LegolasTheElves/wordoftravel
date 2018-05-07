@@ -5,7 +5,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content modal-img">
         <div class="modal-body modal-img-style">
-          <img src="./assets/img/img_featured5.jpg" class="img-item-modal">
+          <img src="./assets/img/img_search4.png" class="img-item-modal">
         </div>
 
       </div>
@@ -21,16 +21,17 @@
                 <span class="text">Quite Recent</span>
               </a>
 
-              <div class="date-search">3 April 2018</div>
+              <div class="date-search">{{item.UpdatedDate | date: 'dd'}} {{item.UpdatedDate | date:'MMMM'}} {{item.UpdatedDate | date: 'yyyy'}}</div>
             </div>
             <div class="item-content-title">
-				<div class="item-title-search">{{item.Title}}</div>
+				<div class="item-title-search">{{item.BlogTitle}}</div>
               <div class="item-content-text">
+                {{item.Description}}
               </div>
 
               <div class="item-content-places">
                 <div class="item-text-places">PLACES:</div>
-                <div class="item-text-content">&nbsp South Africa, North Africa</div>
+                <div class="item-text-content"> {{item.Places}}</div>
                 <div class="item-flag-right">
                   <div class="tag-content">Add</div>
                   <div class="tag-content">
@@ -52,7 +53,7 @@
 
               <div class="item-content-places">
                 <div class="item-text-places">TOPICS:</div>
-                <div class="item-text-content">&nbsp People, Local, Hiking, Good Coffee</div>
+                <div class="item-text-content"> {{item.Topics}}</div>
                 <div class="item-flag-right">
                   <div class="tag-content">Add</div>
                   <div class="tag-content">
@@ -82,7 +83,7 @@
         <div class="modal-body">
           <div class="item-content-user">
             <div class="profile-user">
-              <img src="./assets/img/img-profile-menu.jpg" id="search-user-img-item"> DAVE BUILMER
+              <img src="{{item.BloggerImage}}" id="search-user-img-item"> DAVE BUILMER
 
               <a class="tooltips certified" href="#">
                 <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search-item"></object>
@@ -90,8 +91,7 @@
               </a>
             </div>
             <div class="item-content-text">
-              Duis eu mauris vel lorem blandit vulputate sit amet moral tellus. Cras ac sem diam. Proin egestas, purus id vehicula pharetra,
-              ex velit kihan mollis quam. </div>
+              {{item.BlogDescription}}</div>
             <div class="item-content-places">
               <div class="item-text-places">TAGS:</div>
               <div class="item-text-content">&nbsp; Flashpackers, Local, Hikiing, Good Coffee</div>
@@ -137,7 +137,7 @@
                     <div class='bg-svg-icon-like'>
                       <object id='svg1' data='./assets/svg/icon-like-unliked.svg' type='image/svg+xml' class='icon-options-unlike'></object>
                     </div>
-                    25 Likes
+                    {{item.RatingLikes}} Likes
                   </div>
                 </div>
               </div>

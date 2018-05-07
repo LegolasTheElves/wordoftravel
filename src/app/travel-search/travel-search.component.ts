@@ -1,35 +1,33 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { of } from 'rxjs/observable/of';
 
-import {debounceTime, distinctUntilChanged, switchMap, tap} from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs/operators';
 import { TravelSearch } from './travelSearch';
 import { SearchService } from './search.service';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 declare let $: any;
 
 @Component({
-  selector: 'app-travel-search',
-  templateUrl: './travel-search.component.html',
-  styleUrls: ['./travel-search.component.css']
+	selector: 'app-travel-search',
+	templateUrl: './travel-search.component.html',
+	styleUrls: ['./travel-search.component.css']
 })
 export class TravelSearchComponent implements OnInit {
-
-
 	// for suggestions
 	suggestions = [];
 	suggestionsLoading = false;
 	suggestionTypeahead = new Subject<string>();
 	selectedSuggestion;
 
-  constructor(
+	constructor(
 		private searchService: SearchService,
 		private cd: ChangeDetectorRef,
 		private router: Router
 	) { }
-  ngOnInit(): void {
+	ngOnInit(): void {
 		// typehead for pipe
 		this.suggestionTypeahead.pipe(
 			tap(() => this.suggestionsLoading = true),
@@ -54,15 +52,14 @@ export class TravelSearchComponent implements OnInit {
 			//this.suggestions = [];
 			//this.suggestionsLoading = false;
 		});
-  }
-
+	}
 	onClickSearch() {
 		const selected = this.selectedSuggestion;
 		if (!selected) {
 			// TODO error handling
 			return
 		}
-		
-		this.router.navigate(['/wordoftravel/destination/',selected.text + "-" + selected._id]);
+		//Go to specific destination base on the param
+		this.router.navigate(['/wordoftravel/destination/', selected.text + "-" + selected._id]);
 	}
 }
