@@ -2190,7 +2190,7 @@ padding-top: 25px;
 }
 
 .sticky-wrapper {
-  height: 48px !important;
+  height: 0px !important;
 }
 
 .is-sticky .default-header {
@@ -3141,8 +3141,9 @@ table .img {
   background-color: white;
   border-color: transparent;
   margin: 0px;
-  padding-right: 10px;
-  padding-top: 8px;
+  padding-right: 18px;
+  padding-left: 18px;
+  padding-top: 4px;
   border-top-left-radius: 0rem;
   border-top-right-radius: 0rem;
   border-bottom-right-radius: 0rem;
@@ -5180,25 +5181,6 @@ fieldset[disabled] .btn-poplogout.active {
     padding-left: 0px !important;
   }
 
-  .btn2 {
-    padding-right: 0px;
-    padding-top: 6px;
-  }
-
-  .form-control {
-    padding: 0;
-    height: 40px;
-  }
-
-  .search-panel{
-    height: 40px;
-  }
-
-  .input-group {
-    height: 40px;
-  }
-
-
   .col-md-3.col-12.mb-40 {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -5296,7 +5278,7 @@ fieldset[disabled] .btn-poplogout.active {
     margin-left: -15px;
     margin-right: 25px;
     padding-right: 0px;
-    margin-top: -5px;
+    margin-top: -19px;
   }
 
   #navbarSupportedContent {
@@ -5396,4 +5378,8 @@ height: 35px;
 
 .down-btn-mobile {
   display: inherit;
+}
+
+.fa {
+  color: #133560;
 }

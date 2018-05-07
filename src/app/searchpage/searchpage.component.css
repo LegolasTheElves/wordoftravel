@@ -1,3 +1,8 @@
 .ng-select.suggestion {
     text-align: left;
 }
+
+.ng-select.suggestion[_ngcontent-c1] {
+    background: #f0efef;
+    border: none;
+}

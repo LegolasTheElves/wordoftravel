@@ -4774,10 +4774,6 @@ fieldset[disabled] .btn-poplogout.active {
     padding: 10px;
     font-size: 11px !important;
   }
-
-  .btn2 {    
-    display: none;
-  }
  
 }
 
@@ -4787,11 +4783,6 @@ fieldset[disabled] .btn-poplogout.active {
     padding: 10px;
     font-size: 11px !important;
   }
-
-  .btn2 {
-    display: none;
-  }
- 
 }
 
 @media (max-width: 767px) {
@@ -4939,7 +4930,7 @@ fieldset[disabled] .btn-poplogout.active {
   .container {
   margin: auto;
   }
-z
+
   .btn-readmore {
     padding-top: 8px !important; 
     padding-bottom: 8px !important;
@@ -4953,24 +4944,6 @@ z
     margin-left: -16px;
     padding-left: 0px;
   }
-
-  .btn2 {
-    padding-right: 0px;
-    padding-top: 0px;
-  }
-
-  .form-control {
-    height: 40px;
-  }
-
-  .search-panel{
-    height: 40px;
-  }
-
-  .input-group {
-    height: 40px;
-  }
-
 
   .col-md-3.col-12.mb-40 {
     padding-left: 0px !important;
