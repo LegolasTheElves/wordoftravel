@@ -27,6 +27,7 @@
   font-family: "Raleway";
   font-weight: 700;
   width: auto !important;
+  cursor: pointer !important;
 }
 
 .ng-select .ng-arrow-wrapper {

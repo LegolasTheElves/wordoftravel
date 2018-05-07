@@ -52,7 +52,7 @@ $(document).ready(function () {
   $('.floating-refine-img').on('click',function(e){
     e.preventDefault();
     $('#modal-container-search').attr('style','display:block !important');
-    $( ".divpop-search" ).attr('style', 'top: 50vh !important');
+    $( ".divpop-search" ).attr('style', 'top: 40vh !important');
     $( ".divpop-search" ).animate( {left:0} );
   });
 

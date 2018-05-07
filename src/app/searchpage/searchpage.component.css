@@ -3,6 +3,11 @@
 }
 
 .ng-select.suggestion[_ngcontent-c1] {
-    background: #f0efef;
     border: none;
 }
+
+.ng-select.suggestion {
+    background: #f0f0f0;
+    border: 1px solid #f0f0f0;
+}
+
