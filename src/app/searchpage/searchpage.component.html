@@ -522,10 +522,10 @@
                 <span class="text">Quite Recent</span>
               </a>
 
-              <div class="date-search">{{result.UpdatedDate}}</div>
+              <div class="date-search">{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date: 'yyyy'}}</div>
             </div>
             <div class="content-title">
-              <div class="title-search">{{result.Title}}</div>
+              <div class="title-search">{{result.Title | uppercase}}</div>
             </div>
             <div class="content-user">
               <div class="profile-user">
