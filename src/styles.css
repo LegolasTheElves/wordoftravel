@@ -123,4 +123,11 @@
   .ng-option-label {
     font-size: 18px !important;
   }
+
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-disabled {
+    margin-left: 79px !important;
+  }
+  .ng-option-label {
+  margin-left: 79px !important;
+  }
 }

@@ -284,7 +284,7 @@ $("#nearme-button").click(function() {
 
 $(document).scroll(function() {
   var y = $(this).scrollTop();
-  if (y < 150) {
+  if (y < 250) {
       $('#floating-refine').attr('style','');
       $(".floating-refine-search" ).animate( {left:-50} );
     

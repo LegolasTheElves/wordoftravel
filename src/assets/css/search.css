@@ -21,7 +21,7 @@
 .content-date {
     width: 80%;
     height: 20px;
-    margin: 10px 0px 0px 18px;
+    margin: 10px 6% 0px 6%;
 }
 
 .icon-date-search {
@@ -44,7 +44,7 @@
   .content-title {
     width: 90%;
     height: 35px;
-    margin: 0px 0px 0px 18px;
+    margin: 0 6%;
     overflow: hidden;
 }
 

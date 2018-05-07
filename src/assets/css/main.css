@@ -4800,7 +4800,7 @@ fieldset[disabled] .btn-poplogout.active {
   }
 
   .item {
-    margin-bottom: 30px !important;
+    margin-bottom: 50px !important;
   }
 }
 
@@ -4808,7 +4808,7 @@ fieldset[disabled] .btn-poplogout.active {
 @media (max-width: 580px) {
 
 .item{
-  margin-bottom: 20px !important;
+  margin-bottom: 50px !important;
 }
 
   .content-margin {
@@ -5158,10 +5158,6 @@ fieldset[disabled] .btn-poplogout.active {
   .hero-text {
     width: 100%;
     margin: unset;
-  }
-
-  .container {
-  margin: auto;
   }
 
   .btn-readmore {
