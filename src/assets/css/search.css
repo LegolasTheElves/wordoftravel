@@ -1306,6 +1306,10 @@ span.textbutton {
 
 @media (max-width: 992px){
 
+  .modal-img {
+    height: 300px !important;
+  }
+
   .is-sticky .default-header .navbar-nav a:hover {
     border-top: none !important;
   }
@@ -1755,8 +1759,8 @@ span.textbutton {
 
 @media (min-device-width: 360px) and (max-device-width: 374px){
   .modal-arrow{  
-    top: 200px  !important;
-    left: 45%  !important;
+    top: 268px !important;
+    left: 43% !important;
   }
   .date-search { 
     font-size: 10px !important;
@@ -1773,8 +1777,8 @@ span.textbutton {
 @media (min-device-width: 375px) and (max-device-width: 411px){
 
   .modal-arrow{  
-    top: 200px  !important;
-    left: 45%  !important;
+    top: 267px !important;
+    left: 45% !important;
   }
   .date-search { 
     font-size: 10px !important;
@@ -1790,12 +1794,12 @@ span.textbutton {
 
 @media (min-device-width: 412px) and (max-device-width: 500px){
   .modal-arrow {  
-    top: 197px !important;
+    top: 267px !important;
     left: 45% !important;
   }
 
   .tag-content-bottom {
-    margin: 0px 5px;
+    margin: 0px 4px;
   }
 
   .modal-header {
@@ -1806,7 +1810,7 @@ span.textbutton {
 
 @media (min-device-width: 501px) and (max-device-width: 920px){
   .modal-arrow{  
-    top: 195px !important;
+    top: 267px !important;
     left: 45% !important;
   }
 }
@@ -1841,7 +1845,7 @@ span.textbutton {
 }
 
 .modal-content-box {
-  top:15px;margin-left:20px; max-width:520px;
+  top:0px;margin-left:20px; max-width:520px;
 }
 
 .style-close-bottom {
