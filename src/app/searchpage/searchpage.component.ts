@@ -69,13 +69,15 @@ export class SearchpageComponent implements OnInit {
       //this.suggestionsLoading = false;
     });
   }
+
   //Load isotope
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       loadisotope();
     })
   }
-//Get result from API
+  
+  //Get result from API
   getSearchResult(): void {
     this.searchApiService.getSearch(this.searchTerm)
       .subscribe(
@@ -84,6 +86,7 @@ export class SearchpageComponent implements OnInit {
         },
         error => this.errorMessage = <any>error);
   }
+
   //Search in search page
   onClickSearch() {
     const selected = this.selectedSuggestion;
@@ -91,9 +94,9 @@ export class SearchpageComponent implements OnInit {
       // TODO error handling
       return
     }
-    this.router.navigate(['/wordoftravel/destination/', selected.text + "-" + selected._id]);
-    this.getSearchResult();
+    window.location.href= "/wordoftravel/destination/" + selected.text + "-" + selected._id;
   }
+
   //Modal popup
   selectItem(item) {
     this.selectedItem = item;

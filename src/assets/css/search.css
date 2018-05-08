@@ -9,12 +9,12 @@
 .wrapper {
     border: 1px solid #ccc;
     border-radius: 0rem 0rem 0.75rem 0.75rem;
-    height: 197px;
+    min-height: 210px;
 }
 
 .content-search {
   border-bottom: 1px solid #ccc;
-    height: 158px;
+    min-height: 170px;
     overflow: hidden;
 }
 
@@ -46,12 +46,13 @@
     min-height: 32px; /*height: 47px;*/
     margin: 0 6%;
     overflow: hidden;
+    padding-bottom:5px;
 }
 
  .title-search {
     float: right;
     font-family: "Raleway";
-    font-size: 15px;
+    font-size: 14px;
     color: #133560;
     font-weight: 800;
     letter-spacing: 0rem;
@@ -62,7 +63,8 @@
  .content-user {
     width: 88%;
     height: 20px;
-    margin: 0px 6%;
+    margin: 0px 6% 5px;
+    
 }
 
 #search-user-img {
@@ -92,7 +94,7 @@
   .content-article {
     width: 88%;
     height: 25px;
-    margin: 0px 6%;
+    margin: 0px 6% 5px;
     height: 50px;
     overflow: hidden;
 }
@@ -1855,4 +1857,9 @@ span.textbutton {
 .modal-img-style img {
    border-radius: 15px;
    vertical-align: middle !important;
+}
+
+/* autocompleter css override */
+.ng-dropdown-panel .scroll-host{
+  padding-top:8px;
 }
