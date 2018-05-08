@@ -27,6 +27,7 @@ export class SearchpageComponent implements OnInit {
   selectedSuggestion;
 
   selectedItem = {};
+  popOverHtml = "<div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div><div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div><div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div><div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div>";
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -69,6 +70,7 @@ export class SearchpageComponent implements OnInit {
       //this.suggestionsLoading = false;
     });
   }
+
   //Load isotope
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
@@ -83,6 +85,7 @@ export class SearchpageComponent implements OnInit {
     
   
 //Get result from API
+
   getSearchResult(): void {
     this.searchApiService.getSearch(this.searchTerm)
       .subscribe(
@@ -91,17 +94,20 @@ export class SearchpageComponent implements OnInit {
         },
         error => this.errorMessage = <any>error);
   }
+
   //Search in search page
   onClickSearch() {
     const selected = this.selectedSuggestion;
     if (!selected) {
       // TODO error handling
       return
+      
     }
-    this.router.navigate(['/wordoftravel/destination/', selected.text + "-" + selected._id]);
     this.getSearchResult();
-    this.ngAfterClick();
+    window.location.href= "/wordoftravel/destination/" + selected.text + "-" + selected._id;
+
   }
+
   //Modal popup
   selectItem(item) {
     this.selectedItem = item;

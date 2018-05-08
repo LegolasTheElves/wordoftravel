@@ -9,12 +9,12 @@
 .wrapper {
     border: 1px solid #ccc;
     border-radius: 0rem 0rem 0.75rem 0.75rem;
-    height: 188px;
+    min-height: 210px;
 }
 
 .content-search {
   border-bottom: 1px solid #ccc;
-    height: 153px;
+    min-height: 170px;
     overflow: hidden;
 }
 
@@ -43,15 +43,16 @@
 
   .content-title {
     width: 90%;
-    height: 47px;
+    min-height: 32px; /*height: 47px;*/
     margin: 0 6%;
     overflow: hidden;
+    padding-bottom:5px;
 }
 
  .title-search {
     float: right;
     font-family: "Raleway";
-    font-size: 15px;
+    font-size: 14px;
     color: #133560;
     font-weight: 800;
     letter-spacing: 0rem;
@@ -61,8 +62,9 @@
 
  .content-user {
     width: 88%;
-    height: 25px;
-    margin: 0px 6%;
+    height: 20px;
+    margin: 0px 6% 5px;
+    
 }
 
 #search-user-img {
@@ -92,7 +94,7 @@
   .content-article {
     width: 88%;
     height: 25px;
-    margin: 0px 6%;
+    margin: 0px 6% 5px;
     height: 50px;
     overflow: hidden;
 }
@@ -1487,17 +1489,18 @@ span.textbutton {
 }
 
 .title-search {
-  font-size: 10px;
+  font-size: 13px;
+  line-height: 13px;
 }
 
 
 .content-title {
-  margin: 0px 0px 0px 15px;
+  margin: 0px 0px 0px 12px;
 }
 
 .content-text {
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 13px;
+  line-height: 13px;
 }
 
 .profile-user {
@@ -1506,7 +1509,7 @@ span.textbutton {
 }
 
 .content-search {
-  height: 128px;
+  height: 135px;
 }
 .wrapper {
   height: 170px;
@@ -1650,7 +1653,7 @@ span.textbutton {
       @media (min-width: 360px) and  (max-width: 400px) {
 
         .content-search {
-          height: 140px;
+          height: 150px; /*140*/
         }
         .wrapper {
           height: 180px;
@@ -1808,6 +1811,19 @@ span.textbutton {
   }
 }
 
+
+/* S8 */
+@media only screen and (min-width:501px) and (max-width: 1030) {
+  .title-search {
+    font-size: 13px;
+  }
+
+  .content-text {
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
 .modal-img {
   max-width: 249px;
   height: 483px;
@@ -1841,4 +1857,9 @@ span.textbutton {
 .modal-img-style img {
    border-radius: 15px;
    vertical-align: middle !important;
+}
+
+/* autocompleter css override */
+.ng-dropdown-panel .scroll-host{
+  padding-top:8px;
 }

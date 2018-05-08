@@ -1,4 +1,4 @@
-export interface searchDetails{
+export interface SearchDetails{
     Title: string,
     Blogger: string,
     UpdatedDate: string,

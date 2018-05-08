@@ -60,6 +60,6 @@ export class TravelSearchComponent implements OnInit {
 			return
 		}
 		//Go to specific destination base on the param
-		this.router.navigate(['/wordoftravel/destination/', selected.text + "-" + selected._id]);
+		window.location.href = "/wordoftravel/destination/" + selected.text + "-" + selected._id;
 	}
 }

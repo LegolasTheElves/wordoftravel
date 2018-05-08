@@ -4783,6 +4783,11 @@ fieldset[disabled] .btn-poplogout.active {
 
 /*mobile responsive css */
 
+@media(max-width: 414px){
+  .item{
+    margin-bottom: 20px !important;
+  }
+}
 
 @media (max-width: 849px) {
   #search_concept {
@@ -4808,7 +4813,7 @@ fieldset[disabled] .btn-poplogout.active {
 @media (max-width: 580px) {
 
 .item{
-  margin-bottom: 50px !important;
+  margin-bottom: 30px !important;
 }
 
   .content-margin {
