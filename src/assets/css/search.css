@@ -43,7 +43,7 @@
 
   .content-title {
     width: 90%;
-    height: 47px;
+    min-height: 32px; /*height: 47px;*/
     margin: 0 6%;
     overflow: hidden;
 }
@@ -61,7 +61,7 @@
 
  .content-user {
     width: 88%;
-    height: 25px;
+    height: 20px;
     margin: 0px 6%;
 }
 
@@ -1487,17 +1487,18 @@ span.textbutton {
 }
 
 .title-search {
-  font-size: 10px;
+  font-size: 13px;
+  line-height: 13px;
 }
 
 
 .content-title {
-  margin: 0px 0px 0px 15px;
+  margin: 0px 0px 0px 12px;
 }
 
 .content-text {
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 13px;
+  line-height: 13px;
 }
 
 .profile-user {
@@ -1506,7 +1507,7 @@ span.textbutton {
 }
 
 .content-search {
-  height: 128px;
+  height: 135px;
 }
 .wrapper {
   height: 170px;
@@ -1650,7 +1651,7 @@ span.textbutton {
       @media (min-width: 360px) and  (max-width: 400px) {
 
         .content-search {
-          height: 140px;
+          height: 150px; /*140*/
         }
         .wrapper {
           height: 180px;
@@ -1805,6 +1806,19 @@ span.textbutton {
   .modal-arrow{  
     top: 195px !important;
     left: 45% !important;
+  }
+}
+
+
+/* S8 */
+@media only screen and (min-width:501px) and (max-width: 1030) {
+  .title-search {
+    font-size: 13px;
+  }
+
+  .content-text {
+    font-size: 13px;
+    line-height: 13px;
   }
 }
 
