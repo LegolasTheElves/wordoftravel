@@ -1,0 +1,58 @@
+{
+  "rsltCol": [{
+    "isActive": true,
+    "Orientation": "L",
+    "TextLine2": "HANG EN",
+    "Page": "HomeFeatured",
+    "TextLine3": "Phong Nha Ke-Bang National Park, Vietnam",
+    "LocationName": "Phong Nha",
+    "isSticky": false,
+    "LinkPath": "destinations/vietnam/phongnha",
+    "TextLine1": "Go caving to see some of the largest caves in the world",
+    "FeatureImage": "PhongNha_L1.jpg"
+  }, {
+    "isActive": true,
+    "Orientation": "L",
+    "TextLine2": "INLE LAKE",
+    "Page": "HomeFeatured",
+    "TextLine3": "Inle Lake, Myanmar",
+    "LocationName": "Inle Lake",
+    "isSticky": false,
+    "LinkPath": "destinations/myanmar/inlelake",
+    "TextLine1": "Visit floating villages and discover the local way of life",
+    "FeatureImage": "InleLake1_L.jpg"
+  }, {
+    "isActive": true,
+    "Orientation": "L",
+    "TextLine2": "PHNOM PENH",
+    "Page": "HomeFeatured",
+    "TextLine3": "Phnom Penh, Cambodia",
+    "LocationName": "Phnom Penh",
+    "isSticky": false,
+    "LinkPath": "destinations/cambodia/phnompenh",
+    "TextLine1": "Explore Cambodia's capital city ",
+    "FeatureImage": "PhnomPenh_L1.jpg"
+  }, {
+    "isActive": true,
+    "Orientation": "L",
+    "TextLine2": "CORCOVADO ",
+    "Page": "HomeFeatured",
+    "TextLine3": "Rio de Janeiro, Brazil",
+    "LocationName": "Rio de Janeiro",
+    "isSticky": false,
+    "LinkPath": "destinations/brazil/riodejaneiro",
+    "TextLine1": "Enjoy the views in one of the world's prettiest cities",
+    "FeatureImage": "RiodeJaneiro_L1.jpg"
+  }, {
+    "isActive": true,
+    "Orientation": "L",
+    "TextLine2": "TULUM",
+    "Page": "HomeFeatured",
+    "TextLine3": "Mayan Riviera, Mexico",
+    "LocationName": "Tulum",
+    "isSticky": false,
+    "LinkPath": "destinations/mexico/tulum",
+    "TextLine1": "Discover Mayan cities and pristine beaches",
+    "FeatureImage": "Tulum_L.jpg"
+  }]
+}
