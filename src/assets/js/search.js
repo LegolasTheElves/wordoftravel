@@ -93,6 +93,8 @@ function loadisotope() {
       }
     }
   }).smartresize(); // trigger resize to set container width
+
+  $('[data-toggle="popover"]').popover(); 
 }
 
 
