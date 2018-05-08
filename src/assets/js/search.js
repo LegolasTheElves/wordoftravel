@@ -18,6 +18,45 @@ $(function () {
 
 });
 
+function clickIsotope() {
+  var $container1 = $('#container1'),
+    $body = $('body'),
+    columns = null,
+    $pointer = $('pointer');
+  if ($pointer.click) {
+    console.log('here we go again');
+    $container1.isotope({
+      // disable window resizing
+      resizable: false,
+      masonry: {
+        columnWidth: colW
+      }
+    });
+    $(window).smartresize(function () {
+      var currentColumns = Math.floor(($body.width()) / colW);
+      if (currentColumns !== columns) {
+        if ($(window).width() >= 360 && $(window).width() <= 400) {
+          columns = 2;
+          $container1.width(columns * 150).isotope('reLayout');
+        } else if ($(window).width() >= 401 && $(window).width() <= 440) {
+          columns = 2;
+          $container1.width(columns * 188).isotope('reLayout');
+        } else if ($(window).width() >= 441 && $(window).width() <= 480) {
+          columns = 2;
+          $container1.width(columns * 210).isotope('reLayout');
+        } else if ($(window).width() >= 481 && $(window).width() <= 520) {
+          columns = 2;
+          $container1.width(columns * 240).isotope('reLayout');
+        } else {
+          columns = currentColumns;
+          // apply width to container manually, then trigger relayout
+          $container1.width(columns * colW).isotope('reLayout');
+        }
+      }
+    }).smartresize();
+  }
+}
+
 function loadisotope() {
   var $container1 = $('#container1'),
     $body = $('body'),
@@ -131,12 +170,12 @@ $(document).ready(function () {
       if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
         $('#menu-popover').hide();
         $(".popover").attr('class', 'style-close-bottom popover popover-style fade show');
-      }  else {
-       $('#menu-popover').show();
-        $(".popover").attr('class','popover popover-style fade show');
+      } else {
+        $('#menu-popover').show();
+        $(".popover").attr('class', 'popover popover-style fade show');
       }
-   });
     });
+  });
 
 
   $(document).on('click', function (event) {

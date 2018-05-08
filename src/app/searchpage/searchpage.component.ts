@@ -8,6 +8,7 @@ import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operato
 import { Subject } from 'rxjs/Subject';
 
 declare function loadisotope();
+declare function clickIsotope();
 
 @Component({
   selector: 'app-searchpage',
@@ -74,6 +75,13 @@ export class SearchpageComponent implements OnInit {
       loadisotope();
     })
   }
+  ngAfterClick() {
+    this.items.changes.subscribe(t => {
+      clickIsotope();
+    })
+  }
+    
+  
 //Get result from API
   getSearchResult(): void {
     this.searchApiService.getSearch(this.searchTerm)
@@ -92,6 +100,7 @@ export class SearchpageComponent implements OnInit {
     }
     this.router.navigate(['/wordoftravel/destination/', selected.text + "-" + selected._id]);
     this.getSearchResult();
+    this.ngAfterClick();
   }
   //Modal popup
   selectItem(item) {
