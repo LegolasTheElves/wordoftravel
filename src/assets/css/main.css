@@ -5150,6 +5150,7 @@ fieldset[disabled] .btn-poplogout.active {
   }
 
   .subheadtext {
+    text-align: center;
     padding: 0px 50px;
     font-size: 12px;
     margin-top: -6px;
