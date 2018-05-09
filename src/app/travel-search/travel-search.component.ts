@@ -37,11 +37,11 @@ export class TravelSearchComponent implements OnInit {
 		).subscribe(res => {
 			if (
 				res.hasOwnProperty('suggest') &&
-				res.suggest.hasOwnProperty('alternateNames-suggestion') &&
-				res.suggest['alternateNames-suggestion'].length > 0 &&
-				res.suggest['alternateNames-suggestion'][0].hasOwnProperty('options')
+				res.suggest.hasOwnProperty('asciiName-suggestion') &&
+				res.suggest['asciiName-suggestion'].length > 0 &&
+				res.suggest['asciiName-suggestion'][0].hasOwnProperty('options')
 			) {
-				const value = res.suggest['alternateNames-suggestion'][0].options;
+				const value = res.suggest['asciiName-suggestion'][0].options;
 				this.suggestions = value;
 			} else {
 				this.suggestions = [];

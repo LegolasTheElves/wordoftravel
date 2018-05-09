@@ -27,7 +27,6 @@ export class SearchpageComponent implements OnInit {
   selectedSuggestion;
 
   selectedItem = {};
-  popOverHtml = "<div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div><div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div><div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div><div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div>";
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -54,11 +53,11 @@ export class SearchpageComponent implements OnInit {
     ).subscribe(res => {
       if (
         res.hasOwnProperty('suggest') &&
-        res.suggest.hasOwnProperty('alternateNames-suggestion') &&
-        res.suggest['alternateNames-suggestion'].length > 0 &&
-        res.suggest['alternateNames-suggestion'][0].hasOwnProperty('options')
+        res.suggest.hasOwnProperty('asciiName-suggestion') &&
+        res.suggest['asciiName-suggestion'].length > 0 &&
+        res.suggest['asciiName-suggestion'][0].hasOwnProperty('options')
       ) {
-        const value = res.suggest['alternateNames-suggestion'][0].options;
+        const value = res.suggest['asciiName-suggestion'][0].options;
         this.suggestions = value;
       } else {
         this.suggestions = [];
