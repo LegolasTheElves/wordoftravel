@@ -7,7 +7,7 @@ import { SearchpageComponent } from './searchpage/searchpage.component';
 const routes: Routes = [
   { path: '', redirectTo: '/wordoftravel', pathMatch: 'full' },
   { path: 'wordoftravel', component: HomepageComponent },
-  { path: 'wordoftravel/article', component: ArticlepageComponent },
+  { path: 'wordoftravel/travel-articles', component: ArticlepageComponent },
   { path: 'wordoftravel/destination/:term', component: SearchpageComponent}
 
 ];

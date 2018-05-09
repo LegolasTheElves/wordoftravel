@@ -1,5 +1,4 @@
 
-
 $("[data-toggle=popover]").each(function(i, obj) {
 
     $(this).popover({
@@ -18,4 +17,4 @@ $('html').on('click', function(e) {
        !$(e.target).parents().is('.popover.in')) {
       $('[data-original-title]').popover('hide');
     }
-  });
+});

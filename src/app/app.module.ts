@@ -30,6 +30,7 @@ import { SearchpageComponent } from './searchpage/searchpage.component';
 import { SearchDetailsComponent } from './searchpage/sub/details/details-component';
 import { SearchPageService } from './searchpage/search-page.service';
 import { PopoverComponent } from './popover/popover.component';
+import { ArticlepageService } from './articlepage/articlespage.service';
 
 
 
@@ -64,7 +65,8 @@ import { PopoverComponent } from './popover/popover.component';
     TravelDestinationService,
     HomeSearchService,
     SearchService,
-    SearchPageService
+    SearchPageService,
+    ArticlepageService
   ],
   bootstrap: [AppComponent]
 })
