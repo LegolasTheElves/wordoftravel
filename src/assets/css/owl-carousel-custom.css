@@ -9,6 +9,12 @@
     left: 0;
     right: 0;
   }
+
+@media (max-width: 600px) {
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+}
   .owl-carousel .owl-nav {
     padding-left: 30px;
     padding-right: 30px;
