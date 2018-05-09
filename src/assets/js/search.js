@@ -202,10 +202,10 @@ if (!$(event.target).closest('.hamburger-footer').length) {
   $(document).ready(function () {
     $(window).scroll(function () {
       if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
-        $(".hamburger-style").attr('style', 'display: unset');
+        $(".hamburger-style").attr('style', 'display: none');
         $(".popover-style").attr('display', 'none');
       } else {
-        $(".hamburger-style").attr('style', 'display: none');
+        $(".hamburger-style").attr('style', 'display: unset');
         $(".popover-style").attr('display', 'unset');
       }
     });
