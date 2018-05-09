@@ -149,6 +149,38 @@ $(document).ready(function () {
   });
 
 
+//hamburger popover
+var hamburgerhandler = [
+
+  function() {
+    $( ".hamburger-footer" ).animate( {top:44}, 200);
+  },
+
+  function() {
+    if ($('.hamburger-footer').css('top') == '44px') {
+    $( ".hamburger-footer" ).animate( {top:-245}, 200);
+    }
+    else {
+      $( ".hamburger-footer" ).animate( {top:44}, 200);
+    }
+  }
+
+];
+
+var hamburgerhandlercounter = 0;
+$(".hamburger-style").click(function() {
+  hamburgerhandler[hamburgerhandlercounter++].apply(this, Array.prototype.slice.apply(arguments));
+  hamburgerhandlercounter %= hamburgerhandler.length;
+});
+
+$(document).on('click', function(event) {
+  if ($('.hamburger-footer').css('top') == '44px') {
+if (!$(event.target).closest('.hamburger-footer').length) {
+  $(".hamburger-footer").animate( {top:-245}, 200);
+  }
+}
+});
+//end hamburger popover
   var menuhandlerssearch = [
 
     function () {
