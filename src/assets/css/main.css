@@ -4417,6 +4417,10 @@ fieldset[disabled] .btn-poplogout.active {
   margin-bottom: 8px !important;
 }
 
+.row.justify-content-center.align-items-center p {
+  margin-bottom: 0px !important;
+}
+
 .travel-article-thumb:after {
   content:'\A';
   position:absolute;
