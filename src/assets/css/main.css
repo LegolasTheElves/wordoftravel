@@ -4409,7 +4409,13 @@ fieldset[disabled] .btn-poplogout.active {
   opacity: 0.9;
 }
 
+.row.no-margin.col-md-9.col-12.mb-20 {
+  margin-bottom: 8px !important;
+}
 
+.col-md-3.col-12.mb-20 {
+  margin-bottom: 8px !important;
+}
 
 .travel-article-thumb:after {
   content:'\A';
