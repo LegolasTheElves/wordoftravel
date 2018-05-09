@@ -20,6 +20,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ArticlesPageComponent } from './articlespage/articlespage.component';
 import { SigninComponent } from './signin/signin.component';
 import { TravelSearchComponent } from './travel-search/travel-search.component';
+import { SingleArticlePageComponent } from './single-article-page/single-article-page.component';
 
 //service
 import { TravelArticleService } from './travel-articles/travelArticle.service';
@@ -31,6 +32,7 @@ import { SearchDetailsComponent } from './searchpage/sub/details/details-compone
 import { SearchPageService } from './searchpage/search-page.service';
 import { PopoverComponent } from './popover/popover.component';
 import { ArticlesPageService } from './articlespage/articlespage.service';
+import { SingleArticlePageService } from './single-article-page/single-article-page.service';
 
 
 
@@ -50,7 +52,8 @@ import { ArticlesPageService } from './articlespage/articlespage.service';
     TravelSearchComponent,
     SearchpageComponent,
     PopoverComponent,
-		SearchDetailsComponent,
+    SearchDetailsComponent,
+    SingleArticlePageComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { ArticlesPageService } from './articlespage/articlespage.service';
     HomeSearchService,
     SearchService,
     SearchPageService,
-    ArticlesPageService
+    ArticlesPageService,
+    SingleArticlePageService
   ],
   bootstrap: [AppComponent]
 })

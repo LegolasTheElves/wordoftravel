@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren } from '@angular/core';
 import { ArticlesPageService } from './articlespage.service';
 import { TravelArticles } from './articles';
+
+declare function loadpopovers();
 
 @Component({
   selector: 'app-articlepage',
@@ -11,6 +13,8 @@ export class ArticlesPageComponent implements OnInit {
 
   errorMessage: string;
   articles: TravelArticles[];
+
+  @ViewChildren('travelarticles') items: any;
 
   constructor(private articlesService: ArticlesPageService) { }
   ngOnInit() {
@@ -26,4 +30,14 @@ export class ArticlesPageComponent implements OnInit {
         error => this.errorMessage = <any>error);
   }
 
+  //Load isotope
+  ngAfterViewInit() {
+    this.items.changes.subscribe(t => {
+      loadpopovers();
+    })
+  }
+
+  openSingleArticle(item: TravelArticles){
+    console.log(JSON.stringify(item));
+  }
 }

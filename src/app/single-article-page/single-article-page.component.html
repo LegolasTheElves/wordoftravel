@@ -1,0 +1,276 @@
+
+  <!-- start banner Area -->
+  <section class="banner-area" id="home">
+    <!-- Start Header Area -->
+    <header class="default-header">
+        <nav class="navbar navbar-expand-lg  navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/svg/logo-white.svg" height="45" width="190">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="text-black lnr lnr-menu"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+                    <ul class="justify-content-end align-items-center navbar-nav">
+                        <li>
+                            <a href="#explore">EXPLORE DESTINATIONS</a>
+                        </li>
+                        <li>
+                            <a href="wordoftravel/travel-articles">TRAVEL ARTICLES</a>
+                        </li>
+                        <li>
+                            <a href="#secvice">OUR STORY</a>
+                        </li>
+                        <li>
+                            <a href="#gallery">HELP</a>
+                        </li>
+                        <li>
+                            <a href="#" id="profile">
+                                <img src="./assets/img/img-profile-menu.jpg" id="profile-menu-img">
+                                <span id="profile-menu-badge">10</span>
+                                DAVE BUILMER
+                            </a>
+                            <a href="#faq" id="signup">SIGN UP</a>
+                        </li>
+                    </ul>
+                    <span class="forjquery ">
+                        <a class="btn-addtravelbloggers buttonstyle" href="#home">
+                            ADD TRAVEL BLOG
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+  </section>
+  <!-- End Header Area -->
+
+
+  <!-- Start About Area -->
+  <section class="default-banner">
+      <div id="carousel-wot" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                  <img src="./assets/img/bg-article.png" height="100%">
+              </div>
+          </div>
+          <!--/.Slides-->
+          <a class="buttondownhome" href="#" id="buttondownhome">
+              <object id="svg1" data="./assets/svg/btn_banner_arrow.svg" type="image/svg+xml" width="30" height="35"></object>
+          </a>
+      </div>
+  </section>
+
+  <section class="container mt-60 mb-60" id="article">
+      <div class="row">
+        <div class="inline-label col-md-12">
+          <div class="icon">
+            <object style="text-align: left;" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="40" height="20"></object>
+          </div>
+          <span>{{article.PublishedDate | date: 'dd'}} {{article.PublishedDate | date:'MMMM'}} {{article.PublishedDate | date: 'yyyy'}}</span>
+        </div>
+        <div class="box-list-title col-md-12">{{ article.Title }}</div>
+        <div class="box-list-places col-md-12 ">
+          <div>
+            <span class="label">PLACES:&nbsp;</span>
+            <span class="tags">{{article.Places.values}}</span>
+          </div>
+          <div>
+            <span class="label">TOPICS:&nbsp;</span>
+            <span class="tags">People, Local, Hiking, Good Coffee</span>
+          </div>
+        </div>
+        <div class="social-icons-details col-md-12">
+          <div class="inline-label">
+            <button id="btn-like-icon" class="icon-circle"></button>
+            <span>{{ article.Likes }} LIKES</span>
+          </div>
+          <div class="inline-label">
+              <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
+              <span>SHARE</span>
+          </div>
+          <div class="inline-label">
+              <button id="btn-favorite-icon" class="icon-circle"></button>
+              <span>FAVOURITE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20">
+        <div class="row">
+          <div class="col-md-12" [innerHtml]="safeHtml">
+          </div>  
+        </div>
+
+        <div class="social-icons-details mt-20 mb-90 col-md-12">
+          <div class="inline-label ">
+            <button id="btn-like-icon" class="icon-circle"></button>
+            <span>{{ article.Likes }} LIKES</span>
+          </div>
+
+          <div class="inline-label ">
+            <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
+            <span>SHARE</span>
+          </div>
+
+          <div class="inline-label">
+            <button id="btn-favorite-icon" class="icon-circle"></button>
+            <span>FAVOURITE</span>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <hr class="mb-60">
+
+  <!-- Start Related Articles Area -->
+  <section class="project-area section-gap ml-30 mr-30 mb-60">
+      <div class="">
+          <div class="boxart d-flex mb-20">
+              <div class="row no-margin col-md-9 col-12">
+                  <div class="row no-margin titlecolor1 ">RELATED
+                      <div class="titlecolor">&nbsp;ARTICLES</div>
+                  </div>
+              </div>
+          </div>
+          <div class="boxart d-flex travel-wrapper">
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article1.jpg" alt="">
+                      <div class="mt-20 travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article2.jpg" alt="">
+                      <div class="mt-20  travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="#secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+  
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article3.jpg" alt="">
+                      <div class="mt-20  travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="#secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article4.jpg" alt="">
+                      <div class="mt-20  travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="#secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20 ">
+                      <a href="" class="pointer">
+                          <div class="mt-20 box-mobile-btn travelabox">
+                              <div class="box-mobile-txt">
+                                  OTHER ARTICLES
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+      </div>
+  </section>
+  <!-- End Related Articles Area -->
+
+  <hr class="mb-60 mt-40">
+  <!-- Start Blog Articles Area -->
+  <section class="project-area section-gap ml-30 mr-30 mb-60">
+      <div class="">
+          <div class="boxart d-flex mb-20">
+              <div class="row no-margin col-md-9 col-12">
+                  <div class="row no-margin titlecolor1 ">RELATED
+                      <div class="titlecolor">&nbsp;BLOG POSTS</div>
+                  </div>
+              </div>
+          </div>
+          <div class="boxart d-flex travel-wrapper">
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article1.jpg" alt="">
+                      <div class="mt-20 travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article2.jpg" alt="">
+                      <div class="mt-20  travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="#secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+  
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article3.jpg" alt="">
+                      <div class="mt-20  travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="#secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20">
+                      <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article4.jpg" alt="">
+                      <div class="mt-20  travelabox">
+                          <div class="articles-header text-uppercase">PRAESENT EGESTAS VESTIBULUM VITAE SOLLIC</div>
+                          <div class="articles-subheader">CITY, COUNTRY/SUB-HEAD</div>
+                          <div class="articles-content">In id nulla vitae liguta fermentum mollis. Praesent egestas tempus dui in aliquam. Vestibulum vitae sollicitudin enim,
+                              ut ultricies ex. Curabitur et mattis.</div>
+                          <div class="text-right">
+                              <a href="#secvice" class="btn-readmore">READ MORE</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-3 col-6 mb-20 ">
+                      <a href="" class="pointer">
+                          <div class="mt-20 box-mobile-btn travelabox">
+                              <div class="box-mobile-txt">
+                                  OTHER ARTICLES
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+      </div>
+  </section>
+  <!-- End Blog Articles Area -->
+  <app-footer></app-footer>

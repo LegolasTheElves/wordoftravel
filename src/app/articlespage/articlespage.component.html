@@ -17,7 +17,7 @@
               <a class="highlight" href="#explore">EXPLORE DESTINATIONS</a>
             </li>
             <li>
-              <a href="#articles">TRAVEL ARTICLES</a>
+              <a href="wordoftravel/travel-articles">TRAVEL ARTICLES</a>
             </li>
             <li>
               <a href="#secvice">OUR STORY</a>
@@ -65,7 +65,7 @@
   <div class="row">
     <ul class="container box-list-wrapper mb-60">
       <!-- Item -->
-      <li *ngFor="let article of articles">
+      <li *ngFor="let article of articles" #travelarticles>
         <div class="image-wrapper">
           <img src="./assets/img/img_article3.jpg">
         </div>
@@ -95,7 +95,7 @@
             </div>
           </div>
           <div class="box-list-descriptions">
-            <div class="box-list-title">{{article.Title}}</div>
+            <div class="box-list-title"><a href="wordoftravel/travel-articles/green/a2">{{article.Title}}</a></div>
             <div class="box-list-subheader">{{article.Category}} </div>
             <div class="box-list-overview">
               {{ article.AbstractText }}

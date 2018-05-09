@@ -1,15 +1,14 @@
-
-$("[data-toggle=popover]").each(function(i, obj) {
-
-    $(this).popover({
-        html: true,
-        placement:'bottom',
-        content: function() {
-        return $('#socialSharePopover').html();
-        }
+function loadpopovers(){
+    $("[data-toggle=popover]").each(function(i, obj) {
+        $(this).popover({
+            html: true,
+            placement:'bottom',
+            content: function() {
+            return $('#socialSharePopover').html();
+            }
+        });
     });
-
-});
+}
 
 
 $('html').on('click', function(e) {

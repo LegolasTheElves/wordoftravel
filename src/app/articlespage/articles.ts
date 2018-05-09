@@ -7,6 +7,7 @@ export interface TravelArticles {
     },
     isSticky: boolean,
     AbstractText: string,
+    ArticleText: string,
     FeatureImageThumbnail: string,
     Category: string,
     Likes: number,
