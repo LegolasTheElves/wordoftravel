@@ -5,7 +5,6 @@
       <div class="container-fluid">
         <a class="navbar-brand-search" href="index.html">
           <img src="./assets/svg/logo-colored.svg" height="45" width="190">
-
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +80,7 @@
             <div class="social-icons">
               <div class="inline-label">
                 <button id="btn-like-icon" class="icon-circle"></button>
-                <span>25 LIKES</span>
+                <span>{{ article.Likes }} LIKES</span>
               </div>
 
               <div class="inline-label">
@@ -99,8 +98,7 @@
             <div class="box-list-title">{{article.Title}}</div>
             <div class="box-list-subheader">{{article.Category}} </div>
             <div class="box-list-overview">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet venenatis elit, sit amet placerat tortor. Nunc sit
-              amet venenatis elit, sit amet placerat tortor.
+              {{ article.AbstractText }}
             </div>
             <div class="box-list-places">
               <div class="inline-label">

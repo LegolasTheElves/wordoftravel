@@ -2190,7 +2190,7 @@ padding-top: 25px;
 }
 
 .sticky-wrapper {
-  height: 0px !important;
+  height: 48px !important; /* from 0 */
 }
 
 .is-sticky .default-header {

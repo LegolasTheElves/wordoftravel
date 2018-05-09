@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticlepageService } from './articlespage.service';
+import { ArticlesPageService } from './articlespage.service';
 import { TravelArticles } from './articles';
 
 @Component({
   selector: 'app-articlepage',
-  templateUrl: './articlepage.component.html',
-  styleUrls: ['./articlepage.component.css']
+  templateUrl: './articlespage.component.html',
+  styleUrls: ['./articlespage.component.css']
 })
-export class ArticlepageComponent implements OnInit {
+export class ArticlesPageComponent implements OnInit {
 
   errorMessage: string;
   articles: TravelArticles[];
 
-  constructor(private articlesService: ArticlepageService) { }
+  constructor(private articlesService: ArticlesPageService) { }
   ngOnInit() {
     this.getAllArticles();
   }

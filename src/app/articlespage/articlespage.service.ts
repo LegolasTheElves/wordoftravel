@@ -8,7 +8,7 @@ import { TravelArticles } from './articles';
 
 @Injectable()
 
-export class ArticlepageService {
+export class ArticlesPageService {
   private _travelUrl = 'https://api.wordoftravel.com/articles?limit=10';
 
   constructor(private http: HttpClient) { }

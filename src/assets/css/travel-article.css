@@ -11,10 +11,12 @@
     border-radius: 8px;
     margin-bottom: 20px;
 }
+
 .box-list-content{
     line-height: 14pt;
     padding:20px;
 }
+
 .box-list-actions{
     /* overflow: auto; */
 }
@@ -82,6 +84,7 @@ button:active {
 }
 .box-list-descriptions{
     display: inline-table;
+    width:100%;
 }   
 .label{
     color: #133560;
