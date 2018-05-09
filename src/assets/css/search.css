@@ -788,7 +788,7 @@ a:hover.tooltips span {
   font-size: 13px;
   color: #ffffff;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .title-check {
@@ -1794,4 +1794,14 @@ span.textbutton {
 
 .ng-dropdown-panel .scroll-host {
   padding-top: 8px;
+}
+
+
+/* hamburger footer */
+.hamburger-footer-hidden{
+  display: none;
+}
+
+.floating-refine-search-visible{
+  left:0px !important;
 }

@@ -238,11 +238,10 @@ $(document).ready(function () {
       var y = $(this).scrollTop();
       if (y < 250) {
           $('#floating-refine').attr('style','');
-          $(".floating-refine-search" ).animate( {left:-50} );
-        
+          $(".floating-refine-search" ).removeClass('floating-refine-search-visible');
       } else {
         $('#floating-refine').attr('style','display:block !important');
-        $(".floating-refine-search" ).animate( {left:0} );
+        $(".floating-refine-search" ).addClass('floating-refine-search-visible');
     }
   });
 
