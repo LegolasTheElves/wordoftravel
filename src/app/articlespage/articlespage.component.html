@@ -15,7 +15,7 @@
   <div class="row">
     <ul class="container box-list-wrapper mb-60">
       <!-- Item -->
-      <li *ngFor="let article of articles" #travelarticles>
+      <li *ngFor="let article of articles; let i = index;" #travelarticles>
         <div class="image-wrapper">
           <img src="./assets/img/img_article3.jpg">
         </div>
@@ -53,7 +53,7 @@
             <div class="box-list-places">
               <div class="inline-label">
                 <span class="label">PLACES:&nbsp;</span>
-                <span class="tags">{{article.Places}}</span>
+                <span class="tags" *ngFor="let place of article.Places; let isLast=last">{{place.PlaceName}}{{isLast ? '' : ', '}}</span>
               </div>
               <br>
               <div class="inline-label">
