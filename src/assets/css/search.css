@@ -1265,6 +1265,10 @@ span.textbutton {
   border-radius: 20px;
 }
 
+.nav-color-search a {
+  color: #133560;
+}
+
 @media screen and (max-width: 767px) {
   .search-center {
     text-align: center;

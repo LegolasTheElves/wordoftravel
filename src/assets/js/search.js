@@ -212,15 +212,17 @@ if (!$(event.target).closest('.hamburger-footer').length) {
   });
 
   $(document).ready(function () {
+    if($('#container1').length){ 
     $(window).scroll(function () {
       if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
         $(".hamburger-style").attr('style', 'display: none');        
         $(".hamburger-footer").addClass('hamburger-footer-hidden');
       } else {
-        $(".hamburger-style").attr('style', 'display: unset');
+        $(".hamburger-style").attr('style', '');
         $(".hamburger-footer").removeClass('hamburger-footer-hidden');
       }
     });
+  }
   });
 
 
