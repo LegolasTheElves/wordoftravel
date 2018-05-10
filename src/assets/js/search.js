@@ -95,6 +95,18 @@ function loadisotope() {
   }).smartresize(); // trigger resize to set container width
 
   $('[data-toggle="popover"]').popover(); 
+
+  $("object.icon-unlike-search").hover(function(){
+    $(this).attr('data', './assets/svg/icon-like-liked.svg');
+  },function(){
+    $(this).attr('data', './assets/svg/icon-like-unliked.svg');
+  })
+
+  $("object.icon-like-search").hover(function(){
+    $(this).attr('data', './assets/svg/icon-like-unliked.svg');
+  },function(){
+    $(this).attr('data', './assets/svg/icon-like-liked.svg');
+  })
 }
 
 
