@@ -5,6 +5,7 @@ import { ArticlesPageComponent } from './articlespage/articlespage.component';
 import { SingleArticlePageComponent } from './single-article-page/single-article-page.component';
 import { SearchpageComponent } from './searchpage/searchpage.component';
 import { SpecificDestinationComponent } from './specific-destination/specific-destination.component';
+import { ExploreDestinationsComponent } from './explore-destinations/explore-destinations.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path: 'wordoftravel/travel-articles', component: ArticlesPageComponent },
   { path: 'wordoftravel/travel-articles/:category/:name', component: SingleArticlePageComponent },
   { path: 'wordoftravel/destination/:term', component: SearchpageComponent },
-  { path: 'wordoftravel/specific-destanation', component:SpecificDestinationComponent}
+  { path: 'wordoftravel/specific-destanation', component: SpecificDestinationComponent },
+  { path: 'wordoftravel/explore-destination', component: ExploreDestinationsComponent }
+
 
 ];
 

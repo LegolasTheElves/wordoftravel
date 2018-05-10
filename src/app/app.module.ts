@@ -21,6 +21,8 @@ import { ArticlesPageComponent } from './articlespage/articlespage.component';
 import { SigninComponent } from './signin/signin.component';
 import { TravelSearchComponent } from './travel-search/travel-search.component';
 import { SingleArticlePageComponent } from './single-article-page/single-article-page.component';
+import { SpecificDestinationComponent } from './specific-destination/specific-destination.component';
+import { ExploreDestinationsComponent } from './explore-destinations/explore-destinations.component';
 
 //service
 import { TravelArticleService } from './travel-articles/travelArticle.service';
@@ -33,7 +35,6 @@ import { SearchPageService } from './searchpage/search-page.service';
 import { PopoverComponent } from './popover/popover.component';
 import { ArticlesPageService } from './articlespage/articlespage.service';
 import { SingleArticlePageService } from './single-article-page/single-article-page.service';
-import { SpecificDestinationComponent } from './specific-destination/specific-destination.component';
 
 
 
@@ -55,7 +56,8 @@ import { SpecificDestinationComponent } from './specific-destination/specific-de
     PopoverComponent,
     SearchDetailsComponent,
     SingleArticlePageComponent,
-    SpecificDestinationComponent
+    SpecificDestinationComponent,
+    ExploreDestinationsComponent
   ],
   imports: [
     BrowserModule,
