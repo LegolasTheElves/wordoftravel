@@ -1673,7 +1673,7 @@ span.textbutton {
   position: absolute;
   padding-top: 20px;
   top: 0;
-  z-index: 10000;
+  z-index: 1;
   overflow: hidden;
   background-size: cover;
 }
