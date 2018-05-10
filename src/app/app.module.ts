@@ -33,6 +33,7 @@ import { SearchPageService } from './searchpage/search-page.service';
 import { PopoverComponent } from './popover/popover.component';
 import { ArticlesPageService } from './articlespage/articlespage.service';
 import { SingleArticlePageService } from './single-article-page/single-article-page.service';
+import { SpecificDestinationComponent } from './specific-destination/specific-destination.component';
 
 
 
@@ -53,7 +54,8 @@ import { SingleArticlePageService } from './single-article-page/single-article-p
     SearchpageComponent,
     PopoverComponent,
     SearchDetailsComponent,
-    SingleArticlePageComponent
+    SingleArticlePageComponent,
+    SpecificDestinationComponent
   ],
   imports: [
     BrowserModule,

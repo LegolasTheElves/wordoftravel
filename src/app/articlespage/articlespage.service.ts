@@ -9,13 +9,13 @@ import { TravelArticles } from './articles';
 @Injectable()
 
 export class ArticlesPageService {
-  private _travelUrl = 'https://api.wordoftravel.com/articles?limit=10';
+  private _travelUrl = 'https://api.wordoftravel.com/articles/';
 
   constructor(private http: HttpClient) { }
 
   getArticles(): Observable<TravelArticles[]> {
     return this.http.get<TravelArticles[]>(this._travelUrl)
-      //.do(data => console.log('All:' + JSON.stringify(data)))
+      .do(data => console.log('All:' + JSON.stringify(data)))
       .catch(this.handleError);
   }
   //Error Handler

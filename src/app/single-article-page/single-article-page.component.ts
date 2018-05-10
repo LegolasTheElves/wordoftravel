@@ -29,7 +29,7 @@ export class SingleArticlePageComponent implements OnInit {
         article => {
           this.article = <TravelArticles>article['rsltCol'];
           console.log(this.article);
-          this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.article.ArticleText);
+          this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.article.ArticleName);
         },
         error => this.errorMessage = <any>error);
   }

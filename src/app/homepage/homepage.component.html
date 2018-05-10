@@ -2,8 +2,51 @@
 </app-signin>
 <app-header></app-header>
 <app-about-area></app-about-area>
-<app-featured-destination></app-featured-destination>
-<app-travel-articles></app-travel-articles>
+<!--Feature-destination-->
+<section class="project-area section-gap" id="featured">
+  <hr class="mb-80" />
+  <div class="travelarticles">
+    <div class="boxart d-flex">
+
+      <div class="row no-margin col-md-9 col-12">
+        <div class="row no-margin titlecolor1 ">FEATURED
+          <div class="titlecolor">&nbsp; DESTINATIONS</div>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-12">
+        <div class="mb-30 buttonright">
+          <a href="#secvice" class="btn-titleright">MORE DESTINATIONS</a>
+        </div>
+      </div>
+    </div>
+
+    <app-featured-destination></app-featured-destination>
+  </div>
+</section>
+<!--End-Feature-destination-->
+<!-- Start Travel Articles Area -->
+<section class="project-area section-gap mb-60" id="articles">
+  <div class="travelarticles">
+    <div class="boxart d-flex">
+
+      <div class="row no-margin col-md-9 col-12">
+        <div class="row no-margin titlecolor1 ">THINK DIFFERENTLY WITH OUR
+          <div class="titlecolor">&nbsp; TRAVEL ARTICLES</div>
+        </div>
+
+        <div class="subheadtext mb-30">Exploring topics to help you think of your travel experience in a different way!</div>
+      </div>
+      <div class="col-md-3 col-12">
+        <div class="mb-30 buttonright">
+          <a href="#secvice" class="btn-titleright2">OTHER ARTICLES</a>
+        </div>
+      </div>
+    </div>
+    <app-travel-articles></app-travel-articles>
+  </div>
+</section>
+<!-- End Travel Articles Area -->
 <app-destination></app-destination>
 <app-blogger></app-blogger>
 <app-footer></app-footer>

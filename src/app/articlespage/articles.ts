@@ -1,20 +1,15 @@
 export interface TravelArticles {
     Title: string,
-    Places: {
-        wrapperName: string,
-        values: string[],
-        type: string
-    },
+    Places: [{
+        PlaceName: string,
+        PlaceID: number
+    }],
     isSticky: boolean,
     AbstractText: string,
-    ArticleText: string,
+    ArticleName: string,
     FeatureImageThumbnail: string,
     Category: string,
     Likes: number,
     PublishedDate: string,
-    Tags: {
-        wrapperName: string,
-        values: string[],
-        type: string
-    }
+    Tags: string[]
 }
