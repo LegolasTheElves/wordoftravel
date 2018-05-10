@@ -1265,7 +1265,7 @@ span.textbutton {
   border-radius: 20px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .search-center {
     text-align: center;
     margin: unset;
@@ -1319,7 +1319,7 @@ span.textbutton {
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .modal-img {
     height: 300px !important;
   }
@@ -1459,7 +1459,7 @@ span.textbutton {
   }
 }
 
-@media (max-width: 520px) {
+@media screen and (max-width: 520px) {
   .modal-body {
     padding: 2.25em;
   }
@@ -1504,7 +1504,7 @@ span.textbutton {
   }
 }
 
-@media (min-width: 650px) {
+@media screen and (min-width: 650px) {
   .owl-carousel-icons {
     display: none !important;
   }
@@ -1514,7 +1514,7 @@ span.textbutton {
   }
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
   .icons-for-desktop {
     display: none !important;
   }
@@ -1525,7 +1525,7 @@ span.textbutton {
   }
 }
 
-@media (min-width: 481px) and (max-width: 520px) {
+@media screen and (min-width: 481px) and (max-width: 520px) {
   .modal-header {
     height: 235px;
   }
@@ -1561,7 +1561,7 @@ span.textbutton {
   }
 }
 
-@media (min-width: 441px) and (max-width: 480px) {
+@media screen and (min-width: 441px) and (max-width: 480px) {
   #container1 {
     padding: 20px 10px;
     margin: 0px auto;
@@ -1574,7 +1574,7 @@ span.textbutton {
   }
 }
 
-@media (min-width: 401px) and (max-width: 440px) {
+@media screen and (min-width: 401px) and (max-width: 440px) {
   #container1 {
     padding: 20px 0px;
     margin: 0px auto;
@@ -1587,7 +1587,7 @@ span.textbutton {
   }
 }
 
-@media (max-width: 412px) {
+@media screen and (max-width: 412px) {
   .bs-popover-left {
     left: 146px !important;
   }
@@ -1606,7 +1606,7 @@ span.textbutton {
   }
 }
 
-@media (min-width: 360px) and (max-width: 400px) {
+@media screen and (min-width: 360px) and (max-width: 400px) {
   .content-search {
     height: 150px;
     /*140*/
