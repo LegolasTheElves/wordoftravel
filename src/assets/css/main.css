@@ -4768,14 +4768,14 @@ fieldset[disabled] .btn-poplogout.active {
     width: 65% !important;
   }
   .travel-wrapper {
-    margin-left: 11px;
-    margin-right: 11px;
     flex-wrap: initial;
     overflow: -webkit-paged-x;
   }
   .col-sm-3.col-6.mb-20 {
     padding-left: 0px;
     padding-right: 0px;
+    margin-left: 11px;
+    margin-right: -2px;
   }
   .box-mobile-btn {
     display: block !important;
@@ -5060,12 +5060,21 @@ fieldset[disabled] .btn-poplogout.active {
   .wrapper1 {
     overflow: -webkit-paged-x;
     display: grid;
-    grid-gap: 2px;
+    grid-gap: 9px;
     grid-template-columns: 50% 50% 50% 50% 50% 50%;
-    grid-template-rows: 150px 150px;
+    grid-template-rows: 200px 200px;
     padding: 0px 0px 0px 0px !important;
-    margin-left: 14px;
-    margin-right: 17px;
+  }
+  .box {
+    margin-left: 11px;
+  }
+  .featured_destination4, .featured_destination5, .featured_destination6, 
+  .featured_destination7, .featured_destination8, .featured_destination9 {
+    margin-left: 0px !important
+  }
+  .boxart.d-flex .col-md-12.col-12 {
+    padding-left: 15px;
+    padding-right: 0px !important
   }
   .featuredcountry {
     font-size: 10px;

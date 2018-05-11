@@ -26,7 +26,7 @@ else {
         nav:false,
         loop:false,
         dots:false,
-        margin:10,
+        margin:15,
          responsiveClass:true,
         responsive:{
         0:{
