@@ -2368,6 +2368,9 @@ padding-top: 25px;
   .info-area .info-content {
     margin-top: 30px;
   }
+  .boxart .col-sm-3.col-6.mb-20 {
+    margin-bottom: 0px !important;
+  }
 }
 
 .info-area .info-content:after {
@@ -2625,9 +2628,7 @@ h6 {
 }
 
 .footer-social a {
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 10px;
+  padding: 10px 7px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -2886,6 +2887,7 @@ h6 {
   font-weight: 600;
   font-size: 11px;
   letter-spacing: 0px;
+  height: 42px;
 }
 
 .titlecolor {
@@ -2935,6 +2937,8 @@ h6 {
 }
 
 .travelabox {
+  height: 150px;
+  overflow: hidden;
   width: 88.5%;
   margin: auto;
 }
@@ -5216,6 +5220,7 @@ fieldset[disabled] .btn-poplogout.active {
   }
 
   .travelabox {
+    height: 90%;
     width: 96.5%;
     margin: auto 5px 15px 5px;
     text-align: initial;
@@ -5230,7 +5235,7 @@ fieldset[disabled] .btn-poplogout.active {
   }
 
   .articles-content {
-    height: 26px;
+    height: 45px;
     overflow: hidden;
     line-height: 1.3em !important;
     margin-bottom: 12px;
@@ -5401,3 +5406,17 @@ height: 35px;
 .fa {
   color: #133560;
 }
+
+/* overide css for homepage spacing */
+
+@media screen and (min-width: 520px) {
+  .project-area.section-gap.mb-60 {
+    margin-bottom: 0px;
+    margin-left: 1px;
+}
+
+.boxart .col-sm-3.col-6.mb-20 {
+  margin-bottom: 16px !important;
+}
+}
+
