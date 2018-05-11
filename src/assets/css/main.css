@@ -4897,6 +4897,7 @@ fieldset[disabled] .btn-poplogout.active {
     letter-spacing: 0px;
   }
   .titlecaptionhome {
+    color: transparent !important;
     font-size: 9px !important;
     letter-spacing: 0px !important;
   }
