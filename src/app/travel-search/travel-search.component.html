@@ -14,6 +14,7 @@
                 </div>
                 <ng-select
                  [items]="suggestions"
+                 [routerLink]="onClickSearch()"
                  bindLabel="text"
                  autocommplete="off"
                  [loading]="suggestionsLoading"
