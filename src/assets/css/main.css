@@ -1973,9 +1973,11 @@ h6 {
     margin-bottom: 30px !important;
   }
   .mb-49 {
+    margin-top: -25px;
     margin-bottom: 28px;
   }
   .project-area.section-gap.mb-60 {
+    margin-top: -13px;
     margin-bottom: 0px !important;
   }
   .navbar-nav {
@@ -4963,7 +4965,14 @@ fieldset[disabled] .btn-poplogout.active {
   .textbold1 {
     font-size: 20px;
     letter-spacing: 0em;
-    margin-top: 10px;
+    margin-top: -15px;
+    margin-bottom: 0px;
+  }
+  .menu-content.pb-40 {
+    padding-bottom: 0px !important;
+  }
+  hr.mb-80 {
+    margin-bottom: 40px !important;
   }
   .mb-80 {
     margin-bottom: 40px;
