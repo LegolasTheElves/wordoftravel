@@ -195,23 +195,6 @@ if (!$(event.target).closest('.hamburger-footer').length) {
 }
 });
 //end hamburger popover
-  var menuhandlerssearch = [
-
-    function () {
-      $("html").css("overflow-y", "hidden");
-    },
-
-    function () {
-      $("html").css("overflow-y", "auto");
-    }
-
-  ];
-
-  var menucountersearch = 0;
-  $(".navbar-toggler").click(function () {
-    menuhandlerssearch[menucountersearch++].apply(this, Array.prototype.slice.apply(arguments));
-    menucountersearch %= menuhandlerssearch.length;
-  });
 
   $(document).ready(function () {
     if($('#container1').length){ 

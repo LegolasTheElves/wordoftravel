@@ -237,24 +237,6 @@ $(document).ready(function () {
 
 
 
-  var menuhandlers = [
-
-    function() {
-      $("html").css("overflow-y","hidden");
-    },
-
-    function() {
-      $("html").css("overflow-y","auto");
-    }
-
-  ];
-
-  var menucounter = 0;
-  $(".navbar-toggler").click(function() {
-    menuhandlers[menucounter++].apply(this, Array.prototype.slice.apply(arguments));
-    menucounter %= menuhandlers.length;
-  });
-
   $(document).on('click', function(event) {
   if (!$(event.target).closest('#recent-button').length) {
     $('#autocorrect-menu').attr('style','');
