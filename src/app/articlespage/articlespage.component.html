@@ -25,7 +25,8 @@
               <div class="icon">
                 <object data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="45" height="25"></object>
               </div>
-              <span>{{article.PublishedDate | date: 'dd'}} {{article.PublishedDate | date:'MMMM'}} {{article.PublishedDate | date: 'yyyy'}}</span>
+              <span>{{article.PublishedDate | date: 'dd'}} {{article.PublishedDate | date:'MMMM'}} {{article.PublishedDate | date:
+                'yyyy'}}</span>
             </div>
             <div class="social-icons">
               <div class="inline-label">
@@ -45,10 +46,13 @@
             </div>
           </div>
           <div class="box-list-descriptions">
-            <div class="box-list-title"><a href="wordoftravel/travel-articles/green/a2">{{article.Title}}</a></div>
+            <div class="box-list-title">
+              <a href="wordoftravel/travel-articles/green/a2">{{article.Title}}</a>
+            </div>
             <div class="box-list-subheader">{{article.Category}} </div>
             <div class="box-list-overview">
-              {{ article.AbstractText }}
+              {{(article.AbstractText.length>10)? (article.AbstractText | slice:0:10)+'...':(article.AbstractText) }}
+
             </div>
             <div class="box-list-places">
               <div class="inline-label">
@@ -82,4 +86,3 @@
   <object class="svgIcon" data="./assets/svg/icon-social-whatsapp.svg" type="image/svg+xml" width="40" height="40"></object>
   <object class="svgIcon" data="./assets/svg/icon-social-mail.svg" type="image/svg+xml" width="40" height="38"></object>
 </div>
-
