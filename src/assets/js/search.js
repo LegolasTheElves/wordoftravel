@@ -58,11 +58,11 @@ function clickIsotope() {
 }
 
 function loadisotope() {
-  var $container1 = $('#container1'),
-    $body = $('body'),
+  var $container1 = $('#container1').imagesLoaded( function() { //loadimage first then relayout
+  var  $body = $('body'),
     columns = null;
   console.log('here we go');
-
+  
   $container1.isotope({
     // disable window resizing
     resizable: false,
@@ -92,7 +92,9 @@ function loadisotope() {
         $container1.width(columns * colW).isotope('reLayout');
       }
     }
+   
   }).smartresize(); // trigger resize to set container width
+}); 
 
   $('[data-toggle="popover"]').popover(); 
 

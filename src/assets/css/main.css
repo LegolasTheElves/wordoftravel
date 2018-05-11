@@ -3262,12 +3262,12 @@ table .img {
   padding: 20px;
   margin: 0px auto;
   min-height: 420px;
-  overflow: visible !important;
+  overflow: hidden !important;
 }
 
 .item {
   float: left;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   width: 235px;
 }
 
