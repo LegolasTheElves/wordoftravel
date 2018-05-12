@@ -390,7 +390,7 @@
             </div>
             <div class="content-article">
               <div class="content-text">
-                {{result.Description}}
+                  {{(result.Description.length>150)? (result.Description | slice:0:150)+'...':(result.Description) }}
               </div>
             </div>
 
