@@ -328,13 +328,17 @@ a:hover.tooltips span {
 }
 
 .bg-svg-icon {
-  margin-top: 1px;
+  margin-top: -3px;
   margin-right: 8px;
   height: 20px;
   width: 20px;
   float: left;
   background-color: #f0efef;
   border-radius: 50%;
+}
+
+.text-option a:hover .bg-svg-icon{
+  background-color: #3098d4;;
 }
 
 .bg-svg-icon-flag {
@@ -1605,10 +1609,6 @@ span.textbutton {
 }
 
 @media screen and (min-width: 360px) and (max-width: 400px) {
-  .content-search {
-    height: 150px;
-    /*140*/
-  }
   .profile-user {
     font-size: 12px;
   }
@@ -1799,4 +1799,54 @@ span.textbutton {
 
 .floating-refine-search-visible{
   left:0px !important;
+}
+
+/*Filter for mobile*/
+@media screen and (max-width: 520px) {
+  .divpop-search {
+    width: 100% !important;
+  }
+
+  .content1-search {
+    text-align: right;
+    margin-left: 0px;
+  }
+
+  .content3-search {
+    width: 100%;
+    margin: 0 6%;
+  }
+
+  .button-wrapper {
+    margin: 0px 70px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .container-filter {
+    padding-right: 3px;  }
+  
+  .button-wrapper {
+    margin: 0 25px;  }
+}
+
+@media screen and (max-width: 376px) {
+  .button-wrapper {
+    margin: 0 9px;  }
+
+  .content3-search, .content4-search {
+    margin: 0 4%;
+  }
+  .container-filter {
+    padding-right: 1px; }
+}
+
+@media screen and (max-width: 361px) {
+  .button-wrapper {
+    margin: 0 2px;  }
+
+  .content3-search, .content4-search {
+    margin: 0 0 0 5%  }
+  .container-filter {
+    padding-right: 0px; }
 }

@@ -98,16 +98,16 @@ function loadisotope() {
 
   $('[data-toggle="popover"]').popover(); 
 
-  $("object.icon-unlike-search").hover(function(){
-    $(this).attr('data', './assets/svg/icon-like-liked.svg');
+  $("img.icon-unlike-search").hover(function(){
+    $(this).attr('src', './assets/svg/icon-like-liked.svg');
   },function(){
-    $(this).attr('data', './assets/svg/icon-like-unliked.svg');
+    $(this).attr('src', './assets/svg/icon-like-unliked.svg');
   })
 
-  $("object.icon-like-search").hover(function(){
-    $(this).attr('data', './assets/svg/icon-like-unliked.svg');
+  $("img.icon-like-search").hover(function(){
+    $(this).attr('src', './assets/svg/icon-like-unliked.svg');
   },function(){
-    $(this).attr('data', './assets/svg/icon-like-liked.svg');
+    $(this).attr('src', './assets/svg/icon-like-liked.svg');
   })
 }
 
