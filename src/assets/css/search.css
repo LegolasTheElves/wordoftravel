@@ -10,7 +10,7 @@
 .wrapper {
   border: 1px solid #ccc;
   border-radius: 0rem 0rem 0.75rem 0.75rem;
-  min-height: 210px;
+  height: auto;
 }
 
 .content-search {
@@ -1479,6 +1479,7 @@ span.textbutton {
     width: 89% !important;
   }
   .title-search {
+    padding: 0 0 6px 0px;
     font-size: 13px;
     line-height: 13px;
   }
@@ -1492,12 +1493,6 @@ span.textbutton {
   .profile-user {
     font-size: 13px;
     margin-top: 0px;
-  }
-  .content-search {
-    height: 135px;
-  }
-  .wrapper {
-    height: 170px;
   }
   .like-search {
     width: 40%;
@@ -1613,9 +1608,6 @@ span.textbutton {
   .content-search {
     height: 150px;
     /*140*/
-  }
-  .wrapper {
-    height: 180px;
   }
   .profile-user {
     font-size: 12px;
