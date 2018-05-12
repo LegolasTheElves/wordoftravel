@@ -61,6 +61,9 @@
   line-height: 16px;
   overflow: hidden;
 }
+.title-search a{
+  color: inherit;
+}
 
 .content-user {
   width: 88%;
@@ -969,6 +972,9 @@ fieldset[disabled] .btn-popapply.active {
   letter-spacing: 0rem;
   line-height: 16px;
   margin-top: 8px;
+}
+.item-title-search a{
+  color: inherit;
 }
 
 .item-content-title {
