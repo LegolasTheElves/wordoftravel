@@ -11,21 +11,21 @@
 						<span class="text-black lnr lnr-menu"></span>
 					</button>
 
-					<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent" ng-controller="HeaderController">
 						<ul class="justify-content-end align-items-center navbar-nav nav">
-							<li class="nav-item active">
+							<li ng-class="{ active: isActive('/')}" class="nav-item">
 								<a href="wordoftravel/explore-destination">EXPLORE DESTINATIONS</a>
 							</li>
-							<li class="nav-item">
+							<li ng-class="{ active: isActive('/travel-articles')}" class="nav-item">
 								<a class="menu-link" href="wordoftravel/travel-articles">TRAVEL ARTICLES</a>
 							</li>
-							<li class="nav-item">
+							<li ng-class="{ active: isActive('/')}" class="nav-item">
 								<a href="#secvice">OUR STORY</a>
 							</li>
-							<li class="nav-item">
+							<li ng-class="{ active: isActive('/')}" class="nav-item">
 								<a href="#gallery">HELP</a>
 							</li>
-							<li class="nav-item">
+							<li ng-class="{ active: isActive('/')}" class="nav-item">
 								<a href="#" id="profile">
 									<img src="./assets/img/img-profile-menu.jpg" id="profile-menu-img">
 									<span id="profile-menu-badge">10</span>
