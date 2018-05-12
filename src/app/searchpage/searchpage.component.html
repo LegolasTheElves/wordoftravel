@@ -279,9 +279,16 @@
               </div>
 
 
-              <ng-select [items]="suggestions" [routerLink]="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
-                [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="{{searchName | titlecase}}"
-                [clearable]=false appendTo=".search-form-container" [(ngModel)]="selectedSuggestion">
+              <ng-select [items]="suggestions" 
+              [routerLink]="onClickSearch()"
+              bindLabel="text" autocommplete="off"
+              [loading]="suggestionsLoading"
+              [typeahead]="suggestionTypeahead"
+              class="form-control suggestion"
+              placeholder="{{searchName | titlecase}}"
+              [clearable]=false
+              appendTo=".search-form-container"
+              [(ngModel)]="selectedSuggestion">
               </ng-select>
 
               <div class="input-group-btn search-panel text-center align-content-center">
@@ -372,8 +379,8 @@
             <div class="content-user">
               <div class="profile-user">
                 <a href="">
-                  <img src="{{result.BloggerImage}}" id="search-user-img"> DAVE BUILMER
-                </a>
+                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> DAVE BUILMER
+                
                 <a class="tooltips certified" href="#">
                   <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
 

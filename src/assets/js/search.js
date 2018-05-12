@@ -5,12 +5,16 @@ $(function () {
     columns = null;
 
   if ($(window).width() >= 360 && $(window).width() <= 400) {
+    $('#id').attr('[routerLink]="onClickSearch()"');
     colW = 150;
   } else if ($(window).width() >= 401 && $(window).width() <= 440) {
+    $('#id').attr('[routerLink]="onClickSearch()"');
     colW = 188;
   } else if ($(window).width() >= 441 && $(window).width() <= 480) {
+    $('#id').attr('[routerLink]="onClickSearch()"');
     colW = 200;
   } else if ($(window).width() >= 481 && $(window).width() <= 520) {
+    $('#id').attr('[routerLink]="onClickSearch()"');
     colW = 240;
   } else {
     colW = 248;

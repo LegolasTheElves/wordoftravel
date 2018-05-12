@@ -51,7 +51,7 @@
             </div>
             <div class="box-list-subheader">{{article.Category}} </div>
             <div class="box-list-overview">
-              {{(article.AbstractText.length>10)? (article.AbstractText | slice:0:10)+'...':(article.AbstractText) }}
+              {{(article.AbstractText.length>150)? (article.AbstractText | slice:0:150)+'...':(article.AbstractText) }}
             </div>
             <div class="box-list-places">
               <div class="inline-label">
