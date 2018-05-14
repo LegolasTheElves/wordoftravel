@@ -16,6 +16,7 @@ declare let $: any;
 	styleUrls: ['./travel-search.component.css']
 })
 export class TravelSearchComponent implements OnInit {
+	searchText: any;
 	// for suggestions
 	suggestions = [];
 	suggestionsLoading = false;
@@ -71,4 +72,11 @@ export class TravelSearchComponent implements OnInit {
 		//Go to specific destination base on the param
 		window.location.href = "/wordoftravel/destination/" + selected.value + "-" + selected.id;
 	}
+	search() {
+		window.location.href = "/wordoftravel/destination/" + this.searchText;
+	  }
+	
+	  handleKeyup(event) {
+		this.searchText = event.target.value.toString();
+	  }
 }

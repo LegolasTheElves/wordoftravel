@@ -278,7 +278,7 @@
                 </button>
               </div>
 
-
+              
               <ng-select
               [items]="suggestions" 
               [routerLink]="onClickSearch()"
@@ -288,14 +288,17 @@
               class="form-control suggestion"
               placeholder="{{searchName | titlecase}}"
               [clearable]=false
+              (keyup)='handleKeyup($event)'
+              id="routerLink"
               [groupBy]="groupByFn"
               appendTo=".search-form-container"
               [(ngModel)]="selectedSuggestion">
               </ng-select>
+            
 
               <div class="input-group-btn search-panel text-center align-content-center">
                 <div class="dropdown">
-                  <button class="pointer search-panel btn-search btn-default" type="button" id="search-button" (click)="onClickSearch()">
+                  <button class="pointer search-panel btn-search btn-default" type="button" id="search-button" (click)="search()">
                     <fa name="search" size="2x"></fa>
                   </button>
                 </div>

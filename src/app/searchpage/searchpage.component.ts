@@ -21,6 +21,7 @@ export class SearchpageComponent implements OnInit {
   searchTerm: any;
   searchName: any;
   groupByFn: any;
+  searchText: any;
 
   // for suggestions
   suggestions = [];
@@ -109,6 +110,13 @@ export class SearchpageComponent implements OnInit {
   //Modal popup
   selectItem(item) {
     this.selectedItem = item;
-    console.log(item);
   }
+  search() {
+    window.location.href = "/wordoftravel/destination/" + this.searchText;
+  }
+  handleKeyup(event) {
+    this.searchText = event.target.value.toString();
+  }
+
+
 }
