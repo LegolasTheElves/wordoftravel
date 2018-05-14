@@ -247,3 +247,17 @@ $(document).ready(function () {
   });
 
 });
+
+//activate menu link
+$(function(){
+  var current = location.pathname;
+  $('.nav li a').each(function(){
+      var $this = $(this);
+      if($this.attr('href') == (current)){
+        $this.parents('.nav-item').addClass('active');
+      }
+      else {
+        $this.parents('.nav-item').removeClass('active');
+      }
+  })
+})

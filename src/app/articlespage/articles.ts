@@ -1,15 +1,18 @@
 export interface TravelArticles {
-    Title: string,
-    Places: [{
-        PlaceName: string,
-        PlaceID: number
-    }],
-    isSticky: boolean,
     AbstractText: string,
     ArticleName: string,
-    FeatureImageThumbnail: string,
+    ArticleStatus: string,
+    ArticleText: string,
+    Blogs:any[],
     Category: string,
-    Likes: number,
-    PublishedDate: string,
-    Tags: string[]
+    Description:string,
+    FeatureImage: string,
+    FeatureImageThumbnail:string,
+    Likes:number,
+    Places:any[],
+    PublishedDate:string,
+    RelatedArticles: any[],
+    Tags: any[],
+    Title: any[],
+    isSticky:boolean
 }

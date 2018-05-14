@@ -14,22 +14,29 @@ declare function loadpopovers();
 export class SingleArticlePageComponent implements OnInit {
 
   errorMessage: string;
-  article: TravelArticles;
+  article: any;
   safeHtml: SafeHtml;
+  date: any;
 
   constructor(private singleArticleService: SingleArticlePageService, private route: ActivatedRoute,private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.getAllArticles();
   }
+  
+  //Load isotope
+  ngAfterViewInit() {
+      loadpopovers();
+  }
+
 
   getAllArticles(): void {
-    this.singleArticleService.getArticle('green/a2')
+    this.singleArticleService.getArticle('green/test-zyx')
       .subscribe(
         article => {
           this.article = <TravelArticles>article['rsltCol'];
-          console.log(this.article);
           this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.article.ArticleName);
+          this.date = this.article.PublishedDate;
         },
         error => this.errorMessage = <any>error);
   }

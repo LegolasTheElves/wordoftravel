@@ -401,21 +401,25 @@
 
           </div>
           <div class="bottom-icons">
-            <a class="like-search pointer" href="#">
-              <img src="./assets/svg/icon-like-liked.svg" width="41" height="20" class="icon-like-search">
-            </a>
+              <button id="btn-like-icon-search" class="icon-circle-search pointer"></button>
             <div class="mr-10">{{result.RatingLikes}}</div>
             <a class="text-option">
-              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="<div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object></div>Share</a></div><div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;'class='icon-options2'></object></div>Favourite</a></div><div class='text-option text-uppercase mb-10'><a href='#'><div class='bg-svg-icon'><object id='svg1' data='./assets/svg/morefrombloggers.svg' type='image/svg+xml' class='icon-options'></object></div>More from Bloggers</a></div><div class='text-option text-uppercase'><a href='#'> <div class='bg-svg-icon'><object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object></div>Report Issue</a></div>"></div>
-            </a>
+              <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="<div class='text-option text-uppercase mb-10'>
+                  <button id='btn-share-icon' class='icon-circle-search'></button>
+                  <span>SHARE</span>
+              </div><div class='text-option text-uppercase mb-10'> <button id='btn-favorite-icon' class='icon-circle-search'></button>
+                <span>FAVOURITE</span></div>
+                <div class='text-option text-uppercase mb-10'><button id='btn-moreblogger-icon' class='icon-circle-search'></button>
+                  <span>MORE FROM BLOGGER</span></div>
+                  <div class='text-option text-uppercase'><button id='btn-report-icon' class='icon-circle-search'></button>
+                    <span>REPORT</span></div>
+                  </div>"></div>
+                </a>
 
+              </div>
+            </div>
           </div>
-
-
-        </div>
-
+        </a>
       </div>
-    </a>
-  </div>
-</div>
+    </div>
 <app-footer></app-footer>
