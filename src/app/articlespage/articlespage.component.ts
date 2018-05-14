@@ -26,6 +26,7 @@ export class ArticlesPageComponent implements OnInit {
       .subscribe(
         articles => {
           this.articles = articles['rsltCol'];
+          console.log(this.articles);
         },
         error => this.errorMessage = <any>error);
   }
