@@ -259,6 +259,5 @@ $(function(){
       else {
         $this.parents('.nav-item').removeClass('active');
       }
-      console.log(current);
   })
 })
