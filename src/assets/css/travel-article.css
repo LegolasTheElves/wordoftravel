@@ -23,6 +23,16 @@
 .inline-label{
     float: left;
 }
+.inline-label-modal{
+    width: 25%;
+    float: left;
+}
+.inline-label-search {
+    margin-top: -10px;
+}
+.search-icons-details {
+    margin-bottom: 18px;
+}
 .box-list-actions span{
     margin-top: -8px;
     align-self: center;
@@ -34,6 +44,7 @@
     vertical-align: middle;
 }
 .icon-circle{
+    cursor: pointer;
     background-color: #f2f2f2 !important;
     border-radius: 50%;
     width: 30px;
@@ -43,15 +54,67 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+.icon-circle-search {
+    cursor: pointer;
+    width: 32%;
+    float: left;
+    background-color: #f2f2f2 !important;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    border: none;
+    vertical-align: middle;
+}
+
+button.icon-circle:hover{
+    background-color: #3098d4 !important;
+}
+button.icon-circle-search:hover{
+    background-color: #3098d4 !important;
+}
 button:focus {
     outline:0;
 }
 button:active {
     opacity: 0.8;
 }
+
+#btn-share-icon, #btn-moreblogger-icon, #btn-report-icon, 
+#btn-favorite-icon, #btn-like-icon {
+    margin-top: -4px;
+}
+
 #btn-share-icon {
     content: "";
     background: url(../svg/icon-share.svg) no-repeat center;
+    background-size: 50%;
+  }
+
+#btn-share-icon-modal {
+    content: "";
+    background: url(../svg/icon-share.svg) no-repeat center;
+    background-size: 50%;
+  }
+#btn-moreblogger-icon {
+    content: "";
+    background: url(../svg/morefrombloggers.svg) no-repeat center;
+    background-size: 20%;
+  }
+#btn-moreblogger-icon-modal {
+    content: "";
+    background: url(../svg/morefrombloggers.svg) no-repeat center;
+    background-size: 20%;
+  }
+#btn-report-icon {
+    content: "";
+    background: url(../svg/report.svg) no-repeat center;
+    background-size: 50%;
+  }
+#btn-report-icon-modal {
+    content: "";
+    background: url(../svg/report.svg) no-repeat center;
     background-size: 50%;
   }
 #btn-favorite-icon {
@@ -59,9 +122,44 @@ button:active {
     background: url(../svg/icon-favorite.svg) no-repeat center;
     background-size: 40%;
 }
+#btn-favorite-icon-modal {
+    content: "";
+    background: url(../svg/icon-favorite.svg) no-repeat center;
+    background-size: 40%;
+}
 #btn-like-icon {
     content: "";
     background: url(../svg/icon-like-unliked.svg) no-repeat center;
+    background-size: 50%;
+}
+#btn-like-icon-modal {
+    content: "";
+    background: url(../svg/icon-like-unliked.svg) no-repeat center;
+    background-size: 50%;
+}
+
+.more-options-item {
+    float: right;
+}
+
+#btn-like-icon-search {
+    margin-top: -3px;
+    width: 12%;
+    float: left;
+    content: "";
+    background: url(../svg/icon-like-unliked.svg) no-repeat center;
+    background-size: 50%;
+}
+button#btn-like-icon-search:hover {
+    margin-top: -3px;
+    width: 12%;
+    float: left;
+    content: "";
+    background: url(../svg/icon-like-liked.svg) no-repeat center;
+    background-size: 50%;
+}
+button#btn-like-icon:hover {
+    background: url(../svg/icon-like-liked.svg) no-repeat center;
     background-size: 50%;
 }
 

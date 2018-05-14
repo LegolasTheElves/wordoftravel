@@ -7,7 +7,6 @@ if($('#carousel-wot').length){
   $('.hamburger-style').hide();
   $('.hamburger-footer').hide();
   $('.full-separator').hide();
-  console.log("homepage");
 
   if ($(window).width() >= 992) {
     $('.navbar-brand img').attr('src', './assets/svg/logo-white.svg');
@@ -15,12 +14,10 @@ if($('#carousel-wot').length){
       if ($(document).scrollTop() == 0) {
           $('.navbar-brand img').attr('src', './assets/svg/logo-white.svg');
           $('.navbar-brand img').attr('height', '45');
-          console.log("scroll top homepage");
          
       } else {
           $('.navbar-brand img').attr('src', './assets/svg/logo-colored.svg');
           $('.navbar-brand img').attr('height', '45');
-          console.log("scroll down homepage");
       }
     }); 
     }
@@ -63,7 +60,6 @@ if($('#carousel-wot').length){
 }//end if condition to hide hamburger elements for search
 //for other pages with hamburger
 else if ($('.box-list-wrapper').length || $('.owl-carousel').length){ 
-  console.log("for other page");
   $('.navbar-footer').hide();
   $('.hamburger-style').hide();
   $('.hamburger-footer').hide();
@@ -102,7 +98,6 @@ else if ($('.box-list-wrapper').length || $('.owl-carousel').length){
 }
 
 else { //conditions for search (hamburger)
-  console.log("for search page");
   if ($(window).width() >= 992) {
     $('.forjquery a').attr('class', 'btn-addtravelbloggers1');
     $('.navbar-brand img').attr('src', './assets/svg/logo-colored.svg');

@@ -112,41 +112,24 @@
         <div class="modal-footer">
           <div class="item-content-user">
             <div class="item-flag-center">
-              <div class="center-item-options">
-
-                <div class="box-item-option">
-                  <div class="tag-content-bottom text-uppercase">
-                    <div class='bg-svg-icon'>
-                      <object id='svg1' data='./assets/svg/report.svg' type='image/svg+xml' class='icon-options'></object>
-                    </div>Report Issue
-                  </div>
-
-                </div>
-                <div class="box-item-option">
-                  <div class="tag-content-bottom text-uppercase">
-                    <div class='bg-svg-icon'>
-                      <object id='svg1' data='./assets/svg/icon-favorite.svg' type='image/svg+xml' style='width: 9px;' class='icon-options2'></object>
-                    </div>Favourite
-                  </div>
-                </div>
-
-                <div class="box-item-option">
-                  <div class="tag-content-bottom text-uppercase">
-                    <div class='bg-svg-icon'>
-                      <object id='svg1' data='./assets/svg/icon-share.svg' type='image/svg+xml' class='icon-options'></object>
-                    </div>Share
-                  </div>
-                </div>
-                <div class="box-item-option">
-                  <div class="tag-content-bottom text-uppercase">
-
-                    <div class='bg-svg-icon-like'>
-                      <object id='svg1' data='./assets/svg/icon-like-unliked.svg' type='image/svg+xml' class='icon-options-unlike'></object>
+                <div class="col-md-12">
+                    <div class="inline-label-modal">
+                      <button id="btn-like-icon-modal" class="icon-circle-search"></button>
+                      <span>{{ item.RatingLikes }} LIKES</span>
                     </div>
-                    {{item.RatingLikes}} Likes
+                    <div class="inline-label-modal">
+                        <button id="btn-share-icon-modal" data-toggle="popover" class="icon-circle-search"></button>
+                        <span>SHARE</span>
+                    </div>
+                    <div class="inline-label-modal">
+                        <button id="btn-favorite-icon-modal" class="icon-circle-search"></button>
+                        <span>FAVOURITE</span>
+                    </div>
+                    <div class="inline-label-modal">
+                        <button id="btn-report-icon-modal" class="icon-circle-search"></button>
+                        <span>REPORT</span>
+                    </div>
                   </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

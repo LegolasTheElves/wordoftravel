@@ -189,7 +189,7 @@ a:hover.tooltips span {
 .bottom-icons {
   width: 86%;
   height: 25px;
-  margin: 10px 0px 0px 18px;
+  margin: 10px 0px 0px 15px;
 }
 
 .like-search {
@@ -254,7 +254,7 @@ a:hover.tooltips span {
 
 .mr-10 {
   margin-top: 3px;
-  margin-left: -35px;
+  margin-left: 0px;
   height: 20px;
   float: left;
   font-family: "Raleway";
@@ -1178,7 +1178,7 @@ fieldset[disabled] .btn-morefrombloggers.active {
 
 .item-flag-center {
   position: relative;
-  width: 94%;
+  width: 100%;
   height: 15px;
   font-weight: 500;
   font-size: 10px;
