@@ -253,8 +253,12 @@ $(function(){
   var current = location.pathname;
   $('.nav li a').each(function(){
       var $this = $(this);
-      if($this.attr('href').indexOf(current) !== -1){
+      if($this.attr('href') == (current)){
         $this.parents('.nav-item').addClass('active');
       }
+      else {
+        $this.parents('.nav-item').removeClass('active');
+      }
+      console.log(current);
   })
 })
