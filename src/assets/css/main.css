@@ -4681,9 +4681,12 @@ fieldset[disabled] .btn-poplogout.active {
 
 /*mobile responsive css */
 
-@media screen and(max-width: 414px) {
+@media screen and(max-width: 415px) {
   .item {
     margin-bottom: 20px !important;
+  }
+  .featured_destination3 {
+    width: 207px !important;
   }
 }
 
@@ -5090,9 +5093,7 @@ fieldset[disabled] .btn-poplogout.active {
   .box {
     margin-left: 11px;
   }
-  .featured_destination3 {
-    width: 250px;
-  }
+ 
   .boxart.d-flex .col-md-12.col-12 {
     padding-left: 15px;
     padding-right: 0px !important
@@ -5261,10 +5262,40 @@ a.buttondownhome:before {
   }
 }
 
+@media screen and (max-width: 361px) {
+  .mb-30 {
+    margin-top: -5px !important;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .featured_destination3 {
+    width: 207px !important;
+  }
+}
+
 /*mobile active header activator*/
 @media screen and (max-width: 580px){
+  .featured_destination3 {
+    width: 250px;
+  }
   .navbar-nav .nav-item.active a {
     font-weight: 600;
     border-top: none !important;
   }
 }
+
+@media (min-width: 364px) and (max-width: 376px) {
+  .featured_destination3 {
+    width: 190px !important;
+  }
+}
+
+@media (min-width: 359px) and (max-width: 363px) {
+  .featured_destination3 {
+    width: 179px !important;
+  }
+}
+
+
+
