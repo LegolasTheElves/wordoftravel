@@ -8,7 +8,7 @@ import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operato
 import { Subject } from 'rxjs/Subject';
 
 declare function loadisotope();
-declare function clickIsotope();
+declare let $: any;
 
 @Component({
   selector: 'app-searchpage',
@@ -20,6 +20,8 @@ export class SearchpageComponent implements OnInit {
   searchResult: SearchPage[];
   searchTerm: any;
   searchName: any;
+  groupByFn: any;
+
   // for suggestions
   suggestions = [];
   suggestionsLoading = false;
@@ -57,8 +59,17 @@ export class SearchpageComponent implements OnInit {
         res.suggest['asciiName-suggestion'].length > 0 &&
         res.suggest['asciiName-suggestion'][0].hasOwnProperty('options')
       ) {
-        const value = res.suggest['asciiName-suggestion'][0].options;
+        const value = $.map(res.suggest['asciiName-suggestion'][0].options, function (item) {
+          return {
+            label: item.text + ', ' + item._source.countryCode,
+            id: item._id,
+            value: item.text,
+            group: "Places"
+          }
+        });
         this.suggestions = value;
+        //GroupBy
+        this.groupByFn = (item) => item.group;
       } else {
         this.suggestions = [];
       }
@@ -76,15 +87,7 @@ export class SearchpageComponent implements OnInit {
       loadisotope();
     })
   }
-  ngAfterClick() {
-    this.items.changes.subscribe(t => {
-      clickIsotope();
-    })
-  }
-    
-  
-//Get result from API
-
+  //Get result from API
   getSearchResult(): void {
     this.searchApiService.getSearch(this.searchTerm)
       .subscribe(
@@ -93,20 +96,16 @@ export class SearchpageComponent implements OnInit {
         },
         error => this.errorMessage = <any>error);
   }
-
   //Search in search page
   onClickSearch() {
     const selected = this.selectedSuggestion;
     if (!selected) {
       // TODO error handling
       return
-      
     }
     this.getSearchResult();
-    window.location.href= "/wordoftravel/destination/" + selected.text + "-" + selected._id;
-
+    window.location.href = "/wordoftravel/destination/" + selected.value + "-" + selected.id;
   }
-
   //Modal popup
   selectItem(item) {
     this.selectedItem = item;

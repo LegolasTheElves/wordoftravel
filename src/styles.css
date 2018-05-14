@@ -114,6 +114,10 @@
 .ng-select.ng-select-single .ng-select-container {
   background: transparent;
 }
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup {
+  border-bottom: 1px solid #DDDDDD;
+  color: #020d1a !important;
+}
 
 @media (max-width: 580px) {
   .ng-dropdown-panel.ng-select-bottom {

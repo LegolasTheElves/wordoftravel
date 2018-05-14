@@ -21,6 +21,7 @@ export class TravelSearchComponent implements OnInit {
 	suggestionsLoading = false;
 	suggestionTypeahead = new Subject<string>();
 	selectedSuggestion;
+	groupByFn: any;
 
 	constructor(
 		private searchService: SearchService,
@@ -41,8 +42,16 @@ export class TravelSearchComponent implements OnInit {
 				res.suggest['asciiName-suggestion'].length > 0 &&
 				res.suggest['asciiName-suggestion'][0].hasOwnProperty('options')
 			) {
-				const value = res.suggest['asciiName-suggestion'][0].options;
+				const value = $.map(res.suggest['asciiName-suggestion'][0].options, function (item) {
+					return {
+						label: item.text + ', ' + item._source.countryCode,
+						id: item._id,
+						value: item.text,
+						group: "Places"
+					}
+				});
 				this.suggestions = value;
+				this.groupByFn = (item) => item.group;
 			} else {
 				this.suggestions = [];
 			}
@@ -60,6 +69,6 @@ export class TravelSearchComponent implements OnInit {
 			return
 		}
 		//Go to specific destination base on the param
-		window.location.href = "/wordoftravel/destination/" + selected.text + "-" + selected._id;
+		window.location.href = "/wordoftravel/destination/" + selected.value + "-" + selected.id;
 	}
 }

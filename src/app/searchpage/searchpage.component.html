@@ -279,7 +279,8 @@
               </div>
 
 
-              <ng-select [items]="suggestions" 
+              <ng-select
+              [items]="suggestions" 
               [routerLink]="onClickSearch()"
               bindLabel="text" autocommplete="off"
               [loading]="suggestionsLoading"
@@ -287,6 +288,7 @@
               class="form-control suggestion"
               placeholder="{{searchName | titlecase}}"
               [clearable]=false
+              [groupBy]="groupByFn"
               appendTo=".search-form-container"
               [(ngModel)]="selectedSuggestion">
               </ng-select>

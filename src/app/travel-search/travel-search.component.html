@@ -21,6 +21,7 @@
                  [typeahead]="suggestionTypeahead"
                   class="form-control suggestion"
                   placeholder="Where to?"
+                  [groupBy]="groupByFn"
                   [clearable]=false
                   appendTo=".search-form-container"
                   [(ngModel)]="selectedSuggestion">
