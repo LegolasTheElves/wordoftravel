@@ -91,20 +91,39 @@ button:active {
     background: url(../svg/icon-share.svg) no-repeat center;
     background-size: 50%;
   }
-
+button#btn-share-icon:hover {
+    content: "";
+    background: url(../svg/icon-share-white.svg) no-repeat center;
+    background-size: 50%;
+  }
 #btn-share-icon-modal {
     content: "";
     background: url(../svg/icon-share.svg) no-repeat center;
     background-size: 50%;
   }
+button#btn-share-icon-modal:hover {
+    content: "";
+    background: url(../svg/icon-share-white.svg) no-repeat center;
+    background-size: 50%;
+  }
 #btn-moreblogger-icon {
     content: "";
     background: url(../svg/morefrombloggers.svg) no-repeat center;
-    background-size: 20%;
+    background-size: 50%;
+  }
+button#btn-moreblogger-icon:hover {
+    content: "";
+    background: url(../svg/morefrombloggers-white.svg) no-repeat center;
+    background-size: 50%;
   }
 #btn-moreblogger-icon-modal {
     content: "";
     background: url(../svg/morefrombloggers.svg) no-repeat center;
+    background-size: 20%;
+  }
+button#btn-moreblogger-icon-modal:hover {
+    content: "";
+    background: url(../svg/morefrombloggers-white.svg) no-repeat center;
     background-size: 20%;
   }
 #btn-report-icon {
@@ -112,9 +131,20 @@ button:active {
     background: url(../svg/report.svg) no-repeat center;
     background-size: 50%;
   }
+
+button#btn-report-icon:hover {
+    content: "";
+    background: url(../svg/report-white.svg) no-repeat center;
+    background-size: 50%;
+  }
 #btn-report-icon-modal {
     content: "";
     background: url(../svg/report.svg) no-repeat center;
+    background-size: 50%;
+  }
+button#btn-report-icon-modal:hover {
+    content: "";
+    background: url(../svg/report-white.svg) no-repeat center;
     background-size: 50%;
   }
 #btn-favorite-icon {
@@ -122,9 +152,19 @@ button:active {
     background: url(../svg/icon-favorite.svg) no-repeat center;
     background-size: 40%;
 }
+button#btn-favorite-icon:hover {
+    content: "";
+    background: url(../svg/img-favorite-white.svg) no-repeat center;
+    background-size: 40%;
+}
 #btn-favorite-icon-modal {
     content: "";
     background: url(../svg/icon-favorite.svg) no-repeat center;
+    background-size: 40%;
+}
+button#btn-favorite-icon-modal:hover {
+    content: "";
+    background: url(../svg/img-favorite-white.svg) no-repeat center;
     background-size: 40%;
 }
 #btn-like-icon {
@@ -137,7 +177,11 @@ button:active {
     background: url(../svg/icon-like-unliked.svg) no-repeat center;
     background-size: 50%;
 }
-
+button#btn-like-icon-modal:hover {
+    content: "";
+    background: url(../svg/icon-like-liked.svg) no-repeat center;
+    background-size: 50%;
+}
 .more-options-item {
     float: right;
 }
