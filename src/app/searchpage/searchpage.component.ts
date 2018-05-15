@@ -8,6 +8,7 @@ import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operato
 import { Subject } from 'rxjs/Subject';
 
 declare function loadisotope();
+declare function hideSplash();
 declare let $: any;
 
 @Component({
@@ -45,6 +46,7 @@ export class SearchpageComponent implements OnInit {
       this.searchName = this.searchTerm.split(/[0-9\-_]+/).join('');
     });
   }
+
   ngOnInit() {
     this.getSearchResult();
     // typehead for pipe
@@ -86,6 +88,7 @@ export class SearchpageComponent implements OnInit {
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       loadisotope();
+      console.log(t);
     })
   }
   //Get result from API
@@ -95,8 +98,11 @@ export class SearchpageComponent implements OnInit {
         searchResult => {
           this.searchResult = searchResult['rsltCol'];
         },
-        error => this.errorMessage = <any>error);
-  }
+        error => {
+          this.errorMessage = <any>error; 
+          hideSplash();
+        });
+    }
   //Search in search page
   onClickSearch() {
     const selected = this.selectedSuggestion;

@@ -55,8 +55,8 @@ function loadisotope() {
       }
 
       }).smartresize(); // trigger resize to set container width
-      $(".preload").fadeOut(1000, function () {
-      });
+      
+      hideSplash();
     });
 
   $('[data-toggle="popover"]').popover();
@@ -77,7 +77,10 @@ function loadisotope() {
 }
 
 
-
+function hideSplash(){
+  $(".preload").fadeOut(1000, function () {
+  });
+}
 
 $(document).ready(function () {
   $('[data-toggle="popover"]').popover()
