@@ -2,7 +2,7 @@
   <div *ngFor="let travel of travels" class="col-sm-3 col-6 mb-20">
     <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article1.jpg" alt="">
     <div class="mt-20 travelabox">
-      <div class="articles-header text-uppercase">{{travel.Title}}</div>
+      <div class="articles-header text-uppercase pointer">{{travel.Title}}</div>
       <div class="articles-subheader">
         <span *ngFor="let place of travel.Places; let last = last">
           {{ place.PlaceName + (last ? " " : ",") }}
