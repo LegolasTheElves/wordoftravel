@@ -5,6 +5,7 @@ $(function () {
     columns = null;
 
   if ($(window).width() >= 360 && $(window).width() <= 400) {
+
     colW = 150;
   } else if ($(window).width() >= 401 && $(window).width() <= 440) {
     colW = 188;
