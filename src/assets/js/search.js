@@ -5,22 +5,11 @@ $(function () {
     columns = null;
 
   if ($(window).width() >= 360 && $(window).width() <= 400) {
-<<<<<<< HEAD
     colW = 150;
   } else if ($(window).width() >= 401 && $(window).width() <= 440) {
     colW = 188;
   } else if ($(window).width() >= 441 && $(window).width() <= 480) {
     colW = 200;
-=======
-    $('#id').attr('[routerLink]="onClickSearch()"');
-    colW = Math.floor(($body.width()) / 2 );
-  } else if ($(window).width() >= 401 && $(window).width() <= 440) {
-    $('#id').attr('[routerLink]="onClickSearch()"');
-    colW = Math.floor(($body.width()) / 2 );
-  } else if ($(window).width() >= 441 && $(window).width() <= 480) {
-    $('#id').attr('[routerLink]="onClickSearch()"');
-    colW = Math.floor(($body.width()) / 2 );
->>>>>>> 14c6e271a311d444afd19617d28697a17a329385
   } else if ($(window).width() >= 481 && $(window).width() <= 520) {
     colW = 240;
   } else {
@@ -28,16 +17,46 @@ $(function () {
   }
 
 });
+(function(){
+  function id(v){ return document.getElementById(v); }
+  function loadbar() {
+    var ovrl = id("overlay"),
+        prog = id("progress"),
+        stat = id("progstat"),
+        img = document.images,
+        c = 0,
+        tot = img.length;
+    if(tot == 0) return doneLoading();
 
-<<<<<<< HEAD
-=======
-function clickIsotope() {
-  var $container1 = $('#container1'),
-    $body = $('body'),
-    columns = null,
-    $pointer = $('pointer');
-  if ($pointer.click) {
-    console.log('here we go again');
+    function imgLoaded(){
+      c += 1;
+      var perc = ((100/tot*c) << 0) +"%";
+      prog.style.width = perc;
+      stat.innerHTML = "Just a moment - Searching ......";
+      if(c===tot) return doneLoading();
+    }
+    function doneLoading(){
+      ovrl.style.opacity = 0;
+      setTimeout(function(){ 
+        ovrl.style.display = "none";
+      }, 1200);
+    }
+    for(var i=0; i<tot; i++) {
+      var tImg     = new Image();
+      tImg.onload  = imgLoaded;
+      tImg.onerror = imgLoaded;
+      tImg.src     = img[i].src;
+    }    
+  }
+  document.addEventListener('DOMContentLoaded', loadbar, false);
+}());
+
+function loadisotope() {
+  var $container1 = $('#container1').imagesLoaded(function () { //loadimage first then relayout
+    var $body = $('body'),
+      columns = null;
+    console.log('here we go');
+
     $container1.isotope({
       // disable window resizing
       resizable: false,
@@ -45,86 +64,43 @@ function clickIsotope() {
         columnWidth: colW
       }
     });
+
     $(window).smartresize(function () {
       var currentColumns = Math.floor(($body.width()) / colW);
       if (currentColumns !== columns) {
         if ($(window).width() >= 360 && $(window).width() <= 400) {
           columns = 2;
           $container1.width(columns * colW).isotope('reLayout');
-          console.log("360");
         } else if ($(window).width() >= 401 && $(window).width() <= 440) {
           columns = 2;
           $container1.width(columns * colW).isotope('reLayout');
-          console.log("401");
         } else if ($(window).width() >= 441 && $(window).width() <= 480) {
           columns = 2;
           $container1.width(columns * colW).isotope('reLayout');
-          console.log("441");
         } else if ($(window).width() >= 481 && $(window).width() <= 520) {
           columns = 2;
           $container1.width(columns * colW).isotope('reLayout');
-          console.log("481");
         } else {
           columns = currentColumns;
           // apply width to container manually, then trigger relayout
           $container1.width(columns * colW).isotope('reLayout');
         }
       }
-    }).smartresize();
-  }
-}
 
->>>>>>> 14c6e271a311d444afd19617d28697a17a329385
-function loadisotope() {
-  var $container1 = $('#container1').imagesLoaded( function() { //loadimage first then relayout
-  var  $body = $('body'),
-    columns = null;
-  console.log('here we go');
-  
-  $container1.isotope({
-    // disable window resizing
-    resizable: false,
-    masonry: {
-      columnWidth: colW
-    }
+    }).smartresize(); // trigger resize to set container width
   });
 
-  $(window).smartresize(function () {
-    var currentColumns = Math.floor(($body.width()) / colW);
-    if (currentColumns !== columns) {
-      if ($(window).width() >= 360 && $(window).width() <= 400) {
-        columns = 2;
-        $container1.width(columns * colW).isotope('reLayout');
-      } else if ($(window).width() >= 401 && $(window).width() <= 440) {
-        columns = 2;
-        $container1.width(columns * colW).isotope('reLayout');
-      } else if ($(window).width() >= 441 && $(window).width() <= 480) {
-        columns = 2;
-        $container1.width(columns * colW).isotope('reLayout');
-      } else if ($(window).width() >= 481 && $(window).width() <= 520) {
-        columns = 2;
-        $container1.width(columns * colW).isotope('reLayout');
-      } else {
-        columns = currentColumns;
-        // apply width to container manually, then trigger relayout
-        $container1.width(columns * colW).isotope('reLayout');
-      }
-    }
-   
-  }).smartresize(); // trigger resize to set container width
-}); 
+  $('[data-toggle="popover"]').popover();
 
-  $('[data-toggle="popover"]').popover(); 
-
-  $("img.icon-unlike-search").hover(function(){
+  $("img.icon-unlike-search").hover(function () {
     $(this).attr('src', './assets/svg/icon-like-liked.svg');
-  },function(){
+  }, function () {
     $(this).attr('src', './assets/svg/icon-like-unliked.svg');
   })
 
-  $("img.icon-like-search").hover(function(){
+  $("img.icon-like-search").hover(function () {
     $(this).attr('src', './assets/svg/icon-like-unliked.svg');
-  },function(){
+  }, function () {
     $(this).attr('src', './assets/svg/icon-like-liked.svg');
   })
 }
@@ -181,51 +157,58 @@ $(document).ready(function () {
   });
 
 
-//hamburger popover
-var hamburgerhandler = [
+  //hamburger popover
+  var hamburgerhandler = [
 
-  function() {
-    $( ".hamburger-footer" ).animate( {top:44}, 200);
-  },
+    function () {
+      $(".hamburger-footer").animate({
+        top: 44
+      }, 200);
+    },
 
-  function() {
+    function () {
+      if ($('.hamburger-footer').css('top') == '44px') {
+        $(".hamburger-footer").animate({
+          top: -245
+        }, 200);
+      } else {
+        $(".hamburger-footer").animate({
+          top: 44
+        }, 200);
+      }
+    }
+
+  ];
+
+  var hamburgerhandlercounter = 0;
+  $(".hamburger-style").click(function () {
+    hamburgerhandler[hamburgerhandlercounter++].apply(this, Array.prototype.slice.apply(arguments));
+    hamburgerhandlercounter %= hamburgerhandler.length;
+  });
+
+  $(document).on('click', function (event) {
     if ($('.hamburger-footer').css('top') == '44px') {
-    $( ".hamburger-footer" ).animate( {top:-245}, 200);
+      if (!$(event.target).closest('.hamburger-footer').length) {
+        $(".hamburger-footer").animate({
+          top: -245
+        }, 200);
+      }
     }
-    else {
-      $( ".hamburger-footer" ).animate( {top:44}, 200);
-    }
-  }
-
-];
-
-var hamburgerhandlercounter = 0;
-$(".hamburger-style").click(function() {
-  hamburgerhandler[hamburgerhandlercounter++].apply(this, Array.prototype.slice.apply(arguments));
-  hamburgerhandlercounter %= hamburgerhandler.length;
-});
-
-$(document).on('click', function(event) {
-  if ($('.hamburger-footer').css('top') == '44px') {
-if (!$(event.target).closest('.hamburger-footer').length) {
-  $(".hamburger-footer").animate( {top:-245}, 200);
-  }
-}
-});
-//end hamburger popover
+  });
+  //end hamburger popover
 
   $(document).ready(function () {
-    if($('#container1').length){ 
-    $(window).scroll(function () {
-      if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
-        $(".hamburger-style").attr('style', 'display: none');        
-        $(".hamburger-footer").addClass('hamburger-footer-hidden');
-      } else {
-        $(".hamburger-style").attr('style', '');
-        $(".hamburger-footer").removeClass('hamburger-footer-hidden');
-      }
-    });
-  }
+    if ($('#container1').length) {
+      $(window).scroll(function () {
+        if ($('body').height() <= ($(window).height() + $(window).scrollTop())) {
+          $(".hamburger-style").attr('style', 'display: none');
+          $(".hamburger-footer").addClass('hamburger-footer-hidden');
+        } else {
+          $(".hamburger-style").attr('style', '');
+          $(".hamburger-footer").removeClass('hamburger-footer-hidden');
+        }
+      });
+    }
   });
 
 

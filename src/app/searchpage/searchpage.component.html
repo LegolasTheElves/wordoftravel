@@ -1,3 +1,7 @@
+<div id="overlay">
+  <div id="progstat"></div>
+  <div id="progress"></div>
+</div>
 <!-- floating refine -->
 <div id="floating-refine">
   <!-- Modal content-->
@@ -278,23 +282,13 @@
                 </button>
               </div>
 
-              
-              <ng-select
-              [items]="suggestions" 
-              [routerLink]="onClickSearch()"
-              bindLabel="text" autocommplete="off"
-              [loading]="suggestionsLoading"
-              [typeahead]="suggestionTypeahead"
-              class="form-control suggestion"
-              placeholder="{{searchName | titlecase}}"
-              [clearable]=false
-              (keyup)='handleKeyup($event)'
-              id="routerLink"
-              [groupBy]="groupByFn"
-              appendTo=".search-form-container"
-              [(ngModel)]="selectedSuggestion">
+
+              <ng-select [items]="suggestions" [routerLink]="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
+                [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="{{searchName | titlecase}}"
+                [clearable]=false (keyup)='handleKeyup($event)' id="routerLink" [groupBy]="groupByFn" appendTo=".search-form-container"
+                [(ngModel)]="selectedSuggestion">
               </ng-select>
-            
+
 
               <div class="input-group-btn search-panel text-center align-content-center">
                 <div class="dropdown">
@@ -379,13 +373,16 @@
               <div class="date-search">{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date: 'yyyy'}}</div>
             </div>
             <div class="content-title">
-              <div class="title-search"><a href>{{result.Title | uppercase}}</a></div>
+              <div class="title-search">
+                <a href>{{result.Title | uppercase}}</a>
+              </div>
             </div>
             <div class="content-user">
               <div class="profile-user">
                 <a href="">
-                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> DAVE BUILMER
-                
+                  <img src="{{result.BloggerImage}}" id="search-user-img">
+                </a> DAVE BUILMER
+
                 <a class="tooltips certified" href="#">
                   <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
 
@@ -395,13 +392,13 @@
             </div>
             <div class="content-article">
               <div class="content-text">
-                  {{(result.Description.length>150)? (result.Description | slice:0:150)+'...':(result.Description) }}
+                {{(result.Description.length>150)? (result.Description | slice:0:150)+'...':(result.Description) }}
               </div>
             </div>
 
           </div>
           <div class="bottom-icons">
-              <button id="btn-like-icon-search" class="icon-circle-search pointer"></button>
+            <button id="btn-like-icon-search" class="icon-circle-search pointer"></button>
             <div class="mr-10">{{result.RatingLikes}}</div>
             <a class="text-option">
               <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="<div class='text-option text-uppercase mb-10'>
@@ -414,12 +411,12 @@
                   <div class='text-option text-uppercase'><button id='btn-report-icon' class='icon-circle-search'></button>
                     <span>REPORT</span></div>
                   </div>"></div>
-                </a>
+            </a>
 
-              </div>
-            </div>
           </div>
-        </a>
+        </div>
       </div>
-    </div>
+    </a>
+  </div>
+</div>
 <app-footer></app-footer>
