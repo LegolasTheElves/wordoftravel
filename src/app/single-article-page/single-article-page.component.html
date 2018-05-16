@@ -25,13 +25,13 @@
           <div class="icon">
             <object style="text-align: left;" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="40" height="20"></object>
           </div>
-          <span>{{article.PublishedDate | date: 'dd'}} {{article.PublishedDate | date:'MMMM'}} {{article.PublishedDate | date: 'yyyy'}}</span>
+          <span>{{article?.PublishedDate | date: 'dd'}} {{article?.PublishedDate | date:'MMMM'}} {{article?.PublishedDate | date: 'yyyy'}}</span>
         </div>
-        <div class="box-list-title col-md-12">{{ article.Title }}</div>
+        <div class="box-list-title col-md-12">{{ article?.Title }}</div>
         <div class="box-list-places col-md-12 ">
           <div>
             <span class="label">PLACES:&nbsp;</span>
-            <span class="tags">{{article.Places.values}}</span>
+            <span class="tags">{{article?.Places.values}}</span>
           </div>
           <div>
             <span class="label">TOPICS:&nbsp;</span>
@@ -41,7 +41,7 @@
         <div class="social-icons-details col-md-12">
           <div class="inline-label">
             <button id="btn-like-icon" class="icon-circle"></button>
-            <span>{{ article.Likes }} LIKES</span>
+            <span>{{ article?.Likes }} LIKES</span>
           </div>
           <div class="inline-label">
               <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
@@ -63,7 +63,7 @@
         <div class="social-icons-details mt-20 mb-90 col-md-12">
           <div class="inline-label ">
             <button id="btn-like-icon" class="icon-circle"></button>
-            <span>{{ article.Likes }} LIKES</span>
+            <span>{{ article?.Likes }} LIKES</span>
           </div>
 
           <div class="inline-label ">
