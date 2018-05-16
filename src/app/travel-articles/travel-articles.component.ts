@@ -21,10 +21,12 @@ export class TravelArticlesComponent implements OnInit {
     this.travelApiService.getTravelArticle()
       .subscribe(
         travels => {
-          this.travels = travels['rsltCol'];
-          console.log(this.travels);
-        },
-        error => this.errorMessage = <any>error);
+          if(travels['rsltCol']){
+            this.travels = travels['rsltCol'];
+          } else {
+            this.travels = travels['widersltCol'];
+          }
+        },error => this.errorMessage = <any>error);
   }
-
+  
 }
