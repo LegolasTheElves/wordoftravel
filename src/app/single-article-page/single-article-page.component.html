@@ -9,7 +9,7 @@
       <div id="carousel-wot" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
-                  <img src="./assets/img/bg-article.png" height="100%">
+                  <img src="//wordoftravel.com{{article?.FeatureImage}}" height="100%">
               </div>
           </div>
           <!--/.Slides-->
@@ -31,7 +31,11 @@
         <div class="box-list-places col-md-12 ">
           <div>
             <span class="label">PLACES:&nbsp;</span>
-            <span class="tags">{{article?.Places.values}}</span>
+            <span class="tags">        
+                <span *ngFor="let place of article?.Places; let last = last">
+                    {{ place.PlaceName + (last ? " " : ",") }}
+                </span>
+            </span>
           </div>
           <div>
             <span class="label">TOPICS:&nbsp;</span>
@@ -84,14 +88,33 @@
   <!-- Start Related Articles Area -->
   <section class="project-area section-gap ml-30 mr-30 mb-60">
       <div class="">
-          <div class="boxart d-flex mb-20">
-              <div class="row no-margin col-md-9 col-12">
-                  <div class="row no-margin titlecolor1 ">RELATED
-                      <div class="titlecolor">&nbsp;ARTICLES</div>
-                  </div>
-              </div>
-          </div>
-                <app-travel-articles></app-travel-articles>
+            <div class="boxart d-flex mb-20">
+                <div class="row no-margin col-md-9 col-12">
+                    <div class="row no-margin titlecolor1 ">RELATED
+                        <div class="titlecolor">&nbsp;ARTICLES</div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxart d-flex travel-wrapper">
+                <div *ngFor="let travel of article?.RelatedArticles" class="col-sm-3 col-6 mb-20">
+                    <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">
+                        <img class="border_radius img-fluid travel-article-thumb" src="//wordoftravel.com{{travel.FeatureImageThumbnail}}" alt="">
+                    </a>
+                    <div class="mt-20 travelabox">
+                        <div class="articles-header text-uppercase pointer">
+                            <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">{{travel.Title}}</a></div>
+                        <div class="articles-subheader">
+                            <span *ngFor="let place of travel.Places; let last = last">
+                            {{ place.PlaceName + (last ? " " : ",") }}
+                            </span>
+                            <div class="articles-content">{{travel.AbstractText}}</div>
+                            <div class="text-right">
+                                <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}" class="btn-readmore">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
       </div>
   </section>
   <!-- End Related Articles Area -->
@@ -107,7 +130,22 @@
                   </div>
               </div>
           </div>
-          <app-travel-articles></app-travel-articles>
+            <div class="boxart d-flex travel-wrapper">
+                <div *ngFor="let travel of article.Blogs" class="col-sm-3 col-6 mb-20">
+                    <a href="{{PostURL}}">
+                        <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article1.jpg" alt="">
+                    </a>
+                    <div class="mt-20 travelabox">
+                        <div class="articles-header text-uppercase pointer"><a href="{{PostURL}}">{{travel.Title}}</a></div>
+                        <div class="articles-subheader">
+                            <div class="articles-content">{{travel.Description}}</div>
+                            <div class="text-right">
+                                <a href="{{travel.PostURL}}" class="btn-readmore">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
       </div>
   </section>
   <div id="socialSharePopover" class="inline-label">

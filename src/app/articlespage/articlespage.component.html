@@ -17,7 +17,7 @@
       <!-- Item -->
       <li *ngFor="let article of articles; let i = index;" #travelarticles>
         <div class="image-wrapper">
-          <a href="wordoftravel/travel-articles/green/a2"><img src="./assets/img/img_article3.jpg"></a>
+          <a href="wordoftravel/travel-articles/{{article.Category}}/{{article.ArticleName}}"><img src="//wordoftravel.com{{article.FeatureImageThumbnail}}"></a>
         </div>
         <div class="box-list-content">
           <div class="box-list-actions">
@@ -47,7 +47,7 @@
           </div>
           <div class="box-list-descriptions">
             <div class="box-list-title">
-              <a href="wordoftravel/travel-articles/green/a2">{{article.Title}}</a>
+              <a href="wordoftravel/travel-articles/{{article.Category}}/{{article.ArticleName}}">{{article.Title}}</a>
             </div>
             <div class="box-list-subheader">{{article.Category}} </div>
             <div class="box-list-overview">

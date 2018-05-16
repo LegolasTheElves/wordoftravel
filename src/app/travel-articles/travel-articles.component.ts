@@ -22,6 +22,7 @@ export class TravelArticlesComponent implements OnInit {
       .subscribe(
         travels => {
           this.travels = travels['rsltCol'];
+          console.log(this.travels);
         },
         error => this.errorMessage = <any>error);
   }

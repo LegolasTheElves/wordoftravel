@@ -18,7 +18,15 @@ export class SingleArticlePageComponent implements OnInit {
   safeHtml: SafeHtml;
   date: any;
 
-  constructor(private singleArticleService: SingleArticlePageService, private route: ActivatedRoute,private sanitizer: DomSanitizer) { }
+  articleCategory: string;
+  articleName: string;
+
+  constructor(private singleArticleService: SingleArticlePageService, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+    this.route.params.subscribe(params => {
+      this.articleName = params.name;
+      this.articleCategory = params.category;
+    });
+   }
 
   ngOnInit() {
     this.getAllArticles();
@@ -31,12 +39,13 @@ export class SingleArticlePageComponent implements OnInit {
 
 
   getAllArticles(): void {
-    this.singleArticleService.getArticle('green/test-zyx')
+    this.singleArticleService.getArticle(this.articleCategory.concat('/').concat(this.articleName))
       .subscribe(
         article => {
           this.article = <TravelArticles>article['rsltCol'];
-          this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.article.ArticleName);
+          this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.article.ArticleText);
           this.date = this.article.PublishedDate;
+          console.log(JSON.stringify(this.article));
         },
         error => this.errorMessage = <any>error);
   }

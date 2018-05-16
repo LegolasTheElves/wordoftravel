@@ -88,7 +88,6 @@ export class SearchpageComponent implements OnInit {
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       loadisotope();
-      console.log(t);
     })
   }
   //Get result from API

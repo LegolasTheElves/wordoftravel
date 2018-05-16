@@ -21,9 +21,7 @@ $(function () {
 
 function loadisotope() {
   var $container1 = $('#container1').imagesLoaded(function () { //loadimage first then relayout
-    var $body = $('body'),
-      columns = null;
-    console.log('here we go');
+    var $body = $('body'), columns = null;
 
     $container1.isotope({
       // disable window resizing
@@ -54,11 +52,10 @@ function loadisotope() {
           $container1.width(columns * colW).isotope('reLayout');
         }
       }
-
-      }).smartresize(); // trigger resize to set container width
+    }).smartresize(); // trigger resize to set container width
       
-      hideSplash();
-    });
+    hideSplash();
+  }); // end container image loaded 
 
   $('[data-toggle="popover"]').popover();
 
