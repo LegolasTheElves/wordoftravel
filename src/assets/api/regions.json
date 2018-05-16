@@ -883,8 +883,8 @@
 			]
 	},
 
-	"Australia, NZ & the Pacific": {
-		"RegionName": "Australia, NZ & the Pacific",
+	"Australia, NZ and the Pacific": {
+		"RegionName": "Australia, NZ and the Pacific",
 		"ImagePath": "/images/regions/australia.jpg",
 		"RegionDescription": "x y z",
 		"Countries": [
@@ -1209,7 +1209,7 @@
 
 			{
 				"TravelAdvice": "https://www.gov.uk/foreign-travel-advice/curacao",
-				"CountryName": "Cura�ao",
+				"CountryName": "Curaçao",
 				"CountryCode": "cw",
 				"Priority": 1,
 				"ImagePath": "",
@@ -1310,7 +1310,7 @@
 
 			{
 				"TravelAdvice": "no separate advice",
-				"CountryName": "St Barth�lemy",
+				"CountryName": "St Barthélemy",
 				"CountryCode": "bl",
 				"Priority": 1,
 				"ImagePath": "",
