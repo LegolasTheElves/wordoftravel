@@ -9,7 +9,6 @@ import { Destination } from './destination';
 @Injectable()
 export class DestinationService {
   private _destinationUrl = './assets/api/regions.json';
-
   constructor(private http: HttpClient) { }
 
   getDestination(): Observable<any> {

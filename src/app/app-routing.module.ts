@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'wordoftravel/travel-articles', component: ArticlesPageComponent },
   { path: 'wordoftravel/travel-articles/:category/:name', component: SingleArticlePageComponent },
   { path: 'wordoftravel/destination/:term', component: SearchpageComponent },
-  { path: 'wordoftravel/specific-destination', component: SpecificDestinationComponent },
+  { path: 'wordoftravel/specific-destination/:RegionName', component: SpecificDestinationComponent },
   { path: 'wordoftravel/explore-destination', component: ExploreDestinationsComponent },
   { path: 'wordoftravel/our-story', component:  OurStoryPageComponent } 
 
