@@ -158,3 +158,9 @@ button:active {
     display: none;
 }
 
+.blogger-box {
+    height: 220px;
+    overflow: hidden;
+    width: 88.5%;
+    margin: auto;
+}
