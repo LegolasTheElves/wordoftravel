@@ -1,0 +1,158 @@
+.tagline {
+    font-size: 31px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1em;
+    color: #133560;
+}
+
+p.copyright{
+    margin-bottom: 0px;
+}
+
+.title-launch {
+    padding: 40px 0;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 50px;
+    color: #a967aa;
+}
+
+.title-launch2 {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 50px;
+    color: #133560;
+    padding-bottom: 3px;
+}
+
+.title-contents {
+    line-height: 40px !important;
+    width: 80%;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 30px;
+    color: #a967aa;
+    padding-bottom: 12px;
+    margin: 0 auto;
+}
+
+.title-contents2 {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 30px;
+    color: #133560;
+    padding-bottom: 3px;
+}
+
+.subhead-content {
+    line-height: 26px !important;
+    letter-spacing: -0.3px;
+    font-family: "Raleway";
+    color: #133561;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.standard-img-caption {
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.subscribe-standard {
+    font-family: "Raleway";
+    font-size: 31px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+
+.our-story-banner {
+    font-family: "Raleway";
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+.form-control {
+    padding-left: 30px;
+    border-radius: 0.50rem !important;
+}
+
+.search-form-container {
+    width: 95%;
+    margin: 0 2.5%;
+}
+
+.sbtn3:focus {
+    outline: none;
+  }
+
+.sbtn3 {
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    background-color: #3098d4;
+    border-color: transparent !important;
+    margin: 0px;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0.50rem;
+    border-bottom-right-radius: 0.50rem;
+    border-bottom-left-radius: 0rem;
+    width: 220px;
+}
+
+.img-standard {
+    margin-bottom: 10px;
+    width: 330px;
+}
+
+.text-banner {
+    height: 530px !important;
+}
+
+/* Mobile */
+@media screen and (max-width: 520px) {
+
+.sbtn3 {
+    width: 120px !important;
+}
+    
+.standard-img-caption {
+    right: 0;
+    left: 0;
+    margin-top: -10px;
+    padding-top: 0px;
+    color: #fff;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 24px;
+}
+
+.subscribe-standard {
+    font-size: 24px;
+}
+
+.title-launch {
+    font-size: 40px;
+}
+
+.title-launch2 {
+    font-size: 40px;
+}
+
+.title-contents {
+    width: 100%;
+}
+}

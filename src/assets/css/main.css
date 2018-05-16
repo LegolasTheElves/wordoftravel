@@ -2040,6 +2040,18 @@ h6 {
   height: 10px;
 }
 
+.default-header .nav-color-search .nav-item a:hover {
+  font-weight: 600;
+  border-top: 5px solid #a967aa !important;
+  padding-top: 22px;
+}
+
+.is-sticky .default-header .nav-color-search .nav-item a:hover {
+  font-weight: 600;
+  border-top: 5px solid #a967aa !important;
+  padding-top: 22px;
+}
+
 .is-sticky .default-header .navbar-nav a:hover {
   font-weight: 600;
   border-top: 5px solid #a967aa;
@@ -2048,7 +2060,7 @@ h6 {
 
 .default-header .navbar-nav a:hover {
   font-weight: 600;
-  border-top: 5px solid #a967aa;
+  border-top: 5px solid #ffffff;
   padding-top: 22px;
 }
 
@@ -5246,9 +5258,21 @@ a.buttondownhome:before {
 }
 
 /*Header activator*/
-.navbar-nav .nav-item.active a {
+.default-header .navbar-nav .nav-item.active a {
   font-weight: 600;
-  border-top: 5px solid #a967aa;
+  border-top: 5px solid #ffffff;
+  padding-top: 22px;
+}
+
+.is-sticky .default-header .navbar-nav .nav-item.active a {
+  font-weight: 600;
+  border-top: 5px solid #a967aa !important;
+  padding-top: 22px;
+}
+
+.default-header .nav-color-search .nav-item.active a {
+  font-weight: 600;
+  border-top: 5px solid #a967aa !important;
   padding-top: 22px;
 }
 

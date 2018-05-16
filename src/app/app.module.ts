@@ -23,6 +23,7 @@ import { TravelSearchComponent } from './travel-search/travel-search.component';
 import { SingleArticlePageComponent } from './single-article-page/single-article-page.component';
 import { SpecificDestinationComponent } from './specific-destination/specific-destination.component';
 import { ExploreDestinationsComponent } from './explore-destinations/explore-destinations.component';
+import { OurStoryPageComponent } from './our-story-page/our-story-page.component';
 
 //service
 import { TravelArticleService } from './travel-articles/travelArticle.service';
@@ -35,6 +36,7 @@ import { SearchPageService } from './searchpage/search-page.service';
 import { PopoverComponent } from './popover/popover.component';
 import { ArticlesPageService } from './articlespage/articlespage.service';
 import { SingleArticlePageService } from './single-article-page/single-article-page.service';
+
 
 
 
@@ -57,7 +59,8 @@ import { SingleArticlePageService } from './single-article-page/single-article-p
     SearchDetailsComponent,
     SingleArticlePageComponent,
     SpecificDestinationComponent,
-    ExploreDestinationsComponent
+    ExploreDestinationsComponent,
+    OurStoryPageComponent
   ],
   imports: [
     BrowserModule,
