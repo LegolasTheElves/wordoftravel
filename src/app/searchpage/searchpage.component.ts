@@ -96,7 +96,11 @@ export class SearchpageComponent implements OnInit {
     this.searchApiService.getSearch(this.searchTerm)
       .subscribe(
         searchResult => {
-          this.searchResult = searchResult['rsltCol'];
+          if(searchResult['rsltCol']) {
+            this.searchResult = searchResult['rsltCol'];
+          } else {
+            this.searchResult = searchResult['widersltCol'];
+          }
         },
         error => {
           this.errorMessage = <any>error; 
