@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { ActivatedRoute } from "@angular/router";
+
 @Component({
   selector: 'app-specific-destination',
   templateUrl: './specific-destination.component.html',
@@ -7,9 +9,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SpecificDestinationComponent implements OnInit {
   @Input() item: {};
-  constructor() { }
+ 
+  region: string;
+
+  constructor(public route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      this.region = params.region;
+    });
+   }
 
   ngOnInit() {
+    console.log("Region: " + this.region);
   }
 
 }
