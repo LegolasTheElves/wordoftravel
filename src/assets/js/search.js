@@ -84,12 +84,17 @@ function loadisotope() {
     $(this).attr('src', './assets/svg/icon-like-liked.svg');
   })
 
-  $('img').error(function(){
+  $('img#img-item-search').error(function(){
     $(this).attr('src', './assets/img/missing.jpg');
   });
 
   $('.img-search').error(function(){
     $(this).attr('style','padding:40px;background-color:#fff');
+  });
+
+  $('img').error(function(){
+    $(this).attr('src', './assets/img/missing.jpg');
+    $(this).attr('style','background-color:#fff');
   });
 
 }
