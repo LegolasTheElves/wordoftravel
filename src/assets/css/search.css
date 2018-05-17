@@ -5,6 +5,8 @@
   min-height: 150px;
   width: 100%;
   background-color: #ebebeb;
+  border: 1px solid #ccc;
+  border-bottom: 0px;
 }
 
 .wrapper {
@@ -1761,7 +1763,7 @@ span.textbutton {
   padding-top: 20px;
   top: 0;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
   background-size: cover;
 }
 
