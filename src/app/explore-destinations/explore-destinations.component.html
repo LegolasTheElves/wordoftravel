@@ -10,49 +10,73 @@
       </div>
     </div>
   </div>
-  <app-destination></app-destination>
-</section>
-<!-- Start Destination Area -->
-<section class="project-area section-gap ml-30 mr-30">
-  <div class="d-flex justify-content-center">
-    <div class="menu-content col-lg-8">
-      <div class="title text-center">
-        <h1 class="mb-20 titlecolor1">EXPLORE THE BEST OF
-          <span class="titlecolor">AFRICA</span>
-        </h1>
+  <!--Rotator-->
+  <div class="col-md-12 col-12">
+    <div class="owl-carousel">
+      <div class="" *ngFor="let destination of destinations" #owlitem>
+        <div class="text-center ">
+          <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
+        </div>
+        <div class="gradient-carousel">
+        <div class="img-caption text-center">
+          <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
+          <div class="dest_texthead">
+            <a (click)="selectRegion(destination)" class="btn-destreadmore">READ MORE</a>
+        </div>
+        </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="d-flex justify-content-center">
-    <div class="col-lg-12 col-md-8 text-center">
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Afghanistan</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Armenia</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Azerbaijan</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Bahrain</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Bangladesh</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Bhutan</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Brunei</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Cambodia</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">China</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">India</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Indonesia</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Iran</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Iraq</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Israel</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Japan</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Jordan</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Malaysia</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Maldives</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Mongolia</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Myanmar</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Nepal</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">North Korea</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Pakistan</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Palestine</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Philippines</a>
-      <a href="#" class="genric-btn default circle fz-16 btn-compact">Saudi Arabia</a>
+  
+  <div class="boxart d-flex travel-wrapper">
+    <div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
+      <div class="text-center">
+        <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
+      </div>
+      <div class="gradient-carousel">
+      <div class="img-caption text-center">
+        <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
+        <div class="dest_texthead">
+            <a href="wordoftravel/explore-destination/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
+        </div>
+  
+      </div>
+      </div>
+    </div>
+  
+    <div class="col-sm-3 col-6 mb-20 carousel-mobile">
+      <div class="no-mobile">
+        <div class="text-center">
+          <img class="img-fluid" src="./assets/img/img_des3.jpg" alt="">
+        </div>
+        <div class="img-caption text-center">
+          <div class="dest_texthead">AUSTRALIA</div>
+          <div class="dest_texthead">
+            <a href="wordoftravel/specific-destination" class="btn-destreadmore">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="box-mobile-carousel">
+        <a href="#">
+          <div class="text-center">
+            <img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
+          </div>
+          <div class="color-carousel">
+  
+            <div class="box-mobile-txt">
+              ALL REGIONS
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
+  <!--End of Rotator-->
+</section>
+<!-- Start Destination Area -->
+<section class="project-area section-gap ml-30 mr-30">
+  <app-destination [item]="selectedRegion"></app-destination>
   <div class="mt-30">
     <app-featured-destination></app-featured-destination>
   </div>
