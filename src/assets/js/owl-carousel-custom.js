@@ -1,4 +1,6 @@
-$(document).ready(function(){
+
+function owlRotator() {
+$(document).ready(function(){  
 if ($(window).width() >= 992) {
   $('.owl-carousel').owlCarousel({
     nav:true,
@@ -41,8 +43,7 @@ else {
     }
     })
 }
-
-});
+})};
 
 
 

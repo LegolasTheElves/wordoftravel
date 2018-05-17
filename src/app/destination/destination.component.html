@@ -1,6 +1,6 @@
 <div class="col-md-12 col-12">
   <div class="owl-carousel">
-    <div class="" *ngFor="let destination of destinations">
+    <div class="" *ngFor="let destination of destinations" #owlitem>
       <div class="text-center ">
         <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
       </div>
@@ -8,7 +8,7 @@
       <div class="img-caption text-center">
         <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
         <div class="dest_texthead">
-          <a href="wordoftravel/explore-destination/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
+          <a href="wordoftravel/explore-destination" class="btn-destreadmore">READ MORE</a>
       </div>
       </div>
       </div>

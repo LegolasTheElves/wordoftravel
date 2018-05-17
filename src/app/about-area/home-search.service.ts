@@ -19,6 +19,8 @@ export class HomeSearchService {
       || navigator.userAgent.match(/iPod/i)
       || navigator.userAgent.match(/BlackBerry/i)
       || navigator.userAgent.match(/Windows Phone/i)
+      || navigator.userAgent.match(/SamsungBrowser/i)
+      || navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i)
     ) {
       return _travelUrlMobile;
     }
@@ -31,7 +33,7 @@ export class HomeSearchService {
 
   getHomesearches(): Observable<HomeSearch[]> {
     return this.http.get<HomeSearch[]>(this._ismobile)
-      .do(data => console.log('All:' + JSON.stringify(data)))
+      //.do(data => console.log('All:' + JSON.stringify(data)))
       .catch(this.handleError);
   }
   //Error Handler
