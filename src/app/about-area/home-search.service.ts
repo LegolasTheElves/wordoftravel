@@ -9,14 +9,29 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class HomeSearchService {
-
-  private _travelUrl = 'https://api.wordoftravel.com/featuredlocations/HomeSearch';
+  _ismobile = (function () {
+    let _travelUrl = 'https://api.wordoftravel.com/featuredlocations/HomeSearch';
+    let _travelUrlMobile = 'https://api.wordoftravel.com/featuredlocations/HomeSearch?platform=mobile';
+    if (navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      return _travelUrlMobile;
+    }
+    else {
+      return _travelUrl;
+    }
+  })();
 
   constructor(private http: HttpClient) { }
 
   getHomesearches(): Observable<HomeSearch[]> {
-    return this.http.get<HomeSearch[]>(this._travelUrl)
-      //.do(data => console.log('All:' + JSON.stringify(data)))
+    return this.http.get<HomeSearch[]>(this._ismobile)
+      .do(data => console.log('All:' + JSON.stringify(data)))
       .catch(this.handleError);
   }
   //Error Handler
@@ -24,5 +39,4 @@ export class HomeSearchService {
     console.log(err.message);
     return Observable.throw(err.message);
   }
-
 }

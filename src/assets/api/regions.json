@@ -76,7 +76,7 @@
 
 			{
 				"TravelAdvice": "http://smartraveller.gov.au/Countries/africa/west/Pages/ivory_coast.aspx",
-				"CountryName": "C�te d'Ivoire (Ivory Coast)",
+				"CountryName": "Côte d'Ivoire (Ivory Coast)",
 				"CountryCode": "ci",
 				"Priority": 1,
 				"ImagePath": "",
@@ -456,7 +456,7 @@
 
 			{
 				"TravelAdvice": "https://www.gov.uk/foreign-travel-advice/sao-tome-and-principe",
-				"CountryName": "S�o Tom� and Principe",
+				"CountryName": "São Tomé and Príncipe",
 				"CountryCode": "st",
 				"Priority": 1,
 				"ImagePath": "",

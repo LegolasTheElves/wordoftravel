@@ -25,7 +25,7 @@ export class HomepageComponent implements OnInit {
          for(let obj in destinations){
            this.destinations.push(destinations[obj]);
          }
-         console.log(JSON.stringify(this.destinations));
+         //console.log(JSON.stringify(this.destinations));
         },
         error => {
           this.errorMessage = <any>error;
