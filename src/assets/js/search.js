@@ -86,6 +86,9 @@ function loadisotope() {
 
   $('img').error(function(){
     $(this).attr('src', './assets/img/missing.jpg');
+  });
+
+  $('.img-search').error(function(){
     $(this).attr('style','padding:40px;background-color:#fff');
   });
 
