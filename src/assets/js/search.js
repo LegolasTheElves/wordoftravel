@@ -84,6 +84,9 @@ function loadisotope() {
     $(this).attr('src', './assets/svg/icon-like-liked.svg');
   })
 
+  $('img').error(function(){
+    $(this).attr('src', './assets/img/missing.jpg');
+  });
 
 }
 
@@ -208,3 +211,4 @@ $(document).ready(function () {
   });
 
 });
+
