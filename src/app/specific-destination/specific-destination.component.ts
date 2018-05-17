@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { ActivatedRoute } from "@angular/router";
 import { DestinationService } from '../destination/destination.service';
 
@@ -37,8 +36,7 @@ export class SpecificDestinationComponent implements OnInit {
              this.countries = destinations[obj].Countries;
            }
          }
-
-         console.log(JSON.stringify(this.countries));
+         //console.log(JSON.stringify(this.countries));
         },
         error => {
           this.errorMessage = <any>error;
