@@ -89,7 +89,7 @@ function loadisotope() {
     $(this).attr('style','padding:40px;background-color:#fff');
   });
 
-  $('img').error(function(){
+  $('img#search-user-img').error(function(){
     $(this).attr('src', './assets/img/missing.jpg');
     $(this).attr('style','background-color:#fff');
   });
