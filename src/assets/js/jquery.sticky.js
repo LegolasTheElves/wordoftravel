@@ -59,11 +59,10 @@ if($('#carousel-wot').length){
     }
 }//end if condition to hide hamburger elements for search
 //for other pages with hamburger
-else if ($('.box-list-wrapper').length || $('.owl-carousel').length){ 
+else if ($('.box-list-wrapper').length || $('.owl-carousel').length || $('.wrapper1').length){ 
   $('.navbar-footer').hide();
   $('.hamburger-style').hide();
   $('.hamburger-footer').hide();
-
   if ($(window).width() >= 992) {
     $('.forjquery a').attr('class', 'btn-addtravelbloggers1');
     $('.navbar-brand img').attr('src', './assets/svg/logo-colored.svg');
@@ -112,7 +111,7 @@ else { //conditions for search (hamburger)
           
       $('.forjquery a').attr('class', 'btn-addtravelbloggers1');
           $('.navbar-brand img').attr('src', './assets/svg/logo-colored.svg');
-  
+
         }
       }); 
     }
