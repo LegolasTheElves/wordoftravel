@@ -2899,6 +2899,7 @@ h6 {
 }
 
 .articles-header {
+  height: 33px;
   word-wrap: break-word;
   overflow: hidden;
   font-family: "Raleway";
@@ -2981,7 +2982,7 @@ h6 {
 }
 
 .travelabox {
-  height: 156px;
+  height: 174px;
   overflow: hidden;
   width: 88.5%;
   margin: auto;
