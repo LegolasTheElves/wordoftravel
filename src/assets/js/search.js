@@ -2,21 +2,34 @@ $(function () {
 
   var $container1 = $('#container1'),
     $body = $('body'),
+    itemwidth = null,
     columns = null;
 
   if ($(window).width() >= 360 && $(window).width() <= 400) {
-
-    colW = 150;
-  } else if ($(window).width() >= 401 && $(window).width() <= 440) {
-    colW = 188;
-  } else if ($(window).width() >= 441 && $(window).width() <= 480) {
-    colW = 200;
+    item = Math.floor($body.width());
+    itemwidth = (item/2) - 11;
+    colW = itemwidth;
+    console.log(colW);
+  } else if ($(window).width() >= 401 && $(window).width() <= 411) {
+    item = Math.floor($body.width());
+    itemwidth = (item/2) - 11;
+    colW = itemwidth;
+  } else if ($(window).width() >= 412 && $(window).width() <= 413) {
+    item = Math.floor($body.width());
+    itemwidth = (item/2) - 11;
+    colW = itemwidth;
+  } else if ($(window).width() >= 414 && $(window).width() <= 480) {
+    item = Math.floor($body.width());
+    itemwidth = (item/2) - 11;
+    colW = itemwidth;
   } else if ($(window).width() >= 481 && $(window).width() <= 520) {
-    colW = 240;
+    item = Math.floor($body.width());
+    itemwidth = (item/2) - 11;
+    colW = itemwidth;
   } else {
     colW = 248;
   }
-
+ 
 });
 
 function loadisotope() {

@@ -25,10 +25,10 @@
             </div>
             <div class="item-content-title">
               <div class="item-title-search">
-                <a href="">{{(item.Title | slice:0:100) + '...'}}</a>
+                <a href="">{{item.Title}}</a>
               </div>
               <div class="item-content-text">
-                {{(item.Description | slice:0:250) + '...'}}
+                {{(item.Description | slice:0:200) + '...'}}
               </div>
 
               <div class="item-content-places">

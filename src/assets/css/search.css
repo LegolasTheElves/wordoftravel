@@ -45,14 +45,14 @@
 
 .content-title {
   width: 90%;
-  min-height: 32px;
+  min-height: 16px;
   /*height: 47px;*/
   margin: 0 6%;
   overflow: hidden;
 }
 
 .title-search {
-  float: right;
+  float: left;
   font-family: "Raleway";
   font-size: 14px;
   color: #133560;
@@ -984,6 +984,7 @@ fieldset[disabled] .btn-popapply.active {
 }
 
 .item-content-text {
+  height: 60px;
   float: left;
   font-family: "Raleway";
   font-size: 13px;
@@ -1565,7 +1566,6 @@ span.textbutton {
     margin-right: 2px;
     margin-left: 2px;
     margin-bottom: 5px !important;
-    max-width: 250px !important;
   }
   .content-date {
     width: 95% !important;
@@ -1610,18 +1610,52 @@ span.textbutton {
 }
 }
 
+@media screen and (min-width: 414px) and (max-width: 415px) {
+  .item {
+    float: left;
+    margin-left: 2px;
+    margin-right: 0px;
+    margin-bottom: 4px !important;
+    width: 193px !important;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 413px) {
+  .item {
+    float: left;
+    margin-left: 1px;
+    margin-right: 0px;
+    margin-bottom: 4px !important;
+    width: 193px !important;
+  }
+}
+
+@media screen and (min-width: 374px) and (max-width: 401px) {
+  .item {
+  float: left;
+  margin-left: 1px;
+  margin-right: 0px;
+  margin-bottom: 4px !important;
+  width: 175px !important;
+}
+}
+
+@media screen and (min-width: 359px) and (max-width: 373px) {
+  .item {
+  float: left;
+  margin-left: 1px;
+  margin-right: 0px;
+  margin-bottom: 4px !important;
+  width: 167px !important;
+}
+}
+
 @media screen and (min-width: 401px) and (max-width: 440px) {
   #container1 {
     padding: 20px 0px;
     margin: 0px auto;
   }
-  .item {
-    float: left;
-    margin-left: 5px;
-    margin-right: 0px;
-    margin-bottom: 4px !important;
-    max-width: 198px !important;
-  }
+
   .content-date {
     width: 95% !important;
   }
@@ -1700,13 +1734,6 @@ span.textbutton {
   #container1 {
     padding: 20px 0px;
     margin: 0px auto;
-  }
-  .item {
-    float: left;
-    margin-left: 4px;
-    margin-right: 0px;
-    margin-bottom: 4px !important;
-    max-width: 170px !important;
   }
 
   .content-date {
