@@ -85,12 +85,12 @@ function loadisotope() {
   })
 
   $('img#img-item-search').error(function(){
-    $(this).attr('src', './assets/img/missing.jpg');
-    $(this).attr('style','padding:40px;background-color:#fff');
+    $(this).attr('src', './assets/img/missing.png');
+    $(this).attr('style','background-color:#fff');
   });
 
   $('img#search-user-img').error(function(){
-    $(this).attr('src', './assets/img/missing.jpg');
+    $(this).attr('src', './assets/img/missing.png');
     $(this).attr('style','background-color:#fff');
   });
 
