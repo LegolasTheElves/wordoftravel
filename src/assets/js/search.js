@@ -190,6 +190,7 @@ $(document).ready(function () {
   });
   //end hamburger popover
 
+  //this hide hamburger is working in other browser
   $(document).ready(function () {
     if ($('#container1').length) {
       $(window).scroll(function () {
@@ -199,6 +200,23 @@ $(document).ready(function () {
         } else {
           $(".hamburger-style").attr('style', '');
           $(".hamburger-footer").removeClass('hamburger-footer-hidden');
+        }
+      });
+    }
+  });
+
+  //this hide hamburer is working for vince pc
+  $(document).ready(function () {
+    if ($('#container1').length) {
+      $(window).scroll(function(){
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+          $(".hamburger-style").attr('style', 'display: none');
+          $(".hamburger-footer").addClass('hamburger-footer-hidden');
+          $(".container-fluid-footer").addClass('container-footer-hide');
+        } else {
+          $(".hamburger-style").attr('style', '');
+          $(".hamburger-footer").removeClass('hamburger-footer-hidden');
+          $(".container-fluid-footer").removeClass('container-footer-hide');
         }
       });
     }

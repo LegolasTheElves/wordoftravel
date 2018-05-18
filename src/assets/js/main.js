@@ -232,7 +232,6 @@ $(document).ready(function () {
       if ((y < 350) || ($('.divpop-search').is(":visible"))) {
           $('#floating-refine').attr('style','');
           $(".floating-refine-search" ).removeClass('floating-refine-search-visible');
-          console.log('tye');
       } else {
         $('#floating-refine').attr('style','display:block !important');
         $(".floating-refine-search" ).addClass('floating-refine-search-visible');

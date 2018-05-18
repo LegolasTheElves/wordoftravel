@@ -1354,6 +1354,10 @@ span.textbutton {
     background-color: #313131;
     left: 0px !important;
   }
+  
+  .container-footer-hide {
+    display: none !important;
+  }
   .navbar-footer {
     width: 100%;
   }
