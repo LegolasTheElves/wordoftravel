@@ -3536,12 +3536,14 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .placecaptionhome {
+  margin-right: 32px;
+  margin-top: 15px;
   font-family: "Raleway";
   font-size: 16px;
   font-weight: 600;
   text-align: right;
   letter-spacing: 0.08em;
-  margin-bottom: -7px;
+  margin-bottom: -18px;
 }
 
 .countrycaptionhome {
@@ -4925,11 +4927,7 @@ fieldset[disabled] .btn-poplogout.active {
   .subheadtext {
     letter-spacing: 0px;
   }
-  .titlecaptionhome {
-    color: transparent !important;
-    font-size: 9px !important;
-    letter-spacing: 0px !important;
-  }
+ 
   .captionhome {
     width: 70% !important;
   }

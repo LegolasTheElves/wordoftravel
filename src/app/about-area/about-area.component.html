@@ -18,18 +18,20 @@
       <div class="carousel-item active">
         <img src="http://wordoftravel.com/images/featuredlocations/{{activeItem?.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">{{activeItem?.TextLine1}}</div>
           <p class="placecaptionhome text-uppercase">{{activeItem?.LocationName}}</p>
-          <p class="countrycaptionhome text-uppercase">{{activeItem?.TextLine3}}</p>
+          <p class="countrycaptionhome text-uppercase">{{activeItem?.TextLine3}}         
+          <object id="svg1" data="./assets/svg/bulb-icon2.svg" type="image/svg+xml" width="26"></object>
+        </p>
         </div>
       </div>
       <div *ngFor="let homeSearch of homeSearches;" class="carousel-item">
         <img src="http://wordoftravel.com/images/featuredlocations/{{homeSearch?.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
-          <div class="titlecaptionhome">{{homeSearch?.TextLine1}}</div>
           <p class="placecaptionhome text-uppercase">{{homeSearch?.LocationName}}</p>
-          <p class="countrycaptionhome text-uppercase">{{homeSearch?.TextLine3}}</p>
-        </div>
+          <p class="countrycaptionhome text-uppercase">{{homeSearch?.TextLine3}}          
+            <object id="svg1" data="./assets/svg/bulb-icon2.svg" type="image/svg+xml" width="26"></object>
+          </p>
+            </div>
       </div>
     </div>
     <!--/.Slides-->
