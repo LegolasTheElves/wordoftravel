@@ -292,6 +292,7 @@
               class="form-control suggestion"
               placeholder="{{searchName | titlecase}}"
               [clearable]=false
+              ng-value="selectedSuggestion"
               (keyup)='handleKeyup($event)'
               id="routerLink"
               [groupBy]="groupByFn"
