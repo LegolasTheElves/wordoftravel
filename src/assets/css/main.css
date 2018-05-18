@@ -4697,14 +4697,25 @@ fieldset[disabled] .btn-poplogout.active {
 
 /*mobile responsive css */
 
-@media screen and(max-width: 415px) {
+@media screen and (max-width: 415px) {
   .item {
     margin-bottom: 20px !important;
   }
   .featured_destination3 {
     width: 207px !important;
   }
+
+  .countrycaptionhome {
+    font-size: 12px !important;
+  }
+
+  .placecaptionhome {
+    font-size: 13px;
 }
+
+}
+
+
 
 @media screen and (max-width: 849px) {
   #search_concept {
@@ -4937,6 +4948,10 @@ fieldset[disabled] .btn-poplogout.active {
 }
 
 @media screen and (max-width: 992px) {
+
+  .buttondownhome { 
+    z-index: 0 !important;
+  }
   .footerabout {
     margin-right: 2px !important;
     margin-left: 2px !important;
