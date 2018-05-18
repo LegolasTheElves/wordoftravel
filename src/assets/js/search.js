@@ -91,9 +91,10 @@ function loadisotope() {
 
   $('img#search-user-img').error(function(){
     $(this).attr('src', './assets/img/missing.png');
-    $(this).attr('style','background-color:#fff');
   });
-
+  $('img#search-user-img-item').error(function(){
+    $(this).attr('src', './assets/img/missing.png');
+  });
 }
 
 
