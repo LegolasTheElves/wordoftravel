@@ -1,61 +1,15 @@
-<div class="col-md-12 col-12">
-  <div class="owl-carousel">
-    <div class="" *ngFor="let destination of destinations" #owlitem>
-      <div class="text-center ">
-        <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
-      </div>
-      <div class="gradient-carousel">
-      <div class="img-caption text-center">
-        <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
-        <div class="dest_texthead">
-          <a href="wordoftravel/explore-destination" class="btn-destreadmore">READ MORE</a>
-      </div>
-      </div>
+
+<div class="d-flex justify-content-center">
+    <div class="menu-content col-lg-8">
+      <div class="title text-center">
+        <h1 class="mb-20 titlecolor1">EXPLORE THE BEST OF
+          <span class="titlecolor">{{item.RegionName | uppercase}}</span>
+        </h1>
       </div>
     </div>
   </div>
-</div>
-
-<div class="boxart d-flex travel-wrapper">
-  <div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
-    <div class="text-center">
-      <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
-    </div>
-    <div class="gradient-carousel">
-    <div class="img-caption text-center">
-      <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
-      <div class="dest_texthead">
-          <a href="wordoftravel/explore-destination/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
-      </div>
-
-    </div>
-    </div>
-  </div>
-
-  <div class="col-sm-3 col-6 mb-20 carousel-mobile">
-    <div class="no-mobile">
-      <div class="text-center">
-        <img class="img-fluid" src="./assets/img/img_des3.jpg" alt="">
-      </div>
-      <div class="img-caption text-center">
-        <div class="dest_texthead">AUSTRALIA</div>
-        <div class="dest_texthead">
-          <a href="wordoftravel/specific-destination" class="btn-destreadmore">READ MORE</a>
-        </div>
-      </div>
-    </div>
-    <div class="box-mobile-carousel">
-      <a href="#">
-        <div class="text-center">
-          <img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
-        </div>
-        <div class="color-carousel">
-
-          <div class="box-mobile-txt">
-            ALL REGIONS
-          </div>
-        </div>
-      </a>
-    </div>
+  <div class="d-flex justify-content-center">
+  <div class="col-lg-12 col-md-8 text-center">
+    <a href="#" *ngFor="let countries of item.Countries" class="genric-btn default circle fz-16 btn-compact">{{countries.CountryName}}</a>
   </div>
 </div>

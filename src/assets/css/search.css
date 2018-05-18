@@ -596,7 +596,7 @@ a:hover.tooltips span {
   align-content: center;
   float: right;
   left: -430px;
-  top: 20vh;
+  top: 12vh;
 }
 
 #modal-container-search {
@@ -1353,6 +1353,10 @@ span.textbutton {
     position: absolute !important;
     background-color: #313131;
     left: 0px !important;
+  }
+  
+  .container-footer-hide {
+    display: none !important;
   }
   .navbar-footer {
     width: 100%;

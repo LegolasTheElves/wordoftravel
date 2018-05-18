@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DestinationService } from '../destination/destination.service';
+declare function owlRotator();
 
 @Component({
   selector: 'app-explore-destinations',
@@ -10,38 +11,37 @@ import { DestinationService } from '../destination/destination.service';
 export class ExploreDestinationsComponent implements OnInit {
   errorMessage: string;
   destinations: any;
-  defaulRegion: any;
-  region: string;
   countries: any;
+  @ViewChildren('owlitem') items: any;
 
-  constructor(
-    public route: ActivatedRoute,
-    private destinationApiService: DestinationService) {
-    this.route.params.subscribe(params => {
-      this.region = params.region;
-    });
+  selectedRegion = {};
+
+  constructor(private destinationApiService: DestinationService) {
     this.destinations = [];
-   }
-
-  ngOnInit() {
-    //console.log("Region: ." + this.region + ".");
-    this.getRegion();
   }
-  getRegion(): void {
+  ngAfterViewInit() {
+    this.items.changes.subscribe(t => {
+      owlRotator();
+    })
+  }
+  ngOnInit() {
+    this.getDestinations();
+  }
+  getDestinations(): void {
     this.destinationApiService.getDestination()
       .subscribe(
         destinations => {
-         for(let obj in destinations){
-           console.log(obj[0]);
-           if(obj == this.region) {
-             this.countries = destinations[obj].Countries;
-           }
+          for (let obj in destinations) {
+            this.destinations.push(destinations[obj]);
+            this.countries = destinations[obj].Countries;
           }
-         console.log(JSON.stringify(this.countries));
+          console.log(JSON.stringify(this.destinations[0].RegionName));
         },
         error => {
           this.errorMessage = <any>error;
         });
   }
-
+  selectRegion(item) {
+    this.selectedRegion = item;
+  }
 }

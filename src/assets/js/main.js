@@ -55,7 +55,7 @@ $(document).ready(function () {
 
   $('.pop-close-search').on('click',function(){
     $( ".divpop-search" ).animate({left:-430}, function(){
-      $( ".divpop-search" ).attr('style', 'top: 20vh !important');
+      $( ".divpop-search" ).attr('style', 'top: 12vh !important');
       $('#modal-container-search').attr('style','');
     });
   });
@@ -229,7 +229,7 @@ $(document).ready(function () {
 
   $(document).scroll(function() {
       var y = $(this).scrollTop();
-      if (y < 350) {
+      if ((y < 350) || ($('.divpop-search').is(":visible"))) {
           $('#floating-refine').attr('style','');
           $(".floating-refine-search" ).removeClass('floating-refine-search-visible');
       } else {
