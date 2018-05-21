@@ -46,13 +46,11 @@ $(document).ready(function () {
   $('.floating-refine-img').on('click',function(e){
     e.preventDefault();
     $('#modal-container-search').attr('style','display:block !important');
-    $( ".divpop-search" ).attr('style', 'top: 12vh !important');
     $( ".divpop-search" ).animate( {left:0} );
   });
 
   $('.pop-close-search').on('click',function(){
     $( ".divpop-search" ).animate({left:-430}, function(){
-      $( ".divpop-search" ).attr('style', 'top: 12vh !important');
       $('#modal-container-search').attr('style','');
     });
   });
