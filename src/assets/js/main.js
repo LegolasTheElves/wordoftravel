@@ -46,11 +46,8 @@ $(document).ready(function () {
   $('.floating-refine-img').on('click',function(e){
     e.preventDefault();
     $('#modal-container-search').attr('style','display:block !important');
-    $( ".divpop-search" ).attr('style', 'top: 35% !important');
+    $( ".divpop-search" ).attr('style', 'top: 12vh !important');
     $( ".divpop-search" ).animate( {left:0} );
-    $('html, body').animate({
-      scrollTop: $(".divpop-search").offset().top
-  }, 300);
   });
 
   $('.pop-close-search').on('click',function(){

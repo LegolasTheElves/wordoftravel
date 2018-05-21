@@ -588,9 +588,9 @@ a:hover.tooltips span {
 }
 
 .divpop-search {
-  position: absolute;
+  position: fixed;
   width: 430px;
-  height: 855px;
+  height: 653px;
   background-color: #133560;
   border-radius: 0rem 0.45rem 0.45rem 0rem;
   justify-content: center;
@@ -634,7 +634,7 @@ a:hover.tooltips span {
 
 .content3-search {
   margin-left: 33px;
-  height: 590px;
+  height: 385px;
 }
 
 .content4-search {
@@ -790,14 +790,14 @@ a:hover.tooltips span {
 }
 
 .pop-check-search {
-  width: 100%;
-  display: block;
-  float: left;
-  font-family: "Raleway";
-  font-size: 13px;
-  color: #ffffff;
-  font-weight: 400;
-  margin-bottom: 10px;
+    width: 48%;
+    display: block;
+    float: left;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .title-check {
@@ -1983,3 +1983,7 @@ span.textbutton {
     margin-bottom: 25px;
   }
 }
+
+  .first-column {
+    height: 220px;
+  }
