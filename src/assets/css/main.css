@@ -36,6 +36,11 @@ body {
   font-weight: 300;
 }
 
+.carousel-caption {
+  bottom: 60px;
+  z-index: 10;
+}
+
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #777777;
@@ -3497,7 +3502,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .buttondownhome {
-  z-index: 99;
+  z-index: 9;
   position: absolute;
   bottom: 0;
   display: -webkit-box;
@@ -4435,7 +4440,7 @@ fieldset[disabled] .btn-poplogout.active {
 }
 
 .hero-text {
-  height: 465px !important;
+  height: 390px !important;
 }
 
 .destination-rotator-arrow {
@@ -4949,9 +4954,6 @@ fieldset[disabled] .btn-poplogout.active {
 
 @media screen and (max-width: 992px) {
 
-  .buttondownhome { 
-    z-index: 0 !important;
-  }
   .footerabout {
     margin-right: 2px !important;
     margin-left: 2px !important;
@@ -5200,16 +5202,6 @@ hr.mb-80 {
 
 .project-area.section-gap.mb-49.ml-50.mr-50.travelarticles {
   margin-left: 0px !important;
-}
-
-a.buttondownhome:before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: transparent;
-  cursor: pointer;
-  width: 30px;
-  height: 35px;
 }
 
 .project-area.section-gap.mb-49.ml-50.mr-50 {
