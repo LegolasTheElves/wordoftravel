@@ -105,7 +105,7 @@
                             <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">{{travel.Title}}</a></div>
                         <div class="articles-subheader">
                             <span *ngFor="let place of travel.Places; let last = last">
-                            {{ place.PlaceName + (last ? " " : ",") }}
+                            <a href='wordoftravel/destination/{{place.PlaceName}}'>{{ place.PlaceName + (last ? " " : ",") }}</a>
                             </span>
                             <div class="articles-content">{{travel.AbstractText}}</div>
                             <div class="text-right">
