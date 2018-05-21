@@ -2,7 +2,7 @@
 <div class="d-flex justify-content-center">
     <div class="menu-content col-lg-8">
       <div class="title text-center">
-        <h1 class="mb-20 titlecolor1">EXPLORE THE BEST OF
+        <h1 *ngIf="item" class="mb-20 titlecolor1">EXPLORE THE BEST OF
           <span class="titlecolor">{{item.RegionName | uppercase}}</span>
         </h1>
       </div>
