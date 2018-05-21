@@ -1,7 +1,8 @@
 
 <div class="preload">
   <div class="progstat"> <img class="mb-20" src="./assets/svg/logo-colored.svg" width="350"><br>
-    Just a moment - Searching...</div>
+    Just a moment.... <br/><br/>
+  We are searching for posts about {{searchName | titlecase}}</div>
 </div><!-- floating refine -->
 <div id="floating-refine">
   <!-- Modal content-->
@@ -387,12 +388,15 @@
               <div class="date-search">{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date: 'yyyy'}}</div>
             </div>
             <div class="content-title">
-              <div class="title-search"><a href>{{result.Title | uppercase}}</a></div>
+              <div class="title-search">
+                  <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal">
+                    {{result.Title | uppercase}}
+                  </a></div>
             </div>
             <div class="content-user">
               <div class="profile-user">
                 <a href="">
-                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> DAVE BUILMER
+                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> {{result.BlogTitle}}
                 
                 <a class="tooltips certified" href="#">
                   <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>

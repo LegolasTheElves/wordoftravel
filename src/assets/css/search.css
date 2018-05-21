@@ -81,6 +81,7 @@
 }
 
 .profile-user {
+  width: 100%;
   float: left;
   font-family: "Raleway";
   font-size: 14px;
@@ -1114,8 +1115,8 @@ fieldset[disabled] .btn-readfullpost.active {
 }
 
 #search-user-img-item {
-  width: 28px;
-  height: 28px;
+  margin-top: -3px;
+  width: 18px;
   border-radius: 40px;
 }
 
@@ -1955,4 +1956,8 @@ span.textbutton {
     margin: 0 0 0 5%  }
   .container-filter {
     padding-right: 0px; }
+}
+
+.icon-profile-search-item {
+  padding-top: 5px;
 }

@@ -4803,6 +4803,7 @@ fieldset[disabled] .btn-poplogout.active {
   .form-control {
     font-size: 15px !important;
     border-top-left-radius: 0.75em !important;
+    padding: 0.375rem 0rem;
     width: 65% !important;
   }
   .travel-wrapper {
@@ -4887,17 +4888,6 @@ fieldset[disabled] .btn-poplogout.active {
   }
 }
 
-@media screen and (max-width: 493px) {
-  .form-control {
-    padding: 10px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .form-control {
-    padding: 5px;
-  }
-}
 
 @media screen and (max-width: 767px) {
   .vline-breaker {
@@ -5050,7 +5040,7 @@ fieldset[disabled] .btn-poplogout.active {
     margin-right: 0px;
   }
   .hero-text {
-    height: 485px !important;
+    height: 350px !important;
     width: 100%;
     margin: unset;
   }
@@ -5066,6 +5056,7 @@ fieldset[disabled] .btn-poplogout.active {
   }
   .btn1,
   .btn1-search {
+    width: 45px !important;
     padding-left: 0px !important;
   }
   .col-md-3.col-12.mb-40 {
@@ -5335,6 +5326,14 @@ hr.mb-80 {
   .featured_destination3 {
     width: 179px !important;
   }
+}
+
+@media screen and (max-width: 580px) {
+  .hero-text {
+    height: 405px !important;
+    width: 100%;
+    margin: unset;
+}
 }
 
 .articles-header a, .articles-header-blogpost a {
