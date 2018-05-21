@@ -789,7 +789,7 @@ a:hover.tooltips span {
 }
 
 .pop-check-search {
-  width: 50%;
+  width: 100%;
   display: block;
   float: left;
   font-family: "Raleway";
