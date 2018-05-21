@@ -34,7 +34,7 @@
               <div class="item-content-places item-content-readingtime">
                   <div class="item-text-places">READING TIME:</div>
                   <div class="item-text-content">&nbsp;
-                    <span class="tags" *ngFor="let place of item.Places; let isLast=last">{{place.LocationName}}{{isLast ? '' : ', '}}</span>
+                    <span class="tags">{{(item.ReadingTime <= 1)? (item.ReadingTime) + ' minute': (item.ReadingTime) + ' minutes'}} </span>
                   </div>
                   
                 </div>

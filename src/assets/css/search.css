@@ -1317,27 +1317,6 @@ span.textbutton {
   z-index: 1000;
 }
 
-@media (min-device-width:501px) and (max-device-width: 1030px) {
-  .modal-body .item-content-user {
-    padding: 2em !important;
-  }
-  .btn-morefrombloggers {
-    margin-right: -20px !important;
-  }
-  .item-content-btn2 {
-    margin-bottom: 20px !important;
-  }
-}
-
-@media (min-device-width:412px) and (max-device-width: 732px) {
-  .modal-body .item-content-user {
-    padding: unset;
-  }
-  .item-content-btn2 {
-    margin-bottom: unset;
-  }
-}
-
 @media screen and (max-width: 992px) {
   .modal-img {
     height: 300px !important;
@@ -1688,12 +1667,12 @@ span.textbutton {
 }
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 520px) {
   .bs-popover-left {
     left: 146px !important;
   }
   .modal-body {
-    padding: 2.25em;
+    padding: 1rem 1.5rem 1rem 1.6rem;
   }
   .modal-header {
     height: 280px;
@@ -1706,12 +1685,18 @@ span.textbutton {
   }
 }
 
+@media screen and (max-width: 520px) {
+  .modal-dialog {
+    margin-top: 30% !important;
+}
+}
+
 @media screen and (min-width: 360px) and (max-width: 400px) {
   .profile-user {
     font-size: 12px;
   }
   .modal-header {
-    height: 250px;
+    height: 313px;
   }
   .bs-popover-left {
     left: 110px !important;
@@ -1832,14 +1817,33 @@ span.textbutton {
     margin: 0px 4px;
   }
   .modal-header {
-    height: 290px;
+    height: 350px;
+  }
+
+  .item-content-text {
+    height: 70px;
   }
 }
 
-@media (min-device-width: 501px) and (max-device-width: 920px) {
+@media (max-width: 502px) {
   .modal-arrow {
-    top: 267px !important;
+    top: unset !important;
+    bottom: 515px !important;
     left: 45% !important;
+  }
+}
+
+@media (max-width: 415px) {
+  .modal-arrow {
+    top: unset !important;
+    bottom: 595px !important;
+  }
+}
+
+@media (max-width: 376px) {
+  .modal-arrow {
+    top: unset !important;
+    bottom: 535px !important;
   }
 }
 
@@ -1968,4 +1972,14 @@ span.textbutton {
 
   .item-content-readingtime {
     margin-top: 20px;
+}
+
+
+@media screen and (max-width: 520px) {
+  .modal-img {
+    height: auto !important;
+  }
+  .modal-content {
+    margin-bottom: 25px;
+  }
 }
