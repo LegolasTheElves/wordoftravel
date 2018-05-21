@@ -266,7 +266,7 @@
 
 <app-header></app-header>
 <!--Search Area-->
-<div class="container mt-100">
+<div class="container mt-70">
   <div class="row justify-content-center align-items-center content-margin">
     <div class="col-md-12">
       <div class="banner-content text-center">
@@ -351,14 +351,14 @@
 
   <div class="row no-margin col-12">
     <div class="search-center">
-      <div class="titlecolor1 search-title">YOUR SEARCH</div>
-      <div class="titlecolor search-title">&nbsp;RESULT
+      <div class="titlecolor1 search-title">POSTS ABOUT</div>
+      <div class="titlecolor search-title">&nbsp;{{searchName | uppercase}}
       </div>
 
 
     </div>
-    <div class="subheadtext subhead-search">{{searchName | titlecase}}, Everything about {{searchName | titlecase}}, {{searchName | titlecase}} Destinations, Bloggers
-      talking about {{searchName | titlecase}}</div>
+    <div class="subheadtext subhead-search">Plan your trip to {{searchName | titlecase}}. 
+      Travel bloggers writing about {{searchName | titlecase}} share their experiences and travel tips.</div>
   </div>
 </div>
 <!--End of Search-->

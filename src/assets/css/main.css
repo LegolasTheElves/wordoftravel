@@ -4435,7 +4435,7 @@ fieldset[disabled] .btn-poplogout.active {
 }
 
 .hero-text {
-  height: 440px !important;
+  height: 465px !important;
 }
 
 .destination-rotator-arrow {
@@ -5048,6 +5048,7 @@ fieldset[disabled] .btn-poplogout.active {
     margin-right: 0px;
   }
   .hero-text {
+    height: 485px !important;
     width: 100%;
     margin: unset;
   }
@@ -5315,6 +5316,11 @@ a.buttondownhome:before {
 
 /*mobile active header activator*/
 @media screen and (max-width: 580px){
+
+  .container.mt-70 {
+    margin-top: 50px;
+  }
+
   .featured_destination3 {
     width: 250px;
   }
