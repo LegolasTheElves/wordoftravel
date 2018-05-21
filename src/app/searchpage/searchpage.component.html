@@ -1,6 +1,6 @@
 
 <div class="preload">
-  <div class="progstat"> <img class="mb-20" src="./assets/svg/logo-colored.svg" width="350"><br>
+  <div class="progstat"> <img class="mb-20 img-fluid" src="./assets/svg/logo-colored.svg" width="350"><br>
     Just a moment.... <br/><br/>
   We are searching for posts about {{searchName | titlecase}}</div>
 </div><!-- floating refine -->
@@ -12,6 +12,14 @@
     </div>
   </div>
 </div>
+
+<head>
+<title>Travel Blogs about {{searchName | titlecase}} | wordoftravel</title>
+<meta name="description" content="Planning a trip to {{searchName | uppercase}}
+  Forget the guidebook! Get real travel advice and read real travel experiences about {{searchName | uppercase}}
+     from all of your favourite travel bloggers. Read blogs about what matters to you - 
+     where to stay, what to see and where to eat in {{searchName | uppercase}}">
+</head>
 
 <app-search-dest-details [item]="selectedItem"> </app-search-dest-details>
 <div id="modal-container-search">

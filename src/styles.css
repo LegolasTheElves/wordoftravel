@@ -175,3 +175,7 @@
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-child {
   padding-left: 40px;
 }
+
+.option-buttons {
+  margin: 0 auto;
+}

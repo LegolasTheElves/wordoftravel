@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { SearchService } from '../travel-search/search.service';
 import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
+import { Meta } from '@angular/platform-browser';
 
 declare function loadisotope();
 declare function hideSplash();
