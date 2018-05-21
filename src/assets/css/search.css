@@ -943,7 +943,7 @@ fieldset[disabled] .btn-popapply.active {
   content: "";
   display: block;
   position: fixed;
-  top: 210px;
+  top: 225px;
   left: 258px;
   bottom: auto;
   width: 0;
@@ -1857,7 +1857,7 @@ span.textbutton {
 
 .modal-img {
   max-width: 249px;
-  height: 483px;
+  height: 500px;
   background: none;
   border: none;
 }
@@ -1958,6 +1958,14 @@ span.textbutton {
     padding-right: 0px; }
 }
 
-.icon-profile-search-item {
-  padding-top: 5px;
+  .icon-profile-search-item {
+    padding-top: 5px;
+  }
+
+  .modal-header {
+    min-height: 285px;
+  }
+
+  .item-content-readingtime {
+    margin-top: 20px;
 }

@@ -104,7 +104,7 @@
 
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-disabled {
   color: #063160;
-  margin-left: 70px !important;
+  margin-left: 84px !important;
 }
 
 #search-button[_ngcontent-c9] {
@@ -133,8 +133,11 @@
 
 @media (max-width: 992px) {
   .ng-option-label {
-    margin-left: 10.3% !important;
-}
+    margin-left: 5% !important;
+  }
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-disabled {
+    margin-left: 70px !important;
+  }
 }
 
 @media (max-width: 768px) {

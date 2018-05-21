@@ -31,6 +31,14 @@
                 {{(item.Description | slice:0:200) + '...'}}
               </div>
 
+              <div class="item-content-places item-content-readingtime">
+                  <div class="item-text-places">READING TIME:</div>
+                  <div class="item-text-content">&nbsp;
+                    <span class="tags" *ngFor="let place of item.Places; let isLast=last">{{place.LocationName}}{{isLast ? '' : ', '}}</span>
+                  </div>
+                  
+                </div>
+
               <div class="item-content-places">
                 <div class="item-text-places">PLACES:</div>
                 <div class="item-text-content">&nbsp;
