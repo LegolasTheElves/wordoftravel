@@ -18,10 +18,12 @@
       <div class="carousel-item active">
         <img src="http://wordoftravel.com/images/featuredlocations/{{activeItem?.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
-          <p class="placecaptionhome text-uppercase">{{activeItem?.TextLine2}}</p>
-          <p class="countrycaptionhome text-uppercase">{{activeItem?.TextLine3}}         
-          <object id="svg1" data="./assets/svg/bulb-icon2.svg" type="image/svg+xml" width="26"></object>
-        </p>
+          <a href="wordoftravel{{activeItem?.LinkPath}}">
+            <p class="placecaptionhome text-uppercase">{{activeItem?.TextLine2}}</p>
+            <p class="countrycaptionhome text-uppercase">{{activeItem?.TextLine3}}         
+              <object id="svg1" data="./assets/svg/bulb-icon2.svg" type="image/svg+xml" width="26"></object>
+            </p>
+          </a>
         </div>
       </div>
       <div *ngFor="let homeSearch of homeSearches;" class="carousel-item">

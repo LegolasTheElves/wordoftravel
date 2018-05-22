@@ -64,6 +64,7 @@ export class TravelSearchComponent implements OnInit {
 			//this.suggestionsLoading = false;
 		});
 	}
+	
 	onClickSearch() {
 		const selected = this.selectedSuggestion;
 		if (!selected) {

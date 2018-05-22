@@ -3522,6 +3522,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
   text-align: center;
 }
 
+.captionhome a, .captionhome a:hover{
+  color:#fff;
+  cursor: pointer;
+}
+
 .captionhome {
   right: 3%;
   position: absolute;
@@ -3769,6 +3774,10 @@ now override the 3.3 new styles for modern browsers & apply opacity
   overflow: hidden;
   border-radius: 0.85em;
   border: 3px solid #fff;
+}
+
+a.white-link, a.white-link:hover{
+  color:#fff;
 }
 
 .featuredtitle {

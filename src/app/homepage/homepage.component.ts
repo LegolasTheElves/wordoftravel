@@ -22,6 +22,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
     this.getDestinations();
   }
+  
   getDestinations(): void {
     this.destinationApiService.getDestination()
       .subscribe(

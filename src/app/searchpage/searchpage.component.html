@@ -409,9 +409,9 @@
                 <a href="">
                   <img src="{{result.BloggerImage}}" id="search-user-img"></a> {{result.BlogTitle | titlecase}}
                 
-                <a class="tooltips certified" href="#">
+                
+                <a class="tooltips certified" href="#" *ngIf="result.OurFavorite == true">
                   <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
-
                   <span class="text">Certified</span>
                 </a>
               </div>
