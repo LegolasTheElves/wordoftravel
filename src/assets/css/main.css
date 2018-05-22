@@ -5382,6 +5382,6 @@ hr.mb-80 {
 /*for carousel destination css on click*/
 .clicked {
   position: absolute;
-  border-radius: 0.85rem;
+  border-radius: 0.95rem;
   border: 4px solid #3098d4;
 }
