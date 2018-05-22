@@ -3,6 +3,7 @@ import { SingleArticlePageService } from './single-article-page.service';
 import { TravelArticles } from '../articlespage/articles';
 import { ActivatedRoute } from "@angular/router";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 declare function loadpopovers();
 
@@ -21,23 +22,27 @@ export class SingleArticlePageComponent implements OnInit {
   articleCategory: string;
   articleName: string;
 
-  constructor(private singleArticleService: SingleArticlePageService, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+  constructor(private singleArticleService: SingleArticlePageService,
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer,
+    private meta: Meta,
+    private title: Title
+  ) {
+    this.title.setTitle("Travel Blogs about {{searchName | titlecase}} | wordoftravel");
+    this.meta.addTag({ name: 'description', content: "Planning a trip to {{searchName | titlecase}}? Forget the guidebook! Get real travel advice and read real travel experiences about {{searchName | titlecase}}> from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in {{searchName | titlecase}}" });
     this.route.params.subscribe(params => {
       this.articleName = params.name;
       this.articleCategory = params.category;
     });
-   }
+  }
 
   ngOnInit() {
     this.getAllArticles();
   }
-  
   //Load isotope
   ngAfterViewInit() {
-      loadpopovers();
+    loadpopovers();
   }
-
-
   getAllArticles(): void {
     this.singleArticleService.getArticle(this.articleCategory.concat('/').concat(this.articleName))
       .subscribe(

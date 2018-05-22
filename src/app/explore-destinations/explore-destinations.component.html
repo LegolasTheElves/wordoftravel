@@ -75,27 +75,6 @@
   <!--End of Rotator-->
 </section>
 <!-- Start Destination Area -->
-<section class="project-area section-gap ml-30 mr-30">
-  <app-destination [item]="selectedRegion"></app-destination>
-  <div class="mt-30">
-    <app-featured-destination></app-featured-destination>
-  </div>
-</section>
- <!-- Start Travel Articles Area -->
- <section class="project-area section-gap mb-60" id="articles">
-  <div class="travelarticles">
-          <div class="d-flex justify-content-center mb-40">
-                  <div class="menu-content col-lg-8">
-                      <div class="title text-center">
-                          <h1 class="titlecolor1">HELPFUL POSTS
-                              <span class="titlecolor">TO PLAN YOUR TRIP</span>
-                          </h1>
-                          <h4 class="subheadtext">A curated selection of informative post about travelling in Asia<!--4-->
-                      </h4></div>
-                  </div>
-              </div>
-      <app-travel-articles></app-travel-articles>
-  </div>
-</section>
+<app-destination [item]="selectedRegion"></app-destination>
 <!-- End Travel Articles Area -->
 <app-footer></app-footer>

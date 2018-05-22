@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { SearchService } from '../travel-search/search.service';
 import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 declare function loadisotope();
 declare function hideSplash();
@@ -41,7 +41,12 @@ export class SearchpageComponent implements OnInit {
     private searchService: SearchService,
     private cd: ChangeDetectorRef,
     private router: Router,
+    private meta: Meta,
+    private title: Title
   ) {
+    //Title and Meta Description
+    this.title.setTitle("Travel Blogs about {{searchName | titlecase}} | wordoftravel");
+    this.meta.addTag({ name: 'description', content:"Planning a trip to {{searchName | titlecase}}? Forget the guidebook! Get real travel advice and read real travel experiences about {{searchName | titlecase}}> from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in {{searchName | titlecase}}" });
     this.route.params.subscribe(params => {
       this.searchTerm = params.term;
       console.log(this.searchTerm);

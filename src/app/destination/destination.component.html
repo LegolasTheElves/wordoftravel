@@ -1,15 +1,38 @@
 
-<div class="d-flex justify-content-center">
+<section class="project-area section-gap ml-30 mr-30">
+  <div class="d-flex justify-content-center">
     <div class="menu-content col-lg-8">
       <div class="title text-center">
-        <h1 *ngIf="item" class="mb-20 titlecolor1">EXPLORE THE BEST OF
-          <span class="titlecolor">{{item.RegionName | uppercase}}</span>
+        <h1  class="mb-20 titlecolor1">EXPLORE THE BEST OF
+          <span class="titlecolor">
+          {{item.RegionName | uppercase }}
+          </span>
         </h1>
       </div>
     </div>
   </div>
   <div class="d-flex justify-content-center">
   <div class="col-lg-12 col-md-8 text-center">
-    <a href="#" *ngFor="let countries of item.Countries" class="genric-btn default circle fz-16 btn-compact">{{countries.CountryName}}</a>
+    <a href="#" *ngFor="let countries of item?.Countries" class="genric-btn default circle fz-16 btn-compact">{{countries.CountryName}}</a>
   </div>
 </div>
+  <div class="mt-30">
+    <app-featured-destination></app-featured-destination>
+  </div>
+</section>
+ <!-- Start Travel Articles Area -->
+ <section class="project-area section-gap mb-60" id="articles">
+  <div class="travelarticles">
+          <div class="d-flex justify-content-center mb-40">
+                  <div class="menu-content col-lg-8">
+                      <div class="title text-center">
+                          <h1 class="titlecolor1">HELPFUL POSTS
+                              <span class="titlecolor">TO PLAN YOUR TRIP</span>
+                          </h1>
+                          <h4 class="subheadtext">A curated selection of informative post about travelling in {{item.RegionName}}<!--4-->
+                      </h4></div>
+                  </div>
+              </div>
+      <app-travel-articles></app-travel-articles>
+  </div>
+</section>
