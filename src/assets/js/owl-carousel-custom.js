@@ -59,10 +59,8 @@ $('.owl-item .btn-destreadmore').on('click', function(event){
 
     if($new.hasClass('clicked')){
         $new.removeClass('clicked');
-        console.log("true");
       } else {
         $this.parents('.owl-list').addClass('clicked');
-        console.log("false");
       }
     });
 
