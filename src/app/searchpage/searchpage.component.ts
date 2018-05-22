@@ -45,12 +45,12 @@ export class SearchpageComponent implements OnInit {
     private title: Title
   ) {
     //Title and Meta Description
-    this.title.setTitle("Travel Blogs about {{searchName | titlecase}} | wordoftravel");
-    this.meta.addTag({ name: 'description', content:"Planning a trip to {{searchName | titlecase}}? Forget the guidebook! Get real travel advice and read real travel experiences about {{searchName | titlecase}}> from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in {{searchName | titlecase}}" });
     this.route.params.subscribe(params => {
       this.searchTerm = params.term;
       console.log(this.searchTerm);
       this.searchName = this.searchTerm.split(/[0-9\-_]+/).join('');
+      this.title.setTitle("Travel Blogs about " + this.searchName + " | wordoftravel");
+      this.meta.addTag({ name: 'description', content:"Planning a trip to " + this.searchName + "? Forget the guidebook! Get real travel advice and read real travel experiences about " + this.searchName + " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + this.searchName + "" });
     });
   }
 

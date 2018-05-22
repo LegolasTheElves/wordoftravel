@@ -28,8 +28,6 @@ export class SingleArticlePageComponent implements OnInit {
     private meta: Meta,
     private title: Title
   ) {
-    this.title.setTitle("Travel Blogs about {{searchName | titlecase}} | wordoftravel");
-    this.meta.addTag({ name: 'description', content: "Planning a trip to {{searchName | titlecase}}? Forget the guidebook! Get real travel advice and read real travel experiences about {{searchName | titlecase}}> from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in {{searchName | titlecase}}" });
     this.route.params.subscribe(params => {
       this.articleName = params.name;
       this.articleCategory = params.category;
@@ -51,6 +49,8 @@ export class SingleArticlePageComponent implements OnInit {
           this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.article.ArticleText);
           this.date = this.article.PublishedDate;
           console.log(JSON.stringify(this.article));
+          this.title.setTitle(this.article.Title + " | wordoftravel");
+          this.meta.addTag({ name: 'description', content: "" + this.safeHtml + ""});
         },
         error => this.errorMessage = <any>error);
   }

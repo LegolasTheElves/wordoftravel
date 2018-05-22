@@ -22,15 +22,15 @@ export class SpecificDestinationComponent implements OnInit {
     private meta: Meta,
     private title: Title
   ) {
-    this.title.setTitle("Travel Blogs, Itineraries and Destination Tips about {{region}} | wordoftravel");
-    this.meta.addTag({ name: 'description',
-    content:"Planning a trip to {Region}? Discover great destination ideas and read real travel stories from other independent travellers and travel bloggers. Explore new areas of <<Region>> that take you off the tourist trail."
-  });
     this.route.params.subscribe(params => {
       this.region = params.region;
     });
     this.destinations = [];
     this.countries = [];
+    this.title.setTitle("Travel Blogs, Itineraries and Destination Tips about " + this.region + " | wordoftravel");
+    this.meta.addTag({ name: 'description',
+    content:"Planning a trip to " + this.region + " ? Discover great destination ideas and read real travel stories from other independent travellers and travel bloggers. Explore new areas of " + this.region + " that take you off the tourist trail."
+  });
   }
 
   ngOnInit() {
