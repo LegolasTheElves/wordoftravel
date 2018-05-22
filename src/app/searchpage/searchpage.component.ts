@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { SearchService } from '../travel-search/search.service';
 import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
+import { Meta } from '@angular/platform-browser';
 
 declare function loadisotope();
 declare function hideSplash();
@@ -43,6 +44,7 @@ export class SearchpageComponent implements OnInit {
   ) {
     this.route.params.subscribe(params => {
       this.searchTerm = params.term;
+      console.log(this.searchTerm);
       this.searchName = this.searchTerm.split(/[0-9\-_]+/).join('');
     });
   }
@@ -114,7 +116,8 @@ export class SearchpageComponent implements OnInit {
       return
     }
     this.getSearchResult();
-    window.location.href = "/wordoftravel/destination/" + selected.value + "-" + selected.id;
+    let location = decodeURIComponent(selected.value);
+    window.location.href = "/wordoftravel/destination/" + location.replace(/\s/g,'') + "-" + selected.id;
   }
   //Modal popup
   selectItem(item) {

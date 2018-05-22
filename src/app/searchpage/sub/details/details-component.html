@@ -5,7 +5,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content modal-img">
         <div class="modal-body modal-img-style">
-          <img src="{{item.ThumbnailImage}}" class="img-item-modal">
+          <img id="img-item-search" src="{{item.ThumbnailImage}}" class="img-item-modal">
         </div>
 
       </div>
@@ -30,6 +30,14 @@
               <div class="item-content-text">
                 {{(item.Description | slice:0:200) + '...'}}
               </div>
+
+              <div class="item-content-places item-content-readingtime">
+                  <div class="item-text-places">READING TIME:</div>
+                  <div class="item-text-content">&nbsp;
+                    <span class="tags">{{(item.ReadingTime <= 1)? (item.ReadingTime) + ' minute': (item.ReadingTime) + ' minutes'}} </span>
+                  </div>
+                  
+                </div>
 
               <div class="item-content-places">
                 <div class="item-text-places">PLACES:</div>
@@ -89,10 +97,10 @@
             <div class="profile-user">
               <a href="">
                 <img src="{{item.BloggerImage}}" id="search-user-img-item">
-              </a> DAVE BUILMER
+              </a> {{item.BlogTitle}}
 
               <a class="tooltips certified" href="#">
-                <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search-item"></object>
+                <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="18" height="18" class="icon-profile-search-item"></object>
                 <span class="text">Certified</span>
               </a>
             </div>
@@ -114,20 +122,28 @@
             <div class="item-flag-center">
                 <div class="col-md-12">
                     <div class="inline-label-modal">
+                      <div class="option-buttons">
                       <button id="btn-like-icon-modal" class="icon-circle-search"></button>
                       <span>{{ item.RatingLikes }} LIKES</span>
                     </div>
+                    </div>
                     <div class="inline-label-modal">
+                        <div class="option-buttons">
                         <button id="btn-share-icon-modal" data-toggle="popover" class="icon-circle-search"></button>
                         <span>SHARE</span>
+                        </div>
                     </div>
                     <div class="inline-label-modal">
+                        <div class="option-buttons">
                         <button id="btn-favorite-icon-modal" class="icon-circle-search"></button>
                         <span>FAVOURITE</span>
+                        </div>
                     </div>
                     <div class="inline-label-modal">
+                        <div class="option-buttons">
                         <button id="btn-report-icon-modal" class="icon-circle-search"></button>
                         <span>REPORT</span>
+                        </div>
                     </div>
                   </div>
             </div>

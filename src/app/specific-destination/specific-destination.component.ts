@@ -13,6 +13,7 @@ export class SpecificDestinationComponent implements OnInit {
   destinations: any;
   region: string;
   countries: any;
+  removeCountries:any;
 
   constructor(
     public route: ActivatedRoute,
@@ -21,7 +22,8 @@ export class SpecificDestinationComponent implements OnInit {
       this.region = params.region;
     });
     this.destinations = [];
-   }
+    this.countries = [];
+  }
 
   ngOnInit() {
     console.log("Region: ." + this.region + ".");
@@ -31,17 +33,22 @@ export class SpecificDestinationComponent implements OnInit {
     this.destinationApiService.getDestination()
       .subscribe(
         destinations => {
-         for(let obj in destinations){
-           if(obj == this.region) {
-             this.countries = destinations[obj].Countries;
-           }
-         }
+          for (let obj in destinations) {
+            if (obj == this.region) {
+              let listOfCountries = destinations[obj].Countries;
+              for(let country of listOfCountries) {
+                if (country.Show == false) {
+                  this.removeCountries = country;
+                } else {
+                  this.countries.push(country);
+                }
+              }
+            }
+          }
          //console.log(JSON.stringify(this.countries));
         },
-        error => {
-          this.errorMessage = <any>error;
-        });
+  error => {
+  this.errorMessage = <any>error;
+});
   }
-
-
 }

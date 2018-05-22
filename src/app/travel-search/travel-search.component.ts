@@ -23,6 +23,7 @@ export class TravelSearchComponent implements OnInit {
 	suggestionTypeahead = new Subject<string>();
 	selectedSuggestion;
 	groupByFn: any;
+	searchName:any;
 
 	constructor(
 		private searchService: SearchService,
@@ -70,7 +71,8 @@ export class TravelSearchComponent implements OnInit {
 			return
 		}
 		//Go to specific destination base on the param
-		window.location.href = "/wordoftravel/destination/" + selected.value + "-" + selected.id;
+		let location = decodeURIComponent(selected.value);
+		window.location.href = "/wordoftravel/destination/" + location.replace(/\s/g,'') + "-" + selected.id;
 	}
 	search() {
 		window.location.href = "/wordoftravel/destination/" + this.searchText;

@@ -28,22 +28,6 @@
               <span>{{article.PublishedDate | date: 'dd'}} {{article.PublishedDate | date:'MMMM'}} {{article.PublishedDate | date:
                 'yyyy'}}</span>
             </div>
-            <div class="social-icons">
-              <div class="inline-label">
-                <button id="btn-like-icon" class="icon-circle pointer"></button>
-                <span>{{ article.Likes }} LIKES</span>
-              </div>
-
-              <div class="inline-label">
-                <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
-                <span>SHARE</span>
-              </div>
-
-              <div class="inline-label">
-                <button id="btn-favorite-icon" class="icon-circle"></button>
-                <span>FAVOURITE</span>
-              </div>
-            </div>
           </div>
           <div class="box-list-descriptions">
             <div class="box-list-title">
@@ -65,6 +49,22 @@
               </div>
             </div>
           </div>
+          <div class="social-icons">
+              <div class="inline-label">
+                <button id="btn-like-icon" class="icon-circle pointer"></button>
+                <span>{{ article.Likes }} LIKES</span>
+              </div>
+
+              <div class="inline-label">
+                <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
+                <span>SHARE</span>
+              </div>
+
+              <div class="inline-label">
+                <button id="btn-favorite-icon" class="icon-circle"></button>
+                <span>FAVOURITE</span>
+              </div>
+            </div>
         </div>
       </li>
       <!--End Item-->

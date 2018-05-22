@@ -1,7 +1,8 @@
 
 <div class="preload">
-  <div class="progstat"> <img class="mb-20" src="./assets/svg/logo-colored.svg" width="350"><br>
-    Just a moment - Searching...</div>
+  <div class="progstat"> <img class="mb-20 img-fluid" src="./assets/svg/logo-colored.svg" width="350"><br>
+    Just a moment.... <br/><br/>
+  We are searching for posts about {{searchName | titlecase}}</div>
 </div><!-- floating refine -->
 <div id="floating-refine">
   <!-- Modal content-->
@@ -11,6 +12,14 @@
     </div>
   </div>
 </div>
+
+<head>
+<title>Travel Blogs about {{searchName | titlecase}} | wordoftravel</title>
+<meta name="description" content="Planning a trip to {{searchName | uppercase}}
+  Forget the guidebook! Get real travel advice and read real travel experiences about {{searchName | uppercase}}
+     from all of your favourite travel bloggers. Read blogs about what matters to you - 
+     where to stay, what to see and where to eat in {{searchName | uppercase}}">
+</head>
 
 <app-search-dest-details [item]="selectedItem"> </app-search-dest-details>
 <div id="modal-container-search">
@@ -44,13 +53,49 @@
       <hr class="pop-hr" />
       <div class="content3-search text-left">
         <div class="pop-title-search text-uppercase">Filter by</div>
-        <div class="pop-check-search">
+
+        <div class="pop-check-search first-column">
+            <label class="container-filter-check title-check">
+              <span class="">
+                <img src="./assets/img/icon-travel-tower.png" width="35px" class="checkmark-check-icon">
+              </span>
+  
+              Travel Style
+              <span class=""></span>
+            </label>
+            <label class="container-filter-check">City
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Relaxing
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Hiking
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Adventure
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Sights
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Eco Travel
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+  
+          </div>      
+        <!-- Duplicate left filter
+          <div class="pop-check-search">
           <label class="container-filter-check title-check">
             <span class="">
               <img src="./assets/img/icon-travel.png" width="35px" class="checkmark-check-icon">
             </span>
             Travel Budget
-
           </label>
           <label class="container-filter-check">Shoestring
             <input type="checkbox">
@@ -65,30 +110,9 @@
             <span class="checkmark-check"></span>
           </label>
 
-        </div>
-        <div class="pop-check-search">
-          <label class="container-filter-check title-check">
-            <span class="">
-              <img src="./assets/img/icon-travel.png" width="35px" class="checkmark-check-icon">
-            </span>
-            Travel Budget
-          </label>
-          <label class="container-filter-check">Shoestring
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Flashpack
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Splurge
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
+        </div> -->
 
-        </div>
-
-        <div class="pop-check-search">
+        <div class="pop-check-search first-column">
           <label class="container-filter-check title-check">
             <span class="">
               <img src="./assets/img/icon-eat.png" width="35px" class="checkmark-check-icon">
@@ -120,6 +144,30 @@
 
         </div>
 
+        
+        <div class="pop-check-search second-column">
+            <label class="container-filter-check title-check">
+              <span class="">
+                <img src="./assets/img/icon-travel.png" width="35px" class="checkmark-check-icon">
+              </span>
+              Travel Budget
+  
+            </label>
+            <label class="container-filter-check">Shoestring
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Flashpack
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Splurge
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+          </div>
+
+        <!-- Duplicate left filter
         <div class="pop-check-search">
           <label class="container-filter-check title-check">
             <span class="">
@@ -149,44 +197,11 @@
             <span class="checkmark-check"></span>
           </label>
 
-        </div>
+        </div> -->
 
-        <div class="pop-check-search">
-          <label class="container-filter-check title-check">
-            <span class="">
-              <img src="./assets/img/icon-travel-tower.png" width="35px" class="checkmark-check-icon">
-            </span>
+      
 
-            Travel Style
-            <span class=""></span>
-          </label>
-          <label class="container-filter-check">City
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Relaxing
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Hiking
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Adventure
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Sights
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Eco Travel
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-
-        </div>
-
+        <!-- Duplicate left filter
         <div class="pop-check-search">
           <label class="container-filter-check title-check">
             <span class="">
@@ -220,7 +235,7 @@
             <span class="checkmark-check"></span>
           </label>
 
-        </div>
+        </div> -->
 
 
       </div>
@@ -266,7 +281,7 @@
 
 <app-header></app-header>
 <!--Search Area-->
-<div class="container mt-100">
+<div class="container mt-70">
   <div class="row justify-content-center align-items-center content-margin">
     <div class="col-md-12">
       <div class="banner-content text-center">
@@ -292,6 +307,7 @@
               class="form-control suggestion"
               placeholder="{{searchName | titlecase}}"
               [clearable]=false
+              ng-value="selectedSuggestion"
               (keyup)='handleKeyup($event)'
               id="routerLink"
               [groupBy]="groupByFn"
@@ -350,14 +366,14 @@
 
   <div class="row no-margin col-12">
     <div class="search-center">
-      <div class="titlecolor1 search-title">YOUR SEARCH</div>
-      <div class="titlecolor search-title">&nbsp;RESULT
+      <div class="titlecolor1 search-title">POSTS ABOUT</div>
+      <div class="titlecolor search-title">&nbsp;{{searchName | uppercase}}
       </div>
 
 
     </div>
-    <div class="subheadtext subhead-search">{{searchName | titlecase}}, Everything about {{searchName | titlecase}}, {{searchName | titlecase}} Destinations, Bloggers
-      talking about {{searchName | titlecase}}</div>
+    <div class="subheadtext subhead-search">Plan your trip to {{searchName | titlecase}}. 
+      Travel bloggers writing about {{searchName | titlecase}} share their experiences and travel tips.</div>
   </div>
 </div>
 <!--End of Search-->
@@ -383,12 +399,15 @@
               <div class="date-search">{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date: 'yyyy'}}</div>
             </div>
             <div class="content-title">
-              <div class="title-search"><a href>{{result.Title | uppercase}}</a></div>
+              <div class="title-search">
+                  <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal">
+                    {{result.Title | uppercase}}
+                  </a></div>
             </div>
             <div class="content-user">
               <div class="profile-user">
                 <a href="">
-                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> DAVE BUILMER
+                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> {{result.BlogTitle | titlecase}}
                 
                 <a class="tooltips certified" href="#">
                   <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>

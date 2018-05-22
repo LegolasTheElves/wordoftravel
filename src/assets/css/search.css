@@ -81,6 +81,7 @@
 }
 
 .profile-user {
+  width: 100%;
   float: left;
   font-family: "Raleway";
   font-size: 14px;
@@ -587,9 +588,9 @@ a:hover.tooltips span {
 }
 
 .divpop-search {
-  position: absolute;
+  position: fixed;
   width: 430px;
-  height: 855px;
+  height: 653px;
   background-color: #133560;
   border-radius: 0rem 0.45rem 0.45rem 0rem;
   justify-content: center;
@@ -633,7 +634,7 @@ a:hover.tooltips span {
 
 .content3-search {
   margin-left: 33px;
-  height: 590px;
+  height: 385px;
 }
 
 .content4-search {
@@ -789,14 +790,14 @@ a:hover.tooltips span {
 }
 
 .pop-check-search {
-  width: 50%;
-  display: block;
-  float: left;
-  font-family: "Raleway";
-  font-size: 13px;
-  color: #ffffff;
-  font-weight: 400;
-  margin-bottom: 10px;
+    width: 48%;
+    display: block;
+    float: left;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .title-check {
@@ -942,7 +943,7 @@ fieldset[disabled] .btn-popapply.active {
   content: "";
   display: block;
   position: fixed;
-  top: 210px;
+  top: 225px;
   left: 258px;
   bottom: auto;
   width: 0;
@@ -966,6 +967,7 @@ fieldset[disabled] .btn-popapply.active {
 }
 
 .item-title-search {
+  height: 30px;
   /* float: right; */
   font-family: "Raleway";
   font-size: 17px;
@@ -986,7 +988,7 @@ fieldset[disabled] .btn-popapply.active {
 }
 
 .item-content-text {
-  height: 60px;
+  height: 45px;
   float: left;
   font-family: "Raleway";
   font-size: 13px;
@@ -1004,6 +1006,8 @@ fieldset[disabled] .btn-popapply.active {
 }
 
 .item-text-content {
+  height: 22px;
+  width: 60%;
   float: left;
   font-weight: 600;
   font-style: italic;
@@ -1111,8 +1115,8 @@ fieldset[disabled] .btn-readfullpost.active {
 }
 
 #search-user-img-item {
-  width: 28px;
-  height: 28px;
+  margin-top: -3px;
+  width: 18px;
   border-radius: 40px;
 }
 
@@ -1313,27 +1317,6 @@ span.textbutton {
   z-index: 1000;
 }
 
-@media (min-device-width:501px) and (max-device-width: 1030px) {
-  .modal-body .item-content-user {
-    padding: 2em !important;
-  }
-  .btn-morefrombloggers {
-    margin-right: -20px !important;
-  }
-  .item-content-btn2 {
-    margin-bottom: 20px !important;
-  }
-}
-
-@media (min-device-width:412px) and (max-device-width: 732px) {
-  .modal-body .item-content-user {
-    padding: unset;
-  }
-  .item-content-btn2 {
-    margin-bottom: unset;
-  }
-}
-
 @media screen and (max-width: 992px) {
   .modal-img {
     height: 300px !important;
@@ -1483,7 +1466,7 @@ span.textbutton {
     padding: 2.25em;
   }
   .item-content-user {
-    width: 96%;
+    width: 100%;
     height: 25px;
     margin: 0px 0px;
   }
@@ -1547,6 +1530,7 @@ span.textbutton {
     height: 175px;
   }
   .item-title-search {
+    height: 36px;
     font-size: 15px;
     margin-top: 2px;
   }
@@ -1559,9 +1543,14 @@ span.textbutton {
     margin-bottom: 7px;
   }
   .item-content-text {
+    height: 60px;
     font-size: 12px;
     margin-top: 0px;
   }
+  .item-content-btn {
+    margin-top: 5px;
+  }
+
   #container1 {
     padding: 20px 10px;
     margin: 0px auto;
@@ -1678,23 +1667,28 @@ span.textbutton {
 }
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 520px) {
   .bs-popover-left {
     left: 146px !important;
   }
   .modal-body {
-    padding: 2.25em;
+    padding: 1rem 1.5rem 1rem 1.6rem;
   }
   .modal-header {
     height: 280px;
   }
   .item-content-btn2 {
     margin-top: 25px;
-    margin-left: 20px;
   }
   .tag-content-bottom {
     margin: 0px 4px;
   }
+}
+
+@media screen and (max-width: 520px) {
+  .modal-dialog {
+    margin-top: 30% !important;
+}
 }
 
 @media screen and (min-width: 360px) and (max-width: 400px) {
@@ -1702,7 +1696,7 @@ span.textbutton {
     font-size: 12px;
   }
   .modal-header {
-    height: 250px;
+    height: 313px;
   }
   .bs-popover-left {
     left: 110px !important;
@@ -1823,14 +1817,33 @@ span.textbutton {
     margin: 0px 4px;
   }
   .modal-header {
-    height: 290px;
+    height: 350px;
+  }
+
+  .item-content-text {
+    height: 70px;
   }
 }
 
-@media (min-device-width: 501px) and (max-device-width: 920px) {
+@media (max-width: 502px) {
   .modal-arrow {
-    top: 267px !important;
+    top: unset !important;
+    bottom: 515px !important;
     left: 45% !important;
+  }
+}
+
+@media (max-width: 415px) {
+  .modal-arrow {
+    top: unset !important;
+    bottom: 595px !important;
+  }
+}
+
+@media (max-width: 376px) {
+  .modal-arrow {
+    top: unset !important;
+    bottom: 535px !important;
   }
 }
 
@@ -1848,7 +1861,7 @@ span.textbutton {
 
 .modal-img {
   max-width: 249px;
-  height: 483px;
+  height: 500px;
   background: none;
   border: none;
 }
@@ -1937,6 +1950,10 @@ span.textbutton {
   }
   .container-filter {
     padding-right: 1px; }
+
+    .divpop-search {
+      top: 1vh;
+  }
 }
 
 @media screen and (max-width: 361px) {
@@ -1948,3 +1965,29 @@ span.textbutton {
   .container-filter {
     padding-right: 0px; }
 }
+
+  .icon-profile-search-item {
+    padding-top: 5px;
+  }
+
+  .modal-header {
+    min-height: 285px;
+  }
+
+  .item-content-readingtime {
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 520px) {
+  .modal-img {
+    height: auto !important;
+  }
+  .modal-content {
+    margin-bottom: 25px;
+  }
+}
+
+  .first-column {
+    height: 220px;
+  }
