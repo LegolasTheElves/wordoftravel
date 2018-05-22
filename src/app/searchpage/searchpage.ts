@@ -15,10 +15,10 @@ export interface SearchPage{
         GeoNamesID: string,
         LocationName: string,
         Location: string
-
     }],
     Topics: string[],
     ReadingTime: number,
     BlogTitle: string,
     BlogDescription: string
+    OurFavorite: boolean
 }

@@ -407,12 +407,11 @@
             <div class="content-user">
               <div class="profile-user">
                 <a href="">
-                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> {{result.BlogTitle | titlecase}}
-                
-                
-                <a class="tooltips certified" href="#" *ngIf="result.OurFavorite == true">
+                  <img src="{{result.BloggerImage}}" id="search-user-img"></a> {{result.BlogTitle | titlecase }}
+      
+                <a class="tooltips certified" href="#" *ngIf="result.OurFavourite == true">
                   <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
-                  <span class="text">Certified</span>
+                  <span class="text">This blogger is one of our handpicked favourites. Find out more.</span>
                 </a>
               </div>
             </div>
