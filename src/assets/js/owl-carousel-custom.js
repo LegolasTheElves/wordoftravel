@@ -1,6 +1,9 @@
 
 function owlRotator() {
 $(document).ready(function(){  
+    
+
+
 if ($(window).width() >= 992) {
   $('.owl-carousel').owlCarousel({
     nav:true,
@@ -43,7 +46,33 @@ else {
     }
     })
 }
-})};
+}
+
+)
+
+//for carousel destination on click
+$('.owl-item .btn-destreadmore').on('click', function(event){
+    var $this = $(this);
+
+    $('.owl-item .owl-list').each(function(){
+        var $new = $(this);
+
+    if($new.hasClass('clicked')){
+        $new.removeClass('clicked');
+        console.log("true");
+      } else {
+        $this.parents('.owl-list').addClass('clicked');
+        console.log("false");
+      }
+    });
+
+
+
+
+  });
+
+
+};
 
 
 
