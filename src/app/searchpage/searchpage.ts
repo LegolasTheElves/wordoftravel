@@ -20,5 +20,5 @@ export interface SearchPage{
     ReadingTime: number,
     BlogTitle: string,
     BlogDescription: string
-    OurFavorite: boolean
+    OurFavourite: boolean
 }
