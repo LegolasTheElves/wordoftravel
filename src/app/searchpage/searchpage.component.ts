@@ -49,7 +49,7 @@ export class SearchpageComponent implements OnInit {
       this.searchTerm = params.term;
       console.log(this.searchTerm);
       this.searchName = this.searchTerm.split(/[0-9\-_]+/).join('');
-      this.title.setTitle("Travel Blogs about " + this.searchName + " | wordoftravel");
+      this.title.setTitle("Travel Blogs about " + this.searchName.toUpperCase() + " | wordoftravel");
       this.meta.addTag({ name: 'description', content:"Planning a trip to " + this.searchName + "? Forget the guidebook! Get real travel advice and read real travel experiences about " + this.searchName + " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + this.searchName + "" });
     });
   }
@@ -78,6 +78,7 @@ export class SearchpageComponent implements OnInit {
           }
         });
         this.suggestions = value;
+        console.log(this.suggestions);
         //GroupBy
         this.groupByFn = (item) => item.group;
       } else {
@@ -107,7 +108,7 @@ export class SearchpageComponent implements OnInit {
           } else {
             this.searchResult = searchResult['widersltCol'];
           }
-         console.log(JSON.stringify(this.searchResult));
+         //console.log(JSON.stringify(this.searchResult));
         },
         error => {
           this.errorMessage = <any>error; 
@@ -122,8 +123,9 @@ export class SearchpageComponent implements OnInit {
       return
     }
     this.getSearchResult();
-    let location = decodeURIComponent(selected.value);
-    window.location.href = "/wordoftravel/destination/" + location.replace(/\s/g,'') + "-" + selected.id;
+    let location = selected.value.replace(/\s/g,'');
+		var res = location.toLowerCase();
+		window.location.href = "/wordoftravel/destination/" + res + "-" + selected.id;
   }
   //Modal popup
   selectItem(item) {

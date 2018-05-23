@@ -71,9 +71,9 @@ export class TravelSearchComponent implements OnInit {
 			// TODO error handling
 			return
 		}
-		//Go to specific destination base on the param
-		let location = decodeURIComponent(selected.value);
-		window.location.href = "/wordoftravel/destination/" + location.replace(/\s/g,'') + "-" + selected.id;
+		let location = selected.value.replace(/\s/g,'');
+		var res = location.toLowerCase();
+		window.location.href = "/wordoftravel/destination/" + res + "-" + selected.id;
 	}
 	search() {
 		window.location.href = "/wordoftravel/destination/" + this.searchText;
