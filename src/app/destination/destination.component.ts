@@ -19,7 +19,7 @@ export class DestinationComponent implements OnInit {
   }
 
   ngOnInit() {
-		this.getDestinations();
+    this.getDestinations();
   }
   getDestinations(): void {
     this.destinationApiService.getDestination()
@@ -29,7 +29,6 @@ export class DestinationComponent implements OnInit {
             this.destinations.push(destinations[obj]);
           }
           this.africa = this.destinations[0]
-          console.log(this.africa);
         },
         error => {
           this.errorMessage = <any>error;

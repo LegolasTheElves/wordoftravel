@@ -107,8 +107,7 @@ export class SearchpageComponent implements OnInit {
           } else {
             this.searchResult = searchResult['widersltCol'];
           }
-
-          console.log(JSON.stringify(this.searchResult));
+         console.log(JSON.stringify(this.searchResult));
         },
         error => {
           this.errorMessage = <any>error; 
