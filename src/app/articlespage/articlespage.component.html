@@ -33,7 +33,7 @@
             <div class="box-list-title">
               <a href="wordoftravel/travel-articles/{{article.Category}}/{{article.ArticleName}}">{{article.Title}}</a>
             </div>
-            <div class="box-list-subheader">{{article.Category}} </div>
+            <div class="box-list-subheader">{{article.Category | uppercase}} </div>
             <div class="box-list-overview">
               {{(article.AbstractText.length>150)? (article.AbstractText | slice:0:150)+'...':(article.AbstractText) }}
             </div>

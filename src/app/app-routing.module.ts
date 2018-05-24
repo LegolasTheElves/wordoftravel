@@ -8,7 +8,6 @@ import { SpecificDestinationComponent } from './specific-destination/specific-de
 import { ExploreDestinationsComponent } from './explore-destinations/explore-destinations.component';
 import { OurStoryPageComponent } from './our-story-page/our-story-page.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/wordoftravel', pathMatch: 'full' },
   { path: 'wordoftravel', component: HomepageComponent },
