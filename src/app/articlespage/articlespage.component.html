@@ -40,7 +40,11 @@
             <div class="box-list-places">
               <div class="inline-label">
                 <span class="label">PLACES:&nbsp;</span>
-                <span class="tags" *ngFor="let place of article.Places; let isLast=last">{{place.PlaceName}}{{isLast ? '' : ', '}}</span>
+                <span class="tags" *ngFor="let place of article.Places; let isLast=last">
+                  <a href="wordoftravel/destination/{{place.PlaceName}}-{{place.PlaceID}}" class="place-link">
+                  {{place.PlaceName}}{{isLast ? '' : ', '}}
+                  </a>
+                </span>
               </div>
               <br>
               <div class="inline-label">
