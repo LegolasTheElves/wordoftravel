@@ -29,10 +29,12 @@
       <div *ngFor="let homeSearch of homeSearches;" class="carousel-item">
         <img src="http://wordoftravel.com/images/featuredlocations/{{homeSearch?.FeatureImage}}" height="100%">
         <div class="captionhome text-white">
+            <a href="wordoftravel{{activeItem?.LinkPath}}">
           <p class="placecaptionhome text-uppercase">{{homeSearch?.TextLine2}}</p>
           <p class="countrycaptionhome text-uppercase">{{homeSearch?.TextLine3}}          
             <object id="svg1" data="./assets/svg/bulb-icon2.svg" type="image/svg+xml" width="26"></object>
           </p>
+          </a>
             </div>
       </div>
     </div>
