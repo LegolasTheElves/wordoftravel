@@ -19,11 +19,13 @@ export class ExploreDestinationsComponent implements OnInit {
   constructor(private destinationApiService: DestinationService) {
     this.destinations = [];
   }
+  
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       owlRotator();
     })
   }
+
   ngOnInit() {
     this.getDestinations();
   }
@@ -41,7 +43,9 @@ export class ExploreDestinationsComponent implements OnInit {
           this.errorMessage = <any>error;
         });
   }
+  
   selectRegion(item) {
     this.selectedRegion = item;
+
   }
 }

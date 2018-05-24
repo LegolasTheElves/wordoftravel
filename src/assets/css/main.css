@@ -3587,11 +3587,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .gradient {
-  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
   /* IE6-9 */
@@ -3665,7 +3665,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -3673,7 +3673,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .box:hover:after {
-  opacity: 1;
+  opacity: .6;
   border: 3px solid #BBB;
   cursor: pointer;
   border-radius: 0.65em;

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ViewChildren, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { SearchPageService } from './search-page.service';
 import { SearchPage } from './searchpage';
 
@@ -7,6 +7,7 @@ import { SearchService } from '../travel-search/search.service';
 import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
 import { Meta, Title } from '@angular/platform-browser';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 declare function loadisotope();
 declare function hideSplash();
@@ -18,18 +19,23 @@ declare let $: any;
   styleUrls: ['./searchpage.component.css']
 })
 export class SearchpageComponent implements OnInit {
+  
+  @ViewChild('searchinput') public ngSelect: NgSelectComponent;
+
   errorMessage: string;
   searchResult: SearchPage[];
   searchTerm: any;
   searchName: any;
   groupByFn: any;
   searchText: any;
+  widerSearch: string;
 
   // for suggestions
   suggestions = [];
   suggestionsLoading = false;
   suggestionTypeahead = new Subject<string>();
   selectedSuggestion;
+  
 
   selectedItem = {};
 
@@ -106,6 +112,7 @@ export class SearchpageComponent implements OnInit {
           if(searchResult['rsltCol']) {
             this.searchResult = searchResult['rsltCol'];
           } else {
+            this.widerSearch = "We couldn't find many blog posts in that exact place so we've expanded the search to nearby locations";
             this.searchResult = searchResult['widersltCol'];
           }
          //console.log(JSON.stringify(this.searchResult));
@@ -134,8 +141,13 @@ export class SearchpageComponent implements OnInit {
   search() {
     window.location.href = "/wordoftravel/destination/" + this.searchText;
   }
+
   handleKeyup(event) {
     this.searchText = event.target.value.toString();
+  }
+
+  handleFocus(event){
+    this.ngSelect.placeholder = "";
   }
 
 

@@ -2,7 +2,8 @@
 <div class="preload">
   <div class="progstat"> <img class="mb-20 img-fluid" src="./assets/svg/logo-colored.svg" width="350"><br>
     Just a moment.... <br/><br/>
-  We are searching for posts about {{searchName | titlecase}}</div>
+  We are searching for posts about {{searchName | titlecase}}<br />
+<span class="wider-search">{{ widerSearch }}</span></div>
 </div><!-- floating refine -->
 <div id="floating-refine">
   <!-- Modal content-->
@@ -289,7 +290,7 @@
               </div>
 
               
-              <ng-select
+              <ng-select #searchinput
               [items]="suggestions" 
               [routerLink]="onClickSearch()"
               bindLabel="text" autocommplete="off"
@@ -303,6 +304,7 @@
               id="routerLink"
               [groupBy]="groupByFn"
               appendTo=".search-form-container"
+              (focus)="handleFocus($event)"
               [(ngModel)]="selectedSuggestion">
               </ng-select>
             
