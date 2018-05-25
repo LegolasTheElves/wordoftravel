@@ -69,6 +69,14 @@ $('.owl-item .btn-destreadmore').on('click', function(event){
 
   });
 
+  //banner search homepage on click link
+
+  $(function() {
+    $('.carousel-item').on('click', function() {  
+      window.location = $(this).find('a').attr('href');
+    });
+  });
+
 
 };
 
