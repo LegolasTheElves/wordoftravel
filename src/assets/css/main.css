@@ -5392,3 +5392,11 @@ a.place-link{
 a.place-link:hover{
   font-weight: bold;
 }
+
+@media (min-width: 992px) and (max-width: 1312px){
+
+.navbar-nav {
+  display: contents;
+}
+
+}

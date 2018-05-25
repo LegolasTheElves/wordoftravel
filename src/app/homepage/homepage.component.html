@@ -65,7 +65,8 @@
 	  <!--Carousel-->
       <div class="col-md-12 col-12">
         <div class="owl-carousel">
-          <div class="" *ngFor="let destination of destinations" #owlitem>
+          <div class="" *ngFor="let destination of destinations" #owlitem>  
+            <a href="wordoftravel/explore-destination/{{destination.RegionName}}">
             <div class="text-center">
               <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
             </div>
@@ -77,6 +78,7 @@
               </div>
             </div>
             </div>
+            </a>
           </div>
         </div>
       </div>
@@ -84,6 +86,7 @@
 
     <div class="boxart d-flex travel-wrapper">
 			<div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
+        <a href="wordoftravel/explore-destination/{{destination.RegionName}}">
 			  <div class="text-center">
 				<img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
         </div>
@@ -96,6 +99,7 @@
 		  
 			  </div>
         </div>
+        </a>
 			</div>
 			<div class="col-sm-3 col-6 mb-20 carousel-mobile">
 			  <div class="no-mobile">
