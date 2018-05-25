@@ -974,8 +974,8 @@ fieldset[disabled] .btn-popapply.active {
   color: #133560;
   font-weight: 700;
   letter-spacing: 0rem;
-  line-height: 16px;
-  margin-top: 8px;
+  line-height: 18px;
+  margin-top: 2px;
 }
 .item-title-search a{
   color: inherit;
