@@ -27,9 +27,9 @@ export class SpecificDestinationComponent implements OnInit {
     });
     this.destinations = [];
     this.countries = [];
-    this.title.setTitle("Travel Blogs, Itineraries and Destination Tips about " + this.region + " | wordoftravel");
+    this.title.setTitle("Travel Blogs, Itineraries and Destination Tips about " + this.region.toUpperCase() + " | wordoftravel");
     this.meta.addTag({ name: 'description',
-    content:"Planning a trip to " + this.region + " ? Discover great destination ideas and read real travel stories from other independent travellers and travel bloggers. Explore new areas of " + this.region + " that take you off the tourist trail."
+    content:"Planning a trip to " + this.region.toUpperCase() + " ? Discover great destination ideas and read real travel stories from other independent travellers and travel bloggers. Explore new areas of " + this.region.toUpperCase() + " that take you off the tourist trail."
   });
   }
 

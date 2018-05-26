@@ -55,8 +55,11 @@ export class SearchpageComponent implements OnInit {
       this.searchTerm = params.term;
       console.log(this.searchTerm);
       this.searchName = this.searchTerm.split(/[0-9\-_]+/).join(' ');
+      //Meta Tags
       this.title.setTitle("Travel Blogs about " + this.searchName.toUpperCase() + " | wordoftravel");
-      this.meta.addTag({ name: 'description', content:"Planning a trip to " + this.searchName.toUpperCase() + "? Forget the guidebook! Get real travel advice and read real travel experiences about " + this.searchName.toUpperCase() + " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + this.searchName.toUpperCase() + "" });
+      this.meta.addTag({ name: 'description', content:"Planning a trip to " + this.searchName.toUpperCase() + 
+      "? Forget the guidebook! Get real travel advice and read real travel experiences about " + this.searchName.toUpperCase() + 
+      " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + this.searchName.toUpperCase() + "" });
     });
   }
 

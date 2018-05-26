@@ -8,33 +8,17 @@ import { DestinationService } from './destination.service';
   styleUrls: ['./destination.component.css']
 })
 export class DestinationComponent implements OnInit {
-  errorMessage: any;
-  destinations: Destination[];
   @Input() item: Destination;
-  africa:Destination;
-  selectedItem:{};
+  sample:any;
 
   constructor(private destinationApiService: DestinationService) {
-    this.destinations = [];
+    this.sample = [];
   }
 
   ngOnInit() {
-    this.getDestinations();
+   this.getCountry();
   }
-  getDestinations(): void {
-    this.destinationApiService.getDestination()
-      .subscribe(
-        destinations => {
-          for (let obj in destinations) {
-            this.destinations.push(destinations[obj]);
-          }
-          this.africa = this.destinations[0]
-        },
-        error => {
-          this.errorMessage = <any>error;
-        });
-  }
-  selected(){
-    this.selectedItem = this.item;
+  getCountry(){
+    this.sample = this.item.Countries;
   }
 }
