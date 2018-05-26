@@ -11,6 +11,7 @@ import { NgSelectComponent } from '@ng-select/ng-select';
 
 declare function loadisotope();
 declare function hideSplash();
+declare function loadpopovers();
 declare let $: any;
 
 @Component({
@@ -103,6 +104,7 @@ export class SearchpageComponent implements OnInit {
 
   //Load isotope
   ngAfterViewInit() {
+    loadpopovers();
     this.items.changes.subscribe(t => {
       loadisotope();
     })

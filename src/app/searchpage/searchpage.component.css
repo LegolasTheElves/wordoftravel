@@ -52,3 +52,7 @@
       padding: 4rem;
     }
   }
+
+  #socialSharePopover{
+    display: none;
+}

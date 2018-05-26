@@ -15,10 +15,10 @@ export interface SearchDetails{
         GeoNamesID: string,
         LocationName: string,
         Location: string
-
     }],
     Topics: string[],
     ReadingTime: number,
     BlogTitle: string,
-    BlogDescription: string
+    BlogDescription: string,
+    OurFavourite: boolean
 }

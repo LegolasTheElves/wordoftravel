@@ -423,3 +423,6 @@ button#btn-like-icon-search:hover {
     display: none;
 }
 
+#modalreportPopover, #OurFavoritePopover{
+    display: none;
+}

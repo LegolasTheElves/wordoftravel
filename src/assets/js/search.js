@@ -70,7 +70,7 @@ function loadisotope() {
     hideSplash();
   }); // end container image loaded 
 
-  $('[data-toggle="popover"]').popover();
+  $('.test[data-toggle="popover"]').popover();
 
   $("img.icon-unlike-search").hover(function () {
     $(this).attr('src', './assets/svg/icon-like-liked.svg');
@@ -95,8 +95,39 @@ function loadisotope() {
   $('img#search-user-img-item').error(function(){
     $(this).attr('src', './assets/img/missing.png');
   });
-}
 
+  
+    $(".user-ourfavorite-item[data-toggle=popover]").each(function(i, obj) {
+
+        $(this).popover({ 
+          trigger: "manual",
+          html: true,
+          placement:'bottom',
+          content: function() {
+          return $('#OurFavoritePopover').html();
+          }
+        })
+        .on("mouseenter", function () {
+          var _this = this;
+          $(this).popover("show");
+          $(".popover").on("mouseleave", function () {
+              $(_this).popover('hide');
+          });
+      }).on("mouseleave", function () {
+          var _this = this;
+          setTimeout(function () {
+              if (!$(".popover:hover").length) {
+                  $(_this).popover("hide");
+              }
+          }, 300);
+        });
+        
+    });
+
+
+  }
+
+    
 
 function hideSplash(){
   $(".preload").fadeOut(1000, function () {

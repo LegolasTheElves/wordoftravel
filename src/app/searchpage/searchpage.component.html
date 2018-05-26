@@ -405,11 +405,9 @@
               <div class="profile-user">
                   <img src="{{result.BloggerImage}}" id="search-user-img">{{result.BlogTitle | titlecase }}
       
-                <a class="tooltips certified" href="#" *ngIf="result.OurFavourite == true">
-                   
-                  <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
-                  <span class="text">This blogger is one of our handpicked favourites. Find out more.</span>
-                </a>
+                <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
+                  <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
+                </button>
               </div>
             </div>
             <div class="content-article content-text">
@@ -429,7 +427,7 @@
                 <span>FAVOURITE</span></div>
                 <div class='text-option text-uppercase mb-10'><button id='btn-moreblogger-icon' class='icon-circle-search'></button>
                   <span>MORE FROM BLOGGER</span></div>
-                  <div class='text-option text-uppercase'><button id='btn-report-icon' class='icon-circle-search'></button>
+                  <div class='text-option text-uppercase'><button id='btn-report-icon' data-toggle='popover' class='icon-circle-search'></button>
                     <span>REPORT</span></div>
                   </div>"></div>
                 </a>
@@ -437,7 +435,28 @@
               </div>
             </div>
           </div>
+
+          <!--Popover for our favorite blogger icon-->
+          <div id="OurFavoritePopover" class="inline-label">
+              <div class="sign-up-report">
+                This blogger is one of our
+                <br> handpicked favourites.
+                <a href="#" class="btn-signup-modal">FIND OUT MORE {{result.RatingLikes}}</a>
+              </div>
+            </div>
+
         </a>
       </div>
     </div>
 <app-footer></app-footer>
+
+<!-- Report Tooltip Contents -->
+<div id="socialSharePopover" class="inline-label">
+    <div class="sign-up-report">
+        <a href="#" class="btn-signup-modal">SIGN IN</a>
+      
+      TO REPORT ISSUE
+    </div> 
+  </div>
+
+  

@@ -90,7 +90,6 @@
   letter-spacing: 0rem;
   line-height: 16px;
   margin-top: 4px;
-  overflow: hidden;
 }
 
 .icon-profile-search {
@@ -1230,6 +1229,58 @@ fieldset[disabled] .btn-morefrombloggers.active {
   color: #1679b3;
 }
 
+.btn-signup-modal {
+  display: block;
+  text-align: center;
+  border: 2px solid #3098d4;
+  color: #3098d4;
+  background-color: transparent;
+  border-radius: 50px;
+  font-family: "Raleway";
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  padding: 3px;
+}
+
+.btn-signup-modal:hover,
+.btn-signup-modal:focus,
+.btn-signup-modal:active,
+.btn-signup-modal.active,
+.open .dropdown-toggle.btn-signup-modal {
+  background-color: #3098d4;
+  color: #FFFFFF;
+}
+
+.btn-signup-modal:active,
+.btn-signup-modal.active,
+.open .dropdown-toggle.btn-signup-modal {
+  background-image: none;
+}
+
+.btn-signup-modal.disabled,
+.btn-signup-modal[disabled],
+fieldset[disabled] .btn-signup-modal,
+.btn-signup-modal.disabled:hover,
+.btn-signup-modal[disabled]:hover,
+fieldset[disabled] .btn-signup-modal:hover,
+.btn-signup-modal.disabled:focus,
+.btn-signup-modal[disabled]:focus,
+fieldset[disabled] .btn-signup-modal:focus,
+.btn-signup-modal.disabled:active,
+.btn-signup-modal[disabled]:active,
+fieldset[disabled] .btn-signup-modal:active,
+.btn-signup-modal.disabled.active,
+.btn-signup-modal[disabled].active,
+fieldset[disabled] .btn-signup-modal.active {
+  background-color: #1679b3;
+  border-color: #1679b3;
+}
+
+.btn-signup-modal .badge {
+  color: #1679b3;
+}
+
 .item-content-btn2 {
   text-align: right;
   width: 100%;
@@ -2027,7 +2078,8 @@ span.textbutton {
 }
 
   .icon-profile-search-item {
-    padding-top: 5px;
+    margin-left: -4px;
+    margin-top: -5px;
   }
 
   .modal-header {
@@ -2053,11 +2105,17 @@ span.textbutton {
     height: 220px;
   }
 
-
-
-
-
 .wider-search{
   font-size:14px;
   margin-top:20px;
+}
+
+.sign-up-report {
+  font-size: 12px;
+  text-align: center;
+}
+
+.user-ourfavorite, .user-ourfavorite-item  {
+  background: unset;
+  border: unset;
 }

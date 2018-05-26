@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SearchDetails } from './details';
 
+
 @Component({
   selector: 'app-search-dest-details',
   templateUrl: './details-component.html'
