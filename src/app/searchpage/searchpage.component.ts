@@ -54,9 +54,9 @@ export class SearchpageComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.searchTerm = params.term;
       console.log(this.searchTerm);
-      this.searchName = this.searchTerm.split(/[0-9\-_]+/).join('');
+      this.searchName = this.searchTerm.split(/[0-9\-_]+/).join(' ');
       this.title.setTitle("Travel Blogs about " + this.searchName.toUpperCase() + " | wordoftravel");
-      this.meta.addTag({ name: 'description', content:"Planning a trip to " + this.searchName + "? Forget the guidebook! Get real travel advice and read real travel experiences about " + this.searchName + " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + this.searchName + "" });
+      this.meta.addTag({ name: 'description', content:"Planning a trip to " + this.searchName.toUpperCase() + "? Forget the guidebook! Get real travel advice and read real travel experiences about " + this.searchName.toUpperCase() + " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + this.searchName.toUpperCase() + "" });
     });
   }
 
@@ -130,7 +130,7 @@ export class SearchpageComponent implements OnInit {
       return
     }
     this.getSearchResult();
-    let location = selected.value.replace(/\s/g,'');
+    let location = selected.value.replace(/\s/g,'-');
 		var res = location.toLowerCase();
 		window.location.href = "/wordoftravel/destination/" + res + "-" + selected.id;
   }

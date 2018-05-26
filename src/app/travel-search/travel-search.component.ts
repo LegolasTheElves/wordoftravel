@@ -71,7 +71,7 @@ export class TravelSearchComponent implements OnInit {
 			// TODO error handling
 			return
 		}
-		let location = selected.value.replace(/\s/g,'');
+		let location = selected.value.replace(/\s/g,'-');
 		var res = location.toLowerCase();
 		window.location.href = "/wordoftravel/destination/" + res + "-" + selected.id;
 	}
