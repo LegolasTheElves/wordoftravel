@@ -27,17 +27,18 @@
               <div class="item-title-search">
                 <a href="">{{item.Title}}</a>
               </div>
-              <div class="item-content-text">
-                {{(item.Description | slice:0:200) + '...'}}
-              </div>
-
               <div class="item-content-places item-content-readingtime">
-                  <div class="item-text-places">READING TIME:</div>
+                  <div class="item-text-places"> <button class='bg-svg-icon-reading-time'> </button> </div>
                   <div class="item-text-content">&nbsp;
                     <span class="tags">{{(item.ReadingTime <= 1)? (item.ReadingTime) + ' minute': (item.ReadingTime) + ' minutes'}} </span>
                   </div>
                   
                 </div>
+              <div class="item-content-text">
+                {{(item.Description | slice:0:200) + '...'}}
+              </div>
+
+              
 
               <div class="item-content-places">
                 <div class="item-text-places">PLACES:</div>
@@ -45,19 +46,17 @@
                   <span class="tags" *ngFor="let place of item.Places; let isLast=last">{{place.LocationName}}{{isLast ? '' : ', '}}</span>
                 </div>
                 <div class="item-flag-right">
-                  <div class="tag-content">Add</div>
+                
                   <div class="tag-content">
-                    <div class='bg-svg-icon-flag'>
-                      <object id='svg1' data='./assets/svg/icon-add.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
-                    </div>
+                    <button class='bg-svg-icon-plus'>
+                    </button>
 
                   </div>
 
-                  <div class="tag-content">Flag</div>
+               
                   <div class="tag-content">
-                    <div class='bg-svg-icon-flag'>
-                      <object id='svg1' data='./assets/svg/icon-flag.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
-                    </div>
+                    <button class='bg-svg-icon-flag'>
+                        </button>
                   </div>
                 </div>
               </div>
@@ -67,18 +66,15 @@
                 <div class="item-text-places">TOPICS:</div>
                 <div class="item-text-content">&nbsp; {{item.Topics}}</div>
                 <div class="item-flag-right">
-                  <div class="tag-content">Add</div>
+                
                   <div class="tag-content">
-                    <div class='bg-svg-icon-flag'>
-                      <object id='svg1' data='./assets/svg/icon-add.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
-                    </div>
+                    <button class='bg-svg-icon-plus'>
+                         </button>
                   </div>
 
-                  <div class="tag-content">Flag</div>
                   <div class="tag-content">
-                    <div class='bg-svg-icon-flag'>
-                      <object id='svg1' data='./assets/svg/icon-flag.svg' type='image/svg+xml' width="10" height="10" class='icon-item-flag'></object>
-                    </div>
+                    <button class='bg-svg-icon-flag'>
+                     </button>
                   </div>
                 </div>
               </div>
