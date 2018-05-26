@@ -1,7 +1,6 @@
 
 function owlRotator() {
 $(document).ready(function(){  
-    
 
 
 if ($(window).width() >= 992) {
@@ -24,6 +23,23 @@ if ($(window).width() >= 992) {
         }
     }
 })
+$('.owl-item .btn-destreadmore').on('click', function(event){
+    var $this = $(this);
+
+    $(".showRegion").addClass('c-showRegion');
+    $('.defaulRegion').addClass('c-defaulRegion');
+           
+
+    $('.owl-item .owl-list').each(function(){
+        var $new = $(this);
+
+    if($new.hasClass('clicked')){
+        $new.removeClass('clicked');
+      } else {
+        $this.parents('.owl-list').addClass('clicked');
+      }
+    });
+  });
 }
 
 else { 
@@ -44,30 +60,30 @@ else {
             items:6,
         }
     }
-    })
+    });
+    $('.owl-item .btn-destreadmore').on('click', function(event){
+        var $this = $(this);
+    
+        $(".showRegion").addClass('c-showRegion');
+        $('.defaulRegion').addClass('c-defaulRegion');
+               
+    
+        $('.owl-item .owl-list').each(function(){
+            var $new = $(this);
+    
+        if($new.hasClass('clicked')){
+            $new.removeClass('clicked');
+          } else {
+            $this.parents('.owl-list').addClass('clicked');
+          }
+        });
+      });
 }
 }
 
 )
 
-//for carousel destination on click
-$('.owl-item .btn-destreadmore').on('click', function(event){
-    var $this = $(this);
 
-    $('.owl-item .owl-list').each(function(){
-        var $new = $(this);
-
-    if($new.hasClass('clicked')){
-        $new.removeClass('clicked');
-      } else {
-        $this.parents('.owl-list').addClass('clicked');
-      }
-    });
-
-
-
-
-  });
 
   //banner search homepage on click link
 

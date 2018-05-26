@@ -21,7 +21,7 @@
         <div class="img-caption text-center">
           <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
           <div class="dest_texthead">
-            <a href="#" (click)="selectRegion(destination,this)" class="btn-destreadmore">READ MORE</a>
+            <a href="#" id="clickRegion" (click)="selectRegion(destination,this)" class="btn-destreadmore">READ MORE</a>
         </div>
         </div>
         </div>
@@ -74,7 +74,53 @@
   </div>
   <!--End of Rotator-->
 </section>
+<!--Content Section-->
+<div class="defaulRegion">
+<section class="project-area section-gap ml-30 mr-30">
+  <div class="d-flex justify-content-center">
+    <div class="menu-content col-lg-8">
+      <div class="title text-center">
+        <h1  class="mb-20 titlecolor1">EXPLORE THE BEST OF
+          <span class="titlecolor">
+          {{africa?.RegionName | uppercase}}
+          </span>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+  <div class="col-lg-12 col-md-8 text-center">
+    <a href="#" *ngFor="let countryOfAfrica of countriesOfAfrica" class="genric-btn default circle fz-16 btn-compact">
+      {{countryOfAfrica.CountryName}}
+    </a>
+  </div>
+</div>
+  <div class="mt-30">
+    <app-featured-destination></app-featured-destination>
+  </div>
+</section>
+
+ <!-- Start Travel Articles Area -->
+ <section class="project-area section-gap mb-60" id="articles">
+  <div class="travelarticles">
+          <div class="d-flex justify-content-center mb-40">
+                  <div class="menu-content col-lg-8">
+                      <div class="title text-center">
+                          <h1 class="titlecolor1">HELPFUL POSTS
+                              <span class="titlecolor">TO PLAN YOUR TRIP</span>
+                          </h1>
+                          <h4 class="subheadtext">A curated selection of informative post about travelling in {{africa?.RegionName}}<!--4-->
+                      </h4></div>
+                  </div>
+              </div>
+      <app-travel-articles></app-travel-articles>
+  </div>
+</section>
+</div>
+<!--End of Content-->
 <!-- Start Destination Area -->
+<div class="showRegion">
 <app-destination [item]="selectedRegion"></app-destination>
-<!-- End Travel Articles Area -->
+</div>
+ <!--End Travel Articles Area -->
 <app-footer></app-footer>

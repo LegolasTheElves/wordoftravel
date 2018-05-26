@@ -43,7 +43,7 @@
               <div class="item-content-places">
                 <div class="item-text-places">PLACES:</div>
                 <div class="item-text-content">&nbsp;
-                  <span class="tags" *ngFor="let place of item.Places; let isLast=last">{{place.LocationName}}{{isLast ? '' : ', '}}</span>
+                  <span class="tags" *ngFor="let place of item.Places; let isLast=last"><a href="wordoftravel/destination/{{place.LocationName}}">{{place.LocationName}}{{isLast ? '' : ', '}}</a></span>
                 </div>
                 <div class="item-flag-right">
                 

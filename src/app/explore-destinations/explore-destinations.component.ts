@@ -9,15 +9,19 @@ declare function owlRotator();
   styleUrls: ['./explore-destinations.component.css']
 })
 export class ExploreDestinationsComponent implements OnInit {
+  removeCountries: any;
   errorMessage: string;
   destinations: any;
   countries: any;
+  africa:any;
+  countriesOfAfrica: any;
   @ViewChildren('owlitem') items: any;
 
   selectedRegion = {};
 
   constructor(private destinationApiService: DestinationService) {
     this.destinations = [];
+    this.countriesOfAfrica = [];
   }
   
   ngAfterViewInit() {
@@ -37,7 +41,17 @@ export class ExploreDestinationsComponent implements OnInit {
             this.destinations.push(destinations[obj]);
             this.countries = destinations[obj].Countries;
           }
-          console.log(JSON.stringify(this.destinations[0].RegionName));
+          this.africa = this.destinations[0];
+          let countyOfAfrica = this.africa.Countries;
+          for(let country of countyOfAfrica) {
+            if (country.Show == false) {
+              this.removeCountries = country;
+            } else {
+              this.countriesOfAfrica.push(country);
+              //console.log(JSON.stringify(this.countriesOfAfrica));
+            }
+          }
+          
         },
         error => {
           this.errorMessage = <any>error;
