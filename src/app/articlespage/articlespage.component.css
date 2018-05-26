@@ -44,21 +44,8 @@ button:focus {
 button:active {
     opacity: 0.8;
 }
-#btn-share-icon {
-    content: "";
-    background: url(/assets/svg/icon-share.svg) no-repeat center;
-    background-size: 50%;
-  }
-#btn-favorite-icon {
-    content: "";
-    background: url(/assets/svg/icon-favorite.svg) no-repeat center;
-    background-size: 40%;
-}
-#btn-like-icon {
-    content: "";
-    background: url(/assets/svg/icon-like-unliked.svg) no-repeat center;
-    background-size: 50%;
-}
+
+
 
 .box-list-title{
     font-family: "Raleway";

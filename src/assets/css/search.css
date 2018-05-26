@@ -16,10 +16,10 @@
 }
 
 .content-search {
+  display: inline-grid;
   border-bottom: 1px solid #ccc;
-  height: auto;
-  padding: 0 0 10px 0;
-  overflow: hidden;
+  height: fit-content;
+  padding-bottom: 10px;
 }
 
 .content-date {
@@ -101,8 +101,8 @@
 .content-article {
   width: 88%;
   height: 25px;
-  margin: 0px 6% 10px;
-  height: auto;
+  margin: 0px 6% 0px;
+  height: fit-content;
 }
 
 .content-text {
@@ -113,7 +113,6 @@
   font-weight: 600;
   letter-spacing: 0rem;
   line-height: 16px;
-  margin-top: 2px;
 }
 
 span.text {

@@ -3,7 +3,8 @@
   <div class="progstat"> <img class="mb-20 img-fluid" src="./assets/svg/logo-colored.svg" width="350"><br>
     Just a moment.... <br/><br/>
   We are searching for posts about {{searchName | titlecase}}<br />
-<span class="wider-search" ><i class="fa fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span></div>
+<span class="wider-search" > <i class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i>
+ {{ widerSearch }}</span></div>
 </div><!-- floating refine -->
 <div id="floating-refine">
   <!-- Modal content-->
@@ -367,7 +368,7 @@
     </div>
     <div class="subheadtext subhead-search">Plan your trip to {{searchName | titlecase}}. 
       Travel bloggers writing about {{searchName | titlecase}} share their experiences and travel tips. <br/>
-      <span class="wider-search"><i class="fa fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span>
+      <span class="wider-search"><i class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span>
     </div>
      
   </div>
@@ -405,20 +406,20 @@
                   <img src="{{result.BloggerImage}}" id="search-user-img">{{result.BlogTitle | titlecase }}
       
                 <a class="tooltips certified" href="#" *ngIf="result.OurFavourite == true">
+                   
                   <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
                   <span class="text">This blogger is one of our handpicked favourites. Find out more.</span>
                 </a>
               </div>
             </div>
-            <div class="content-article">
-              <div class="content-text">
+            <div class="content-article content-text">
                   {{(result.Description.length>150)? (result.Description | slice:0:150)+'...':(result.Description) }}
-              </div>
             </div>
 
           </div>
           <div class="bottom-icons">
-              <button id="btn-like-icon-search" class="icon-circle-search pointer"></button>
+              <button id="btn-like-icon-search" class="icon-circle-search pointer">
+            </button>
             <div class="mr-10">{{result.RatingLikes}}</div>
             <a class="text-option">
               <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="<div class='text-option text-uppercase mb-10'>
