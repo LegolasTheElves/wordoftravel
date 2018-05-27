@@ -2119,3 +2119,7 @@ span.textbutton {
   background: unset;
   border: unset;
 }
+
+#OurFavoritePopoverModal {
+  display: none;
+}
