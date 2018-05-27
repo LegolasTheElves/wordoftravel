@@ -88,7 +88,6 @@ export class SearchpageComponent implements OnInit {
           }
         });
         this.suggestions = value;
-        console.log(this.suggestions);
         //GroupBy
         this.groupByFn = (item) => item.group;
       } else {
