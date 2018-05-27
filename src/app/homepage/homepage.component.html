@@ -66,7 +66,7 @@
       <div class="col-md-12 col-12">
         <div class="owl-carousel">
           <div class="" *ngFor="let destination of destinations" #owlitem>  
-            <a href="wordoftravel/explore-destination/{{destination.RegionName}}">
+            <a href="wordoftravel/specific-destination/{{destination.RegionName}}">
             <div class="text-center">
               <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
             </div>
@@ -74,7 +74,7 @@
             <div class="img-caption text-center">
               <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
               <div class="dest_texthead">
-                <a href="wordoftravel/explore-destination/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
+                <a href="wordoftravel/specific-destination/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
               </div>
             </div>
             </div>
@@ -86,7 +86,7 @@
 
     <div class="boxart d-flex travel-wrapper">
 			<div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
-        <a href="wordoftravel/explore-destination/{{destination.RegionName}}">
+        <a href="wordoftravel/specific-destination/{{destination.RegionName}}">
 			  <div class="text-center">
 				<img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
         </div>
@@ -94,7 +94,7 @@
 			  <div class="img-caption text-center">
 				<div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
 				<div class="dest_texthead">
-					<a href="wordoftravel/explore-destination/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
+					<a href="wordoftravel/specific-destination/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
 				</div>
 		  
 			  </div>
