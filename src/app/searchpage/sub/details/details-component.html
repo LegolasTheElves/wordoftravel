@@ -40,12 +40,7 @@
               </div>       
 
               <div class="item-content-places">
-                <div class="item-text-places">PLACES:</div>
-                <div class="item-text-content">&nbsp;
-                  <span class="tags" *ngFor="let place of item.Places; let isLast=last">
-                    <a href="#" (click)="selectedPlaces(place.LocationName, place.GeoNamesID)">{{place.LocationName}}{{isLast ? '' : ', '}}</a>
-                  </span>
-                </div>
+                <div class="item-text-places">TOPICS:</div>
                 <div class="item-flag-right">
 
                   <div class="tag-content">
@@ -63,13 +58,15 @@
               
               <div class="item-content-links">
                 <div class="item-text-content">&nbsp;
-                  <span *ngFor="let place of item.Places; let isLast=last"><a class="tags genric-btn default circle fz-12 btn-compact-modal" href="wordoftravel/destination/{{place.LocationName}}">{{item.Topics}}{{isLast ? '' : ''}}</a></span>
+                <span><a class="tags genric-btn default circle fz-12 btn-compact-modal">
+                  {{item.Topics}},[{{item.FilterFeatures}}]
+                </a>
+              </span>
                 </div>
               </div>
 
               <div class="item-content-places">
-                <div class="item-text-places">TOPICS:</div>
-                <div class="item-text-content">&nbsp; {{item.Topics}},[{{item.FilterFeatures}}]</div>
+                <div class="item-text-places">PLACES:</div>
                 <div class="item-flag-right">
 
                   <div class="tag-content">
@@ -88,7 +85,7 @@
 
               <div class="item-content-links">
               <div class="item-text-content">&nbsp;
-                <span *ngFor="let place of item.Places; let isLast=last"><a class="tags genric-btn default circle fz-12 btn-compact-modal" href="wordoftravel/destination/{{place.LocationName}}">{{place.LocationName}}{{isLast ? '' : ''}}</a></span>
+                <span *ngFor="let place of item.Places; let isLast=last"><a (click)="selectedPlaces(place.LocationName, place.GeoNamesID)" class="tags genric-btn default circle fz-12 btn-compact-modal" >{{place.LocationName}}{{isLast ? '' : ''}}</a></span>
               </div>
             </div>
 
