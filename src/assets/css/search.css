@@ -610,6 +610,13 @@ a:hover.tooltips span {
   top: -245px;
 }
 
+.sort-by-filter {
+  position: fixed;
+  top: -245px;
+  left: 29px;
+  z-index: 999;
+}
+
 .hamburger-style {
   padding-left: 30px;
   padding-right: 15px;
@@ -650,7 +657,7 @@ a:hover.tooltips span {
 .divpop-search {
   position: fixed;
   width: 430px;
-  height: 653px;
+  height: 605px;
   background-color: #133560;
   border-radius: 0rem 0.45rem 0.45rem 0rem;
   justify-content: center;
@@ -694,7 +701,7 @@ a:hover.tooltips span {
 
 .content3-search {
   margin-left: 33px;
-  height: 385px;
+  height: 340px;
 }
 
 .content4-search {
@@ -2014,8 +2021,49 @@ span.textbutton {
 
 /*Filter for mobile*/
 @media screen and (max-width: 520px) {
-  .divpop-search {
+
+  .footer-arrow {
+    right: 44px !important;
+  }
+
+  .filter-sort-search a {
+    font-size: 20px;
+    font-family: "Raleway";
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0rem;
+  line-height: 16px;
+  
+  }
+
+  .filter-sort-search {
+    padding: 10px;
+    text-align: left !important;
+    text-transform: unset !important;
+  }
+
+  .popover-style-filter {
+    background: #313131;
+    top: 270px !important;
+    left: 10px !important;
     width: 100% !important;
+    border: unset;
+    border-radius: 0rem;
+  }
+
+  .on-mobile-scroll {
+  height: 470px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  }
+
+  .pop-check-search, .pop-radio-search {
+    width: 80%;
+    font-size: 20px;
+  }
+
+  .divpop-search {
+    width: 85% !important;
   }
 
   .content1-search {
@@ -2023,13 +2071,38 @@ span.textbutton {
     margin-left: 0px;
   }
 
-  .content3-search {
-    width: 100%;
-    margin: 0 6%;
+  .divpop-search {
+    height: 650px;
+  }
+
+  .content3-search, .content4-search {
+        margin-left: 20%;
+  }
+
+  .content4-search {
+    height: 65px;
+  }
+
+  .container-filter-check {
+     margin-right: 0px;
+     margin-bottom: 10px;
+  }
+
+  .pop-title-search {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .container-filter {
+    padding-left: 0px;
+  }
+
+  .first-column, .second-column {
+    height: auto !important;
   }
 
   .button-wrapper {
-    margin: 0px 70px;
+    margin: 0px 40px;
   }
 }
 
@@ -2088,7 +2161,11 @@ span.textbutton {
 }
 
   .first-column {
-    height: 220px;
+    height: 100px;
+  }
+
+  .second-column {
+    height: 115px;
   }
 
 .wider-search{
@@ -2117,7 +2194,7 @@ span.textbutton {
 
 /* Modal mobile */
 @media screen and (max-width: 520px) {
-.modal-desktop {
+.modal-desktop, .filter-desktop {
   display: none !important;
 }
 .modal-dialog {
@@ -2169,7 +2246,7 @@ span.textbutton {
 
 /* Modal desktop */
 @media screen and (min-width: 520px) {
-.modal-mobile {
+.modal-mobile, .filter-mobile {
   display: none !important;
 }
 }

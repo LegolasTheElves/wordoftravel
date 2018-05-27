@@ -222,6 +222,46 @@ $(document).ready(function () {
   });
   //end hamburger popover
 
+  //start filter sort
+  var sortbyfilter = [
+
+    function () {
+      $(".sort-by-filter").animate({
+        top: 247
+      }, 200);
+    },
+
+    function () {
+      if ($('.sort-by-filter').css('top') == '44px') {
+        $(".sort-by-filter").animate({
+          top: -245
+        }, 200);
+      } else {
+        $(".sort-by-filter").animate({
+          top: 247
+        }, 200);
+      }
+    }
+
+  ];
+
+  var sortbyfiltercounter = 0;
+  $(".filter-mobile-click").click(function () {
+    sortbyfilter[sortbyfiltercounter++].apply(this, Array.prototype.slice.apply(arguments));
+    sortbyfiltercounter %= sortbyfilter.length;
+  });
+
+  $(document).on('click', function (event) {
+    if ($('.sort-by-filter').css('top') == '247px') {
+      if (!$(event.target).closest('.sort-by-filter').length) {
+        $(".sort-by-filter").animate({
+          top: -245
+        }, 200);
+      }
+    }
+  });
+  //end filter sort
+
   //this hide hamburger is working in other browser
   $(document).ready(function () {
     if ($('#container1').length) {

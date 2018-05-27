@@ -2997,7 +2997,7 @@ h6 {
   font-family: "Raleway";
   color: #a967aa;
   font-size: 27px;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   font-weight: 500;
 }
 
@@ -5209,7 +5209,7 @@ hr.mb-80 {
 }
 
 .col-lg-5.col-md-8.mb-30 {
-  padding-left: 2px !important;
+  padding-left: 20px !important;
   padding-right: 2px !important;
 }
 

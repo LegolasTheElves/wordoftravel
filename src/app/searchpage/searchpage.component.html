@@ -25,7 +25,8 @@
       </div>
       <hr class="pop-hr" />
 
-      <div class="content4-search text-left">
+      <div class="on-mobile-scroll">
+      <div class="content4-search text-left filter-desktop">
         <div class="pop-title-search text-uppercase">Sort By</div>
         <div class="pop-radio-search">
           <label class="container-filter">Rating
@@ -43,45 +44,35 @@
         </div>
       </div>
 
+      <div class="content4-search text-left filter-mobile">
+          <div class="pop-title-search text-uppercase pointer">Sort By
+          <span class="filter-mobile-click"><i class="far fa-angle-down" size="2x" style="font-size:25px; color: #a967aa;"></i> </span></div>
+          <div class="pop-radio-search">
+            <label class="container-filter">Rating
+            </label>
+          </div>
+        </div>
+
+        <div class="sort-by-filter">
+            <div class="footer-arrow"></div>
+            <div class="pointer popover-style-filter btn-menu-search">
+              <div class='filter-sort-search text-uppercase'>
+                <a href='#'>Rating</a>
+              </div>
+              <div class='filter-sort-search text-uppercase'>
+                <a href='#'>Date Published</a>
+              </div>
+              <div class='filter-sort-search text-uppercase'>
+                <a href='#'>Recommended</a>
+              </div>
+            </div>
+          </div>
+
       <hr class="pop-hr" />
       <div class="content3-search text-left">
         <div class="pop-title-search text-uppercase">Filter by</div>
 
-        <div class="pop-check-search first-column">
-            <label class="container-filter-check title-check">
-              <span class="">
-                  <i class="far fa-suitcase checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
-              </span>
-  
-              Travel Style
-              <span class=""></span>
-            </label>
-            <label class="container-filter-check">City
-              <input type="checkbox">
-              <span class="checkmark-check"></span>
-            </label>
-            <label class="container-filter-check">Relaxing
-              <input type="checkbox">
-              <span class="checkmark-check"></span>
-            </label>
-            <label class="container-filter-check">Hiking
-              <input type="checkbox">
-              <span class="checkmark-check"></span>
-            </label>
-            <label class="container-filter-check">Adventure
-              <input type="checkbox">
-              <span class="checkmark-check"></span>
-            </label>
-            <label class="container-filter-check">Sights
-              <input type="checkbox">
-              <span class="checkmark-check"></span>
-            </label>
-            <label class="container-filter-check">Eco Travel
-              <input type="checkbox">
-              <span class="checkmark-check"></span>
-            </label>
-  
-          </div>      
+          
         <!-- Duplicate left filter
           <div class="pop-check-search">
           <label class="container-filter-check title-check">
@@ -105,40 +96,10 @@
 
         </div> -->
 
-        <div class="pop-check-search first-column">
-          <label class="container-filter-check title-check">
-            <span class="">
-                <i class="fal fa-utensils checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
-            </span>
-
-            Eating and Drinking
-
-          </label>
-          <label class="container-filter-check">Cheap Eats
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Local
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Vegetarian
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Nightlife
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-          <label class="container-filter-check">Coffee
-            <input type="checkbox">
-            <span class="checkmark-check"></span>
-          </label>
-
-        </div>
+        
 
         
-        <div class="pop-check-search second-column">
+        <div class="pop-check-search first-column">
             <label class="container-filter-check title-check">
               <span class="">
                 <i class="far fa-money-bill checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
@@ -159,6 +120,74 @@
               <span class="checkmark-check"></span>
             </label>
           </div>
+
+          <div class="pop-check-search second-column">
+              <label class="container-filter-check title-check">
+                <span class="">
+                    <i class="far fa-suitcase checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
+                </span>
+    
+                Travel Style
+                <span class=""></span>
+              </label>
+              <label class="container-filter-check">City
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Relaxing
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Hiking
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Adventure
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Sights
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Eco Travel
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+    
+            </div>    
+
+          <div class="pop-check-search first-column">
+              <label class="container-filter-check title-check">
+                <span class="">
+                    <i class="fal fa-utensils checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
+                </span>
+    
+                Eating and Drinking
+    
+              </label>
+              <label class="container-filter-check">Cheap Eats
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Local
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Vegetarian
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Nightlife
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+              <label class="container-filter-check">Coffee
+                <input type="checkbox">
+                <span class="checkmark-check"></span>
+              </label>
+    
+            </div>
 
         <!-- Duplicate left filter
         <div class="pop-check-search">
@@ -232,6 +261,7 @@
 
 
       </div>
+    </div>
       <hr class="pop-hr" />
       <div class="content2-search">
         <div class="button-wrapper">
@@ -459,4 +489,4 @@
     </div> 
   </div>
 
-  
+<!-- Filter mobile sort by -->
