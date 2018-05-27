@@ -19,7 +19,7 @@ constructor(private http: HttpClient) {
  }
 
 getSearch(term: string): Observable<SearchPage[]> {
-  console.log("Search URL: " + this._travelUrl + term);
+  //console.log("Search URL: " + this._travelUrl + term);
   return this.http.get<SearchPage[]>(this._travelUrl + term)
     //.do(data => console.log('All:' + JSON.stringify(data)))
     .catch(this.handleError);

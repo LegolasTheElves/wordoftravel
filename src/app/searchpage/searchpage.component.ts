@@ -54,7 +54,6 @@ export class SearchpageComponent implements OnInit {
     //Title and Meta Description
     this.route.params.subscribe(params => {
       this.searchTerm = params.term;
-      console.log(this.searchTerm);
       this.searchName = this.searchTerm.split(/[0-9\-_]+/).join(' ');
       //Meta Tags
       this.title.setTitle("Travel Blogs about " + this.searchName.toUpperCase() + " | wordoftravel");

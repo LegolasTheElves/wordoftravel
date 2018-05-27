@@ -19,9 +19,8 @@ export class SearchDetailsComponent implements AfterViewChecked  {
   selectedPlaces(item, id){
     this.places = item;
     this.placeid = id;
-    console.log(this.places, this.placeid);
     let location = this.places.replace(/\s/g,'-');
-    var res = location.toLowerCase();
+    let res = location.toLowerCase();
     let confimation = window.confirm("Do you want to update your search to show results for "  + this.places +"?");
     if(confimation == true){
       window.location.href = "/wordoftravel/destination/" + res + "-" + this.placeid;
