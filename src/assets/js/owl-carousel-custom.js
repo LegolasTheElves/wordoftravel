@@ -27,7 +27,7 @@ function owlRotator() {
 
           $(".showRegion").addClass('c-showRegion');
           $('.defaulRegion').addClass('c-defaulRegion');
-
+          $('.btn-destreadmore').removeClass('defaultReadmore');
           
           $('.owl-item .owl-list').each(function () {
             var $new = $(this);
@@ -62,10 +62,9 @@ function owlRotator() {
 
           $(".showRegion").addClass('c-showRegion');
           $('.defaulRegion').addClass('c-defaulRegion');
-//
-//if ($this.hasClass('defaultReadmore')) {
-//  $this.removeClass('defaultReadmore');
-//}
+
+          $('.btn-destreadmore').removeClass('defaultReadmore');
+
           $('.owl-item .owl-list').each(function () {
             var $new = $(this);
             if ($new.hasClass('clicked')) {

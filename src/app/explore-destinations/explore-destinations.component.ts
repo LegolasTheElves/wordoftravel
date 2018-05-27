@@ -47,13 +47,12 @@ export class ExploreDestinationsComponent implements OnInit {
           }
           let countyOfAfrica = this.africa.Countries;
           for(let country of countyOfAfrica) {
-            if (country.Show == false) {
-              this.removeCountries = country;
-            } else {
+            //if (country.Show == false) {
+              //this.removeCountries = country;
+           // } else {
               this.countriesOfAfrica.push(country);
-              //console.log(JSON.stringify(this.countriesOfAfrica));
             }
-          }
+          //}
           
         },
         error => {
