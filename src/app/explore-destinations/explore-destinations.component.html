@@ -13,6 +13,19 @@
   <!--Rotator-->
   <div class="col-md-12 col-12">
     <div class="owl-carousel">
+        <div class="owl-list clicked" #owlitem>
+            <div class="text-center ">
+              <img class="img-fluid" src="http://wordoftravel.com{{africa?.ImagePath}}" alt="">
+            </div>
+            <div class="gradient-carousel">
+            <div class="img-caption text-center">
+              <div class="dest_texthead text-uppercase">{{africa?.RegionName}}</div>
+              <div class="dest_texthead">
+                <a href="#" id="clickRegion" (click)="selectRegion(africa,this)" class="btn-destreadmore defaultReadmore">READ MORE</a>
+            </div>
+            </div>
+            </div>
+          </div>
       <div class="owl-list" *ngFor="let destination of destinations" #owlitem>
         <div class="text-center ">
           <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">

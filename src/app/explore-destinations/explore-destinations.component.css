@@ -1,11 +1,17 @@
-.showRegion{
-    display: none;
+.showRegion {
+  display: none;
 }
 
 .c-showRegion {
-    display: block !important;
+  display: block !important;
 }
 
 .c-defaulRegion {
-    display: none !important;
+  display: none !important;
 }
+
+.defaultReadmore {
+  background-color: #a967aa;
+  color: #ffffff;
+}
+

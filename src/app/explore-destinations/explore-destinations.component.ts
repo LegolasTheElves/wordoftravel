@@ -22,6 +22,7 @@ export class ExploreDestinationsComponent implements OnInit {
   constructor(private destinationApiService: DestinationService) {
     this.destinations = [];
     this.countriesOfAfrica = [];
+    this.africa = [];
   }
   
   ngAfterViewInit() {
@@ -38,10 +39,12 @@ export class ExploreDestinationsComponent implements OnInit {
       .subscribe(
         destinations => {
           for (let obj in destinations) {
+            if(destinations[obj].RegionName == "Africa"){
+              this.africa = destinations[obj];
+            }else{
             this.destinations.push(destinations[obj]);
-            this.countries = destinations[obj].Countries;
+            }
           }
-          this.africa = this.destinations[0];
           let countyOfAfrica = this.africa.Countries;
           for(let country of countyOfAfrica) {
             if (country.Show == false) {
