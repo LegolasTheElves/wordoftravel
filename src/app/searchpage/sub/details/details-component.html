@@ -1,6 +1,6 @@
-<!--End of floating refine-->
+<!--Start modal desktop-->
 <div class="modal fade" id="search-item-modal" role="dialog">
-  <div id="modalclose">
+  <div id="modalclose" class="modal-desktop">
 
     <div class="modal-dialog modal-lg">
       <div class="modal-content modal-img">
@@ -28,20 +28,16 @@
                 <a href="">{{item.Title}}</a>
               </div>
               <div class="item-content-places item-content-readingtime">
-                <div class="item-text-places">
+                <div class="item-reading-time">
                   <button class='bg-svg-icon-reading-time'> </button>
-                </div>
-                <div class="item-text-content">&nbsp;
-                  <span class="tags">{{(item.ReadingTime
+                  <span class="reading-time">{{(item.ReadingTime
                     <=1 )? (item.ReadingTime) + ' minute': (item.ReadingTime) + ' minutes'}} </span>
                 </div>
 
               </div>
               <div class="item-content-text">
                 {{(item.Description | slice:0:200) + '...'}}
-              </div>
-
-
+              </div>       
 
               <div class="item-content-places">
                 <div class="item-text-places">PLACES:</div>
@@ -55,9 +51,7 @@
                   <div class="tag-content">
                     <button class='bg-svg-icon-plus'>
                     </button>
-
                   </div>
-
 
                   <div class="tag-content">
                     <button class='bg-svg-icon-flag'>
@@ -66,6 +60,12 @@
                 </div>
               </div>
 
+              
+              <div class="item-content-links">
+                <div class="item-text-content">&nbsp;
+                  <span *ngFor="let place of item.Places; let isLast=last"><a class="tags genric-btn default circle fz-12 btn-compact-modal" href="wordoftravel/destination/{{place.LocationName}}">{{item.Topics}}{{isLast ? '' : ''}}</a></span>
+                </div>
+              </div>
 
               <div class="item-content-places">
                 <div class="item-text-places">TOPICS:</div>
@@ -75,7 +75,9 @@
                   <div class="tag-content">
                     <button class='bg-svg-icon-plus'>
                     </button>
+
                   </div>
+
 
                   <div class="tag-content">
                     <button class='bg-svg-icon-flag'>
@@ -83,6 +85,12 @@
                   </div>
                 </div>
               </div>
+
+              <div class="item-content-links">
+              <div class="item-text-content">&nbsp;
+                <span *ngFor="let place of item.Places; let isLast=last"><a class="tags genric-btn default circle fz-12 btn-compact-modal" href="wordoftravel/destination/{{place.LocationName}}">{{place.LocationName}}{{isLast ? '' : ''}}</a></span>
+              </div>
+            </div>
 
 
               <div class="item-content-btn">
@@ -152,7 +160,171 @@
 
     </div>
   </div>
+
+  <div id="modalclose" class="modal-mobile">
+
+    <div class="modal-dialog modal-lg">
+      
+      <div class="modal-content modal-content-box">
+
+          <div class="modal-img-group">
+              <div class="modal-content modal-img">
+                  <div class="modal-body modal-img-style">
+                    <img id="img-item-search" src="{{item.ThumbnailImage}}" class="img-item-modal">
+                  </div>
+          
+                </div>
+            </div>
+
+        <div class="modal-header">
+          <div class="item-pop-close float-right" data-dismiss="modal">x</div>
+          <div class="content-search-item">
+            <div class="item-content-date">
+              <a class="tooltips" href="#">
+                <object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-itemdate-search"></object>
+                <span class="text">Quite Recent</span>
+              </a>
+
+              <div class="date-search">{{item.UpdatedDate | date: 'dd'}} {{item.UpdatedDate | date:'MMMM'}} {{item.UpdatedDate | date: 'yyyy'}}</div>
+            </div>
+            <div class="item-content-title">
+              <div class="item-title-search">
+                <a href="">{{item.Title}}</a>
+              </div>
+              <div class="item-content-places item-content-readingtime">
+                <div class="item-reading-time">
+                  <button class='bg-svg-icon-reading-time'> </button>
+                  <span class="reading-time">{{(item.ReadingTime
+                    <=1 )? (item.ReadingTime) + ' minute': (item.ReadingTime) + ' minutes'}} </span>
+                </div>
+
+              </div>
+              <div class="item-content-text">
+                {{(item.Description | slice:0:200) + '...'}}
+              </div>       
+
+              <div class="item-content-places">
+                <div class="item-text-places">TOPICS:</div>
+                
+                <div class="item-flag-right">
+
+                  <div class="tag-content">
+                    <button class='bg-svg-icon-plus'>
+                    </button>
+                  </div>
+
+                  <div class="tag-content">
+                    <button class='bg-svg-icon-flag'>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="item-content-links">
+                <div class="item-text-content">&nbsp;
+                  <span><a class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">{{item.Topics}}</a></span>
+                </div>
+              </div>
+
+              <div class="item-content-places">
+                <div class="item-text-places">PLACES:</div>
+                <div class="item-flag-right">
+
+                  <div class="tag-content">
+                    <button class='bg-svg-icon-plus'>
+                    </button>
+
+                  </div>
+
+
+                  <div class="tag-content">
+                    <button class='bg-svg-icon-flag'>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-content-links">
+              <div class="item-text-content">&nbsp;
+                <span *ngFor="let place of item.Places; let isLast=last"><a class="tags genric-btn default circle fz-12 btn-compact-modal" href="wordoftravel/destination/{{place.LocationName}}">{{place.LocationName}}{{isLast ? '' : ''}}</a></span>
+              </div>
+            </div>
+
+
+              <div class="item-content-btn">
+                <a href="{{item.PostURL}}" class="btn-readfullpost">READ THE FULL POST</a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="item-content-user">
+              <div class="item-flag-center">
+                <div class="col-md-12">
+                  <div class="inline-btn-left">
+                    <div class="">
+                      <button id="btn-like-icon-modal" class="icon-circle-search"></button>
+                      <span>{{ item.RatingLikes }} LIKES</span>
+                    </div>
+                  </div>
+                  <div class="inline-btn-right">
+                    <div class="option-buttons">
+                      <button id="btn-share-icon-modal" class="icon-circle-search"></button>
+                 
+                    </div>
+                  </div>
+                  <div class="inline-btn-right">
+                    <div class="option-buttons">
+                      <button id="btn-favorite-icon-modal" class="icon-circle-search"></button>
+              
+                    </div>
+                  </div>
+                  <div class="inline-btn-right">
+                    <div class="option-buttons">
+                      <button id="btn-report-icon-modal" data-toggle="popover" class="icon-circle-search"></button>
+                
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="modal-body">
+          <div class="item-content-user">
+            <div class="profile-user">
+              <img src="{{item.BloggerImage}}" id="search-user-img-item"> {{item.BlogTitle}}
+
+              <button class="user-ourfavorite" href="#" data-toggle="popover">
+                <img src="./assets/svg/icon-result-account.svg" width="18" height="18" class="icon-profile-search-item">
+              </button>
+            </div>
+            <div class="item-content-text">
+              {{item.BlogDescription}}</div>
+            <div class="item-content-places">
+              <div class="item-text-places">TAGS:</div>
+              <div class="item-text-content">&nbsp; {{item.Tags}}</div>
+
+            </div>
+            <div class="item-content-btn2">
+              <a href="https://{{item.Blogger}}" class="btn-morefrombloggers">MORE FROM BLOGGER</a>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+
+
+    </div>
+  </div>
 </div>
+
+
 
 <!-- Report Tooltip Contents -->
 <div id="modalreportPopover" class="inline-label">

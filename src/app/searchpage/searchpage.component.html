@@ -3,7 +3,7 @@
   <div class="progstat"> <img class="mb-20 img-fluid" src="./assets/svg/logo-colored.svg" width="350"><br>
     Just a moment.... <br/><br/>
   We are searching for posts about {{searchName | titlecase}}<br />
-<span class="wider-search" > <i class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i>
+<span class="wider-search" > <i *ngIf="widerSearch" class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i>
  {{ widerSearch }}</span></div>
 </div><!-- floating refine -->
 <div id="floating-refine">
@@ -50,7 +50,7 @@
         <div class="pop-check-search first-column">
             <label class="container-filter-check title-check">
               <span class="">
-                <img src="./assets/img/icon-travel-tower.png" width="35px" class="checkmark-check-icon">
+                  <i class="far fa-suitcase checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
               </span>
   
               Travel Style
@@ -108,7 +108,7 @@
         <div class="pop-check-search first-column">
           <label class="container-filter-check title-check">
             <span class="">
-              <img src="./assets/img/icon-eat.png" width="35px" class="checkmark-check-icon">
+                <i class="fal fa-utensils checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
             </span>
 
             Eating and Drinking
@@ -130,7 +130,7 @@
             <input type="checkbox">
             <span class="checkmark-check"></span>
           </label>
-          <label class="container-filter-check">Good Coffee
+          <label class="container-filter-check">Coffee
             <input type="checkbox">
             <span class="checkmark-check"></span>
           </label>
@@ -141,7 +141,7 @@
         <div class="pop-check-search second-column">
             <label class="container-filter-check title-check">
               <span class="">
-                <img src="./assets/img/icon-travel.png" width="35px" class="checkmark-check-icon">
+                <i class="far fa-money-bill checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
               </span>
               Travel Budget
   
@@ -368,7 +368,7 @@
     </div>
     <div class="subheadtext subhead-search">Plan your trip to {{searchName | titlecase}}. 
       Travel bloggers writing about {{searchName | titlecase}} share their experiences and travel tips. <br/>
-      <span class="wider-search"><i class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span>
+      <span class="wider-search"><i *ngIf="widerSearch" class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span>
     </div>
      
   </div>

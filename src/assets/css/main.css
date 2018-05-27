@@ -5405,5 +5405,20 @@ a.place-link:hover{
    color: #3098D4;
 }
 
+.btn-compact-modal {
+  height: 20px;
+  line-height: unset;
+  margin: 1px 7px 1px -5px;
+  padding: 4px 7px;
+}
 
-
+.item-content-links {
+  width: 100%;
+  float: left;
+  font-family: "Raleway";
+  font-size: 12px;
+  color: #383838;
+  font-weight: 600;
+  letter-spacing: 0rem;
+  line-height: 11px;
+}
