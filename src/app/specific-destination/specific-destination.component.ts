@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { DestinationService } from '../destination/destination.service';
-import { Meta,Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-specific-destination',
@@ -14,7 +14,7 @@ export class SpecificDestinationComponent implements OnInit {
   destinations: any;
   region: string;
   countries: any;
-  removeCountries:any;
+  removeCountries: any;
 
   constructor(
     public route: ActivatedRoute,
@@ -27,10 +27,13 @@ export class SpecificDestinationComponent implements OnInit {
     });
     this.destinations = [];
     this.countries = [];
-    this.title.setTitle("Travel Blogs, Itineraries and Destination Tips about " + this.region.toUpperCase() + " | wordoftravel");
-    this.meta.addTag({ name: 'description',
-    content:"Planning a trip to " + this.region.toUpperCase() + " ? Discover great destination ideas and read real travel stories from other independent travellers and travel bloggers. Explore new areas of " + this.region.toUpperCase() + " that take you off the tourist trail."
-  });
+    let placeName = this.region;
+    let res = placeName.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+    this.title.setTitle("Travel Blogs, Itineraries and Destination Tips about " + res + " | wordoftravel");
+    this.meta.addTag({
+      name: 'description',
+      content: "Planning a trip to " + res + " ? Discover great destination ideas and read real travel stories from other independent travellers and travel bloggers. Explore new areas of " + res + " that take you off the tourist trail."
+    });
   }
 
   ngOnInit() {
@@ -44,7 +47,7 @@ export class SpecificDestinationComponent implements OnInit {
           for (let obj in destinations) {
             if (obj == this.region) {
               let listOfCountries = destinations[obj].Countries;
-              for(let country of listOfCountries) {
+              for (let country of listOfCountries) {
                 if (country.Show == false) {
                   this.removeCountries = country;
                 } else {
@@ -53,10 +56,10 @@ export class SpecificDestinationComponent implements OnInit {
               }
             }
           }
-         //console.log(JSON.stringify(this.countries));
+          //console.log(JSON.stringify(this.countries));
         },
-  error => {
-  this.errorMessage = <any>error;
-});
+        error => {
+          this.errorMessage = <any>error;
+        });
   }
 }

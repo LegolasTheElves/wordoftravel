@@ -21,8 +21,8 @@ export class SingleArticlePageComponent implements OnInit {
 
   articleCategory: string;
   articleName: string;
-  places:string;
-  placeid:number
+  places: string;
+  placeid: number
 
   constructor(private singleArticleService: SingleArticlePageService,
     private route: ActivatedRoute,
@@ -50,18 +50,20 @@ export class SingleArticlePageComponent implements OnInit {
           this.article = <TravelArticles>article['rsltCol'];
           this.safeHtml = this.sanitizer.bypassSecurityTrustHtml(this.article.ArticleText);
           this.date = this.article.PublishedDate;
-          console.log(JSON.stringify(this.article));
-          this.title.setTitle(this.article.Title + " | wordoftravel");
-          this.meta.addTag({ name: 'description', content: "" + this.safeHtml + ""});
+          //console.log(JSON.stringify(this.article));
+          let articleTitle = this.article.Title ;
+          let res = articleTitle.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+          this.title.setTitle(res + " | wordoftravel");
+          this.meta.addTag({ name: 'description', content: "" + this.safeHtml + "" });
         },
         error => this.errorMessage = <any>error);
   }
-  selectedPlaces(item, id){
+  selectedPlaces(item, id) {
     this.places = item;
     this.placeid = id;
-    let location = this.places.replace(/\s/g,'-');
+    let location = this.places.replace(/\s/g, '-');
     let res = location.toLowerCase();
-      window.location.href = "/wordoftravel/destination/" + res + "-" + this.placeid;
-		
+    window.location.href = "/wordoftravel/destination/" + res + "-" + this.placeid;
+
   }
 }
