@@ -37,7 +37,7 @@ export class SpecificDestinationComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("Region: ." + this.region + ".");
+    console.log("Region: " + this.region + ".");
     this.getRegion();
   }
   getRegion(): void {
@@ -45,7 +45,9 @@ export class SpecificDestinationComponent implements OnInit {
       .subscribe(
         destinations => {
           for (let obj in destinations) {
-            if (obj == this.region) {
+            let location = obj.replace(/\s/g, '-');
+            let res = location.toLowerCase();
+            if (res == this.region) {
               let listOfCountries = destinations[obj].Countries;
               for (let country of listOfCountries) {
                 if (country.Show == false) {

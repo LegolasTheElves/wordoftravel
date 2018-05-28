@@ -61,23 +61,23 @@
         <div class="mb-30 buttonright">
           <a href="#secvice" class="btn-titleright3">ALL REGIONS</a>
         </div>
-	  </div>
-	  <!--Carousel-->
+      </div>
+      <!--Carousel-->
       <div class="col-md-12 col-12">
         <div class="owl-carousel">
-          <div class="" *ngFor="let destination of destinations" #owlitem>  
-            <a href="wordoftravel/specific-destinations/{{destination.RegionName}}">
-            <div class="text-center">
-              <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
-            </div>
-            <div class="gradient-carousel">
-            <div class="img-caption text-center">
-              <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
-              <div class="dest_texthead">
-                <a href="wordoftravel/specific-destinations/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
+          <div class="" *ngFor="let destination of destinations" #owlitem>
+            <a href="#" (click)="selectedPlaces(destination.RegionName)">
+              <div class="text-center">
+                <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
               </div>
-            </div>
-            </div>
+              <div class="gradient-carousel">
+                <div class="img-caption text-center">
+                  <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
+                  <div class="dest_texthead">
+                    <a href="#" (click)="selectedPlaces(destination.RegionName)" class="btn-destreadmore">READ MORE</a>
+                  </div>
+                </div>
+              </div>
             </a>
           </div>
         </div>
@@ -85,49 +85,49 @@
     </div>
 
     <div class="boxart d-flex travel-wrapper">
-			<div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
-        <a href="wordoftravel/specific-destinations/{{destination.RegionName}}">
-			  <div class="text-center">
-				<img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
-        </div>
-        <div class="gradient-carousel">
-			  <div class="img-caption text-center">
-				<div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
-				<div class="dest_texthead">
-					<a href="wordoftravel/specific-destinations/{{destination.RegionName}}" class="btn-destreadmore">READ MORE</a>
-				</div>
-		  
-			  </div>
-        </div>
+      <div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
+        <a href="#" (click)="selectedPlaces(destination.RegionName)">
+          <div class="text-center">
+            <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
+          </div>
+          <div class="gradient-carousel">
+            <div class="img-caption text-center">
+              <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
+              <div class="dest_texthead">
+                <a href="#" (click)="selectedPlaces(destination.RegionName)" class="btn-destreadmore">READ MORE</a>
+              </div>
+
+            </div>
+          </div>
         </a>
-			</div>
-			<div class="col-sm-3 col-6 mb-20 carousel-mobile">
-			  <div class="no-mobile">
-				<div class="text-center">
-				  <img class="img-fluid" src="./assets/img/img_des3.jpg" alt="">
-				</div>
-				<div class="img-caption text-center">
-				  <div class="dest_texthead">AUSTRALIA</div>
-				  <div class="dest_texthead">
-					<a href="wordoftravel/specific-destinations" class="btn-destreadmore">READ MORE</a>
-				  </div>
-				</div>
-			  </div>
-			  <div class="box-mobile-carousel">
-				<a href="#">
-				  <div class="text-center">
-					<img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
-				  </div>
-				  <div class="color-carousel">
-		  
-					<div class="box-mobile-txt">
-					  ALL REGIONS
-					</div>
-				  </div>
-				</a>
-			  </div>
-			</div>
-		  </div>
+      </div>
+      <div class="col-sm-3 col-6 mb-20 carousel-mobile">
+        <div class="no-mobile">
+          <div class="text-center">
+            <img class="img-fluid" src="./assets/img/img_des3.jpg" alt="">
+          </div>
+          <div class="img-caption text-center">
+            <div class="dest_texthead">AUSTRALIA</div>
+            <div class="dest_texthead">
+              <a href="wordoftravel/specific-destinations" class="btn-destreadmore">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="box-mobile-carousel">
+          <a href="#">
+            <div class="text-center">
+              <img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
+            </div>
+            <div class="color-carousel">
+
+              <div class="box-mobile-txt">
+                ALL REGIONS
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

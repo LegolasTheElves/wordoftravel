@@ -10,6 +10,7 @@ export class HomepageComponent implements OnInit {
   errorMessage: string;
   destinations: any;
   @ViewChildren('owlitem') items: any;
+  selectedRegion:any;
 
   constructor(private destinationApiService: DestinationService) {
     this.destinations = [];
@@ -36,5 +37,11 @@ export class HomepageComponent implements OnInit {
           this.errorMessage = <any>error;
         });
   }
-
+  selectedPlaces(item) {
+    this.selectedRegion = item;
+    let location = this.selectedRegion.replace(/\s/g, '-');
+    let res = location.toLowerCase();
+    window.location.href = "/wordoftravel/specific-destinations/" + res;
+  }
 }
+
