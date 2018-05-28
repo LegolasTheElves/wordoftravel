@@ -23,7 +23,7 @@ export class SearchDetailsComponent implements AfterViewChecked  {
     let res = location.toLowerCase();
     let confimation = window.confirm("Do you want to update your search to show results for "  + this.places +"?");
     if(confimation == true){
-      window.location.href = "/wordoftravel/destination/" + res + "-" + this.placeid;
+      window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
     }else{
       return;
     }

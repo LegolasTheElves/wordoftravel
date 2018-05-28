@@ -73,10 +73,10 @@ export class TravelSearchComponent implements OnInit {
 		}
 		let location = selected.value.replace(/\s/g,'-');
 		var res = location.toLowerCase();
-		window.location.href = "/wordoftravel/destination/" + res + "-" + selected.id;
+		window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
 	}
 	search() {
-		window.location.href = "/wordoftravel/destination/" + this.searchText;
+		window.location.href = "/wordoftravel/destinations/" + this.searchText;
 	  }
 	
 	  handleKeyup(event) {

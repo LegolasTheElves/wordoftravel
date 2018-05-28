@@ -137,14 +137,14 @@ export class SearchpageComponent implements OnInit {
     this.getSearchResult();
     let location = selected.value.replace(/\s/g,'-');
 		var res = location.toLowerCase();
-		window.location.href = "/wordoftravel/destination/" + res + "-" + selected.id;
+		window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
   }
   //Modal popup
   selectItem(item) {
     this.selectedItem = item;
   }
   search() {
-    window.location.href = "/wordoftravel/destination/" + this.searchText;
+    window.location.href = "/wordoftravel/destinations/" + this.searchText;
   }
 
   handleKeyup(event) {

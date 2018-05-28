@@ -63,7 +63,7 @@ export class SingleArticlePageComponent implements OnInit {
     this.placeid = id;
     let location = this.places.replace(/\s/g, '-');
     let res = location.toLowerCase();
-    window.location.href = "/wordoftravel/destination/" + res + "-" + this.placeid;
+    window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
 
   }
 }

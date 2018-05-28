@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'wordoftravel', component: HomepageComponent },
   { path: 'wordoftravel/travel-articles', component: ArticlesPageComponent },
   { path: 'wordoftravel/travel-articles/:category/:name', component: SingleArticlePageComponent },
-  { path: 'wordoftravel/destination/:term', component: SearchpageComponent },
+  { path: 'wordoftravel/destinations/:term', component: SearchpageComponent },
   { path: 'wordoftravel/specific-destinations/:region', component: SpecificDestinationComponent },
   { path: 'wordoftravel/explore-destinations', component: ExploreDestinationsComponent },
   { path: 'wordoftravel/our-story', component:  OurStoryPageComponent } 
