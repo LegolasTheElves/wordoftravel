@@ -10,9 +10,10 @@ declare function loadpopovers();
   styleUrls: ['./articlespage.component.css']
 })
 export class ArticlesPageComponent implements OnInit {
-
   errorMessage: string;
   articles: TravelArticles[];
+  places:string;
+  placeid:number;
 
   @ViewChildren('travelarticles') items: any;
 
@@ -40,5 +41,13 @@ export class ArticlesPageComponent implements OnInit {
 
   openSingleArticle(item: TravelArticles){
     console.log(JSON.stringify(item));
+  }
+  selectedPlaces(item, id){
+    this.places = item;
+    this.placeid = id;
+    let location = this.places.replace(/\s/g,'-');
+    let res = location.toLowerCase();
+      window.location.href = "/wordoftravel/destination/" + res + "-" + this.placeid;
+		
   }
 }

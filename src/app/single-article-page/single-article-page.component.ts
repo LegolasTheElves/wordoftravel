@@ -21,6 +21,8 @@ export class SingleArticlePageComponent implements OnInit {
 
   articleCategory: string;
   articleName: string;
+  places:string;
+  placeid:number
 
   constructor(private singleArticleService: SingleArticlePageService,
     private route: ActivatedRoute,
@@ -53,5 +55,13 @@ export class SingleArticlePageComponent implements OnInit {
           this.meta.addTag({ name: 'description', content: "" + this.safeHtml + ""});
         },
         error => this.errorMessage = <any>error);
+  }
+  selectedPlaces(item, id){
+    this.places = item;
+    this.placeid = id;
+    let location = this.places.replace(/\s/g,'-');
+    let res = location.toLowerCase();
+      window.location.href = "/wordoftravel/destination/" + res + "-" + this.placeid;
+		
   }
 }

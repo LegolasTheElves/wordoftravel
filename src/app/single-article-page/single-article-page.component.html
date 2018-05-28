@@ -33,7 +33,7 @@
             <span class="label">PLACES:&nbsp;</span>
             <span class="tags">        
                 <span *ngFor="let place of article?.Places; let last = last">
-                    <a href="wordoftravel/destination/{{place.PlaceName}}-{{place.PlaceID}}" class="place-link">
+                    <a href="#" (click)="selectedPlaces(place.PlaceName, place.PlaceID)" class="place-link">
                         {{ place.PlaceName + (last ? " " : ",") }}
                     </a>
                 </span>
