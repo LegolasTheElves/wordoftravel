@@ -7,6 +7,7 @@
   background-color: #ebebeb;
   border: 1px solid #ccc;
   border-bottom: 0px;
+  object-fit: cover;
 }
 
 .wrapper {
@@ -1345,6 +1346,7 @@ fieldset[disabled] .btn-signup-modal.active {
 }
 
 .img-item-modal {
+  min-height: 150px;
   display: block;
   object-fit: cover;
   height: 100%;
