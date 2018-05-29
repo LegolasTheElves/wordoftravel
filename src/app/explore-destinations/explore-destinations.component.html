@@ -14,6 +14,7 @@
   <div class="col-md-12 col-12">
     <div class="owl-carousel">
         <div class="owl-list clicked" #owlitem>
+            <a href="#" class="cardregion" id="clickRegion" (click)="selectRegion(africa,this)">
             <div class="text-center ">
               <img class="img-fluid" src="http://wordoftravel.com{{africa?.ImagePath}}" alt="">
             </div>
@@ -25,8 +26,10 @@
             </div>
             </div>
             </div>
+          </a>
           </div>
       <div class="owl-list" *ngFor="let destination of destinations" #owlitem>
+          <a href="#" class="cardregion" id="clickRegion" (click)="selectRegion(destination,this)">
         <div class="text-center ">
           <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
         </div>
@@ -39,11 +42,14 @@
         </div>
         </div>
       </div>
+      </a>
+      </div>
     </div>
   </div>
   
   <div class="boxart d-flex travel-wrapper">
     <div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
+        <a href="#" id="clickRegion" (click)="selectRegion(destination,this)">
       <div class="text-center">
         <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
       </div>
@@ -51,14 +57,17 @@
       <div class="img-caption text-center">
         <div class="dest_texthead text-uppercase">{{destination.RegionName}}</div>
         <div class="dest_texthead">
-            <a href="#"  (click)="selectRegion(destination)" class="btn-destreadmore">READ MORE</a>
+            <a href="#" class="btn-destreadmore">READ MORE</a>
         </div>
       </div>
       </div>
+      </a>
     </div>
   
     <div class="col-sm-3 col-6 mb-20 carousel-mobile">
       <div class="no-mobile">
+          <div class="owl-list" #owlitem>
+              <a href="#" class="cardregion" id="clickRegion" (click)="selectRegion(africa,this)">
         <div class="text-center">
           <img class="img-fluid" src="./assets/img/img_des3.jpg" alt="">
         </div>
@@ -68,9 +77,12 @@
             <a href="#" class="btn-destreadmore">READ MORE</a>
           </div>
         </div>
+      </a>
+      </div>
       </div>
       <div class="box-mobile-carousel">
-        <a href="#">
+          <div class="owl-list" #owlitem>
+              <a href="#" class="cardregion" id="clickRegion" (click)="selectRegion(africa,this)">
           <div class="text-center">
             <img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
           </div>
@@ -81,6 +93,7 @@
             </div>
           </div>
         </a>
+        </div>
       </div>
     </div>
   </div>
