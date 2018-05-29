@@ -124,32 +124,25 @@ button#btn-share-icon:hover {
     content: "\f1e0";
 }
 
+
 button#btn-share-icon-modal:hover {
     color: #FFFFFF;
 }
+
 #btn-moreblogger-icon {
-    padding-left: 3px;
-    padding-top: 2px;
+    padding-top: 1px;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
-    font-weight: 300;
-  }
-#btn-moreblogger-icon:before {
-    padding-top: 4px;
-    padding-left: 4px;
-    font-size: 10px;
-    font-family: 'Font Awesome 5 Brands';
-    position: absolute;
-    content: "\f37d";
-}
-#btn-moreblogger-icon:after {
-    font-size: 17px;
     font-family: 'Font Awesome 5 Pro';
-    content: "\f111";
+    font-weight: 500;
+    font-size: 14px;
+}
+#btn-moreblogger-icon:before {
+    content: "\f2bd";
 }
 button#btn-moreblogger-icon:hover {
     color: #FFFFFF;
