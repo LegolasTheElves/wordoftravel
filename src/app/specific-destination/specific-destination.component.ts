@@ -9,6 +9,7 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./specific-destination.component.css']
 })
 export class SpecificDestinationComponent implements OnInit {
+  regionTitle: string;
   @Input() item: {};
   errorMessage: string;
   destinations: any;
@@ -24,6 +25,7 @@ export class SpecificDestinationComponent implements OnInit {
   ) {
     this.route.params.subscribe(params => {
       this.region = params.region;
+      this.regionTitle = this.region.split(/[0-9\-_]+/).join(' ');
     });
     this.destinations = [];
     this.countries = [];
@@ -45,7 +47,7 @@ export class SpecificDestinationComponent implements OnInit {
       .subscribe(
         destinations => {
           for (let obj in destinations) {
-            let location = obj.replace(/\s/g, '-');
+            let location = obj.replace(/[,\s]+|[,\s]+/g, '-');
             let res = location.toLowerCase();
             if (res == this.region) {
               let listOfCountries = destinations[obj].Countries;
