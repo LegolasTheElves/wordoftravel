@@ -85,15 +85,15 @@ function loadisotope() {
   })
 
   $('img#img-item-search').error(function(){
-    $(this).attr('src', './assets/img/missing.png');
-    $(this).attr('style','background-color:#fff');
+    $(this).attr('src', 'http://www.wordoftravel.com/images/posts/missing.png');
+    $(this).attr('style','padding: 30px; background-color:#fff');
   });
 
   $('img#search-user-img').error(function(){
-    $(this).attr('src', './assets/img/missing.png');
+    $(this).attr('src', 'http://www.wordoftravel.com/images/posts/missing.png');
   });
   $('img#search-user-img-item').error(function(){
-    $(this).attr('src', './assets/img/missing.png');
+    $(this).attr('src', 'http://www.wordoftravel.com/images/posts/missing.png');
   });
 
   
