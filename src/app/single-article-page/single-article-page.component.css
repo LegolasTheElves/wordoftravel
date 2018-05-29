@@ -150,3 +150,15 @@ button:active {
     width: 88.5%;
     margin: auto;
 }
+
+.our-story-banner {
+    font-family: "Raleway";
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+.text-banner {
+    height: 530px !important;
+}
