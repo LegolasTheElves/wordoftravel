@@ -4976,6 +4976,16 @@ fieldset[disabled] .btn-poplogout.active {
 }
 
 @media screen and (max-width: 580px) {
+
+  .col-lg-5.col-md-12.mb-50 {
+    margin-left: 0px !important;
+}
+
+.col-lg-5.col-md-8.mb-30 {
+   padding-left: 0px !important; 
+   padding-right: 0px !important; 
+}
+
 .default-header .navbar-nav a:hover {
   color: #3098d4;
   font-weight: 700;
@@ -5377,6 +5387,17 @@ hr.mb-80 {
 }
 
 @media screen and (max-width: 580px) {
+
+  .col-lg-5.col-md-12.mb-50 {
+    margin-bottom: 25px;
+  }
+  
+  .col-lg-5.col-md-8.mb-30 {
+     padding-left: 15px !important; 
+     padding-right: 15px !important; 
+     margin-bottom: 25px;
+  }
+
   .hero-text {
     height: 120px !important;
     width: 100%;
