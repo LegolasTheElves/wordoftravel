@@ -242,7 +242,7 @@ $(document).ready(function () {
   });
 
   $('.featured_img').error(function(){
-    $(this).attr('src', './assets/img/missing.png');
+    $(this).attr('src', 'http://www.wordoftravel.com/images/posts/missing.png');
   });
 
 });

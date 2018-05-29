@@ -38,6 +38,27 @@ function owlRotator() {
             }
           });
         });
+
+        
+        $('.owl-item .cardregion').on('click', function (event) {
+          var $this = $(this);
+
+          $(".showRegion").addClass('c-showRegion');
+          $('.defaulRegion').addClass('c-defaulRegion');
+          $('.btn-destreadmore').removeClass('defaultReadmore');
+          
+          $('.owl-item .owl-list').each(function () {
+            var $new = $(this);
+            if ($new.hasClass('clicked')) {
+              $new.removeClass('clicked');
+            } else {
+              $this.parents('.owl-list').addClass('clicked');
+            }
+          });
+         
+      });
+
+
       } else {
         $('.owl-carousel').owlCarousel({
           nav: false,
@@ -75,21 +96,47 @@ function owlRotator() {
             }
           });
         });
+
+        
+        $('.owl-item .cardregion').on('click', function (event) {
+          var $this = $(this);
+
+          $(".showRegion").addClass('c-showRegion');
+          $('.defaulRegion').addClass('c-defaulRegion');
+          $('.btn-destreadmore').removeClass('defaultReadmore');
+          
+          $('.owl-item .owl-list').each(function () {
+            var $new = $(this);
+            if ($new.hasClass('clicked')) {
+              $new.removeClass('clicked');
+            } else {
+              $this.parents('.owl-list').addClass('clicked');
+            }
+          });
+         
+      });
+      
       }
-    }
+  
 
-  )
+    //banner search homepage on click link
 
-
-
-  //banner search homepage on click link
-
-  $(function () {
     $('.carousel-item').on('click', function () {
       window.location = $(this).find('a').attr('href');
     });
-  });
 
+    $('.textmedium.text-white.mb-10').on('click', function () {
+      window.location = $('.carousel-item.active').find('a').attr('href');
+    });
+
+    $('.textbold.text-uppercase.text-white.mb-30').on('click', function () {
+      window.location = $('.carousel-item.active').find('a').attr('href');
+    });
+
+
+}
+
+)
 
 };
 

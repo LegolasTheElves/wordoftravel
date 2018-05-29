@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HomeSearchService } from './home-search.service';
 import { HomeSearch } from './homeSearch';
 
+declare function loadlinkcarousel();
+
 @Component({
   selector: 'app-about-area',
   templateUrl: './about-area.component.html',
@@ -18,6 +20,11 @@ export class AboutAreaComponent implements OnInit {
   ngOnInit() {
     this.getHomeSearches();
   }
+
+  ngAfterViewInit() {
+    loadlinkcarousel();
+  }
+
   getHomeSearches(): void{
     this.homeSearchService.getHomesearches()
     .subscribe(

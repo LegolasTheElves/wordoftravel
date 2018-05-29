@@ -7,6 +7,23 @@
   <!-- Start About Area -->
   <section class="default-banner">
       <div id="carousel-wot" class="carousel slide carousel-fade" data-ride="carousel">
+
+            <div class="single-img-caption">
+                    <div class="container">
+                      <div class="row justify-content-center align-items-center text-banner">
+                        <div class="col-md-12">
+              
+                          <div class="banner-content text-center">
+                            <div class="our-story-banner text-white mb-20 text-uppercase">{{ article?.Title }}</div>
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+      
+
+
           <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                   <img src="//wordoftravel.com{{article?.FeatureImage}}" height="100%">
@@ -14,7 +31,7 @@
           </div>
           <!--/.Slides-->
           <a class="buttondownhome" href="#buttondownhome" id="buttondownhome">
-              <object id="svg1" data="./assets/svg/btn_banner_arrow.svg" type="image/svg+xml" width="30" height="35"></object>
+            <img _ngcontent-c4="" class="pointer" src="./assets/img/btn_banner_arrow.png" width="30">
           </a>
       </div>
   </section>
@@ -152,7 +169,7 @@
                         <div class="articles-subheader">
                             <div class="articles-content">{{travel.Description}}</div>
                             <div class="text-right">
-                                <a href="{{travel.PostURL}}" class="btn-readmore">READ MORE</a>
+                                <a target="_blank" href="{{travel.PostURL}}" class="btn-readmore">READ MORE <i class="fas fa-external-link-alt" size="1x" style="margin-left: 5px;font-weight: 500;font-size: 13px;color: #FFFFFF;"></i></a>
                             </div>
                         </div>
                     </div>

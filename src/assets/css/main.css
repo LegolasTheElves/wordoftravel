@@ -37,7 +37,8 @@ body {
 }
 
 .carousel-caption {
-  bottom: 60px;
+  padding: 0px;
+  bottom: 190px;
   z-index: 10;
 }
 
@@ -2890,6 +2891,7 @@ h6 {
 }
 
 .textbold {
+  height: 60px;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -4448,7 +4450,8 @@ fieldset[disabled] .btn-poplogout.active {
 }
 
 .hero-text {
-  height: 390px !important;
+  height: 160px !important;
+  padding: 0% 0px;
 }
 
 .destination-rotator-arrow {
@@ -4708,6 +4711,21 @@ fieldset[disabled] .btn-poplogout.active {
   }
 }
 
+@media screen and (min-width: 992px) {
+
+.carousel-caption .container { 
+    padding: 0px;
+}
+
+.carousel-caption .container .col-md-12 { 
+  padding: 0px;
+}
+
+.mb-30 {
+  margin-bottom: 0px;
+}
+}
+
 /*mobile responsive css */
 
 @media screen and (max-width: 415px) {
@@ -4934,6 +4952,7 @@ fieldset[disabled] .btn-poplogout.active {
     font-size: 19px !important;
   }
   .textbold {
+    height: unset !important;
     font-size: 21px !important;
     letter-spacing: 0px !important;
     line-height: 1em !important;
@@ -4948,6 +4967,12 @@ fieldset[disabled] .btn-poplogout.active {
   .forjquery {
     justify-content: center;
   }
+}
+
+@media screen and (max-width: 580px) {
+.carousel-caption {
+  bottom: 220px;
+}
 }
 
 @media screen and (max-width: 992px) {
@@ -5048,7 +5073,6 @@ fieldset[disabled] .btn-poplogout.active {
     margin-right: 0px;
   }
   .hero-text {
-    height: 350px !important;
     width: 100%;
     margin: unset;
   }
@@ -5338,7 +5362,7 @@ hr.mb-80 {
 
 @media screen and (max-width: 580px) {
   .hero-text {
-    height: 405px !important;
+    height: 120px !important;
     width: 100%;
     margin: unset;
 }

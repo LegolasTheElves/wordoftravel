@@ -39,9 +39,9 @@ export class HomepageComponent implements OnInit {
   }
   selectedPlaces(item) {
     this.selectedRegion = item;
-    let location = this.selectedRegion.replace(/\s/g, '-');
+    let location = this.selectedRegion.replace(/[,\s]+|[,\s]+/g, '-');
     let res = location.toLowerCase();
-    window.location.href = "/wordoftravel/specific-destinations/" + res;
+    window.location.href = "/wordoftravel/explore-destinations/" + res;
   }
 }
 
