@@ -4721,7 +4721,7 @@ fieldset[disabled] .btn-poplogout.active {
   padding: 0px;
 }
 
-.mb-30 {
+.pointer.textbold.text-uppercase.text-white.mb-30 {
   margin-bottom: 0px;
 }
 }
@@ -5445,4 +5445,21 @@ a.place-link:hover{
   font-weight: 600;
   letter-spacing: 0rem;
   line-height: 11px;
+}
+
+.btn-compact-articles {
+  height: 20px;
+  line-height: unset;
+  margin: 0px 7px -3px 0px;
+  padding: 2px 7px;
+  font-weight: 600
+}
+
+.btn-compact-articlespage {
+  color: #3098d4 !important;
+  height: 20px;
+  line-height: unset;
+  margin: 0px 7px -3px 0px;
+  padding: 1px 7px;
+  font-weight: 600
 }
