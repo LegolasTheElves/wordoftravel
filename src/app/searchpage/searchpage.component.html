@@ -433,7 +433,7 @@
             </div>
             <div class="content-user">
               <div class="profile-user">
-                  <img src="{{result.BloggerImage}}" id="search-user-img">{{(result.BlogTitle.length>20)? (result.BlogTitle | slice:0:20 | titlecase)+'..':(result.BlogTitle) }}
+                  <img src="{{result.BloggerImage}}" id="search-user-img">{{(result.BlogTitle.length>22)? (result.BlogTitle | slice:0:22 | titlecase)+'..':(result.BlogTitle | titlecase) }}
                 <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
                   <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
                 </button>
