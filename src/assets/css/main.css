@@ -2065,9 +2065,9 @@ h6 {
 }
 
 .default-header .navbar-nav a:hover {
-  font-weight: 600;
-  border-top: 5px solid #ffffff;
-  padding-top: 22px;
+    font-weight: 600;
+    border-top: 5px solid #ffffff;
+    padding-top: 22px;
 }
 
 .is-sticky .default-header .navbar-nav a .nohover:hover {
@@ -4975,6 +4975,22 @@ fieldset[disabled] .btn-poplogout.active {
 }
 }
 
+@media screen and (max-width: 580px) {
+.default-header .navbar-nav a:hover {
+  color: #3098d4;
+  font-weight: 700;
+  border-top: 5px solid #ffffff;
+  padding-top: 22px;
+}
+
+.default-header .navbar-nav .nav-item.active a {
+color: #3098d4;
+font-weight: 700;
+border-top: 5px solid #ffffff;
+padding-top: 22px;
+}
+}
+
 @media screen and (max-width: 992px) {
 
   .footerabout {
@@ -5462,4 +5478,8 @@ a.place-link:hover{
   margin: 0px 7px -3px 0px;
   padding: 1px 7px;
   font-weight: 600
+}
+
+.col-lg-5.col-md-12.mb-50 {
+  margin-left: 15px;
 }
