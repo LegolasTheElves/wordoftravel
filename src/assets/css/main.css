@@ -5446,14 +5446,3 @@ a.place-link:hover{
   letter-spacing: 0rem;
   line-height: 11px;
 }
-
-.single-img-caption {
-  position: absolute;
-  right: 15%;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-}

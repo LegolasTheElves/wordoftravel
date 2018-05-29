@@ -55,6 +55,7 @@ p.copyright{
 }
 
 .standard-img-caption {
+    bottom: 210px;
     position: absolute;
     right: 15%;
     left: 15%;
@@ -117,7 +118,7 @@ p.copyright{
 }
 
 .text-banner {
-    height: 530px !important;
+    height: 70px !important;
 }
 
 /* Mobile */
