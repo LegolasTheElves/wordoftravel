@@ -10,7 +10,7 @@ export interface Destination{
 				Priority: 1,
 				ImagePath: "",
 				CountryDescription: "",
-				Show: true
+				Show: boolean
             }
         ]
 }
