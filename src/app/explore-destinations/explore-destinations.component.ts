@@ -42,18 +42,16 @@ export class ExploreDestinationsComponent implements OnInit {
             if(destinations[obj].RegionName == "Africa"){
               this.africa = destinations[obj];
             }else{
-            this.destinations.push(destinations[obj]);
+              this.destinations.push(destinations[obj]);
             }
           }
+          
           let countyOfAfrica = this.africa.Countries;
           for(let country of countyOfAfrica) {
-            //if (country.Show == false) {
-              //this.removeCountries = country;
-           // } else {
+            if (country.Show != false) {
               this.countriesOfAfrica.push(country);
             }
-          //}
-          
+          }
         },
         error => {
           this.errorMessage = <any>error;
