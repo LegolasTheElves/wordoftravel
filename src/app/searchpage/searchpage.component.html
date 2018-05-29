@@ -428,12 +428,12 @@
             <div class="content-title">
               <div class="title-search">
                   <a class="img-search" class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal">
-                    {{result.Title | uppercase}}
+                   {{result.Title | uppercase}}
                   </a></div>
             </div>
             <div class="content-user">
               <div class="profile-user">
-                  <img src="{{result.BloggerImage}}" id="search-user-img">{{(result.BlogTitle.length>22)? (result.BlogTitle | slice:0:22 | titlecase)+'..':(result.BlogTitle | titlecase) }}
+                  <img src="{{result.BloggerImage}}" id="search-user-img">{{(result.BlogTitle.length>21)? (result.BlogTitle | slice:0:21 | titlecase)+'..':(result.BlogTitle | titlecase) }}
                 <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
                   <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
                 </button>

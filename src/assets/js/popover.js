@@ -1,6 +1,6 @@
 function loadpopovers(){
     $("[data-toggle=popover]").each(function(i, obj) {
-        $('.icon-circle').popover({
+        $(this).popover({
             html: true,
             placement:'bottom',
             content: function() {
