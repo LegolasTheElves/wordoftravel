@@ -34,6 +34,7 @@ export class ExploreDestinationsComponent implements OnInit {
   ngOnInit() {
     this.getDestinations();
   }
+  
   getDestinations(): void {
     this.destinationApiService.getDestination()
       .subscribe(
@@ -45,7 +46,7 @@ export class ExploreDestinationsComponent implements OnInit {
               this.destinations.push(destinations[obj]);
             }
           }
-          
+
           let countyOfAfrica = this.africa.Countries;
           for(let country of countyOfAfrica) {
             if (country.Show != false) {
