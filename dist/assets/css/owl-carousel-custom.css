@@ -1,0 +1,65 @@
+
+.owl-carousel {
+    position: relative;
+}
+    
+.owl-carousel .owl-nav {
+    position: absolute;
+    top: 46%;
+    left: 0;
+    right: 0;
+  }
+
+@media (max-width: 600px) {
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+}
+  .owl-carousel .owl-nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 40px;
+    color: white;
+  }
+  .owl-carousel .owl-nav img {
+    width: 30px;
+    height: 30px;
+  }
+  .owl-carousel .owl-nav button.owl-prev{
+    float: left;
+    outline: none !important;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    float: right;
+    outline: none !important;
+  }
+
+  
+.owl-carousel-icons {
+  position: relative;
+}
+  
+.owl-carousel-icons .owl-nav {
+  position: absolute;
+  top: 46%;
+  left: 0;
+  right: 0;
+}
+.owl-carousel-icons .owl-nav {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 40px;
+  color: white;
+}
+.owl-carousel-icons .owl-nav img {
+  width: 30px;
+  height: 30px;
+}
+.owl-carousel-icons .owl-nav button.owl-prev{
+  float: left;
+  outline: none !important;
+}
+.owl-carousel-icons .owl-nav button.owl-next {
+  float: right;
+  outline: none !important;
+}
