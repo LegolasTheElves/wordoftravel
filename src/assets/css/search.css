@@ -356,7 +356,7 @@ a:hover.tooltips span {
   line-height: 1;
   font-family: 'Font Awesome 5 Pro';
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
   border-radius: 50%;
   background-color: #f0efef;
   margin-top: -10px;
@@ -382,7 +382,7 @@ a:hover.tooltips span {
   line-height: 1;
   font-family: 'Font Awesome 5 Pro';
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
   border-radius: 50%;
   background-color: #f0efef;
   margin-top: -10px;
@@ -1127,7 +1127,7 @@ fieldset[disabled] .btn-popapply.active {
   background-color: #133560;
   border-radius: 50px;
   font-family: "Raleway";
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0px;
   padding: 5px 20px;
@@ -1194,7 +1194,7 @@ fieldset[disabled] .btn-readfullpost.active {
   background-color: #3098d4;
   border-radius: 50px;
   font-family: "Raleway";
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0px;
   padding: 5px 20px;
@@ -1656,9 +1656,10 @@ span.textbutton {
     padding: 0.25em;
   }
   .item-content-places {
+    height: 12px;
     font-size: 12px;
     margin-top: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
   .item-content-text {
     height: 60px;
@@ -1850,7 +1851,7 @@ span.textbutton {
     width: 95% !important;
   }
   #search-user-img {
-    margin-top: -3px;
+    margin-top: -11px;
     width: 18px;
     height: 18px;
   }
@@ -2241,6 +2242,9 @@ span.textbutton {
 
 /* Modal mobile */
 @media screen and (max-width: 520px) {
+  .item-text-content {
+    height: 32px;
+  }
 .modal-desktop, .filter-desktop {
   display: none !important;
 }
@@ -2300,4 +2304,47 @@ span.textbutton {
 
 .modal {
   padding-right: 0px !important;
+}
+
+@media screen and (max-width: 361px){
+
+.content-title {
+    margin: 0px 0px 0px 5px;
+}
+
+.content-user {
+  width: 100%;
+  margin: 0px 5px 0px;
+}
+
+.content-date {
+  margin: 10px 6% 0px 5px;
+}
+
+.content-article {
+  line-height: 15px;
+  width: 94%;
+  height: 25px;
+  margin: 0px 7px 5px 7px;
+  height: fit-content;
+}
+
+.text-wrap-user {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 67%;
+}
+
+.user-ourfavorite, .user-ourfavorite-item {
+  margin-top: 3px;
+  position: absolute;
+  display: inline-flex;
+}
+
+}
+
+.text-wrap-user {
+  display: contents;
 }

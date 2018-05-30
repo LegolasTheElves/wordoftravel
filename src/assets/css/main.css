@@ -4729,6 +4729,10 @@ fieldset[disabled] .btn-poplogout.active {
 /*mobile responsive css */
 
 @media screen and (max-width: 415px) {
+
+  .box-mobile-txt {
+    font-size: 16px;
+  }
   .item {
     margin-bottom: 20px !important;
   }
@@ -5509,4 +5513,11 @@ a.place-link:hover{
 
 .col-lg-5.col-md-12.mb-50 {
   margin-left: 15px;
+}
+
+@media screen and (max-width: 415px) {
+
+  .box-mobile-txt {
+    font-size: 16px;
+  }
 }

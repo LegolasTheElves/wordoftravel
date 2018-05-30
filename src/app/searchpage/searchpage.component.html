@@ -433,7 +433,8 @@
             </div>
             <div class="content-user">
               <div class="profile-user">
-                  <img src="{{result.BloggerImage}}" id="search-user-img">{{(result.BlogTitle.length>21)? (result.BlogTitle | slice:0:21 | titlecase)+'..':(result.BlogTitle | titlecase) }}
+                  <img src="{{result.BloggerImage}}" id="search-user-img">
+                  <div class="text-wrap-user">{{(result.BlogTitle.length>21)? (result.BlogTitle | slice:0:21 | titlecase)+'..':(result.BlogTitle | titlecase) }}</div>
                 <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
                   <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
                 </button>
@@ -470,7 +471,7 @@
               <div class="sign-up-report">
                 This blogger is one of our
                 <br> handpicked favourites.
-                <a href="#" class="btn-signup-modal">FIND OUT MORE</a>
+                <a href="#" class="btn-signup-modal text-uppercase">FIND OUT MORE</a>
               </div>
             </div>
 

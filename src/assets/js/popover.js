@@ -1,5 +1,5 @@
 function loadpopovers(){
-    $("[data-toggle=popover]").each(function(i, obj) {
+    $("#btn-share-icon[data-toggle=popover]").each(function(i, obj) {
         $(this).popover({
             html: true,
             placement:'bottom',
