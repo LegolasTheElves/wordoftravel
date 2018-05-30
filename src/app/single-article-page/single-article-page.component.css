@@ -94,6 +94,17 @@ button:active {
 }
 
 @media only screen and (max-width: 600px){
+
+    .our-story-banner {
+        font-size: 35px !important;
+    }
+
+    .single-img-caption {
+        width: 100%;
+        bottom: 190px !important;
+        right: 0px !important;
+        left: 0px !important;
+    }
     .container{
         margin: none !important;
     }

@@ -148,6 +148,7 @@ $(document).ready(function () {
     nav: true,
     navText: ["<img src='./assets/img/blue-arrow-left.png'>", "<img src='./assets/img/blue-arrow-right.png'>"],
     dots: false,
+    loop: true,
     margin: 10,
     responsiveClass: true,
     responsive: {
