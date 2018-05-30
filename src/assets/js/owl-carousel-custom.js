@@ -117,23 +117,6 @@ function owlRotator() {
       });
       
       }
-  
-
-    //banner search homepage on click link
-
-    $('.carousel-item').on('click', function () {
-      window.location = $(this).find('a').attr('href');
-    });
-
-    $('.textmedium.text-white.mb-10').on('click', function () {
-      window.location = $('.carousel-item.active').find('a').attr('href');
-    });
-
-    $('.textbold.text-uppercase.text-white.mb-30').on('click', function () {
-      window.location = $('.carousel-item.active').find('a').attr('href');
-    });
-
-
 }
 
 )
