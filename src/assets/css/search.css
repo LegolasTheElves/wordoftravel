@@ -2347,5 +2347,9 @@ span.textbutton {
   display: inline-flex;
 }
 
+#btn-like-icon-search {
+  margin-right: 8px;
+}
+
 }
 
