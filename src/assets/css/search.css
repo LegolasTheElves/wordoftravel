@@ -17,9 +17,9 @@
 }
 
 .content-search {
-  display: inline-grid;
+  display: table;
   border-bottom: 1px solid #ccc;
-  height: fit-content;
+  height: auto;
   padding-bottom: 10px;
 }
 
@@ -100,9 +100,9 @@
 
 .content-article {
   width: 88%;
-  height: 25px;
+  min-height: 50px;
   margin: 0px 6% 0px;
-  height: fit-content;
+  height: auto;
 }
 
 .content-text {
@@ -2063,7 +2063,7 @@ span.textbutton {
 }
 
 .text-wrap-user {
-  display: contents;
+  display: inline-flex;
 }
 
 @media screen and (max-width: 1301px) {

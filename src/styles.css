@@ -82,7 +82,6 @@
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
   border-bottom: 1px solid #DDDDDD;
   padding: 0px 0px;
-  background-color: transparent;
 }
 
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option:last-child {
@@ -117,6 +116,7 @@
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup {
   border-bottom: 1px solid #DDDDDD;
   color: #020d1a !important;
+  padding: 0px;
 }
 
 @media (max-width: 580px) {
@@ -184,5 +184,5 @@
 }
 
 .ng-dropdown-panel .ng-dropdown-panel-items {
-  max-height: 295px !important;
+  max-height: 300px !important;
 }
