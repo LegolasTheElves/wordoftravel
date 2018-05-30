@@ -2023,6 +2023,10 @@ span.textbutton {
   left:0px !important;
 }
 
+.text-wrap-user {
+  display: contents;
+}
+
 @media screen and (max-width: 1301px) {
   .navbar-nav a {
     letter-spacing: 0.2px;
@@ -2345,6 +2349,3 @@ span.textbutton {
 
 }
 
-.text-wrap-user {
-  display: contents;
-}
