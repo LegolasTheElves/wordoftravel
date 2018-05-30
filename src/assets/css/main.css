@@ -4809,6 +4809,7 @@ fieldset[disabled] .btn-poplogout.active {
     border-top-right-radius: 0.50rem !important;
   }
   .featured_destination9 {
+    height: 410px;
     display: block !important;
     position: relative;
     grid-column: 6;
@@ -4860,6 +4861,7 @@ fieldset[disabled] .btn-poplogout.active {
     border-radius: 0.75rem;
   }
   .box-mobile-txt {
+    width: 90%;
     font-family: "Raleway";
     color: #ffffff;
     font-size: 20px;
@@ -4976,6 +4978,10 @@ fieldset[disabled] .btn-poplogout.active {
 }
 
 @media screen and (max-width: 580px) {
+  
+  .margin-bottom-35 {
+    margin-bottom: 35px;
+  }
 
   .col-lg-5.col-md-12.mb-50 {
     margin-left: 0px !important;
@@ -5132,7 +5138,7 @@ padding-top: 22px;
     letter-spacing: 0px;
   }
   .travelabox {
-    height: 90%;
+    height: 100%;
     width: 96.5%;
     margin: auto 5px 15px 5px;
     text-align: initial;
