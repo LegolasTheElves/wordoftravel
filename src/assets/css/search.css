@@ -144,6 +144,24 @@ a.tooltips span {
   padding: 2px;
 }
 
+a.tooltips-readingtime {
+  position: relative;
+  display: inline;
+}
+
+a.tooltips-readingtime span {
+  position: absolute;
+  width: 130px;
+  color: #333333;
+  background: #ebebeb;
+  height: 20px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 2px;
+  margin-left: -30px;
+  padding: 2px;
+}
+
 a.tooltips.certified span {
   position: absolute;
   width: 65px;
@@ -181,6 +199,27 @@ a.tooltips span:after {
 }
 
 a:hover.tooltips span {
+  visibility: visible;
+  opacity: 1;
+  top: 20px;
+  left: -25px;
+  z-index: 9999;
+}
+
+a.tooltips-readingtime span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -9px;
+  width: 0;
+  height: 0;
+  border-bottom: 6px solid #ebebeb;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+a:hover.tooltips-readingtime span {
   visibility: visible;
   opacity: 1;
   top: 20px;

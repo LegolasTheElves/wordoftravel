@@ -182,3 +182,7 @@
 .option-buttons {
   margin: 0 auto;
 }
+
+.ng-dropdown-panel .ng-dropdown-panel-items {
+  max-height: 295px !important;
+}
