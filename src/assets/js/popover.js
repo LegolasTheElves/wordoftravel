@@ -62,6 +62,33 @@ function loadpopovers(){
         });
         
     });
+    $("#test-button[data-toggle=popover]").each(function(i, obj) {
+
+        $(this).popover({ 
+          trigger: "manual",
+          html: true,
+          placement:'bottom',
+          content: function() {
+          return $('#OurFavoritePopover').html();
+          }
+        })
+        .on("mouseenter", function () {
+          var _this = this;
+          $(this).popover("show");
+          $(".popover").on("mouseleave", function () {
+              $(_this).popover('hide');
+          });
+      }).on("mouseleave", function () {
+          var _this = this;
+          setTimeout(function () {
+              if (!$(".popover:hover").length) {
+                  $(_this).popover("hide");
+              }
+          }, 300);
+        });
+        
+    });
+
 }
 
 

@@ -23,7 +23,7 @@ export class SingleArticlePageComponent implements OnInit {
   articleName: string;
   places: string;
   placeid: number
-
+  @ViewChildren('relatedPost') items: any;
   constructor(private singleArticleService: SingleArticlePageService,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
@@ -42,6 +42,9 @@ export class SingleArticlePageComponent implements OnInit {
   //Load isotope
   ngAfterViewInit() {
     loadpopovers();
+    this.items.changes.subscribe(t => {
+      loadpopovers();
+    })
   }
   getAllArticles(): void {
     this.singleArticleService.getArticle(this.articleCategory.concat('/').concat(this.articleName))

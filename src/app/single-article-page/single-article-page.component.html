@@ -1,187 +1,209 @@
 <app-signin></app-signin>
-  <!-- start banner Area -->
-  <app-header></app-header>
-  <!-- End Header Area -->
+<!-- start banner Area -->
+<app-header></app-header>
+<!-- End Header Area -->
+<!--Popover for our favorite blogger icon-->
+<div id="OurFavoritePopover" class="inline-label">
+  <div class="sign-up-report">
+    This blogger is one of our
+    <br> handpicked favourites.
+    <a href="#" class="btn-signup-modal text-uppercase">FIND OUT MORE</a>
+  </div>
+</div>
 
+<!-- Start About Area -->
+<section class="default-banner">
+  <div id="carousel-wot" class="carousel slide carousel-fade" data-ride="carousel">
 
-  <!-- Start About Area -->
-  <section class="default-banner">
-      <div id="carousel-wot" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="single-img-caption">
+      <div class="container">
+        <div class="row justify-content-center align-items-center text-banner">
+          <div class="col-md-12">
 
-            <div class="single-img-caption">
-                    <div class="container">
-                      <div class="row justify-content-center align-items-center text-banner">
-                        <div class="col-md-12">
-              
-                          <div class="banner-content text-center">
-                            <div class="our-story-banner text-white mb-20 text-uppercase">{{ article?.Title }}</div>
-              
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </div>
-      
+            <div class="banner-content text-center">
+              <div class="our-story-banner text-white mb-20 text-uppercase">{{ article?.Title }}</div>
 
-
-          <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                  <img src="//wordoftravel.com{{article?.FeatureImage}}" height="100%">
-              </div>
-          </div>
-          <!--/.Slides-->
-          <a class="buttondownhome" href="#buttondownhome" id="buttondownhome">
-            <img _ngcontent-c4="" class="pointer" src="./assets/img/btn_banner_arrow.png" width="30">
-          </a>
-      </div>
-  </section>
-
-  <section class="container mt-40 mb-40" id="">
-      <div class="row">
-        <div class="inline-label col-md-12">
-          <div class="icon">
-            <object style="text-align: left;" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="40" height="20"></object>
-          </div>
-          <span>{{article?.PublishedDate | date: 'dd'}} {{article?.PublishedDate | date:'MMMM'}} {{article?.PublishedDate | date: 'yyyy'}}</span>
-        </div>
-        <div class="box-list-places col-md-12 ">
-          <div>
-            <span class="label">PLACES:&nbsp;</span>
-            <span class="tags">        
-                <span *ngFor="let place of article?.Places; let last = last">
-                    <a href="#" (click)="selectedPlaces(place.PlaceName, place.PlaceID)" class="place-link">
-                        {{ place.PlaceName + (last ? " " : ",") }}
-                    </a>
-                </span>
-            </span>
-          </div>
-          <div>
-            <span class="label">TOPICS:&nbsp;</span>
-            <span class="tags">{{article.Tags}}</span>
-          </div>
-        </div>
-        <div class="social-icons-details col-md-12">
-          <div class="inline-label">
-            <button id="btn-like-icon" class="icon-circle"></button>
-            <span>{{ article?.Likes }} LIKES</span>
-          </div>
-          <div class="inline-label">
-              <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
-              <span>SHARE</span>
-          </div>
-          <div class="inline-label">
-              <button id="btn-favorite-icon" class="icon-circle"></button>
-              <span>FAVOURITE</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-20">
-        <div class="row">
-          <div class="col-md-12" [innerHtml]="safeHtml">
-          </div>  
-        </div>
-
-        <div class="social-icons-details mb-80 col-md-12">
-          <div class="inline-label ">
-            <button id="btn-like-icon" class="icon-circle"></button>
-            <span>{{ article?.Likes }} LIKES</span>
-          </div>
-
-          <div class="inline-label ">
-            <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
-            <span>SHARE</span>
-          </div>
-
-          <div class="inline-label">
-            <button id="btn-favorite-icon" class="icon-circle"></button>
-            <span>FAVOURITE</span>
-          </div>
-        </div>
-      </div>
-  </section>
-
-  <hr class="mb-50">
-
-  <!-- Start Related Articles Area -->
-  <section class="project-area section-gap ml-30 mr-30 mb-60">
-      <div class="">
-            <div class="boxart d-flex mb-30">
-                <div class="row no-margin col-md-9 col-12">
-                    <div class="row no-margin titlecolor1 ">RELATED
-                        <div class="titlecolor">&nbsp;ARTICLES</div>
-                    </div>
-                </div>
             </div>
-            <div class="boxart d-flex travel-wrapper">
-                <div *ngFor="let travel of article?.RelatedArticles" class="col-sm-3 col-6 mb-20">
-                    <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">
-                        <img class="border_radius img-fluid travel-article-thumb" src="//wordoftravel.com{{travel.FeatureImageThumbnail}}" alt="">
-                    </a>
-                    <div class="mt-20 travelabox">
-                        <div class="articles-header text-uppercase pointer">
-                            <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">{{travel.Title}}</a></div>
-                        <div class="articles-subheader">
-                            <span *ngFor="let place of travel.Places; let last = last">
-                            <a href='wordoftravel/destination/{{place.PlaceName}}'>{{ place.PlaceName + (last ? " " : ",") }}</a>
-                            </span>
-                            <div class="articles-content">{{travel.AbstractText}}</div>
-                            <div class="text-right">
-                                <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}" class="btn-readmore">READ MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-      </div>
-  </section>
-  <!-- End Related Articles Area -->
-
-  <hr class="mb-50">
-  <!-- Start Blog Articles Area -->
-  <section class="project-area section-gap ml-30 mr-30 mb-60">
-      <div class="">
-          <div class="boxart d-flex mb-30">
-              <div class="row no-margin col-md-9 col-12">
-                  <div class="row no-margin titlecolor1 ">RELATED
-                      <div class="titlecolor">&nbsp;BLOG POSTS</div>
-                  </div>
-              </div>
           </div>
-            <div class="boxart d-flex travel-wrapper">
-                <div *ngFor="let travel of article?.Blogs" class="col-sm-3 col-6 mb-20">
-                    <a href="{{travel.PostURL}}" target="_blank">
-                        <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article1.jpg" alt="">
-                    </a>
-                    <div class="mt-20 blogger-box">
-                        <div class="articles-header-blogpost text-uppercase pointer"><a href="{{travel.PostURL}}" target="_blank">{{travel.Title}}</a></div>
-                        <div class="blogger">
-                                <a href="">
-                                  <img src="http://wordoftravel.com{{travel.BloggerThumbnail}}" id="search-user-img"></a> DAVE BUILMER
-                                
-                                <a class="tooltips certified" href="#">
-                                  <object id="svg1" data="./assets/svg/icon-result-account.svg" type="image/svg+xml" width="14" height="14" class="icon-profile-search"></object>
-                
-                                  <span class="text">Certified</span>
-                                </a>
-                              </div>
-                        <div class="articles-subheader">
-                            <div class="articles-content">{{travel.Description}}</div>
-                            <div class="text-right">
-                                <a target="_blank" href="{{travel.PostURL}}" class="btn-readmore">READ MORE <i class="fas fa-external-link-alt" size="1x" style="margin-left: 5px;font-weight: 500;font-size: 13px;color: #FFFFFF;"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
       </div>
-  </section>
-  <div id="socialSharePopover" class="inline-label">
-        <object class="svgIcon" data="./assets/svg/icon-social-facebook.svg" type="image/svg+xml" width="40" height="40"></object>
-        <object class="svgIcon" data="./assets/svg/icon-social-twitter.svg" type="image/svg+xml" width="40" height="40"></object>
-        <object class="svgIcon" data="./assets/svg/icon-social-pinterest.svg" type="image/svg+xml" width="40" height="40"></object>
-        <object class="svgIcon" data="./assets/svg/icon-social-whatsapp.svg" type="image/svg+xml" width="40" height="40"></object>
-        <object class="svgIcon" data="./assets/svg/icon-social-mail.svg" type="image/svg+xml" width="40" height="38"></object>
     </div>
-  <!-- End Blog Articles Area -->
-  <app-footer></app-footer>
+
+
+
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img src="//wordoftravel.com{{article?.FeatureImage}}" height="100%">
+      </div>
+    </div>
+    <!--/.Slides-->
+    <a class="buttondownhome" href="#buttondownhome" id="buttondownhome">
+      <img _ngcontent-c4="" class="pointer" src="./assets/img/btn_banner_arrow.png" width="30">
+    </a>
+  </div>
+</section>
+
+<section class="container mt-40 mb-40" id="">
+  <div class="row">
+    <div class="inline-label col-md-12">
+      <div class="icon">
+        <object style="text-align: left;" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="40" height="20"></object>
+      </div>
+      <span>{{article?.PublishedDate | date: 'dd'}} {{article?.PublishedDate | date:'MMMM'}} {{article?.PublishedDate | date: 'yyyy'}}</span>
+    </div>
+    <div class="box-list-places col-md-12 ">
+      <div>
+        <span class="label">PLACES:&nbsp;</span>
+        <span class="tags">
+          <span *ngFor="let place of article?.Places; let last = last">
+            <a href="#" (click)="selectedPlaces(place.PlaceName, place.PlaceID)" class="place-link">
+              {{ place.PlaceName + (last ? " " : ",") }}
+            </a>
+          </span>
+        </span>
+      </div>
+      <div>
+        <span class="label">TOPICS:&nbsp;</span>
+        <span class="tags">{{article?.Tags}}</span>
+      </div>
+    </div>
+    <div class="social-icons-details col-md-12">
+      <div class="inline-label">
+        <button id="btn-like-icon" class="icon-circle"></button>
+        <span>{{ article?.Likes }} LIKES</span>
+      </div>
+      <div class="inline-label">
+        <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
+        <span>SHARE</span>
+      </div>
+      <div class="inline-label">
+        <button id="btn-favorite-icon" class="icon-circle"></button>
+        <span>FAVOURITE</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-20">
+    <div class="row">
+      <div class="col-md-12" [innerHtml]="safeHtml">
+      </div>
+    </div>
+
+    <div class="social-icons-details mb-80 col-md-12">
+      <div class="inline-label ">
+        <button id="btn-like-icon" class="icon-circle"></button>
+        <span>{{ article?.Likes }} LIKES</span>
+      </div>
+
+      <div class="inline-label ">
+        <button id="btn-share-icon" data-toggle="popover" class="icon-circle"></button>
+        <span>SHARE</span>
+      </div>
+
+      <div class="inline-label">
+        <button id="btn-favorite-icon" class="icon-circle"></button>
+        <span>FAVOURITE</span>
+      </div>
+      <button id="test-button" data-toggle="popover" class="user-ourfavorite-item" href="#">
+        <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
+      </button>
+    </div>
+  </div>
+</section>
+
+<hr class="mb-50">
+
+<!-- Start Related Articles Area -->
+<section class="project-area section-gap ml-30 mr-30 mb-60">
+  <div class="">
+    <div class="boxart d-flex mb-30">
+      <div class="row no-margin col-md-9 col-12">
+        <div class="row no-margin titlecolor1 ">RELATED
+          <div class="titlecolor">&nbsp;ARTICLES</div>
+        </div>
+      </div>
+    </div>
+    <div class="boxart d-flex travel-wrapper">
+      <div *ngFor="let travel of article?.RelatedArticles" class="col-sm-3 col-6 mb-20">
+        <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">
+          <img class="border_radius img-fluid travel-article-thumb" src="//wordoftravel.com{{travel.FeatureImageThumbnail}}" alt="">
+        </a>
+        <div class="mt-20 travelabox">
+          <div class="articles-header text-uppercase pointer">
+            <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">{{travel.Title}}</a>
+          </div>
+          <div class="articles-subheader">
+            <span *ngFor="let place of travel.Places; let last = last">
+              <a href='wordoftravel/destination/{{place.PlaceName}}'>{{ place.PlaceName + (last ? " " : ",") }}</a>
+            </span>
+            <div class="articles-content">{{travel.AbstractText}}</div>
+            <div class="text-right">
+              <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}" class="btn-readmore">READ MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Related Articles Area -->
+
+<hr class="mb-50">
+<!-- Start Blog Articles Area -->
+<section class="project-area section-gap ml-30 mr-30 mb-60">
+  <div class="">
+    <div class="boxart d-flex mb-30">
+      <div class="row no-margin col-md-9 col-12">
+        <div class="row no-margin titlecolor1 ">RELATED
+          <div class="titlecolor">&nbsp;BLOG POSTS</div>
+        </div>
+      </div>
+    </div>
+    <div class="boxart d-flex travel-wrapper">
+      <div *ngFor="let travel of article?.Blogs" class="col-sm-3 col-6 mb-20" #relatedPost>
+        <a href="{{travel.PostURL}}" target="_blank">
+          <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article1.jpg" alt="">
+        </a>
+        <div class="mt-20 blogger-box">
+          <div class="articles-header-blogpost text-uppercase pointer">
+            <a href="{{travel.PostURL}}" target="_blank">{{travel.Title}}</a>
+          </div>
+          <div class="blogger">
+            <a href="">
+              <img src="http://wordoftravel.com{{travel.BloggerThumbnail}}" id="search-user-img">
+            </a> {{travel.BlogTitle}}
+
+            <button id="test-button" data-toggle="popover" class="user-ourfavorite-item" href="#">
+              <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
+            </button>
+          </div>
+          <div class="articles-subheader">
+            <div class="articles-content">{{travel.Description}}</div>
+            <div class="text-right">
+              <a target="_blank" href="{{travel.PostURL}}" class="btn-readmore">READ MORE
+                <i class="fas fa-external-link-alt" size="1x" style="margin-left: 5px;font-weight: 500;font-size: 13px;color: #FFFFFF;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="socialSharePopover" class="inline-label">
+  <object class="svgIcon" data="./assets/svg/icon-social-facebook.svg" type="image/svg+xml" width="40" height="40"></object>
+  <object class="svgIcon" data="./assets/svg/icon-social-twitter.svg" type="image/svg+xml" width="40" height="40"></object>
+  <object class="svgIcon" data="./assets/svg/icon-social-pinterest.svg" type="image/svg+xml" width="40" height="40"></object>
+  <object class="svgIcon" data="./assets/svg/icon-social-whatsapp.svg" type="image/svg+xml" width="40" height="40"></object>
+  <object class="svgIcon" data="./assets/svg/icon-social-mail.svg" type="image/svg+xml" width="40" height="38"></object>
+</div>
+<!-- End Blog Articles Area -->
+<!--Popover for our favorite blogger icon-->
+<div id="OurFavoritePopover" class="inline-label">
+  <div class="sign-up-report">
+    This blogger is one of our
+    <br> handpicked favourites.
+    <a href="#" class="btn-signup-modal text-uppercase">FIND OUT MORE</a>
+  </div>
+</div>
+<app-footer></app-footer>
