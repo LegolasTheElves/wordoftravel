@@ -653,7 +653,6 @@ a:hover.tooltips-readingtime span {
 .sort-by-filter {
   position: fixed;
   top: -245px;
-  left: 29px;
   z-index: 999;
 }
 
@@ -2117,6 +2116,10 @@ span.textbutton {
     right: 44px !important;
   }
 
+  .sort-by-filter .footer-arrow {
+    right: 80px !important;
+  }
+
   .filter-sort-search a {
     font-size: 20px;
     font-family: "Raleway";
@@ -2393,3 +2396,60 @@ span.textbutton {
 
 }
 
+@media screen and (max-width: 415px){
+  .btn-popreset {
+    margin: 0px 5px 0 0px;
+  }
+  .titlecolor1, .titlecolor {
+    font-size: 21px;
+  }
+  .pop-check-search, .pop-radio-search {
+    width: 90%;
+  }
+  .content3-search, .content4-search {
+    margin-left: 16%;
+  }
+
+}
+
+@media screen and (max-width: 376px){
+
+  .titlecolor1, .titlecolor {
+    font-size: 19px;
+  }
+  .pop-check-search, .pop-radio-search {
+    width: 100%;
+  }
+  .content3-search, .content4-search {
+    margin-left: 14%;
+  }
+  .btn-popreset {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 361px){
+  .content3-search, .content4-search {
+     margin-left: 12%;
+  }
+  .btn-popreset, .btn-popapply {
+    padding: 5px 40px;
+    margin: -10px 5px 0px 15px;
+  }
+ 
+}
+
+input.container-filter {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  outline: 0 none;
+}
+
+.sort-by-filter a {
+  color: #FFFFFF !important;
+}
+
+.sort-by-filter a:hover {
+  color: #3098d4 !important;
+}

@@ -9,7 +9,6 @@ $(function () {
     item = Math.floor($body.width());
     itemwidth = (item/2) - 11;
     colW = itemwidth;
-    console.log(colW);
   } else if ($(window).width() >= 401 && $(window).width() <= 411) {
     item = Math.floor($body.width());
     itemwidth = (item/2) - 11;
@@ -97,11 +96,9 @@ function loadisotope() {
   $('a img.img-search').click(function() {
        if ($(this, '.img-search').attr('src') == 'http://www.wordoftravel.com/images/posts/missing.png') {
         $('img.img-item-modal').attr('style','padding: 30px; background-color:#fff;'); 
-        console.log('nana');
         }
         else {
           $('img.img-item-modal').attr('style','padding: 0px; background-color:#fff;'); 
-          console.log('nonono');
         }
   });
 
@@ -239,21 +236,80 @@ $(document).ready(function () {
   var sortbyfilter = [
 
     function () {
+            //selected highlight
+            var Selected = $("input.container-filter").val();
+            console.log(Selected);
+            if (Selected == 'Rating') {
+               $('.sort-by-filter a.rating-popover').attr('style','color: #3098d4 !important; font-weight: 700');
+               $('.sort-by-filter a.date-popover').attr('style','color: #FFFFFF; font-weight: 400');
+               $('.sort-by-filter a.recommended-popover').attr('style','color: #FFFFFF; font-weight: 400');
+            }
+            else if (Selected == 'Date Published') {
+              $('.sort-by-filter a.rating-popover').attr('style','color: #FFFFFF; font-weight: 400');
+              $('.sort-by-filter a.date-popover').attr('style','color: #3098d4 !important; font-weight: 700');
+              $('.sort-by-filter a.recommended-popover').attr('style','color: #FFFFFF; font-weight: 400');
+           }
+           else if (Selected == 'Recommended') {
+            $('.sort-by-filter a.rating-popover').attr('style','color: #FFFFFF; font-weight: 400');
+            $('.sort-by-filter a.date-popover').attr('style','color: #FFFFFF; font-weight: 400');
+            $('.sort-by-filter a.recommended-popover').attr('style','color: #3098d4 !important; font-weight: 700');
+          }
+           //end selected hightlight
+
+      var offset = $(".filter-mobile-click").offset();
+      var fposY = offset.top - $(window).scrollTop();
+      var fposX = offset.left - $(window).scrollLeft(); 
+      var posY = 15 + fposY;
+      var posY =  Math.floor(posY*100)/100; 
+      var posX = fposX - 108;
+
+      $('.sort-by-filter').css('left', posX);
+
       $(".sort-by-filter").animate({
-        top: 247
+        top: posY
       }, 200);
+
     },
 
     function () {
-      if ($('.sort-by-filter').css('top') == '44px') {
+
+      //selected highlight
+      var Selected = $("input.container-filter").val();
+      console.log(Selected);
+      if (Selected == 'Rating') {
+         $('.sort-by-filter a.rating-popover').attr('style','color: #3098d4 !important; font-weight: 700');
+         $('.sort-by-filter a.date-popover').attr('style','color: #FFFFFF; font-weight: 400');
+         $('.sort-by-filter a.recommended-popover').attr('style','color: #FFFFFF; font-weight: 400');
+      }
+      else if (Selected == 'Date Published') {
+        $('.sort-by-filter a.rating-popover').attr('style','color: #FFFFFF; font-weight: 400');
+        $('.sort-by-filter a.date-popover').attr('style','color: #3098d4 !important; font-weight: 700');
+        $('.sort-by-filter a.recommended-popover').attr('style','color: #FFFFFF; font-weight: 400');
+     }
+     else if (Selected == 'Recommended') {
+      $('.sort-by-filter a.rating-popover').attr('style','color: #FFFFFF; font-weight: 400');
+      $('.sort-by-filter a.date-popover').attr('style','color: #FFFFFF; font-weight: 400');
+      $('.sort-by-filter a.recommended-popover').attr('style','color: #3098d4 !important; font-weight: 700');
+    }
+     //end selected hightlight
+     
+      var offset = $(".filter-mobile-click").offset();
+      var fposY = offset.top - $(window).scrollTop();
+      var fposX = offset.left - $(window).scrollLeft(); 
+      var posY = 15 + fposY;
+      var posY =  Math.floor(posY*100)/100; 
+      var posX = fposX - 108;
+
+      if ($('.sort-by-filter').css('top') == posY+'px') { console.log('true');
         $(".sort-by-filter").animate({
           top: -245
         }, 200);
-      } else {
+      } else { console.log('sssss');
         $(".sort-by-filter").animate({
-          top: 247
+          top: posY
         }, 200);
       }
+      
     }
 
   ];
@@ -261,11 +317,11 @@ $(document).ready(function () {
   var sortbyfiltercounter = 0;
   $(".filter-mobile-click").click(function () {
     sortbyfilter[sortbyfiltercounter++].apply(this, Array.prototype.slice.apply(arguments));
-    sortbyfiltercounter %= sortbyfilter.length;
+    sortbyfiltercounter %= sortbyfilter.length; 
   });
 
   $(document).on('click', function (event) {
-    if ($('.sort-by-filter').css('top') == '247px') {
+    if ($('.sort-by-filter').css('top') == '245px') {
       if (!$(event.target).closest('.sort-by-filter').length) {
         $(".sort-by-filter").animate({
           top: -245
@@ -319,4 +375,34 @@ $(document).ready(function () {
 
   });
 
+});
+
+$(document).ready(function () {
+    
+$('.rating-popover').click(function(){
+  $('input.container-filter').val('Rating');
+  $('input.container-filter').text('Rating');
+  console.log('dsdsdsd');
+  $(".sort-by-filter").animate({
+    top: -245
+  }, 200);
+});
+
+$('.date-popover').click(function(){
+  $('input.container-filter').val('Date Published');
+  $('input.container-filter').text('Date Published');
+  console.log('datt');
+  $(".sort-by-filter").animate({
+    top: -245
+  }, 200);
+});
+
+$('.recommended-popover').click(function(){
+  $('input.container-filter').val('Recommended');
+  $('input.container-filter').text('Recommended');
+  console.log('ssff');
+  $(".sort-by-filter").animate({
+    top: -245
+  }, 200);
+});
 });

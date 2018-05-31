@@ -1,11 +1,16 @@
-
 <div class="preload">
-  <div class="progstat"> <img class="mb-20 img-fluid" src="./assets/svg/logo-colored.svg" width="350"><br>
-    Just a moment.... <br/><br/>
-  We are searching for posts about {{searchName | titlecase}}<br />
-<span class="wider-search" > <i *ngIf="widerSearch" class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i>
- {{ widerSearch }}</span></div>
-</div><!-- floating refine -->
+  <div class="progstat">
+    <img class="mb-20 img-fluid" src="./assets/svg/logo-colored.svg" width="350">
+    <br> Just a moment....
+    <br/>
+    <br/> We are searching for posts about {{searchName | titlecase}}
+    <br />
+    <span class="wider-search">
+      <i *ngIf="widerSearch" class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i>
+      {{ widerSearch }}</span>
+  </div>
+</div>
+<!-- floating refine -->
 <div id="floating-refine">
   <!-- Modal content-->
   <div class="floating-refine-search" id="floating-refine-search">
@@ -26,54 +31,56 @@
       <hr class="pop-hr" />
 
       <div class="on-mobile-scroll">
-      <div class="content4-search text-left filter-desktop">
-        <div class="pop-title-search text-uppercase">Sort By</div>
-        <div class="pop-radio-search">
-          <label class="container-filter">Rating
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container-filter">Date Published
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container-filter">Recommended
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-      </div>
-
-      <div class="content4-search text-left filter-mobile">
-          <div class="pop-title-search text-uppercase pointer">Sort By
-          <span class="filter-mobile-click"><i class="far fa-angle-down" size="2x" style="font-size:25px; color: #a967aa;"></i> </span></div>
+        <div class="content4-search text-left filter-desktop">
+          <div class="pop-title-search text-uppercase">Sort By</div>
           <div class="pop-radio-search">
             <label class="container-filter">Rating
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container-filter">Date Published
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container-filter">Recommended
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
             </label>
           </div>
         </div>
 
+        <div class="content4-search text-left filter-mobile">
+          <div class="pop-title-search text-uppercase pointer">Sort By
+            <span class="filter-mobile-click">
+              <i class="far fa-angle-down" size="2x" style="font-size:25px; color: #a967aa;"></i>
+            </span>
+          </div>
+          <div class="pop-radio-search">
+            <input value="Rating" type="text" class="container-filter" disabled>
+          </div>
+        </div>
+
         <div class="sort-by-filter">
-            <div class="footer-arrow"></div>
-            <div class="pointer popover-style-filter btn-menu-search">
-              <div class='filter-sort-search text-uppercase'>
-                <a href='#'>Rating</a>
-              </div>
-              <div class='filter-sort-search text-uppercase'>
-                <a href='#'>Date Published</a>
-              </div>
-              <div class='filter-sort-search text-uppercase'>
-                <a href='#'>Recommended</a>
-              </div>
+          <div class="footer-arrow"></div>
+          <div class="pointer popover-style-filter btn-menu-search">
+            <div class='filter-sort-search text-uppercase'>
+              <a class="rating-popover">Rating</a>
+            </div>
+            <div class='filter-sort-search text-uppercase'>
+              <a class="date-popover">Date Published</a>
+            </div>
+            <div class='filter-sort-search text-uppercase'>
+              <a class="recommended-popover">Recommended</a>
             </div>
           </div>
+        </div>
 
-      <hr class="pop-hr" />
-      <div class="content3-search text-left">
-        <div class="pop-title-search text-uppercase">Filter by</div>
+        <hr class="pop-hr" />
+        <div class="content3-search text-left">
+          <div class="pop-title-search text-uppercase">Filter by</div>
 
-          
-        <!-- Duplicate left filter
+
+          <!-- Duplicate left filter
           <div class="pop-check-search">
           <label class="container-filter-check title-check">
             <span class="">
@@ -96,16 +103,16 @@
 
         </div> -->
 
-        
 
-        
-        <div class="pop-check-search first-column">
+
+
+          <div class="pop-check-search first-column">
             <label class="container-filter-check title-check">
               <span class="">
                 <i class="far fa-money-bill checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
               </span>
               Travel Budget
-  
+
             </label>
             <label class="container-filter-check">Shoestring
               <input type="checkbox">
@@ -122,74 +129,74 @@
           </div>
 
           <div class="pop-check-search second-column">
-              <label class="container-filter-check title-check">
-                <span class="">
-                    <i class="far fa-suitcase checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
-                </span>
-    
-                Travel Style
-                <span class=""></span>
-              </label>
-              <label class="container-filter-check">City
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Relaxing
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Hiking
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Adventure
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Sights
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Eco Travel
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-    
-            </div>    
+            <label class="container-filter-check title-check">
+              <span class="">
+                <i class="far fa-suitcase checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
+              </span>
+
+              Travel Style
+              <span class=""></span>
+            </label>
+            <label class="container-filter-check">City
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Relaxing
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Hiking
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Adventure
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Sights
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Eco Travel
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+
+          </div>
 
           <div class="pop-check-search first-column">
-              <label class="container-filter-check title-check">
-                <span class="">
-                    <i class="fal fa-utensils checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
-                </span>
-    
-                Eating and Drinking
-    
-              </label>
-              <label class="container-filter-check">Cheap Eats
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Local
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Vegetarian
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Nightlife
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-              <label class="container-filter-check">Coffee
-                <input type="checkbox">
-                <span class="checkmark-check"></span>
-              </label>
-    
-            </div>
+            <label class="container-filter-check title-check">
+              <span class="">
+                <i class="fal fa-utensils checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
+              </span>
 
-        <!-- Duplicate left filter
+              Eating and Drinking
+
+            </label>
+            <label class="container-filter-check">Cheap Eats
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Local
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Vegetarian
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Nightlife
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+            <label class="container-filter-check">Coffee
+              <input type="checkbox">
+              <span class="checkmark-check"></span>
+            </label>
+
+          </div>
+
+          <!-- Duplicate left filter
         <div class="pop-check-search">
           <label class="container-filter-check title-check">
             <span class="">
@@ -221,9 +228,9 @@
 
         </div> -->
 
-      
 
-        <!-- Duplicate left filter
+
+          <!-- Duplicate left filter
         <div class="pop-check-search">
           <label class="container-filter-check title-check">
             <span class="">
@@ -260,8 +267,8 @@
         </div> -->
 
 
+        </div>
       </div>
-    </div>
       <hr class="pop-hr" />
       <div class="content2-search">
         <div class="button-wrapper">
@@ -320,25 +327,13 @@
                 </button>
               </div>
 
-              
-              <ng-select #searchinput
-              [items]="suggestions" 
-              [routerLink]="onClickSearch()"
-              bindLabel="text" autocommplete="off"
-              [loading]="suggestionsLoading"
-              [typeahead]="suggestionTypeahead"
-              class="form-control suggestion"
-              placeholder="{{searchName | titlecase}}"
-              [clearable]=false
-              ng-value="selectedSuggestion"
-              (keyup)='handleKeyup($event)'
-              id="routerLink"
-              [groupBy]="groupByFn"
-              appendTo=".search-form-container"
-              (focus)="handleFocus($event)"
-              [(ngModel)]="selectedSuggestion">
+
+              <ng-select #searchinput [items]="suggestions" [routerLink]="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
+                [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="{{searchName | titlecase}}"
+                [clearable]=false ng-value="selectedSuggestion" (keyup)='handleKeyup($event)' id="routerLink" [groupBy]="groupByFn"
+                appendTo=".search-form-container" (focus)="handleFocus($event)" [(ngModel)]="selectedSuggestion">
               </ng-select>
-            
+
 
               <div class="input-group-btn search-panel text-center align-content-center">
                 <div class="dropdown">
@@ -396,11 +391,13 @@
 
 
     </div>
-    <div class="subheadtext subhead-search">Plan your trip to {{searchName | titlecase}}. 
-      Travel bloggers writing about {{searchName | titlecase}} share their experiences and travel tips. <br/>
-      <span class="wider-search"><i *ngIf="widerSearch" class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span>
+    <div class="subheadtext subhead-search">Plan your trip to {{searchName | titlecase}}. Travel bloggers writing about {{searchName | titlecase}} share their experiences
+      and travel tips.
+      <br/>
+      <span class="wider-search">
+        <i *ngIf="widerSearch" class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span>
     </div>
-     
+
   </div>
 </div>
 <!--End of Search-->
@@ -427,26 +424,28 @@
             </div>
             <div class="content-title">
               <div class="title-search">
-                  <a class="img-search" class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal">
-                   {{result.Title | uppercase}}
-                  </a></div>
+                <a class="img-search" class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal">
+                  {{result.Title | uppercase}}
+                </a>
+              </div>
             </div>
             <div class="content-user">
               <div class="profile-user">
-                  <img src="{{result.BloggerImage}}" id="search-user-img">
-                  <div class="text-wrap-user">{{(result.BlogTitle.length>21)? (result.BlogTitle | slice:0:21 | titlecase)+'..':(result.BlogTitle | titlecase) }}</div>
+                <img src="{{result.BloggerImage}}" id="search-user-img">
+                <div class="text-wrap-user">{{(result.BlogTitle.length>21)? (result.BlogTitle | slice:0:21 | titlecase)+'..':(result.BlogTitle | titlecase)
+                  }}</div>
                 <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
                   <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
                 </button>
               </div>
             </div>
             <div class="content-article content-text">
-                  {{(result.Description.length>150)? (result.Description | slice:0:150)+'...':(result.Description) }}
+              {{(result.Description.length>150)? (result.Description | slice:0:150)+'...':(result.Description) }}
             </div>
 
           </div>
           <div class="bottom-icons">
-              <button id="btn-like-icon-search" class="icon-circle-search pointer">
+            <button id="btn-like-icon-search" class="icon-circle-search pointer">
             </button>
             <div class="mr-10">{{result.RatingLikes}}</div>
             <a class="text-option">
@@ -460,33 +459,33 @@
                   <div class='text-option text-uppercase'><button id='btn-report-icon' data-toggle='popover' class='icon-circle-search'></button>
                     <span>REPORT</span></div>
                   </div>"></div>
-                </a>
+            </a>
 
-              </div>
-            </div>
           </div>
-
-          <!--Popover for our favorite blogger icon-->
-          <div id="OurFavoritePopover" class="inline-label">
-              <div class="sign-up-report">
-                This blogger is one of our
-                <br> handpicked favourites.
-                <a href="#" class="btn-signup-modal text-uppercase">FIND OUT MORE</a>
-              </div>
-            </div>
-
-        </a>
+        </div>
       </div>
-    </div>
+
+      <!--Popover for our favorite blogger icon-->
+      <div id="OurFavoritePopover" class="inline-label">
+        <div class="sign-up-report">
+          This blogger is one of our
+          <br> handpicked favourites.
+          <a href="#" class="btn-signup-modal text-uppercase">FIND OUT MORE</a>
+        </div>
+      </div>
+
+    </a>
+  </div>
+</div>
 <app-footer></app-footer>
 
 <!-- Report Tooltip Contents -->
 <div id="socialSharePopover" class="inline-label">
-    <div class="sign-up-report">
-        <a href="#" class="btn-signup-modal">SIGN IN</a>
-      
-      TO REPORT ISSUE
-    </div> 
+  <div class="sign-up-report">
+    <a href="#" class="btn-signup-modal">SIGN IN</a>
+
+    TO REPORT ISSUE
   </div>
+</div>
 
 <!-- Filter mobile sort by -->
