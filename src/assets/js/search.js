@@ -366,7 +366,7 @@ $(document).ready(function () {
 
   $(document).on('click', function (event) {
     if ($('#search-item-modal').is(':visible')) {
-      if (!$(event.target).closest('.modal-dialog').length) {
+      if ((!$(event.target).closest('.modal-dialog').length) && (!$(event.target).closest('.swal-overlay').length)) {
         $("#search-item-modal").modal('hide');
 
       }
@@ -406,3 +406,85 @@ $('.recommended-popover').click(function(){
   }, 200);
 });
 });
+
+//places modal 
+
+function loadmodal() {
+
+//for places tag modal 
+$('a#confirm').click(function(e){
+  e.preventDefault();
+  var link = $(this).attr('href');
+  var ftag =  $(this).clone().children().remove().end().text();
+  var tag = $.trim(ftag);
+  console.log('do you want ', tag);
+  swal( {
+    icon: "info",
+    text: "Do you want to update your search to show results for " + tag,
+    buttons: ["Cancel", "OK"],
+    className: "modal-places",
+    }).then((willDelete) => {
+      if (willDelete) {
+        window.location.href = link;
+      } else {
+      
+      }
+    });
+  });
+
+  //hover on ourfavourite
+  $(".user-ourfavorite[data-toggle=popover]").each(function(i, obj) {
+
+    $(this).popover({ 
+      trigger: "manual",
+      html: true,
+      placement:'bottom',
+      content: function() {
+      return $('#OurFavoritePopoverModal').html();
+      }
+    })
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+          $(_this).popover('hide');
+      });
+  }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+          if (!$(".popover:hover").length) {
+              $(_this).popover("hide");
+          }
+      }, 300);
+    });
+    
+});
+
+$("#btn-report-icon-modal[data-toggle=popover]").each(function(i, obj) {
+
+    $(this).popover({ 
+      trigger: "manual",
+      html: true,
+      placement:'bottom',
+      content: function() {
+      return $('#modalreportPopover').html();
+      }
+    })
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+          $(_this).popover('hide');
+      });
+  }).on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+          if (!$(".popover:hover").length) {
+              $(_this).popover("hide");
+          }
+      }, 300);
+    });
+    
+});
+
+}

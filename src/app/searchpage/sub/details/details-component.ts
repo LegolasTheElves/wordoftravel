@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, Input, AfterViewChecked, ViewChildren } from '@angular/core';
 import { SearchDetails } from './details';
 import swal from 'sweetalert';
 
+declare function loadmodal();
 
 @Component({
   selector: 'app-search-dest-details',
@@ -11,8 +12,16 @@ export class SearchDetailsComponent implements AfterViewChecked  {
   @Input() item: SearchDetails;
   places:any;
   placeid:any;
+  @ViewChildren('owlitem') items: any;
 
   constructor() {}
+
+  ngAfterViewInit() {
+    this.items.changes.subscribe(t => {
+      loadmodal();
+    })
+  }
+
 
   ngAfterViewChecked() {
     //console.log(this.item.Places);
@@ -20,18 +29,10 @@ export class SearchDetailsComponent implements AfterViewChecked  {
   selectedPlaces(item, id){
     this.places = item;
     this.placeid = id;
+    let tagid = this.placeid;
     let location = this.places.replace(/\s/g,'-');
     let res = location.toLowerCase();
-    let confimation = swal("Do you want to update your search to show results for "  + this.places +"?", {
-      buttons: ["Oh noez!", "Aww yiss!"],
-    }).then((willDelete) => {
-      if (willDelete) {
-        window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
-      } else {
-        return;
-      }
-    });
-		
+     //console.log(this.item.Places);
   }
 
 }

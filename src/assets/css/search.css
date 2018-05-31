@@ -2436,6 +2436,10 @@ span.textbutton {
     padding: 5px 40px;
     margin: -10px 5px 0px 15px;
   }
+
+  .item-content-btn {
+    margin-top: 3px;
+  }
  
 }
 

@@ -186,3 +186,8 @@
 .ng-dropdown-panel .ng-dropdown-panel-items {
   max-height: 300px !important;
 }
+
+.swal-text {
+  text-align: center;
+
+}
