@@ -9,6 +9,8 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./specific-destination.component.css']
 })
 export class SpecificDestinationComponent implements OnInit {
+  tallDestination: any;
+  wideDestination: any;
   regionTitle: string;
   @Input() item: {};
   errorMessage: string;
@@ -20,6 +22,7 @@ export class SpecificDestinationComponent implements OnInit {
   constructor(
     public route: ActivatedRoute,
     private destinationApiService: DestinationService,
+    private featuredDestinationService: DestinationService,
     private meta: Meta,
     private title: Title
   ) {
@@ -41,6 +44,7 @@ export class SpecificDestinationComponent implements OnInit {
   ngOnInit() {
     console.log("Region: " + this.region + ".");
     this.getRegion();
+    this.getFeaturedDestination();
   }
   getRegion(): void {
     this.destinationApiService.getDestination()
@@ -65,5 +69,23 @@ export class SpecificDestinationComponent implements OnInit {
         error => {
           this.errorMessage = <any>error;
         });
+  }
+  getFeaturedDestination(): void {
+    this.featuredDestinationService.getFeaturedDestination(this.region.toLowerCase().replace(/[,\s]+|[,\s]+/g, '-'))
+      .subscribe(
+        destinations => {
+          let featuredDestinations = destinations['rsltCol'];
+          for(let destination of featuredDestinations){
+            if(destination.Orientation == "L"){
+              this.wideDestination = destination;
+            } else if(destination.Orientation == "P"){
+              this.tallDestination = destination;
+            } else {
+              this.destinations.push(destination);
+            }
+          }
+        },
+        error => this.errorMessage = <any>error,
+      );
   }
 }

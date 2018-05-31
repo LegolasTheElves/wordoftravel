@@ -5,10 +5,12 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/observable/throw';
 import { Destination } from './destination';
+import { TravelDestination } from '../featured-destination/travelDestination';
 
 @Injectable()
 export class DestinationService {
   private _destinationUrl = './assets/api/regions.json';
+  private _travelUrl = 'https://api.wordoftravel.com/featuredlocations/HomeFeatured?region=';
   constructor(private http: HttpClient) { }
 
   getDestination(): Observable<any> {
@@ -20,6 +22,11 @@ export class DestinationService {
   private handleError(err: HttpErrorResponse) {
     console.log(err.message);
     return Observable.throw(err.message);
+  }
+  getFeaturedDestination(region: string): Observable<TravelDestination[]> {
+    return this.http.get<TravelDestination[]>(this._travelUrl + region)
+      .do(data => console.log('All:' + JSON.stringify(data)))
+      .catch(this.handleError);
   }
 
 }
