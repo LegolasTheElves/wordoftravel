@@ -9,20 +9,27 @@ declare function owlRotator();
   styleUrls: ['./explore-destinations.component.css']
 })
 export class ExploreDestinationsComponent implements OnInit {
+  tallDestination: any;
+  wideDestination: any;
   removeCountries: any;
   errorMessage: string;
   destinations: any;
   countries: any;
   africa:any;
   countriesOfAfrica: any;
+  africaFeatured:any;
   @ViewChildren('owlitem') items: any;
 
   selectedRegion = {};
 
-  constructor(private destinationApiService: DestinationService) {
+  constructor(
+    private destinationApiService: DestinationService,
+    private featuredDestinationService: DestinationService
+  ) {
     this.destinations = [];
     this.countriesOfAfrica = [];
     this.africa = [];
+    this.africaFeatured = [];
   }
   
   ngAfterViewInit() {
@@ -33,6 +40,7 @@ export class ExploreDestinationsComponent implements OnInit {
 
   ngOnInit() {
     this.getDestinations();
+    this.getFeaturedDestination();
   }
   
   getDestinations(): void {
@@ -61,6 +69,24 @@ export class ExploreDestinationsComponent implements OnInit {
   
   selectRegion(item) {
     this.selectedRegion = item;
-
+  }
+//get africa featured
+  getFeaturedDestination(): void {
+    this.featuredDestinationService.getAfricaFeatured()
+      .subscribe(
+        africaFeatured => {
+          let featuredDestinations = africaFeatured['rsltCol'];
+          for(let destination of featuredDestinations){
+            if(destination.Orientation == "L"){
+              this.wideDestination = destination;
+            } else if(destination.Orientation == "P"){
+              this.tallDestination = destination;
+            } else {
+              this.africaFeatured.push(destination);
+            }
+          }
+        },
+        error => this.errorMessage = <any>error,
+      );
   }
 }

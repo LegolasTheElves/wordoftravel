@@ -25,6 +25,11 @@ export class DestinationService {
   }
   getFeaturedDestination(region: string): Observable<TravelDestination[]> {
     return this.http.get<TravelDestination[]>(this._travelUrl + region)
+      //.do(data => console.log('All:' + JSON.stringify(data)))
+      .catch(this.handleError);
+  }
+  getAfricaFeatured(): Observable<TravelDestination[]> {
+    return this.http.get<TravelDestination[]>(this._travelUrl + "africa")
       .do(data => console.log('All:' + JSON.stringify(data)))
       .catch(this.handleError);
   }

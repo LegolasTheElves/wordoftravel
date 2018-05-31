@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, Input } from '@angular/core';
+import { Component, OnInit, ViewChildren, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Destination } from './destination';
 import { DestinationService } from './destination.service';
 
@@ -7,18 +7,39 @@ import { DestinationService } from './destination.service';
   templateUrl: './destination.component.html',
   styleUrls: ['./destination.component.css']
 })
-export class DestinationComponent implements OnInit {
+export class DestinationComponent implements OnChanges {
+  destinations: any;
+  errorMessage: any;
   @Input() item: Destination;
-  sample:any;
+   tallDestination: any;
+   wideDestination: any;
 
-  constructor(private destinationApiService: DestinationService) {
-    this.sample = [];
+  constructor(
+    private destinationApiService: DestinationService,
+    private featuredDestinationService: DestinationService
+  ) {
+    this.destinations = [];
   }
-
-  ngOnInit() {
-   this.getCountry();
+  ngOnChanges(changes: SimpleChanges) {
+    // changes.prop contains the old and the new value...
+    this.getFeaturedDestination();
   }
-  getCountry(){
-    this.sample = this.item.Countries;
+  getFeaturedDestination(): void {
+    this.featuredDestinationService.getFeaturedDestination(this.item.RegionName.toLowerCase().replace(/[,\s]+|[,\s]+/g, '-'))
+      .subscribe(
+        destinations => {
+          let featuredDestinations = destinations['rsltCol'];
+          for(let destination of featuredDestinations){
+            if(destination.Orientation == "L"){
+              this.wideDestination = destination;
+            } else if(destination.Orientation == "P"){
+              this.tallDestination = destination;
+            } else {
+              this.destinations.push(destination);
+            }
+          }
+        },
+        error => this.errorMessage = <any>error,
+      );
   }
 }
