@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, AfterViewChecked } from '@angular/core';
 import { SearchDetails } from './details';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -21,12 +22,15 @@ export class SearchDetailsComponent implements AfterViewChecked  {
     this.placeid = id;
     let location = this.places.replace(/\s/g,'-');
     let res = location.toLowerCase();
-    let confimation = window.confirm("Do you want to update your search to show results for "  + this.places +"?");
-    if(confimation == true){
-      window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
-    }else{
-      return;
-    }
+    let confimation = swal("Do you want to update your search to show results for "  + this.places +"?", {
+      buttons: ["Oh noez!", "Aww yiss!"],
+    }).then((willDelete) => {
+      if (willDelete) {
+        window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
+      } else {
+        return;
+      }
+    });
 		
   }
 

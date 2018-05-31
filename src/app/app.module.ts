@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutAreaComponent } from './about-area/about-area.component';
 import { FeaturedDestinationComponent } from './featured-destination/featured-destination.component';
 import { TravelArticlesComponent } from './travel-articles/travel-articles.component';
+import { TravelArticlesHomepageComponent } from './travel-articles-homepage/travel-articles-homepage.component';
 import { DestinationComponent } from './destination/destination.component';
 import { BloggerComponent } from './blogger/blogger.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -27,6 +28,7 @@ import { OurStoryPageComponent } from './our-story-page/our-story-page.component
 
 //service
 import { TravelArticleService } from './travel-articles/travelArticle.service';
+import { TravelArticleHomepageService } from './travel-articles-homepage/travelArticle.service';
 import { TravelDestinationService } from './featured-destination/travelDestination.service';
 import { HomeSearchService } from './about-area/home-search.service';
 import { SearchService } from './travel-search/search.service';
@@ -50,6 +52,7 @@ import { DestinationService } from './destination/destination.service';
     HomepageComponent,
     FeaturedDestinationComponent,
     TravelArticlesComponent,
+    TravelArticlesHomepageComponent,
     DestinationComponent,
     BloggerComponent,
     ArticlesPageComponent,
@@ -73,6 +76,7 @@ import { DestinationService } from './destination/destination.service';
   ],
   providers: [
     TravelArticleService,
+    TravelArticleHomepageService,
     TravelDestinationService,
     HomeSearchService,
     SearchService,
