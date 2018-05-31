@@ -1073,7 +1073,7 @@ fieldset[disabled] .btn-popapply.active {
 }
 
 .item-title-search {
-  height: fit-content;
+  height: 38px;
   /* float: right; */
   font-family: "Raleway";
   font-size: 17px;
@@ -2239,7 +2239,7 @@ span.textbutton {
   }
 
   .modal-header {
-    min-height: 290px;
+    min-height: 312px;
   }
 
   .item-content-readingtime {
