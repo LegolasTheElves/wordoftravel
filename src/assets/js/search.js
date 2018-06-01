@@ -320,6 +320,11 @@ $(document).ready(function () {
     sortbyfiltercounter %= sortbyfilter.length; 
   });
 
+  $(".sort-by-click").click(function () {
+    sortbyfilter[sortbyfiltercounter++].apply(this, Array.prototype.slice.apply(arguments));
+    sortbyfiltercounter %= sortbyfilter.length; 
+  });
+
   $(document).on('click', function (event) {
     if ($('.sort-by-filter').css('top') == '245px') {
       if (!$(event.target).closest('.sort-by-filter').length) {
