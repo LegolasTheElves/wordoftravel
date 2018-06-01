@@ -1017,11 +1017,11 @@ fieldset[disabled] .btn-popapply.active {
 .item-pop-close {
   position: absolute;
   font-family: "Raleway";
-  font-size: 18px;
-  color: #5f6875;
+  font-size: 22px;
+  color: #133560;
   font-weight: 400;
-  border: 1px solid #5f6875;
-  padding: 3px 5px 6px 6px;
+  border: 1px solid #133560;
+  padding: 5px 7px 9px 8px;
   border-radius: 50%;
   cursor: pointer;
   right: 0;
@@ -1688,7 +1688,7 @@ span.textbutton {
   }
   .item-title-search {
     height: 36px;
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 2px;
   }
   .modal-body {
@@ -1696,13 +1696,14 @@ span.textbutton {
   }
   .item-content-places {
     height: 12px;
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 3px;
     margin-bottom: 0px;
   }
   .item-content-text {
-    height: 60px;
-    font-size: 12px;
+    overflow: hidden;
+    height: 59px;
+    font-size: 14px;
     margin-top: 0px;
   }
 
@@ -1827,7 +1828,7 @@ span.textbutton {
     left: 146px !important;
   }
   .modal-body {
-    padding: 1rem 1.5rem 1rem 1.6rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
   }
   .item-content-btn2 {
     margin-top: 50px;
@@ -1870,15 +1871,12 @@ span.textbutton {
   .subhead-search {
     font-size: 13px;
   }
-  .item-content-places {
-    font-size: 8px;
-  }
+
   .item-content-text {
-    font-size: 9px;
+    height: 51px;
+    overflow: hidden;
   }
-  .item-title-search {
-    font-size: 10px;
-  }
+
   #container1 {
     padding: 20px 0px;
     margin: 0px auto;
@@ -1970,6 +1968,12 @@ span.textbutton {
 
   .item-content-text {
     height: 70px;
+    font-size: 14px;
+  }
+
+  .item-content-places {
+    font-size: 12px;
+    
   }
 }
 
@@ -2015,6 +2019,7 @@ span.textbutton {
 }
 
 .modal-img-style {
+  margin-top: 30px;
   padding: 0rem;
   overflow: hidden;
   border-radius: 15px;
@@ -2305,6 +2310,16 @@ span.textbutton {
 
 /* Modal mobile */
 @media screen and (max-width: 520px) {
+
+  .btn-readfullpost {
+    padding: 7px 127px;
+  }
+
+  .btn-morefrombloggers {
+    padding: 7px 130px;
+  }
+  
+
   a:hover.tooltips-readingtime span {
     top: 15px;
     left: 5px;
@@ -2341,6 +2356,7 @@ a.tooltips-readingtime span {
 }
 
 .modal-img-group {
+  padding-bottom: 0px !important;
   padding: 20px;
 }
 
@@ -2349,8 +2365,8 @@ a.tooltips-readingtime span {
 }
 
 .modal-footer {
-  border-top: 1px solid #e9ecef;
-  border-bottom: 1px solid #e9ecef;
+  border-top: 2px solid #e9ecef;
+  border-bottom: 2px solid #e9ecef;
 }
 
 .inline-btn-left {
@@ -2372,10 +2388,12 @@ a.tooltips-readingtime span {
 
 /* Modal desktop */
 @media screen and (min-width: 520px) {
+
 .modal-mobile, .filter-mobile {
   display: none !important;
 }
 }
+
 
 .modal {
   padding-right: 0px !important;
@@ -2383,6 +2401,13 @@ a.tooltips-readingtime span {
 
 @media screen and (max-width: 361px){
 
+  .btn-readfullpost {
+    padding: 7px 67px;
+  }
+
+  .btn-morefrombloggers {
+    padding: 7px 62px;
+  }
 .content-title {
     margin: 0px 0px 0px 5px;
 }
@@ -2426,6 +2451,14 @@ a.tooltips-readingtime span {
 }
 
 @media screen and (max-width: 415px){
+
+  .btn-readfullpost {
+    padding: 7px 78px;
+  }
+
+  .btn-morefrombloggers {
+    padding: 7px 73px;
+  }
   .btn-popreset {
     margin: 0px 5px 0 0px;
   }
@@ -2442,6 +2475,14 @@ a.tooltips-readingtime span {
 }
 
 @media screen and (max-width: 376px){
+
+  .btn-readfullpost {
+    padding: 7px 68px;
+  }
+
+  .btn-morefrombloggers {
+    padding: 7px 65px;
+  }
 
   .titlecolor1, .titlecolor {
     font-size: 19px;
@@ -2498,4 +2539,15 @@ input.container-filter {
     line-height: 18px;
     margin-top: 6px;
     overflow: hidden;
+}
+
+.item-pop-logo {
+  position: absolute;
+  padding: 3px 5px 6px 6px;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  line-height: 11px;
 }
