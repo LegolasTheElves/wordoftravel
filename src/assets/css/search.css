@@ -2311,6 +2311,11 @@ span.textbutton {
 /* Modal mobile */
 @media screen and (max-width: 520px) {
 
+  .user-ourfavorite, .user-ourfavorite-item {
+    margin-top: 6px;
+    margin-left: 4px;
+  }
+
   .mr-10 {
     margin-top: 5px;
   }
@@ -2391,7 +2396,6 @@ a.tooltips-readingtime span {
 
 /* Modal desktop */
 @media screen and (min-width: 520px) {
-
 .modal-mobile, .filter-mobile {
   display: none !important;
 }
@@ -2437,11 +2441,11 @@ a.tooltips-readingtime span {
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    width: 67%;
+    max-width: 67%;
 }
 
 .user-ourfavorite, .user-ourfavorite-item {
-  margin-top: 3px;
+  margin-top: 6px;
   position: absolute;
   display: inline-flex;
 }

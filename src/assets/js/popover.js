@@ -36,7 +36,7 @@ function loadpopovers(){
         
       });
 
-      $("#user-ourfavorite[data-toggle=popover]").each(function(i, obj) {
+      $("#user-ourfavorite[data-toggle=popover] img").each(function(i, obj) {
 
         $(this).popover({ 
           trigger: "manual",

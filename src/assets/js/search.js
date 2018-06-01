@@ -107,7 +107,7 @@ function loadisotope() {
   });
 
   
-    $(".user-ourfavorite-item[data-toggle=popover]").each(function(i, obj) {
+    $(".user-ourfavorite-item[data-toggle=popover] img").each(function(i, obj) {
 
         $(this).popover({ 
           trigger: "manual",
@@ -438,7 +438,7 @@ $('a#confirm').click(function(e){
   });
 
   //hover on ourfavourite
-  $(".user-ourfavorite[data-toggle=popover]").each(function(i, obj) {
+  $(".user-ourfavorite[data-toggle=popover] img").each(function(i, obj) {
 
     $(this).popover({ 
       trigger: "manual",
