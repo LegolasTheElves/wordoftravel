@@ -159,7 +159,7 @@
     <div class="boxart d-flex travel-wrapper">
       <div *ngFor="let travel of article?.Blogs" class="col-sm-3 col-6 mb-20" #relatedPost>
         <a href="{{travel.PostURL}}" target="_blank">
-          <img class="border_radius img-fluid travel-article-thumb" src="./assets/img/img_article1.jpg" alt="">
+          <img class="border_radius img-fluid travel-article-thumb" src="http://wordoftravel.com{{travel.PostThumbnail}}" alt="">
         </a>
         <div class="mt-20 blogger-box">
           <div class="articles-header-blogpost text-uppercase pointer">
