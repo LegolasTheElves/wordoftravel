@@ -383,6 +383,12 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+
+  
+$('.subheadtext').text(function( index,text ) {
+  return text.replace(" .", '.');
+  console.log('sss');
+});
     
 $('.rating-popover').click(function(){
   $('input.container-filter').val('Rating');
