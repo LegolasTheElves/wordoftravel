@@ -1278,6 +1278,8 @@ fieldset[disabled] .btn-morefrombloggers.active {
 }
 
 .btn-signup-modal {
+  margin-top: 8px;
+  margin-bottom: 8px;
   display: block;
   text-align: center;
   border: 2px solid #3098d4;
