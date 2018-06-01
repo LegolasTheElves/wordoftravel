@@ -1705,9 +1705,6 @@ span.textbutton {
     font-size: 12px;
     margin-top: 0px;
   }
-  .item-content-btn {
-    margin-top: 5px;
-  }
 
   #container1 {
     padding: 20px 10px;
@@ -1833,7 +1830,8 @@ span.textbutton {
     padding: 1rem 1.5rem 1rem 1.6rem;
   }
   .item-content-btn2 {
-    margin-top: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;  
   }
   .tag-content-bottom {
     margin: 0px 4px;
@@ -2202,6 +2200,15 @@ span.textbutton {
 }
 
 @media screen and (max-width: 415px) {
+
+  .modal-header {
+    height: 369px;
+  }
+
+  .item-content-btn2 {
+    margin-top: 10px;
+  }
+
   .container-filter {
     padding-right: 3px;  }
   
@@ -2210,6 +2217,11 @@ span.textbutton {
 }
 
 @media screen and (max-width: 376px) {
+
+  .modal-header {
+    height: 350px;
+  }
+  
   .button-wrapper {
     margin: 0 9px;  }
 
@@ -2225,6 +2237,10 @@ span.textbutton {
 }
 
 @media screen and (max-width: 361px) {
+
+  .modal-header {
+    height: 335px;
+  }   
   .button-wrapper {
     margin: 0 2px;  }
 
@@ -2240,7 +2256,7 @@ span.textbutton {
   }
 
   .modal-header {
-    min-height: 312px;
+    min-height: 326px;
   }
 
   .item-content-readingtime {
@@ -2451,7 +2467,7 @@ a.tooltips-readingtime span {
   }
 
   .item-content-btn {
-    margin-top: 3px;
+    margin-top: 10px;
   }
  
 }
