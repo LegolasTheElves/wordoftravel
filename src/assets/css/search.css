@@ -2502,6 +2502,21 @@ a.tooltips-readingtime span {
 }
 
 @media screen and (max-width: 361px){
+  .pop-close-search {
+    margin-top: -5px;
+  }
+  .content1-search {
+    height: 50px;
+  }
+  .on-mobile-scroll {
+    height: 443px;
+  }
+  .divpop-search {
+    height: 585px;
+  }
+  .container-filter-check {
+    margin-bottom: 7px;
+  }
   .content3-search, .content4-search {
      margin-left: 12%;
   }

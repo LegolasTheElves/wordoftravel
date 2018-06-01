@@ -425,7 +425,7 @@ $('a#confirm').click(function(e){
   console.log('do you want ', tag);
   swal( {
     icon: "info",
-    text: "Do you want to update your search to show results for " + tag,
+    text: "Do you want to update your search to show results for " + tag + "?",
     buttons: ["Cancel", "OK"],
     className: "modal-places",
     }).then((willDelete) => {
