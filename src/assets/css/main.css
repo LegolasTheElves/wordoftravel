@@ -5367,6 +5367,11 @@ hr.mb-80 {
   .carousel-mobile {
     display: none;
   }
+  .description-travel {
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 
 @media screen and (max-width: 361px) {
@@ -5540,4 +5545,11 @@ a.place-link:hover{
 
 .modal-places {
   background-color: #FFFFFF;
+}
+
+.description-travel {
+  color: #133560;
+  line-height: 27px;
+  font-size: 23px;
+  font-weight: 500;
 }
