@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, AfterViewChecked, ViewChildren } from '@angular/core';
 import { SearchDetails } from './details';
-import swal from 'sweetalert';
 
 declare function loadmodal();
 
@@ -26,13 +25,15 @@ export class SearchDetailsComponent implements AfterViewChecked  {
   ngAfterViewChecked() {
     //console.log(this.item.Places);
   }
-  selectedPlaces(item, id){
-    this.places = item;
-    this.placeid = id;
-    let tagid = this.placeid;
-    let location = this.places.replace(/\s/g,'-');
-    let res = location.toLowerCase();
-     //console.log(this.item.Places);
+  selectedPlaces(item){
+    let place = item;
+   // this.placeid = id;
+    //let tagid = this.placeid;
+    let location = place.replace(/\s/g,'-');
+    this.places = location.toLowerCase();
+    
+    //window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
+    console.log(this.places);
   }
 
 }

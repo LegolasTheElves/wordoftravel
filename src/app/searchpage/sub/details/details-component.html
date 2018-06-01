@@ -91,7 +91,7 @@
               <div class="item-content-links">
                 <div class="item-text-content">&nbsp;
                   <span *ngFor="let place of item.Places; let isLast=last">
-                    <a id="confirm" class="tags genric-btn default circle fz-12 btn-compact-modal" href="wordoftravel/destinations/{{place.Location}}-{{item.tagid}}">
+                    <a href="/wordoftravel/destinations/{{places}}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)" class="tags genric-btn default circle fz-12 btn-compact-modal">
                       {{place.LocationName}}{{isLast ? '' : ''}}</a>
                   </span>
                 </div>
@@ -266,7 +266,7 @@
               <div class="item-content-links">
                 <div class="item-text-content">&nbsp;
                   <span *ngFor="let place of item.Places; let isLast=last">
-                    <a id="confirm" class="tags genric-btn default circle fz-12 btn-compact-modal" href="wordoftravel/destinations/{{place.Location}}-{{item.tagid}}">
+                    <a href="/wordoftravel/destinations/{{places}}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)" class="tags genric-btn default circle fz-12 btn-compact-modal">
                       {{place.LocationName}}{{isLast ? '' : ''}}</a>
                   </span>
                 </div>
