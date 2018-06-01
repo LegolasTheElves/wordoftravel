@@ -5012,7 +5012,11 @@ padding-top: 22px;
 }
 
 @media screen and (max-width: 992px) {
-
+  .description-travel {
+    line-height: 19px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
   .footerabout {
     margin-right: 2px !important;
     margin-left: 2px !important;
@@ -5366,11 +5370,6 @@ hr.mb-80 {
 @media screen and (min-width: 580px) {
   .carousel-mobile {
     display: none;
-  }
-  .description-travel {
-    line-height: 19px;
-    font-size: 14px;
-    font-weight: 400;
   }
 }
 
