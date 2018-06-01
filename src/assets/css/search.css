@@ -1037,7 +1037,7 @@ fieldset[disabled] .btn-popapply.active {
 }
 
 .modal-dialog {
-  margin-top: 15vh;
+  margin-top: 13vh;
   width: 900px;
 }
 
@@ -2289,6 +2289,18 @@ span.textbutton {
 
 /* Modal mobile */
 @media screen and (max-width: 520px) {
+  a:hover.tooltips-readingtime span {
+    top: 15px;
+    left: 5px;
+}
+
+a.tooltips-readingtime span {
+    width: 65px;
+    height: 20px;
+    margin-left: -27px;
+    height: 30px;
+    line-height: 13px;
+}
   .item-text-content {
     height: 32px;
   }
@@ -2457,4 +2469,17 @@ input.container-filter {
 
 .sort-by-filter a:hover {
   color: #3098d4 !important;
+}
+
+.item-content-text-user {
+    height: 35px;
+    float: left;
+    font-family: "Raleway";
+    font-size: 13px;
+    color: #383838;
+    font-weight: 400;
+    letter-spacing: 0rem;
+    line-height: 18px;
+    margin-top: 6px;
+    overflow: hidden;
 }
