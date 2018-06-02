@@ -24,6 +24,7 @@ export interface SearchPage {
             GeoNamesID: string,
             Source: string,
             LocationName: string,
+            LocationSlug: string,
             AdditionalMid: string,
             Location: string
         }

@@ -133,7 +133,14 @@ export class SearchpageComponent implements OnInit {
             this.widerSearch = "We couldn't find many blog posts in that exact place so we've expanded the search to nearby locations";
             this.searchResult = searchResult['widersltCol'];
           }
-          //console.log(JSON.stringify(this.searchResult));
+          
+          for(let i = 0; i < this.searchResult.length; i++){
+            for(let j = 0; j < this.searchResult[i].Places.length; j++){
+              this.searchResult[i].Places[j].LocationSlug = this.searchResult[i].Places[j].LocationName.split(" ").join("-").toLowerCase();
+            }
+          }
+
+          console.log(this.searchResult);
         },
         error => {
           this.errorMessage = <any>error;
@@ -156,6 +163,7 @@ export class SearchpageComponent implements OnInit {
   selectItem(item) {
     this.selectedItem = item;
   }
+
   search() {
     window.location.href = "/wordoftravel/destinations/" + this.searchText;
   }

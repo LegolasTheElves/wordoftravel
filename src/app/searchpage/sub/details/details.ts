@@ -21,6 +21,7 @@ export interface SearchDetails {
             Sequence: number,
             CountryCode: string,
             LocationType: string,
+            LocationSlug: string,
             GeoNamesID: string,
             Source: string,
             LocationName: string,

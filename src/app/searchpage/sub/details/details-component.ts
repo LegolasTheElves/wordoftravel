@@ -29,13 +29,11 @@ export class SearchDetailsComponent implements AfterViewChecked  {
 
   selectedPlaces(item){
     let place = item;
-   // this.placeid = id;
-    //let tagid = this.placeid;
+   
     let location = place.replace(/\s/g,'-');
-    this.places = location.toLowerCase();
-    
+    this.places = location.toLowerCase(); 
     //window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
+
     console.log(this.places);
   }
-
 }
