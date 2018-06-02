@@ -28,9 +28,9 @@ export class DestinationComponent implements OnChanges {
     this.featuredDestinationService.getFeaturedDestination(this.item.RegionName.toLowerCase().replace(/[,\s]+|[,\s]+/g, '-'))
       .subscribe(
         destinations => {
-          
           this.destinations = []; // empty array first
-
+          this.tallDestination = []; // empty array first
+          this.wideDestination = []; // empty array first
           let featuredDestinations = destinations['rsltCol'];
           for(let destination of featuredDestinations){
             if(destination.Orientation == "L"){
