@@ -2575,20 +2575,6 @@ input.container-filter {
   line-height: 11px;
 }
 
-/* Sweet Alert Overrides */
-
-.swal-button--cancel:focus, .swal-button:focus{
-  border:none !important;
-  box-shadow:0px;
-}
-
-.swal-button--cancel:hover{
-  background-color:#663a78
-}
-
-.swal-button:hover{
-  background-color:#3578ae;
-}
 
 #recent-button:hover{
   background-color:#3578ae;
@@ -2596,8 +2582,4 @@ input.container-filter {
 
 #nearme-button:hover{
   background-color:#663a78
-}
-
-.ng-option-label{
-  color: #a966ab !important;
 }

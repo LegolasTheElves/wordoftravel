@@ -80,7 +80,6 @@
 }
 
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
-  border-bottom: 1px solid #DDDDDD;
   padding: 0px 0px;
 }
 
@@ -114,8 +113,6 @@
   background: transparent;
 }
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup {
-  border-bottom: 1px solid #DDDDDD;
-  color: #020d1a !important;
   padding: 0px;
 }
 
@@ -255,6 +252,43 @@
 
 .swal-icon:first-child {
   margin-top: -10px;
+}
+
+.swal-button--cancel:focus, .swal-button:focus{
+  border:none !important;
+  box-shadow:0px;
+}
+
+.swal-button--cancel:hover{
+  background-color:#663a78;
+}
+
+.swal-button--confirm:hover{
+  background-color:#3578ae;
+}
+
+.ng-option-disabled .ng-option-label {
+  color: #a966ab !important;
+  margin-left: 5px !important;
+  }
+
+.ng-option-disabled.ng-optgroup {
+  padding-top: 1px;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 500;
+    font-size: 22px;
+    color: #a966ab !important;
+    margin-left: 22px;
+}
+
+.ng-option-disabled.ng-optgroup:before {
+  content: "\f279";
 }
 
 .ng-option.ng-option-child.ng-option-marked .ng-option-label {
