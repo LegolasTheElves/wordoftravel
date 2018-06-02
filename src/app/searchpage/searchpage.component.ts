@@ -22,6 +22,9 @@ declare let $: any;
 })
 export class SearchpageComponent implements OnInit {
 
+  showPosition(arg0: any): any {
+    throw new Error("Method not implemented.");
+  }
   @ViewChild('searchinput') public ngSelect: NgSelectComponent;
 
   errorMessage: string;
@@ -43,7 +46,7 @@ export class SearchpageComponent implements OnInit {
   currentLocation: Coordinates = null;
   lat: any;
   lon: any;
-  nearmePlaces:any;
+  nearmePlaces = {};
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -75,7 +78,6 @@ export class SearchpageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getNearme();
     this.searchByCurrent();
     this.getSearchResult();
     // typehead for pipe
@@ -173,7 +175,7 @@ export class SearchpageComponent implements OnInit {
         self.currentLocation = position;
         this.lat = position.coords.latitude;
         this.lon = position.coords.longitude;
-        console.log( this.lat);
+        this.getNearme(this.lat,this.lon);
         self.ref.detectChanges();
       },
       error => {
@@ -182,16 +184,16 @@ export class SearchpageComponent implements OnInit {
       }
     );
   }
-  getNearme() {
-    let lat = 10.3156992;
-    let lon = 123.88543659999999
-    this.searchService.searchNearme(lat,lon)
+  getNearme(latitude, longitude) {
+    let lat = latitude;
+    let lon = longitude;
+    this.searchService.searchNearme(lat, lon)
       .subscribe(
         nearme => {
-          this.nearmePlaces = nearme;
+          this.nearmePlaces = nearme['hits']['hits'][0]._source;
           console.log(this.nearmePlaces);
-        }, 
+        },
         error => this.errorMessage = <any>error);
-}
+  }
 
 }
