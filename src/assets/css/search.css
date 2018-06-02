@@ -1977,6 +1977,7 @@ span.textbutton {
   }
 
   .item-content-text {
+    width: 100%;
     height: auto;
     font-size: 14px;
   }
