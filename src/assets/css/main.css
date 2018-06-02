@@ -4840,6 +4840,9 @@ fieldset[disabled] .btn-poplogout.active {
   .travel-wrapper {
     flex-wrap: initial;
     overflow: -webkit-paged-x;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
   }
   .col-sm-3.col-6.mb-20 {
     padding-left: 0px;
@@ -5192,6 +5195,7 @@ padding-top: 22px;
     text-align: center;
   }
   .wrapper1 {
+    overflow-x: scroll;
     overflow: -webkit-paged-x;
     display: grid;
     grid-gap: 9px;
