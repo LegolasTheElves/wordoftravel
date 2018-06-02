@@ -47,8 +47,24 @@
   </div>
   
   <div class="boxart d-flex travel-wrapper">
+    <div class="col-sm-3 col-6 mb-20 carousel-mobile">
+        <a href="#" id="clickRegion" class="cardregion" (click)="selectRegion(africa)">
+      <div class="text-center">
+          <img class="img-fluid" src="http://wordoftravel.com{{africa?.ImagePath}}" alt="">
+      </div>
+      <div class="gradient-carousel clicked">
+      <div class="img-caption text-center">
+        <div class="dest_texthead text-uppercase">{{africa?.RegionName}}</div>
+        <div class="dest_texthead">
+            <a href="#" class="btn-destreadmore defaultReadmore" (click)="selectRegion(africa)">READ MORE</a>
+        </div>
+      </div>
+      </div>
+      </a>
+    </div>
+
     <div *ngFor="let destination of destinations" class="col-sm-3 col-6 mb-20 carousel-mobile">
-        <a href="#" id="clickRegion" (click)="selectRegion(destination,this)">
+        <a href="#" id="clickRegion" class="cardregion" (click)="selectRegion(destination,this)">
       <div class="text-center">
         <img class="img-fluid" src="http://wordoftravel.com{{destination.ImagePath}}" alt="">
       </div>
@@ -62,6 +78,8 @@
       </div>
       </a>
     </div>
+
+
   
     <div class="col-sm-3 col-6 mb-20 carousel-mobile">
       <div class="no-mobile">

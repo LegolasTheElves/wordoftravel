@@ -78,43 +78,25 @@ function owlRotator() {
             }
           }
         });
-        $('.owl-item .btn-destreadmore').on('click', function (event) {
+        $('.carousel-mobile .cardregion').on('click', function (event) {
           var $this = $(this);
-
-          $(".showRegion").addClass('c-showRegion');
-          $('.defaulRegion').addClass('c-defaulRegion');
-
-          $('.btn-destreadmore').removeClass('defaultReadmore');
-
-          $('.owl-item .owl-list').each(function () {
-            var $new = $(this);
-            if ($new.hasClass('clicked')) {
-              $new.removeClass('clicked');
-
-            } else {
-              $this.parents('.owl-list').addClass('clicked');
-            }
-          });
-        });
-
-        
-        $('.owl-item .cardregion').on('click', function (event) {
-          var $this = $(this);
-
+          console.log("acrd");
           $(".showRegion").addClass('c-showRegion');
           $('.defaulRegion').addClass('c-defaulRegion');
           $('.btn-destreadmore').removeClass('defaultReadmore');
           
-          $('.owl-item .owl-list').each(function () {
+          $('.carousel-mobile .gradient-carousel').each(function () {
             var $new = $(this);
             if ($new.hasClass('clicked')) {
+              console.log('remove');
               $new.removeClass('clicked');
             } else {
-              $this.parents('.owl-list').addClass('clicked');
+              $this.find('.gradient-carousel').addClass('clicked');
+              console.log('add');
             }
           });
-         
-      });
+        });
+
       
       }
 }
