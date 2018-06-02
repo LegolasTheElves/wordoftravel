@@ -82,7 +82,7 @@ export class SearchpageComponent implements OnInit {
       ) {
         const value = $.map(res.suggest['asciiName-suggestion'][0].options, function (item) {
           return {
-            label: item._source.asciiName + ', ' + item._source.countryName,
+            label: item.displayText,
             id: item._id,
             value: item.text,
             group: "Places"
