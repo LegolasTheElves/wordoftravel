@@ -1708,6 +1708,7 @@ span.textbutton {
     margin-bottom: 0px;
   }
   .item-content-text {
+    width: 100%;
     margin-bottom: 10px;
     overflow: hidden;
     height: auto;
@@ -1881,7 +1882,8 @@ span.textbutton {
   }
 
   .item-content-text {
-    height: 51px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
   }
 
