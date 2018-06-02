@@ -2371,6 +2371,7 @@ h6 {
 @media screen and (max-width: 1199px) {
   .default-banner h1 {
     font-size: 45px;
+    margin-bottom: 10px;
   }
 }
 
@@ -5502,7 +5503,7 @@ a.place-link:hover{
 .btn-compact-modal {
   height: 20px;
   line-height: unset;
-  margin: 1px 7px 1px -5px;
+  margin: 5px 7px 1px -5px;
   padding: 4px 7px;
 }
 

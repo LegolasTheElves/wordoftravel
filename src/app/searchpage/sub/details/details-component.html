@@ -1,15 +1,15 @@
 <!--Start modal desktop-->
 <div class="modal fade" id="search-item-modal" role="dialog">
-  <div id="modalclose" class="modal-desktop">
+  <div id="modalclose" class="modal-desktop" style="overflow: hidden;height: 100%; display: flex; align-items: center; justify-content: center;">
 
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg" style="height: 100%; display: flex;align-items: center;justify-content: center;">
       <div class="modal-content modal-img">
         <div class="modal-body modal-img-style">
           <img id="img-item-search" src="{{item.ThumbnailImage}}" class="img-item-modal">
         </div>
 
       </div>
-      <div class="modal-content modal-content-box">
+      <div class="modal-content modal-content-box" style="display: flex; justify-content: center;">
         <div class="modal-arrow"></div>
 
         <div class="modal-header">
@@ -133,7 +133,7 @@
             </div>
             <div class="item-content-links">
               <div class="item-text-tag">&nbsp;
-                <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
+                <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal-topics" href="#">
                   {{ tag }}
                 </a>
               </div>
@@ -254,10 +254,10 @@
               <div class="item-content-links">
                   <div class="item-text-content">&nbsp;
                     <span>
-                      <a *ngFor="let topic of item.Topics" class="tags genric-btn default circle fz-12 btn-compact-modal">
+                      <a *ngFor="let topic of item.Topics" class="tags genric-btn default circle fz-12 btn-compact-modal-topics">
                         {{topic}}
                       </a>
-                      <a *ngFor="let filter of item.FilterFeatures" class="tags genric-btn default circle fz-12 btn-compact-modal">
+                      <a *ngFor="let filter of item.FilterFeatures" class="tags genric-btn default circle fz-12 btn-compact-modal-topics">
                         {{filter}}
                       </a>
                     </span>
@@ -357,7 +357,7 @@
             </div>
             <div class="item-content-links">
                 <div class="item-text-tag mb-10">&nbsp;
-                  <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
+                  <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal-topics" href="#">
                     {{ tag }}
                   </a>
                 </div>
