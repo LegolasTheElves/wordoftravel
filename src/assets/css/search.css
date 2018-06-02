@@ -2614,6 +2614,6 @@ input.container-filter {
 .btn-compact-modal-topics {
   height: 20px;
   line-height: unset;
-  margin: 5px 6px 1px 0px;
+  margin: 5px 6px 1px -1px;
   padding: 4px 7px;
 }
