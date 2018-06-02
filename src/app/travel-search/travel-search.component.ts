@@ -24,7 +24,7 @@ export class TravelSearchComponent implements OnInit {
 	suggestionTypeahead = new Subject<string>();
 	selectedSuggestion;
 	groupByFn: any;
-	searchName:any;
+	searchName: any;
 
 	safeHtml: SafeHtml;
 
@@ -50,10 +50,10 @@ export class TravelSearchComponent implements OnInit {
 			) {
 				const value = $.map(res.suggest['asciiName-suggestion'][0].options, function (item) {
 					return {
-						label: item.text + ', ' + item._source.countryName,
+						label: item._source.asciiName + ', ' + item._source.countryName,
 						id: item._id,
 						value: item.text,
-						group: " Places"
+						group: "Places"
 					}
 				});
 				this.suggestions = value;
@@ -68,22 +68,22 @@ export class TravelSearchComponent implements OnInit {
 			//this.suggestionsLoading = false;
 		});
 	}
-	
+
 	onClickSearch() {
 		const selected = this.selectedSuggestion;
 		if (!selected) {
 			// TODO error handling
 			return
 		}
-		let location = selected.value.replace(/\s/g,'-');
+		let location = selected.value.replace(/\s/g, '-');
 		var res = location.toLowerCase();
 		window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
 	}
 	search() {
 		window.location.href = "/wordoftravel/destinations/" + this.searchText;
-	  }
-	
-	  handleKeyup(event) {
+	}
+
+	handleKeyup(event) {
 		this.searchText = event.target.value.toString();
-	  }
+	}
 }
