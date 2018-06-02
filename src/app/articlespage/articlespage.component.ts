@@ -10,6 +10,8 @@ declare function loadpopovers();
   styleUrls: ['./articlespage.component.css']
 })
 export class ArticlesPageComponent implements OnInit {
+  category: any;
+  articleName:any;
   errorMessage: string;
   articles: TravelArticles[];
   places:string;
@@ -27,7 +29,7 @@ export class ArticlesPageComponent implements OnInit {
       .subscribe(
         articles => {
           this.articles = articles['rsltCol'];
-          console.log(this.articles);
+          //console.log(this.articles);
         },
         error => this.errorMessage = <any>error);
   }
@@ -49,5 +51,13 @@ export class ArticlesPageComponent implements OnInit {
     let res = location.toLowerCase();
       window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
 		
+  }
+  selectedCategory(item, id){
+    let categoryName = item;
+    this.articleName = id;
+    let location = categoryName.replace(/\s/g,'-');
+    this.category = location.toLowerCase();
+    window.location.href = "wordoftravel/travel-articles/" + this.category + '/' + this.articleName;
+    console.log(this.category);
   }
 }

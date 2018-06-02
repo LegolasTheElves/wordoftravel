@@ -19,7 +19,7 @@
       <!-- Item -->
       <li *ngFor="let article of articles; let i = index;" #travelarticles>
         <div class="image-wrapper">
-          <a href="wordoftravel/travel-articles/{{article.Category}}/{{article.ArticleName}}"><img src="//wordoftravel.com{{article.FeatureImageThumbnail}}"></a>
+          <a href="#" (click)="selectedCategory(article.Category, article.ArticleName)"><img src="//wordoftravel.com{{article.FeatureImageThumbnail}}"></a>
         </div>
         <div class="box-list-content">
           <div class="box-list-actions">
@@ -33,7 +33,7 @@
           </div>
           <div class="box-list-descriptions">
             <div class="box-list-title">
-              <a href="wordoftravel/travel-articles/{{article.Category}}/{{article.ArticleName}}">{{article.Title}}</a>
+              <a href="#" (click)="selectedCategory(article.Category, article.ArticleName)">{{article.Title}}</a>
             </div>
             <div class="box-list-subheader"> 
               <span class="genric-btn default circle fz-12 btn-compact-articlespage">{{article.Category | uppercase}} </span></div>

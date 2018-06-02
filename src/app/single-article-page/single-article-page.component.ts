@@ -32,7 +32,9 @@ export class SingleArticlePageComponent implements OnInit {
   ) {
     this.route.params.subscribe(params => {
       this.articleName = params.name;
-      this.articleCategory = params.category;
+      let category = params.category.replace(/-/g,' ');
+      this.articleCategory = category.toLowerCase();
+      console.log(this.articleCategory);
     });
   }
 
