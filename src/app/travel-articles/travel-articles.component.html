@@ -1,11 +1,11 @@
 <div class="boxart d-flex travel-wrapper margin-bottom-35">
   <div *ngFor="let travel of travels" class="col-sm-3 col-6 mb-20">
-    <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">
+    <a href="#" (click)="selectedCategory(travel.Category, travel.ArticleName)">
       <img class="border_radius img-fluid travel-article-thumb" src="http://wordoftravel.com{{travel.FeatureImageThumbnail}}" alt="">
     </a>
     <div class="mt-20 travelabox">
       <div class="articles-header text-uppercase pointer">
-        <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}">
+        <a href="#" (click)="selectedCategory(travel.Category, travel.ArticleName)">
           {{travel.Title}} </a>
       </div>
       <div class="articles-subheader">
@@ -14,7 +14,7 @@
         </span>
         <div class="articles-content">{{travel.AbstractText}}</div>
         <div class="text-right">
-          <a href="wordoftravel/travel-articles/{{travel.Category}}/{{travel.ArticleName}}" class="btn-readmore">READ MORE</a>
+          <a href="#" (click)="selectedCategory(travel.Category, travel.ArticleName)" class="btn-readmore">READ MORE</a>
         </div>
       </div>
     </div>

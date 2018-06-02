@@ -34,7 +34,6 @@ export class SingleArticlePageComponent implements OnInit {
       this.articleName = params.name;
       let category = params.category.replace(/-/g,' ');
       this.articleCategory = category.toLowerCase();
-      console.log(this.articleCategory);
     });
   }
 
@@ -69,6 +68,5 @@ export class SingleArticlePageComponent implements OnInit {
     let location = this.places.replace(/\s/g, '-');
     let res = location.toLowerCase();
     window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
-
   }
 }

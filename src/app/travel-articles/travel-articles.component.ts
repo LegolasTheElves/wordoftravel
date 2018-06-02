@@ -8,6 +8,8 @@ import { TravelArticle } from './travelArticle';
   styleUrls: ['./travel-articles.component.css']
 })
 export class TravelArticlesComponent implements OnInit {
+  category: any;
+  articleName: any;
   errorMessage: string;
   travels: TravelArticle[];
 
@@ -27,6 +29,14 @@ export class TravelArticlesComponent implements OnInit {
             this.travels = travels['widersltCol'];
           }
         },error => this.errorMessage = <any>error);
+  }
+  selectedCategory(item, id){
+    let categoryName = item;
+    this.articleName = id;
+    let location = categoryName.replace(/\s/g,'-');
+    this.category = location.toLowerCase();
+    window.location.href = "wordoftravel/travel-articles/" + this.category + '/' + this.articleName;
+    //console.log(this.category);
   }
   
 }
