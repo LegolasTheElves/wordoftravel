@@ -429,19 +429,20 @@ $('a#confirm').click(function(e){
   var ftag =  $(this).clone().children().remove().end().text();
   var tag = $.trim(ftag);
   console.log('do you want ', tag);
-  swal( {
+  swal({
     icon: "info",
     text: "Do you want to update your search to show results for " + tag + "?",
     buttons: ["Cancel", "OK"],
     className: "modal-places",
-    }).then((willDelete) => {
-      if (willDelete) {
-        window.location.href = link;
-      } else {
-      
-      }
-    });
+  }).then((willDelete) => {
+    if (willDelete) {
+      window.location.href = link;
+    } else {
+    
+    }
   });
+  $('.swal-button').blur();
+});
 
   //hover on ourfavourite
   $(".user-ourfavorite[data-toggle=popover] img").each(function(i, obj) {

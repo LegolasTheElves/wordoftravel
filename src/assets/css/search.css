@@ -1342,6 +1342,7 @@ fieldset[disabled] .btn-signup-modal.active {
   letter-spacing: 0rem;
   line-height: 11px;
   margin-top: 10px;
+  margin-bottom:10px;
 }
 
 .item-flag-center {
@@ -2572,4 +2573,31 @@ input.container-filter {
   margin-left: 15px;
   margin-top: 10px;
   line-height: 11px;
+}
+
+/* Sweet Alert Overrides */
+
+.swal-button--cancel:focus, .swal-button:focus{
+  border:none !important;
+  box-shadow:0px;
+}
+
+.swal-button--cancel:hover{
+  background-color:#663a78
+}
+
+.swal-button:hover{
+  background-color:#3578ae;
+}
+
+#recent-button:hover{
+  background-color:#3578ae;
+}
+
+#nearme-button:hover{
+  background-color:#663a78
+}
+
+.ng-option-label{
+  color: #a966ab !important;
 }

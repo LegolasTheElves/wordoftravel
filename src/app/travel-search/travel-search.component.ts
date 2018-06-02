@@ -7,6 +7,7 @@ import { debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs/operato
 import { TravelSearch } from './travelSearch';
 import { SearchService } from './search.service';
 import { Router } from "@angular/router";
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare let $: any;
 
@@ -25,10 +26,13 @@ export class TravelSearchComponent implements OnInit {
 	groupByFn: any;
 	searchName:any;
 
+	safeHtml: SafeHtml;
+
 	constructor(
 		private searchService: SearchService,
 		private cd: ChangeDetectorRef,
-		private router: Router
+		private router: Router,
+		private sanitizer: DomSanitizer
 	) { }
 	ngOnInit(): void {
 		// typehead for pipe
@@ -49,7 +53,7 @@ export class TravelSearchComponent implements OnInit {
 						label: item.text + ', ' + item._source.countryName,
 						id: item._id,
 						value: item.text,
-						group: "Places"
+						group: " Places"
 					}
 				});
 				this.suggestions = value;
