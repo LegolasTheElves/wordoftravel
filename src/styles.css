@@ -256,3 +256,7 @@
 .swal-icon:first-child {
   margin-top: -10px;
 }
+
+.ng-option.ng-option-child.ng-option-marked .ng-option-label {
+  color: #3098d4;
+}
