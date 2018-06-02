@@ -125,16 +125,12 @@
               {{item.BlogDescription}}</div>
             <div class="item-content-places">
               <div class="item-text-places">TAGS:</div>
-              <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
-                  {{ tag | titlecase }}
-              </a>
-
-
+            
             </div>
             <div class="item-content-links">
               <div class="item-text-tag">&nbsp;
                 <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal-topics" href="#">
-                  {{ tag }}
+                    {{ tag | titlecase }}
                 </a>
               </div>
             </div>
@@ -348,17 +344,13 @@
             </div>
             <div class="item-content-text">
               {{item.BlogDescription}}</div>
-            <div class="item-content-places">
+            <div class="item-content-tag">
               <div class="item-text-places">TAGS:</div>
-              <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
-                  {{ tag | titlecase}}
-              </a>
-
             </div>
             <div class="item-content-links">
                 <div class="item-text-tag mb-10">&nbsp;
                   <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal-topics" href="#">
-                    {{ tag }}
+                      {{ tag | titlecase}}
                   </a>
                 </div>
               </div>
