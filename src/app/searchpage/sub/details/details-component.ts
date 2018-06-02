@@ -18,6 +18,7 @@ export class SearchDetailsComponent implements AfterViewChecked  {
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       loadmodal();
+      console.log(this.item);
     })
   }
 
@@ -25,6 +26,7 @@ export class SearchDetailsComponent implements AfterViewChecked  {
   ngAfterViewChecked() {
     //console.log(this.item.Places);
   }
+
   selectedPlaces(item){
     let place = item;
    // this.placeid = id;

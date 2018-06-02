@@ -63,8 +63,11 @@
               <div class="item-content-links">
                 <div class="item-text-content">&nbsp;
                   <span>
-                    <a class="tags genric-btn default circle fz-12 btn-compact-modal">
-                      {{item.Topics}},[{{item.FilterFeatures}}]
+                    <a *ngFor="let topic of item.Topics" class="tags genric-btn default circle fz-12 btn-compact-modal">
+                      {{topic}}
+                    </a>
+                    <a *ngFor="let filter of item.FilterFeatures" class="tags genric-btn default circle fz-12 btn-compact-modal">
+                      {{filter}}
                     </a>
                   </span>
                 </div>
@@ -121,7 +124,9 @@
               {{item.BlogDescription}}</div>
             <div class="item-content-places">
               <div class="item-text-places">TAGS:</div>
-              <div class="item-text-content">&nbsp; {{item.Tags}}</div>
+              <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
+                  {{ tag }}
+              </a>
 
             </div>
             <div class="item-content-btn2">
@@ -240,7 +245,9 @@
               <div class="item-content-links">
                 <div class="item-text-content">&nbsp;
                   <span>
-                    <a class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">{{item.Topics}}</a>
+                    <a *ngFor="let topic of item.Topics" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
+                      {{ topic }}
+                    </a>
                   </span>
                 </div>
               </div>
@@ -330,7 +337,9 @@
               {{item.BlogDescription}}</div>
             <div class="item-content-places">
               <div class="item-text-places">TAGS:</div>
-              <div class="item-text-content">&nbsp; {{item.Tags}}</div>
+              <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
+                  {{ tag }}
+              </a>
 
             </div>
             <div class="item-content-btn2">
