@@ -5075,7 +5075,7 @@ padding-top: 22px;
   .textbold1 {
     font-size: 20px;
     letter-spacing: 0em;
-    margin-top: -15px;
+    margin-top: 0px; /* from -15 */
     margin-bottom: 0px;
   }
   .menu-content.pb-40 {
