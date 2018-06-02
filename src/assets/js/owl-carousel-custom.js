@@ -78,9 +78,8 @@ function owlRotator() {
             }
           }
         });
-        $('.carousel-mobile .cardregion').on('click', function (event) {
+        $('.travel-wrapper .carousel-mobile .cardregion').on('click', function (event) {
           var $this = $(this);
-          console.log("acrd");
           $(".showRegion").addClass('c-showRegion');
           $('.defaulRegion').addClass('c-defaulRegion');
           $('.btn-destreadmore').removeClass('defaultReadmore');
@@ -88,8 +87,8 @@ function owlRotator() {
           $('.carousel-mobile .gradient-carousel').each(function () {
             var $new = $(this);
             if ($new.hasClass('clicked')) {
-              console.log('remove');
               $new.removeClass('clicked');
+              console.log('remove');
             } else {
               $this.find('.gradient-carousel').addClass('clicked');
               console.log('add');
