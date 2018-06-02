@@ -2583,3 +2583,12 @@ input.container-filter {
 #nearme-button:hover{
   background-color:#663a78
 }
+
+.item-text-tag {
+  margin-top: 7px;
+  height: 22px;
+  width: 100%;
+  float: left;
+  font-weight: 600;
+  font-style: italic;
+}

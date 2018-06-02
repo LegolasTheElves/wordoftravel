@@ -94,7 +94,8 @@
               <div class="item-content-links">
                 <div class="item-text-content">&nbsp;
                   <span *ngFor="let place of item.Places; let isLast=last">
-                    <a href="/wordoftravel/destinations/{{places}}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)" class="tags genric-btn default circle fz-12 btn-compact-modal">
+                    <a href="/wordoftravel/destinations/{{places}}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)"
+                      class="tags genric-btn default circle fz-12 btn-compact-modal">
                       {{place.LocationName}}{{isLast ? '' : ''}}</a>
                   </span>
                 </div>
@@ -128,6 +129,14 @@
                   {{ tag | titlecase }}
               </a>
 
+
+            </div>
+            <div class="item-content-links">
+              <div class="item-text-tag">&nbsp;
+                <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
+                  {{ tag }}
+                </a>
+              </div>
             </div>
             <div class="item-content-btn2">
               <a target="_blank" href="https://{{item.Blogger}}" class="btn-morefrombloggers">MORE FROM BLOGGER
@@ -273,7 +282,8 @@
               <div class="item-content-links">
                 <div class="item-text-content">&nbsp;
                   <span *ngFor="let place of item.Places; let isLast=last">
-                    <a href="/wordoftravel/destinations/{{places}}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)" class="tags genric-btn default circle fz-12 btn-compact-modal">
+                    <a href="/wordoftravel/destinations/{{places}}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)"
+                      class="tags genric-btn default circle fz-12 btn-compact-modal">
                       {{place.LocationName}}{{isLast ? '' : ''}}</a>
                   </span>
                 </div>
@@ -342,6 +352,13 @@
               </a>
 
             </div>
+            <div class="item-content-links">
+                <div class="item-text-tag mb-10">&nbsp;
+                  <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal" href="#">
+                    {{ tag }}
+                  </a>
+                </div>
+              </div>
             <div class="item-content-btn2">
               <a href="https://{{item.Blogger}}" class="btn-morefrombloggers">MORE FROM BLOGGER
                 <i class="fas fa-external-link-alt" size="1x" style="margin-left: 5px;font-weight: 500;font-size: 13px;color: #FFFFFF;"></i>
