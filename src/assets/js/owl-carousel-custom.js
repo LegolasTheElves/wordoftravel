@@ -88,10 +88,8 @@ function owlRotator() {
             var $new = $(this);
             if ($new.hasClass('clicked')) {
               $new.removeClass('clicked');
-              console.log('remove');
             } else {
               $this.find('.gradient-carousel').addClass('clicked');
-              console.log('add');
             }
           });
         });
