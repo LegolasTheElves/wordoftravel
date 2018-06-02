@@ -32,5 +32,6 @@ export interface SearchDetails {
     FilterFeatures: string[],
     ReadingTime: number,
     BlogTitle: string,
-    BlogDescription: string
+    BlogDescription: string,
+    BloggerTags:string[]
 }
