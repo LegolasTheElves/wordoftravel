@@ -39,6 +39,7 @@ import { PopoverComponent } from './popover/popover.component';
 import { ArticlesPageService } from './articlespage/articlespage.service';
 import { SingleArticlePageService } from './single-article-page/single-article-page.service';
 import { DestinationService } from './destination/destination.service';
+import { GeoLocationService } from './geo-location.service';
 
 
 
@@ -83,7 +84,8 @@ import { DestinationService } from './destination/destination.service';
     SearchPageService,
     ArticlesPageService,
     SingleArticlePageService,
-    DestinationService
+    DestinationService,
+    GeoLocationService
   ],
   bootstrap: [AppComponent]
 })

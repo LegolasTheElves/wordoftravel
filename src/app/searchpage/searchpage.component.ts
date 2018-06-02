@@ -8,6 +8,7 @@ import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operato
 import { Subject } from 'rxjs/Subject';
 import { Meta, Title } from '@angular/platform-browser';
 import { NgSelectComponent } from '@ng-select/ng-select';
+import { GeoLocationService } from '../geo-location.service';
 
 declare function loadisotope();
 declare function hideSplash();
@@ -20,7 +21,7 @@ declare let $: any;
   styleUrls: ['./searchpage.component.css']
 })
 export class SearchpageComponent implements OnInit {
-  
+
   @ViewChild('searchinput') public ngSelect: NgSelectComponent;
 
   errorMessage: string;
@@ -36,9 +37,13 @@ export class SearchpageComponent implements OnInit {
   suggestionsLoading = false;
   suggestionTypeahead = new Subject<string>();
   selectedSuggestion;
-  
-
   selectedItem = {};
+  //geolocation
+  errorMsg: string;
+  currentLocation: Coordinates = null;
+  lat: any;
+  lon: any;
+  nearmePlaces:any;
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -49,7 +54,9 @@ export class SearchpageComponent implements OnInit {
     private cd: ChangeDetectorRef,
     private router: Router,
     private meta: Meta,
-    private title: Title
+    private title: Title,
+    private geoLocationService: GeoLocationService,
+    private ref: ChangeDetectorRef,
   ) {
     //Title and Meta Description
     this.route.params.subscribe(params => {
@@ -57,15 +64,19 @@ export class SearchpageComponent implements OnInit {
       this.searchName = (this.searchTerm.split(/[0-9\-_]+/).join(' '));
       //Meta Tags
       let placeName = this.searchName;
-      let res = placeName.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+      let res = placeName.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
       this.title.setTitle("Travel Blogs about " + res + " | wordoftravel");
-      this.meta.addTag({ name: 'description', content:"Planning a trip to " + res + 
-      "? Forget the guidebook! Get real travel advice and read real travel experiences about " + res + 
-      " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + res + "" });
+      this.meta.addTag({
+        name: 'description', content: "Planning a trip to " + res +
+          "? Forget the guidebook! Get real travel advice and read real travel experiences about " + res +
+          " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + res + ""
+      });
     });
   }
 
   ngOnInit() {
+    this.getNearme();
+    this.searchByCurrent();
     this.getSearchResult();
     // typehead for pipe
     this.suggestionTypeahead.pipe(
@@ -114,19 +125,19 @@ export class SearchpageComponent implements OnInit {
     this.searchApiService.getSearch(this.searchTerm)
       .subscribe(
         searchResult => {
-          if(searchResult['rsltCol']) {
+          if (searchResult['rsltCol']) {
             this.searchResult = searchResult['rsltCol'];
           } else {
             this.widerSearch = "We couldn't find many blog posts in that exact place so we've expanded the search to nearby locations";
             this.searchResult = searchResult['widersltCol'];
           }
-         //console.log(JSON.stringify(this.searchResult));
+          //console.log(JSON.stringify(this.searchResult));
         },
         error => {
-          this.errorMessage = <any>error; 
+          this.errorMessage = <any>error;
           hideSplash();
         });
-    }
+  }
   //Search in search page
   onClickSearch() {
     const selected = this.selectedSuggestion;
@@ -135,9 +146,9 @@ export class SearchpageComponent implements OnInit {
       return
     }
     this.getSearchResult();
-    let location = selected.value.replace(/\s/g,'-');
-		var res = location.toLowerCase();
-		window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
+    let location = selected.value.replace(/\s/g, '-');
+    var res = location.toLowerCase();
+    window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
   }
   //Modal popup
   selectItem(item) {
@@ -151,9 +162,36 @@ export class SearchpageComponent implements OnInit {
     this.searchText = event.target.value.toString();
   }
 
-  handleFocus(event){
+  handleFocus(event) {
     this.ngSelect.placeholder = "";
   }
-
+  searchByCurrent() {
+    let self = this;
+    const accuracy = { enableHighAccuracy: true };
+    self.geoLocationService.getLocation(accuracy).subscribe(
+      position => {
+        self.currentLocation = position;
+        this.lat = position.coords.latitude;
+        this.lon = position.coords.longitude;
+        console.log( this.lat);
+        self.ref.detectChanges();
+      },
+      error => {
+        self.errorMsg = error;
+        self.ref.detectChanges();
+      }
+    );
+  }
+  getNearme() {
+    let lat = 10.3156992;
+    let lon = 123.88543659999999
+    this.searchService.searchNearme(lat,lon)
+      .subscribe(
+        nearme => {
+          this.nearmePlaces = nearme;
+          console.log(this.nearmePlaces);
+        }, 
+        error => this.errorMessage = <any>error);
+}
 
 }

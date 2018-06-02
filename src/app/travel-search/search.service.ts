@@ -30,6 +30,13 @@ export class SearchService {
 		const url = `https://places-api.wordoftravel.com/v1/cities/suggestions/${term}`;
 		return this.http.get(url);
   }
+  //Nearme suggestion
+  searchNearme(lat, lon): Observable<any> {
+		const url = `https://places-api.wordoftravel.com/v1/cities/nearme/${lat}/${lon}`;
+    //return this.http.get(url);
+    return this.http.get(url)
+      .do(data => console.log('All:' + JSON.stringify(data)))
+  }
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
