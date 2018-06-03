@@ -61,6 +61,7 @@
   padding-left: 0px;
   padding-right: 0px;
   margin-top: -7px;
+  border: 1px solid #ccc;
 }
 
 .ng-dropdown-panel {
@@ -75,7 +76,8 @@
 }
 
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
-  background-color: unset !important;
+  /*background-color: unset !important;*/
+  background-color: #3098d4 !important;
   color: #000000;
 }
 
@@ -141,8 +143,12 @@
   content: "\f279";
 }
 
-.ng-option.ng-option-child.ng-option-marked .ng-option-label {
-  color: #3098d4;
+.ng-option.ng-option-child.ng-option-marked {
+  background-color: #3098d4 !important;
+}
+
+.ng-option.ng-option-child.ng-option-marked .ng-option-label{
+  color:#fff;
 }
 
 
