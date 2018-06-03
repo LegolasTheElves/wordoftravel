@@ -25,6 +25,7 @@ export class SearchpageComponent implements OnInit {
   showPosition(arg0: any): any {
     throw new Error("Method not implemented.");
   }
+
   @ViewChild('searchinput') public ngSelect: NgSelectComponent;
 
   errorMessage: string;
@@ -178,6 +179,7 @@ export class SearchpageComponent implements OnInit {
   handleFocus(event) {
     this.ngSelect.placeholder = "";
   }
+
   searchByCurrent() {
     let self = this;
     const accuracy = { enableHighAccuracy: true };
@@ -186,6 +188,9 @@ export class SearchpageComponent implements OnInit {
         self.currentLocation = position;
         this.lat = position.coords.latitude;
         this.lon = position.coords.longitude;
+
+        console.log(this.lat + '-' + this.lon);
+        
         this.getNearme(this.lat,this.lon);
         self.ref.detectChanges();
       },
@@ -195,6 +200,7 @@ export class SearchpageComponent implements OnInit {
       }
     );
   }
+
   getNearme(latitude, longitude) {
     let lat = latitude;
     let lon = longitude;

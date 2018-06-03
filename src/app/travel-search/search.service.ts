@@ -35,7 +35,7 @@ export class SearchService {
 		const url = `https://places-api.wordoftravel.com/v1/cities/nearme/${lat}/${lon}`;
     //return this.http.get(url);
     return this.http.get(url)
-      .do(data => console.log('All:' + JSON.stringify(data)))
+      .do(data => console.log('All NearMe:' + JSON.stringify(data)))
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

@@ -9,6 +9,8 @@ import { SearchService } from './search.service';
 import { Router } from "@angular/router";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
+import { GeoLocationService } from '../geo-location.service';
+
 declare let $: any;
 
 @Component({
@@ -28,13 +30,23 @@ export class TravelSearchComponent implements OnInit {
 
 	safeHtml: SafeHtml;
 
+	 //geolocation
+	 errorMessage: string;
+	 currentLocation: Coordinates = null;
+	 lat: any;
+	 lon: any;
+	 nearmePlaces = {};
+
 	constructor(
 		private searchService: SearchService,
 		private cd: ChangeDetectorRef,
 		private router: Router,
-		private sanitizer: DomSanitizer
+		private sanitizer: DomSanitizer,
+		private geoLocationService: GeoLocationService,
+		private ref: ChangeDetectorRef,
 	) { }
 	ngOnInit(): void {
+		this.searchByCurrent();
 		// typehead for pipe
 		this.suggestionTypeahead.pipe(
 			tap(() => this.suggestionsLoading = true),
@@ -86,4 +98,37 @@ export class TravelSearchComponent implements OnInit {
 	handleKeyup(event) {
 		this.searchText = event.target.value.toString();
 	}
+
+	searchByCurrent() {
+		let self = this;
+		const accuracy = { enableHighAccuracy: true };
+		self.geoLocationService.getLocation(accuracy).subscribe(
+		  position => {
+			self.currentLocation = position;
+			this.lat = position.coords.latitude;
+			this.lon = position.coords.longitude;
+	
+			console.log(this.lat + '-' + this.lon);
+			
+			this.getNearme(this.lat,this.lon);
+			self.ref.detectChanges();
+		  },
+		  error => {
+			self.errorMsg = error;
+			self.ref.detectChanges();
+		  }
+		);
+	  }
+	
+	  getNearme(latitude, longitude) {
+		let lat = latitude;
+		let lon = longitude;
+		this.searchService.searchNearme(lat, lon)
+		  .subscribe(
+			nearme => {
+			  this.nearmePlaces = nearme['hits']['hits'][0]._source;
+			  console.log(this.nearmePlaces);
+			},
+			error => this.errorMessage = <any>error);
+	  }
 }
