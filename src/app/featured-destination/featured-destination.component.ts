@@ -12,9 +12,16 @@ export class FeaturedDestinationComponent implements OnInit {
   destinations: TravelDestination[];
   tallDestination: TravelDestination;
   wideDestination: TravelDestination;
+  exploredestinations: boolean;
 
   constructor(private travelDestinationService: TravelDestinationService) {
     this.destinations = [];
+    
+    if(window.location.pathname.includes('explore-destinations')){
+      this.exploredestinations = true;
+    } else {
+      this.exploredestinations = false;
+    }
    }
 
   ngOnInit() {

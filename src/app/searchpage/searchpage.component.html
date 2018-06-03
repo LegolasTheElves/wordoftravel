@@ -328,7 +328,7 @@
               </div>
 
 
-              <ng-select #searchinput [items]="suggestions" [routerLink]="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
+              <ng-select #searchinput [items]="suggestions" (change)="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
                 [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="{{searchName | titlecase}}"
                 [clearable]=false ng-value="selectedSuggestion" (keyup)='handleKeyup($event)' id="routerLink" [groupBy]="groupByFn"
                 appendTo=".search-form-container" (focus)="handleFocus($event)" [(ngModel)]="selectedSuggestion">

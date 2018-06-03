@@ -27,7 +27,7 @@
             </div>
             </div>
           </a>
-          </div>
+      </div>
       <div class="owl-list" *ngFor="let destination of destinations" #owlitem>
           <a href="#" class="cardregion" id="clickRegion" (click)="selectRegion(destination)">
         <div class="text-center ">
@@ -100,7 +100,7 @@
 
 
   
-    <div class="col-sm-3 col-6 mb-20 carousel-mobile">
+    <div class="col-sm-3 col-6 mb-20 carousel-mobile"  *ngIf="exploredestinations == false">
       <div class="box-mobile-carousel">
           <div class="">
               <a href="/wordoftravel/explore-destinations" class="cardregion" id="clickRegion" (click)="selectRegion(africa)">
@@ -108,7 +108,6 @@
             <img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
           </div>
           <div class="color-carousel">
-  
             <div class="box-mobile-txt">
               ALL REGIONS
             </div>
@@ -117,6 +116,7 @@
         </div>
       </div>
     </div>
+
   </div>
     <!--mobile carousel explore destination-->
   <!--End of Rotator-->
@@ -251,7 +251,7 @@
         </div>
       </a>
     </div>
-    <a href="/wordoftravel/explore-destinations" class="white-link">
+    <a href="/wordoftravel/explore-destinations" class="white-link" *ngIf="exploredestinations == false">
       <div class="box featured_destination9">
         <div class="box-mobile-carousel">
           <div class="text-center">

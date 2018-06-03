@@ -122,6 +122,7 @@ export class SearchpageComponent implements OnInit {
       loadisotope();
     })
   }
+
   //Get result from API
   getSearchResult(): void {
     this.searchApiService.getSearch(this.searchTerm)
@@ -147,8 +148,10 @@ export class SearchpageComponent implements OnInit {
           hideSplash();
         });
   }
+
   //Search in search page
   onClickSearch() {
+    console.log("Clicked Search");
     const selected = this.selectedSuggestion;
     if (!selected) {
       // TODO error handling

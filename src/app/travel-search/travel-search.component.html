@@ -14,11 +14,11 @@
                 </div>
                 <ng-select
                  [items]="suggestions"
-                 [routerLink]="onClickSearch()"
-                 bindLabel="text"
-                 autocommplete="off"
-                 [loading]="suggestionsLoading"
-                 [typeahead]="suggestionTypeahead"
+                 (change)="onClickSearch()"
+                  bindLabel="text"
+                  autocommplete="off"
+                  [loading]="suggestionsLoading"
+                  [typeahead]="suggestionTypeahead"
                   class="form-control suggestion"
                   placeholder="Where to?"
                   (keyup)='handleKeyup($event)'

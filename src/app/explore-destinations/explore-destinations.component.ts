@@ -18,6 +18,7 @@ export class ExploreDestinationsComponent implements OnInit {
   africa:any;
   countriesOfAfrica: any;
   africaFeatured:any;
+  exploredestinations: boolean;
   @ViewChildren('owlitem') items: any;
 
   selectedRegion = {};
@@ -30,6 +31,12 @@ export class ExploreDestinationsComponent implements OnInit {
     this.countriesOfAfrica = [];
     this.africa = [];
     this.africaFeatured = [];
+    
+    if(window.location.pathname.includes('explore-destinations')){
+      this.exploredestinations = true;
+    } else {
+      this.exploredestinations = false;
+    }
   }
   
   ngAfterViewInit() {
@@ -40,7 +47,7 @@ export class ExploreDestinationsComponent implements OnInit {
 
   ngOnInit() {
     this.getDestinations();
-    this.getFeaturedDestination();
+    this.getFeaturedDestination();    
   }
   
   getDestinations(): void {

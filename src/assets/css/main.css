@@ -5199,7 +5199,7 @@ padding-top: 22px;
     overflow: -webkit-paged-x;
     display: grid;
     grid-gap: 9px;
-    grid-template-columns: 50% 50% 50% 50% 50% 50%;
+    grid-template-columns: 72% 72% 72% 72% 72% 72%;
     grid-template-rows: 200px 200px;
     padding: 0px 0px 0px 0px !important;
   }
@@ -5385,7 +5385,8 @@ hr.mb-80 {
 
 @media screen and (max-width: 415px) {
   .featured_destination3 {
-    width: 207px !important;
+    /*width: 207px !important;*/
+    width: 297px !important;
   }
 }
 

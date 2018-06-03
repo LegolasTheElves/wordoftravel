@@ -18,6 +18,7 @@ export class SpecificDestinationComponent implements OnInit {
   region: string;
   countries: any;
   removeCountries: any;
+  exploredestinations: boolean;
 
   constructor(
     public route: ActivatedRoute,
@@ -39,6 +40,12 @@ export class SpecificDestinationComponent implements OnInit {
       name: 'description',
       content: "Planning a trip to " + res + " ? Discover great destination ideas and read real travel stories from other independent travellers and travel bloggers. Explore new areas of " + res + " that take you off the tourist trail."
     });
+
+    if(window.location.pathname.includes('explore-destinations')){
+      this.exploredestinations = true;
+    } else {
+      this.exploredestinations = false;
+    }
   }
 
   ngOnInit() {

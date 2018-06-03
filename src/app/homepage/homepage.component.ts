@@ -11,14 +11,21 @@ export class HomepageComponent implements OnInit {
   destinations: any;
   @ViewChildren('owlitem') items: any;
   selectedRegion:any;
+  exploredestinations: boolean;
 
   constructor(private destinationApiService: DestinationService) {
     this.destinations = [];
+
+    if(window.location.pathname.includes('explore-destinations')){
+      this.exploredestinations = true;
+    } else {
+      this.exploredestinations = false;
+    }
   }
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       owlRotator();
-    })
+    });
   }
   ngOnInit() {
     this.getDestinations();
