@@ -24,7 +24,11 @@ export class DestinationComponent implements OnChanges {
     // changes.prop contains the old and the new value...
     this.getFeaturedDestination();
   }
+
   getFeaturedDestination(): void {
+
+    if(this.item.RegionName == undefined) { return; }
+    
     this.featuredDestinationService.getFeaturedDestination(this.item.RegionName.toLowerCase().replace(/[,\s]+|[,\s]+/g, '-'))
       .subscribe(
         destinations => {

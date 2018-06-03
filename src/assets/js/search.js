@@ -384,38 +384,35 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-  
-$('.subheadtext').text(function( index,text ) {
-  return text.replace(" .", '.');
-});
     
-$('.rating-popover').click(function(){
-  $('input.container-filter').val('Rating');
-  $('input.container-filter').text('Rating');
-  console.log('dsdsdsd');
-  $(".sort-by-filter").animate({
-    top: -245
-  }, 200);
-});
+  $('.subheadtext').text(function( index,text ) {
+    return text.replace(" .", '.');
+  });
+      
+  $('.rating-popover').click(function(){
+    $('input.container-filter').val('Rating');
+    $('input.container-filter').text('Rating');
+    $(".sort-by-filter").animate({
+      top: -245
+    }, 200);
+  });
 
-$('.date-popover').click(function(){
-  $('input.container-filter').val('Date Published');
-  $('input.container-filter').text('Date Published');
-  console.log('datt');
-  $(".sort-by-filter").animate({
-    top: -245
-  }, 200);
-});
+  $('.date-popover').click(function(){
+    $('input.container-filter').val('Date Published');
+    $('input.container-filter').text('Date Published');
+    $(".sort-by-filter").animate({
+      top: -245
+    }, 200);
+  });
 
-$('.recommended-popover').click(function(){
-  $('input.container-filter').val('Recommended');
-  $('input.container-filter').text('Recommended');
-  console.log('ssff');
-  $(".sort-by-filter").animate({
-    top: -245
-  }, 200);
-});
-});
+  $('.recommended-popover').click(function(){
+    $('input.container-filter').val('Recommended');
+    $('input.container-filter').text('Recommended');
+    $(".sort-by-filter").animate({
+        top: -245
+      }, 200);
+    });
+  });
 
 //places modal 
 
@@ -429,10 +426,10 @@ $('a#confirm').click(function(e){
   var tag = $.trim(ftag);
   console.log('do you want ', tag);
   swal({
-    icon: "info",
     text: "Do you want to update your search to show results for " + tag + "?",
     buttons: ["Cancel", "OK"],
     className: "modal-places",
+    icon: "./assets/img/logo-colored.png"
   }).then((willDelete) => {
     if (willDelete) {
       window.location.href = link;

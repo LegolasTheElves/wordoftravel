@@ -72,7 +72,7 @@ export class SearchpageComponent implements OnInit {
       this.meta.addTag({
         name: 'description', content: "Planning a trip to " + res +
           "? Forget the guidebook! Get real travel advice and read real travel experiences about " + res +
-          " from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + res + ""
+          "from all of your favourite travel bloggers. Read blogs about what matters to you - where to stay, what to see and where to eat in " + res + ""
       });
     });
   }

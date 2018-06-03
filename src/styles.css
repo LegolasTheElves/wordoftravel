@@ -281,15 +281,16 @@
   font-family: 'Font Awesome 5 Pro';
   font-weight: 300;
   font-size: 65px;
-  width: 80px;
+  width: 200px;
   height: 80px;
   border-width: unset;
   border-style: unset;
   border-radius: unset;
+  margin-bottom:0px !important;
 }
 
 .swal-icon:first-child {
-  margin-top: -10px;
+  margin-top: 7px;
 }
 
 .swal-button--cancel:focus, .swal-button:focus{

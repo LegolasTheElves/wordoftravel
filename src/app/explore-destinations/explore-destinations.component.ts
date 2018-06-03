@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DestinationService } from '../destination/destination.service';
+
 declare function owlRotator();
 
 @Component({
@@ -42,7 +43,7 @@ export class ExploreDestinationsComponent implements OnInit {
   ngAfterViewInit() {
     this.items.changes.subscribe(t => {
       owlRotator();
-    })
+    });
   }
 
   ngOnInit() {

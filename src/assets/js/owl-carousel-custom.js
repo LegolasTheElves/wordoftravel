@@ -1,7 +1,5 @@
 function owlRotator() {
   $(document).ready(function () {
-
-
       if ($(window).width() >= 992) {
         $('.owl-carousel').owlCarousel({
           nav: true,
@@ -22,41 +20,40 @@ function owlRotator() {
             }
           }
         })
+        
         $('.owl-item .btn-destreadmore').on('click', function (event) {
-          var $this = $(this);
+            var $this = $(this);
 
-          $(".showRegion").addClass('c-showRegion');
-          $('.defaulRegion').addClass('c-defaulRegion');
-          $('.btn-destreadmore').removeClass('defaultReadmore');
-          
-          $('.owl-item .owl-list').each(function () {
-            var $new = $(this);
-            if ($new.hasClass('clicked')) {
-              $new.removeClass('clicked');
-            } else {
-              $this.parents('.owl-list').addClass('clicked');
-            }
+            $(".showRegion").addClass('c-showRegion');
+            $('.defaulRegion').addClass('c-defaulRegion');
+            $('.btn-destreadmore').removeClass('defaultReadmore');
+            
+            $('.owl-item .owl-list').each(function () {
+              var $new = $(this);
+              if ($new.hasClass('clicked')) {
+                $new.removeClass('clicked');
+              } else {
+                $this.parents('.owl-list').addClass('clicked');
+              }
+            });
           });
-        });
 
         
         $('.owl-item .cardregion').on('click', function (event) {
-          var $this = $(this);
-
-          $(".showRegion").addClass('c-showRegion');
-          $('.defaulRegion').addClass('c-defaulRegion');
-          $('.btn-destreadmore').removeClass('defaultReadmore');
+            var $this = $(this);
+            $(".showRegion").addClass('c-showRegion');
+            $('.defaulRegion').addClass('c-defaulRegion');
+            $('.btn-destreadmore').removeClass('defaultReadmore');
+            $('.owl-item .owl-list').each(function () {
+              var $new = $(this);
+              if ($new.hasClass('clicked')) {
+                $new.removeClass('clicked');
+              } else {
+                $this.parents('.owl-list').addClass('clicked');
+              }
+            });
           
-          $('.owl-item .owl-list').each(function () {
-            var $new = $(this);
-            if ($new.hasClass('clicked')) {
-              $new.removeClass('clicked');
-            } else {
-              $this.parents('.owl-list').addClass('clicked');
-            }
-          });
-         
-      });
+        });
 
 
       } else {
