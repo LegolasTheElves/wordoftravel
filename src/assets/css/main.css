@@ -3332,10 +3332,10 @@ table .img {
 /* ---- grid-item 22222---- */
 
 #container1 {
-  padding: 20px;
+  padding: 60px 20px 0px 20px;
   margin: 0px auto;
   min-height: 420px;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 .item {
@@ -5394,6 +5394,7 @@ hr.mb-80 {
 @media screen and (max-width: 580px){
 
   .container.mt-70 {
+    margin-bottom: 25px;
     margin-top: 50px;
   }
 

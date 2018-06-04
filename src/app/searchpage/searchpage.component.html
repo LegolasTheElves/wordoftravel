@@ -115,15 +115,15 @@
 
             </label>
             <label class="container-filter-check">Shoestring
-              <input type="checkbox">
+              <input type="checkbox" value=".budgetshoestring">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Flashpack
-              <input type="checkbox">
+              <input type="checkbox" value=".budgetflashback">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Splurge
-              <input type="checkbox">
+              <input type="checkbox" value=".budgetsplurge">
               <span class="checkmark-check"></span>
             </label>
           </div>
@@ -138,27 +138,27 @@
               <span class=""></span>
             </label>
             <label class="container-filter-check">City
-              <input type="checkbox">
+              <input type="checkbox" value=".stylecity">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Relaxing
-              <input type="checkbox">
+              <input type="checkbox" value=".stylerelaxing">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Hiking
-              <input type="checkbox">
+              <input type="checkbox" value=".stylehiking">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Adventure
-              <input type="checkbox">
+              <input type="checkbox" value=".styleadventure">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Sights
-              <input type="checkbox">
+              <input type="checkbox" value=".stylesights">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Eco Travel
-              <input type="checkbox">
+              <input type="checkbox" value=".styleecotravel">
               <span class="checkmark-check"></span>
             </label>
 
@@ -174,23 +174,23 @@
 
             </label>
             <label class="container-filter-check">Cheap Eats
-              <input type="checkbox">
+              <input type="checkbox" value=".eatingcheapeats">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Local
-              <input type="checkbox">
+              <input type="checkbox" value=".eatinglocal">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Vegetarian
-              <input type="checkbox">
+              <input type="checkbox" value=".eatingvegerarian">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Nightlife
-              <input type="checkbox">
+              <input type="checkbox" value=".eatingnightlife">
               <span class="checkmark-check"></span>
             </label>
             <label class="container-filter-check">Coffee
-              <input type="checkbox">
+              <input type="checkbox" value=".eatingcoffee">
               <span class="checkmark-check"></span>
             </label>
 
@@ -401,13 +401,14 @@
 <div class="mb-60">
   <div id="container1">
     <div class="filter-search" id="filter-search" style="width:100%">
-      <img class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
+      <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
     </div>
     <a *ngFor="let result of searchResult">
-      <div class="item w1 h1">
+      <div class="item w1 h1 {{result.FilterFeatures.toString().replace('.','')}}">
         <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>
           <img id="img-item-search" class="img-fluid img-search" src="{{result.ThumbnailImage}}">
         </a>
+        <div class="filter" style="display: none;"></div>
         <div class="wrapper">
           <div class="content-search">
             <div class="content-date">

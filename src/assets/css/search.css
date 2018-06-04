@@ -17,6 +17,7 @@
 }
 
 .content-search {
+  word-break: break-word;
   display: table;
   border-bottom: 1px solid #ccc;
   height: auto;
@@ -690,7 +691,7 @@ a:hover.tooltips-readingtime span {
 }
 
 .filter-search {
-  margin: -20px 0px 20px;
+  margin: -60px 0px 20px;
 }
 
 .divpop-search {
@@ -1462,7 +1463,7 @@ span.textbutton {
   }
   .filter-search {
     text-align: center;
-    margin-top: -20px;
+    margin-top: -50px;
   }
 }
 
@@ -1713,7 +1714,7 @@ span.textbutton {
   }
 
   #container1 {
-    padding: 20px 10px;
+    padding: 20px 10px 10px 0px;
     margin: 0px auto;
     overflow: visible !important;
   }
