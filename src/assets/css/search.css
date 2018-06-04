@@ -1622,10 +1622,6 @@ span.textbutton {
   .item-title-search {
     height: auto;
   }
-  .btn-compact-modal {
-    margin: 5px 7px 4px -3px;
-  }
-
   .modal-body {
     padding: 2.25em;
   }
