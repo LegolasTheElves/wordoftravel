@@ -5504,7 +5504,7 @@ a.place-link:hover{
 .btn-compact-modal {
   height: 20px;
   line-height: unset;
-  margin: 5px 7px 1px -5px;
+  margin: 5px 2px 1px 0px;
   padding: 4px 7px;
 }
 
