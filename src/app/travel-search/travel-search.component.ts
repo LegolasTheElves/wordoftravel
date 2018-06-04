@@ -31,11 +31,12 @@ export class TravelSearchComponent implements OnInit {
 	safeHtml: SafeHtml;
 
 	 //geolocation
+	 errorMsg: string;
 	 errorMessage: string;
 	 currentLocation: Coordinates = null;
 	 lat: any;
 	 lon: any;
-	 nearmePlaces = {};
+	 nearmePlaces: any;
 
 	constructor(
 		private searchService: SearchService,

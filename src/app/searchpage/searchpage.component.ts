@@ -47,7 +47,7 @@ export class SearchpageComponent implements OnInit {
   currentLocation: Coordinates = null;
   lat: any;
   lon: any;
-  nearmePlaces = {};
+  nearmePlaces: any;
 
   @ViewChildren('isotopeitems') items: any;
 

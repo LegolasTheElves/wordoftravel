@@ -5199,7 +5199,7 @@ padding-top: 22px;
     overflow: -webkit-paged-x;
     display: grid;
     grid-gap: 9px;
-    grid-template-columns: 72% 72% 72% 72% 72% 72%;
+    grid-template-columns: 63% 63% 63% 63% 63% 63%;
     grid-template-rows: 200px 200px;
     padding: 0px 0px 0px 0px !important;
   }
@@ -5398,7 +5398,7 @@ hr.mb-80 {
   }
 
   .featured_destination3 {
-    width: 250px;
+    width: 315px;
   }
   .navbar-nav .nav-item.active a {
     font-weight: 600;
