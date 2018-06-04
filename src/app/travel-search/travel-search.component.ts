@@ -36,7 +36,7 @@ export class TravelSearchComponent implements OnInit {
 	 currentLocation: Coordinates = null;
 	 lat: any;
 	 lon: any;
-	 nearmePlaces: any;
+	 nearmePlaces = [];
 
 	constructor(
 		private searchService: SearchService,
@@ -127,7 +127,7 @@ export class TravelSearchComponent implements OnInit {
 		this.searchService.searchNearme(lat, lon)
 		  .subscribe(
 			nearme => {
-			  this.nearmePlaces = nearme['hits']['hits'][0]._source;
+			  this.nearmePlaces.push(nearme['hits']['hits'][0]._source);
 			  console.log(this.nearmePlaces);
 			},
 			error => this.errorMessage = <any>error);

@@ -47,7 +47,7 @@ export class SearchpageComponent implements OnInit {
   currentLocation: Coordinates = null;
   lat: any;
   lon: any;
-  nearmePlaces = [];
+  nearmePlaces: any;
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -200,7 +200,7 @@ export class SearchpageComponent implements OnInit {
     this.searchService.searchNearme(lat, lon)
       .subscribe(
         nearme => {
-          this.nearmePlaces.push(nearme['hits']['hits'][0]._source);
+          this.nearmePlaces = (nearme['hits']['hits'][0]._source);
           //console.log(this.nearmePlaces);
         },
         error => this.errorMessage = <any>error);
