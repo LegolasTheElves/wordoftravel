@@ -2317,10 +2317,10 @@ h6 {
   border-bottom: 1px solid #DDDDDD;
   margin-left: 0px !important;
 }
-.dropdown-item:first-child {
+/*.dropdown-item:first-child {
   background-color: #3098d4 !important;
   color: #ffffff !important;
-}
+}*/
 .dropdown-item:hover, .dropdown-item:focus {
   background-color: #3098d4 !important;
   color: #ffffff !important;
