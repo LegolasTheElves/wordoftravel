@@ -47,7 +47,7 @@ export class SearchpageComponent implements OnInit {
   currentLocation: Coordinates = null;
   lat: any;
   lon: any;
-  nearmePlaces: any;
+  nearmePlaces = [];
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -78,7 +78,6 @@ export class SearchpageComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.searchByCurrent();
     this.getSearchResult();
     // typehead for pipe
     this.suggestionTypeahead.pipe(
@@ -137,7 +136,7 @@ export class SearchpageComponent implements OnInit {
               this.searchResult[i].Places[j].LocationSlug = this.searchResult[i].Places[j].LocationName.split(" ").join("-").toLowerCase();
             }
           }
-          console.log(this.searchResult);
+          this.searchByCurrent();
         },
         error => {
           this.errorMessage = <any>error;
@@ -200,8 +199,8 @@ export class SearchpageComponent implements OnInit {
     this.searchService.searchNearme(lat, lon)
       .subscribe(
         nearme => {
-          this.nearmePlaces = (nearme['hits']['hits'][0]._source);
-          //console.log(this.nearmePlaces);
+          this.nearmePlaces.push(nearme.hits['hits'][0]._source);
+          console.log(this.nearmePlaces);
         },
         error => this.errorMessage = <any>error);
   }
