@@ -34,18 +34,20 @@
         <div class="content4-search text-left filter-desktop">
           <div class="pop-title-search text-uppercase">Sort By</div>
           <div class="pop-radio-search">
+            <form id="sortbyform">
             <label class="container-filter">Rating
-              <input type="radio" checked="checked" name="radio">
+              <input type="radio" checked="checked" name="radio" value="rating">
               <span class="checkmark"></span>
             </label>
             <label class="container-filter">Date Published
-              <input type="radio" name="radio">
+              <input type="radio" name="radio" value="date">
               <span class="checkmark"></span>
             </label>
             <label class="container-filter">Recommended
-              <input type="radio" name="radio">
+              <input type="radio" name="radio" value="recommended">
               <span class="checkmark"></span>
             </label>
+          </form>
           </div>
         </div>
 
@@ -408,7 +410,6 @@
         <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>
           <img id="img-item-search" class="img-fluid img-search" src="{{result.ThumbnailImage}}">
         </a>
-        <div class="filter" style="display: none;"></div>
         <div class="wrapper">
           <div class="content-search">
             <div class="content-date">
@@ -417,7 +418,7 @@
                 <span class="text">Quite Recent</span>
               </a>
 
-              <div class="date-search">{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date: 'yyyy'}}</div>
+              <div class="date-search"><div id="time" class="{{result.UpdatedDate}}" style="display: none"></div>{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date: 'yyyy'}}</div>
             </div>
             <div class="content-title">
               <div class="title-search">
@@ -431,6 +432,8 @@
                 <img src="{{result.BloggerImage}}" id="search-user-img">
                 <div class="text-wrap-user">{{(result.BlogTitle.length>21)? (result.BlogTitle | slice:0:21 | titlecase)+'..':(result.BlogTitle | titlecase)
                   }}</div>
+                  <div style="display: none" id="recommended" class="1" *ngIf="result.OurFavourite == true"></div>
+                  <div style="display: none" id="recommended" class="999" *ngIf="result.OurFavourite == false"></div>
                 <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
                   <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
                 </button>
@@ -444,7 +447,7 @@
           <div class="bottom-icons">
             <button id="btn-like-icon-search" class="icon-circle-search pointer">
             </button>
-            <div class="mr-10">{{result.RatingLikes}}</div>
+            <div class="mr-10 ratinglike">{{result.RatingLikes}}</div>
             <a class="text-option">
               <div class="test pointer grip" data-toggle="popover" data-placement="right" html="true" data-html="true" data-content="<div class='text-option text-uppercase mb-10'>
                   <button id='btn-share-icon' class='icon-circle-search'></button>

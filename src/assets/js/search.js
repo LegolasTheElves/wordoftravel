@@ -43,7 +43,20 @@ function loadisotope() {
       masonry: {
         columnWidth: colW
       },
-    
+      sortBy : 'rating',
+      sortAscending: false,
+      getSortData: {
+        rating: function($elem) {
+            return parseInt($elem.find(".ratinglike").text());
+        },
+        date : function ($elem) {
+          return Date.parse($($elem).find('#time').attr('class'));
+        },
+        recommended : function ($elem) {
+          return Date.parse($($elem).find('#recommended').attr('class'));
+        }
+
+    }
     });
 
     $(window).smartresize(function () {
@@ -155,11 +168,17 @@ function loadisotope() {
 
 
   var filterValue = inclusives.length ? inclusives.join(', ') : '*';
-  var sortValue = "search";
-  $container1.isotope({ filter: filterValue })
-  $container1.isotope({ sortBy: sortValue });
+  var sortValue = $('input[name=radio]:checked', '#sortbyform').val()
+  $container1.isotope({
+     filter: filterValue,
+     getSortData : {
+     rating : '.rating-like parseInt',
+     date : '.date-search'
+     },
+     sortBy : sortValue 
+    });
 
-console.log(filterValue);
+console.log(sortValue);
 });
 
 }
