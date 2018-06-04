@@ -989,7 +989,7 @@ h6 {
 .genric-btn.default {
   color: #222222;
   background: #f0efef;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /* from transparent */
 }
 
 .genric-btn.default:hover {
@@ -1011,7 +1011,7 @@ h6 {
 .genric-btn.primary {
   color: #fff;
   background: #b01afe;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.primary:hover {
@@ -1029,13 +1029,13 @@ h6 {
 .genric-btn.primary-border:hover {
   color: #fff;
   background: #a967aa;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.success {
   color: #fff;
   background: #4cd3e3;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.success:hover {
@@ -1053,7 +1053,7 @@ h6 {
 .genric-btn.success-border:hover {
   color: #fff;
   background: #4cd3e3;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.info {
@@ -1077,13 +1077,13 @@ h6 {
 .genric-btn.info-border:hover {
   color: #fff;
   background: #38a4ff;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.warning {
   color: #fff;
   background: #f4e700;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.warning:hover {
@@ -1101,13 +1101,13 @@ h6 {
 .genric-btn.warning-border:hover {
   color: #fff;
   background: #f4e700;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.danger {
   color: #fff;
   background: #f44a40;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.danger:hover {
@@ -1125,14 +1125,14 @@ h6 {
 .genric-btn.danger-border:hover {
   color: #fff;
   background: #f44a40;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.link {
   color: #222222;
   background: #f0efef;
   text-decoration: underline;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.link:hover {
@@ -1151,7 +1151,7 @@ h6 {
 .genric-btn.link-border:hover {
   color: #222222;
   background: #f9f9ff;
-  border: 1px solid transparent;
+  border: 1px solid #fff; /*from transparent*/
 }
 
 .genric-btn.disable {
