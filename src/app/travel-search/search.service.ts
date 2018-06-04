@@ -34,8 +34,8 @@ export class SearchService {
   searchNearme(lat, lon): Observable<any> {
 		const url = `https://places-api.wordoftravel.com/v1/cities/nearme/${lat}/${lon}`;
     //return this.http.get(url);
-    return this.http.get(url)
-      .do(data => console.log('All NearMe:' + JSON.stringify(data)))
+    return this.http.get(url);
+      //;.do(data => console.log('All NearMe:' + JSON.stringify(data)))
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

@@ -47,7 +47,7 @@ export class SearchpageComponent implements OnInit {
   currentLocation: Coordinates = null;
   lat: any;
   lon: any;
-  nearmePlaces: any;
+  nearmePlaces = [];
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -77,7 +77,6 @@ export class SearchpageComponent implements OnInit {
       });
     });
   }
-
   ngOnInit() {
     this.searchByCurrent();
     this.getSearchResult();
@@ -115,7 +114,6 @@ export class SearchpageComponent implements OnInit {
       //this.suggestionsLoading = false;
     });
   }
-
   //Load isotope
   ngAfterViewInit() {
     loadpopovers();
@@ -123,7 +121,6 @@ export class SearchpageComponent implements OnInit {
       loadisotope();
     })
   }
-
   //Get result from API
   getSearchResult(): void {
     this.searchApiService.getSearch(this.searchTerm)
@@ -135,13 +132,11 @@ export class SearchpageComponent implements OnInit {
             this.widerSearch = "We couldn't find many blog posts in that exact place so we've expanded the search to nearby locations";
             this.searchResult = searchResult['widersltCol'];
           }
-          
-          for(let i = 0; i < this.searchResult.length; i++){
-            for(let j = 0; j < this.searchResult[i].Places.length; j++){
+          for (let i = 0; i < this.searchResult.length; i++) {
+            for (let j = 0; j < this.searchResult[i].Places.length; j++) {
               this.searchResult[i].Places[j].LocationSlug = this.searchResult[i].Places[j].LocationName.split(" ").join("-").toLowerCase();
             }
           }
-
           console.log(this.searchResult);
         },
         error => {
@@ -188,10 +183,8 @@ export class SearchpageComponent implements OnInit {
         self.currentLocation = position;
         this.lat = position.coords.latitude;
         this.lon = position.coords.longitude;
-
-        console.log(this.lat + '-' + this.lon);
-        
-        this.getNearme(this.lat,this.lon);
+        //get nearme places
+        this.getNearme(this.lat, this.lon);
         self.ref.detectChanges();
       },
       error => {
@@ -200,15 +193,15 @@ export class SearchpageComponent implements OnInit {
       }
     );
   }
-
+  //nearme method
   getNearme(latitude, longitude) {
     let lat = latitude;
     let lon = longitude;
     this.searchService.searchNearme(lat, lon)
       .subscribe(
         nearme => {
-          this.nearmePlaces = nearme['hits']['hits'][0]._source;
-          console.log(this.nearmePlaces);
+          this.nearmePlaces.push(nearme['hits']['hits'][0]._source);
+          //console.log(this.nearmePlaces);
         },
         error => this.errorMessage = <any>error);
   }
