@@ -150,7 +150,57 @@ function loadisotope() {
   });
 
   //filter items
+  $('.filter-search img.pointer').click(function() {
+  $('.item').each(function () {
+    var $this = $(this);
+    if ($this.hasClass('eatingcoffee')) {
+      $(".eatingcoffee").attr( 'checked', true );
+    }
+    if ($this.hasClass('eatingnightlife')) {
+      $(".eatingnightlife").attr( 'checked', true );
+    }
+    if ($this.hasClass('eatingvegetarian')) {
+      $(".eatingvegetarian").attr( 'checked', true );
+    }
+    if ($this.hasClass('eatinglocal')) {
+      $(".eatinglocal").attr( 'checked', true );
+    }
+    if ($this.hasClass('eatingcheapeats')) {
+      $(".eatingcheapeats").attr( 'checked', true );
+    }
+    if ($this.hasClass('styleecotravel')) {
+      $(".styleecotravel").attr( 'checked', true );
+    }
+    if ($this.hasClass('stylesights')) {
+      $(".stylesights").attr( 'checked', true );
+    }
+    if ($this.hasClass('styleadventure')) {
+      $(".styleadventure").attr( 'checked', true );
+    }
+    if ($this.hasClass('stylehiking')) {
+      $(".stylehiking").attr( 'checked', true );
+    }
+    if ($this.hasClass('stylerelaxing')) {
+      $(".stylerelaxing").attr( 'checked', true );
+    }
+    if ($this.hasClass('stylecity')) {
+      $(".stylecity").attr( 'checked', true );
+    }
+    if ($this.hasClass('budgetsplurge')) {
+      $(".budgetsplurge").attr( 'checked', true );
+    }
+    if ($this.hasClass('budgetflashback')) {
+      $(".budgetflashback").attr( 'checked', true );
+    }
+    if ($this.hasClass('budgetshoestring')) {
+      $(".budgetshoestring").attr( 'checked', true );
+    }
 
+  });
+});
+ 
+
+ //filter when click
   $(".btn-popapply").click(function(event) {
     event.preventDefault();
 
@@ -168,7 +218,13 @@ function loadisotope() {
 
 
   var filterValue = inclusives.length ? inclusives.join(', ') : '*';
-  var sortValue = $('input[name=radio]:checked', '#sortbyform').val()
+  var sortValue = $('input[name=radio]:checked', '#sortbyform').val();
+  var sortValue2 = $('input[class=container-filter]').val();
+  fsortValue2 = sortValue2.toLowerCase(); 
+  if (fsortValue2 == 'date published') {
+    fsortValue2 = 'date';
+  }
+  if ($(window).width() >= 520){
   $container1.isotope({
      filter: filterValue,
      getSortData : {
@@ -177,8 +233,18 @@ function loadisotope() {
      },
      sortBy : sortValue 
     });
+  }
+  else {
+    $container1.isotope({
+      filter: filterValue,
+      getSortData : {
+      rating : '.rating-like parseInt',
+      date : '.date-search'
+      },
+      sortBy : fsortValue2
+     });
+  }
 
-console.log(sortValue);
 });
 
 }
@@ -283,7 +349,6 @@ $(document).ready(function () {
     function () {
       //selected highlight
       var Selected = $("input.container-filter").val();
-      console.log(Selected);
       if (Selected == 'Rating') {
         $('.sort-by-filter a.rating-popover').attr('style', 'color: #3098d4 !important; font-weight: 700');
         $('.sort-by-filter a.date-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
@@ -318,7 +383,6 @@ $(document).ready(function () {
 
       //selected highlight
       var Selected = $("input.container-filter").val();
-      console.log(Selected);
       if (Selected == 'Rating') {
         $('.sort-by-filter a.rating-popover').attr('style', 'color: #3098d4 !important; font-weight: 700');
         $('.sort-by-filter a.date-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
@@ -342,12 +406,10 @@ $(document).ready(function () {
       var posX = fposX - 108;
 
       if ($('.sort-by-filter').css('top') == posY + 'px') {
-        console.log('true');
         $(".sort-by-filter").animate({
           top: -245
         }, 200);
       } else {
-        console.log('sssss');
         $(".sort-by-filter").animate({
           top: posY
         }, 200);
