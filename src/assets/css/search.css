@@ -691,7 +691,7 @@ a:hover.tooltips-readingtime span {
 }
 
 .filter-search {
-  margin: -60px 0px 20px;
+  margin: 0px 20px 10px;
 }
 
 .divpop-search {
@@ -1463,7 +1463,7 @@ span.textbutton {
   }
   .filter-search {
     text-align: center;
-    margin-top: -50px;
+    margin-top: -30px;
   }
 }
 
@@ -1528,7 +1528,7 @@ span.textbutton {
     z-index: 1000;
   }
   #container1 {
-    overflow: visible !important;
+    overflow: hidden !important;
   }
   .popover-body-style {
     text-align: center;
@@ -1714,9 +1714,9 @@ span.textbutton {
   }
 
   #container1 {
-    padding: 20px 10px 10px 0px;
+    padding: 0px 10px 0px 10px;
     margin: 0px auto;
-    overflow: visible !important;
+    overflow: hidden !important;
   }
   .item {
     float: left;
@@ -1809,7 +1809,7 @@ span.textbutton {
 
 @media screen and (min-width: 401px) and (max-width: 440px) {
   #container1 {
-    padding: 20px 0px;
+    padding: 0px 0px;
     margin: 0px auto;
   }
 
@@ -1885,7 +1885,7 @@ span.textbutton {
   }
 
   #container1 {
-    padding: 20px 0px;
+    padding: 5px 0px;
     margin: 0px auto;
   }
 

@@ -3338,11 +3338,18 @@ table .img {
 
 /* ---- grid-item 22222---- */
 
-#container1 {
-  padding: 60px 20px 0px 20px;
+#container2 {
+  padding: 20px 20px 0px 20px;
   margin: 0px auto;
   min-height: 420px;
-  overflow: visible !important;
+  overflow: hidden !important;
+}
+
+#container1 {
+  padding: 20px 20px 0px 20px;
+  margin: 0px auto;
+  min-height: 420px;
+  overflow: hidden !important;
 }
 
 .item {

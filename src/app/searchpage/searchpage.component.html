@@ -401,10 +401,10 @@
 <!--End of Search-->
 
 <div class="mb-60">
-  <div id="container1">
     <div class="filter-search" id="filter-search" style="width:100%">
-      <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
-    </div>
+        <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
+      </div>
+  <div id="container1">
     <a *ngFor="let result of searchResult">
       <div class="item w1 h1 {{result.FilterFeatures.toString().replace('.','')}}">
         <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>

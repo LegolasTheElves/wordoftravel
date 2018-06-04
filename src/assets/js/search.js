@@ -32,6 +32,7 @@ $(function () {
 });
 
 function loadisotope() {
+  
   var $container1 = $('#container1').imagesLoaded(function () { //loadimage first then relayout
     var $body = $('body'),
       columns = null;
@@ -59,6 +60,15 @@ function loadisotope() {
     }
     });
 
+    var $container2 =  $('#container2');
+      $container2.isotope({
+        itemSelector: '.item',
+        resizable: false,
+        masonry: {
+          columnWidth: colW
+        },
+    });
+
     $(window).smartresize(function () {
       var currentColumns = Math.floor(($body.width()) / colW);
       if (currentColumns !== columns) {
@@ -81,6 +91,30 @@ function loadisotope() {
         }
       }
     }).smartresize(); // trigger resize to set container width
+
+
+    $(window).smartresize(function () {
+      var currentColumns = Math.floor(($body.width()) / colW);
+      if (currentColumns !== columns) {
+        if ($(window).width() >= 360 && $(window).width() <= 400) {
+          columns = 2;
+          $container2.width(columns * colW).isotope('reLayout');
+        } else if ($(window).width() >= 401 && $(window).width() <= 440) {
+          columns = 2;
+          $container2.width(columns * colW).isotope('reLayout');
+        } else if ($(window).width() >= 441 && $(window).width() <= 480) {
+          columns = 2;
+          $container2.width(columns * colW).isotope('reLayout');
+        } else if ($(window).width() >= 481 && $(window).width() <= 520) {
+          columns = 2;
+          $container2.width(columns * colW).isotope('reLayout');
+        } else {
+          columns = currentColumns;
+          // apply width to container manually, then trigger relayout
+          $container2.width(columns * colW).isotope('reLayout');
+        }
+      }
+    }).smartresize();
 
     hideSplash();
   }); // end container image loaded 
@@ -148,6 +182,7 @@ function loadisotope() {
       });
 
   });
+
 
   //filter items
   $('.filter-search img.pointer').click(function() {
@@ -245,7 +280,7 @@ function loadisotope() {
      });
   }
 
-});
+}); 
 
 }
 
