@@ -5,7 +5,7 @@ function owlRotator() {
           nav: true,
           navText: ["<img src='./assets/img/img-home-arrow-left.png'>", "<img src='./assets/img/img-home-arrow-right.png'>"],
           dots: false,
-          loop: true,
+          loop: false,
           margin: 10,
           responsiveClass: true,
           responsive: {
@@ -107,7 +107,7 @@ $(document).ready(function () {
     nav: true,
     navText: ["<img src='./assets/img/blue-arrow-left.png'>", "<img src='./assets/img/blue-arrow-right.png'>"],
     dots: false,
-    loop: true,
+    loop: false,
     margin: 10,
     responsiveClass: true,
     responsive: {

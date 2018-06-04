@@ -1977,6 +1977,7 @@ span.textbutton {
     width: 100%;
     height: auto;
     font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .item-content-places {
@@ -2378,7 +2379,7 @@ a.tooltips-readingtime span {
 }
 
 .item-content-btn, .item-content-btn2  {
-  margin-bottom: 10px;
+  margin-bottom: 22px;
   text-align: center;
   margin-top: 10px;
 }
@@ -2596,7 +2597,7 @@ input.container-filter {
 }
 
 .item-text-tag {
-  margin-top: 7px;
+  margin-top: 2px;
   height: 22px;
   width: 100%;
   float: left;
