@@ -1,163 +1,163 @@
-
 <section class="project-area section-gap ml-30 mr-30">
   <div class="d-flex justify-content-center">
     <div class="menu-content col-lg-8">
       <div class="title text-center">
-        <h1  class="mb-20 titlecolor1">EXPLORE THE BEST OF
+        <h1 class="mb-20 titlecolor1">EXPLORE THE BEST OF
           <span class="titlecolor">
-          {{item.RegionName | uppercase }}
+            {{item.RegionName | uppercase }}
           </span>
         </h1>
       </div>
     </div>
   </div>
   <div class="d-flex justify-content-center">
-  <div class="col-lg-12 col-md-8 text-center">
-   <span *ngFor="let countries of item?.Countries">
-    <a href="#" *ngIf="countries.Show == true" class="genric-btn default circle fz-16 btn-compact">
-      {{countries.CountryName}}
-    </a>
-  </span>
+    <div class="col-lg-12 col-md-8 text-center">
+      <span *ngFor="let countries of item?.Countries">
+        <a href="#" *ngIf="countries.Show == true" class="genric-btn default circle fz-16 btn-compact">
+          {{countries.CountryName}}
+        </a>
+      </span>
+    </div>
   </div>
-</div>
-<div class="mt-30">
-  <!--Featured Destinstion-->
-  <div class="wrapper1 mb-60">
-    <div class="box featured_destination1">
-      <a href="wordoftravel{{destinations[0]?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[0]?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent">
-            <div class="featuredlocation">{{(destinations[0]?.TextLine2) | titlecase}} </div>
-            <div class="featuredcountry">{{(destinations[0]?.TextLine3) | uppercase}}</div>
+  <div class="mt-30">
+    <!--Featured Destinstion-->
+    <div class="wrapper1 mb-60">
+      <div class="box featured_destination1">
+        <a href="wordoftravel{{destinations[0]?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[0]?.FeatureImage}}">
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="box featured_destination2">
-      <a href="wordoftravel{{destinations[1]?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[1]?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent">
-            <div class="featuredlocation">{{destinations[1]?.TextLine2 | titlecase}} </div>
-            <div class="featuredcountry">{{destinations[1]?.TextLine3 | uppercase}}</div>
+          <div class="gradient">
+            <div class="boxcontent">
+              <div class="featuredlocation">{{(destinations[0]?.TextLine2) | titlecase}} </div>
+              <div class="featuredcountry">{{(destinations[0]?.TextLine3) | uppercase}}</div>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="box featured_destination3">
-      <a href="wordoftravel{{tallDestination?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{tallDestination?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent3">
-            <div class="featuredlocation">{{tallDestination?.TextLine2 | titlecase}}</div>
-            <div class="featuredcountry">{{tallDestination?.TextLine3 | uppercase}}</div>
+        </a>
+      </div>
+      <div class="box featured_destination2">
+        <a href="wordoftravel{{destinations[1]?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[1]?.FeatureImage}}">
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="box featured_destination4">
-      <a href="wordoftravel{{destinations[2]?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[2]?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent">
-            <div class="featuredlocation">{{destinations[2]?.TextLine2 | titlecase}} </div>
-            <div class="featuredcountry">{{destinations[2]?.TextLine3 | uppercase}}</div>
+          <div class="gradient">
+            <div class="boxcontent">
+              <div class="featuredlocation">{{destinations[1]?.TextLine2 | titlecase}} </div>
+              <div class="featuredcountry">{{destinations[1]?.TextLine3 | uppercase}}</div>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="box featured_destination5">
-      <a href="wordoftravel{{destinations[3]?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[3]?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent">
-            <div class="featuredlocation">{{destinations[3]?.TextLine2 | titlecase}} </div>
-            <div class="featuredcountry">{{destinations[3]?.TextLine3 | uppercase}}</div>
+        </a>
+      </div>
+      <div class="box featured_destination3">
+        <a href="wordoftravel{{tallDestination?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{tallDestination?.FeatureImage}}">
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="box featured_destination6">
-      <a href="wordoftravel{{wideDestination?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{wideDestination?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent2">
-            <div class="featuredlocation">{{wideDestination?.TextLine2 | titlecase}}</div>
-            <div class="featuredcountry">{{wideDestination?.TextLine3 | uppercase}}</div>
+          <div class="gradient">
+            <div class="boxcontent3">
+              <div class="featuredlocation">{{tallDestination?.TextLine2 | titlecase}}</div>
+              <div class="featuredcountry">{{tallDestination?.TextLine3 | uppercase}}</div>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="box featured_destination7">
-      <a href="wordoftravel{{destinations[4]?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[4]?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent">
-            <div class="featuredlocation">{{destinations[4]?.TextLine2 | titlecase}} </div>
-            <div class="featuredcountry">{{destinations[4]?.TextLine3 | uppercase}}</div>
+        </a>
+      </div>
+      <div class="box featured_destination4">
+        <a href="wordoftravel{{destinations[2]?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[2]?.FeatureImage}}">
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="box featured_destination8">
-      <a href="wordoftravel{{destinations[5]?.LinkPath}}" class="white-link">
-        <div class="img-wrapper">
-          <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[5]?.FeatureImage}}">
-        </div>
-        <div class="gradient">
-          <div class="boxcontent">
-            <div class="featuredlocation">{{destinations[5]?.TextLine2 | titlecase}} </div>
-            <div class="featuredcountry">{{destinations[5]?.TextLine3 | uppercase}}</div>
+          <div class="gradient">
+            <div class="boxcontent">
+              <div class="featuredlocation">{{destinations[2]?.TextLine2 | titlecase}} </div>
+              <div class="featuredcountry">{{destinations[2]?.TextLine3 | uppercase}}</div>
+            </div>
           </div>
-        </div>
-      </a>
-    </div>
-    <a href="/wordoftravel/explore-destinations" class="white-link">
-      <div class="box featured_destination9">
-        <div class="box-mobile-carousel">
-          <div class="text-center">
-            <img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
+        </a>
+      </div>
+      <div class="box featured_destination5">
+        <a href="wordoftravel{{destinations[3]?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[3]?.FeatureImage}}">
           </div>
-          <div class="color-carousel-destination">
-            <div class="box-mobile-txt">
-              MORE DESTINATIONS
+          <div class="gradient">
+            <div class="boxcontent">
+              <div class="featuredlocation">{{destinations[3]?.TextLine2 | titlecase}} </div>
+              <div class="featuredcountry">{{destinations[3]?.TextLine3 | uppercase}}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="box featured_destination6">
+        <a href="wordoftravel{{wideDestination?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{wideDestination?.FeatureImage}}">
+          </div>
+          <div class="gradient">
+            <div class="boxcontent2">
+              <div class="featuredlocation">{{wideDestination?.TextLine2 | titlecase}}</div>
+              <div class="featuredcountry">{{wideDestination?.TextLine3 | uppercase}}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="box featured_destination7">
+        <a href="wordoftravel{{destinations[4]?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[4]?.FeatureImage}}">
+          </div>
+          <div class="gradient">
+            <div class="boxcontent">
+              <div class="featuredlocation">{{destinations[4]?.TextLine2 | titlecase}} </div>
+              <div class="featuredcountry">{{destinations[4]?.TextLine3 | uppercase}}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="box featured_destination8">
+        <a href="wordoftravel{{destinations[5]?.LinkPath}}" class="white-link">
+          <div class="img-wrapper">
+            <img class="featured_img" src="http://wordoftravel.com/images/featuredlocations/{{destinations[5]?.FeatureImage}}">
+          </div>
+          <div class="gradient">
+            <div class="boxcontent">
+              <div class="featuredlocation">{{destinations[5]?.TextLine2 | titlecase}} </div>
+              <div class="featuredcountry">{{destinations[5]?.TextLine3 | uppercase}}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <a href="/wordoftravel/explore-destinations" class="white-link">
+        <div class="box featured_destination9">
+          <div class="box-mobile-carousel">
+            <div class="text-center">
+              <img class="img-fluid image-carousel-mobile" src="./assets/img/img_des3.jpg" alt="" />
+            </div>
+            <div class="color-carousel-destination">
+              <div class="box-mobile-txt">
+                MORE DESTINATIONS
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
+    <!--End of featured-->
   </div>
-  <!--End of featured-->
-</div>
 </section>
- <!-- Start Travel Articles Area -->
- <section class="project-area section-gap mb-60" id="articles">
+<!-- Start Travel Articles Area -->
+<section class="project-area section-gap mb-60" id="articles">
   <div class="travelarticles">
-          <div class="d-flex justify-content-center mb-40">
-                  <div class="menu-content col-lg-8">
-                      <div class="title text-center">
-                          <h1 class="titlecolor1">HELPFUL POSTS
-                              <span class="titlecolor">TO PLAN YOUR TRIP</span>
-                          </h1>
-                          <h4 class="subheadtext">A curated selection of informative post about travelling in {{item.RegionName}}<!--4-->
-                      </h4></div>
-                  </div>
-              </div>
-      <app-travel-articles></app-travel-articles>
+    <div class="d-flex justify-content-center mb-40">
+      <div class="menu-content col-lg-8">
+        <div class="title text-center">
+          <h1 class="titlecolor1">HELPFUL POSTS
+            <span class="titlecolor">TO PLAN YOUR TRIP</span>
+          </h1>
+          <h4 class="sub-header">A curated selection of informative posts about travelling in {{item.RegionName}}</h4>
+            <!--4-->
+        </div>
+      </div>
+    </div>
+    <app-travel-articles></app-travel-articles>
   </div>
 </section>

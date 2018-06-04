@@ -13,6 +13,7 @@ export class DestinationComponent implements OnChanges {
   @Input() item: Destination;
    tallDestination: any;
    wideDestination: any;
+   regionName:any;
 
   constructor(
     private destinationApiService: DestinationService,
@@ -26,7 +27,6 @@ export class DestinationComponent implements OnChanges {
   }
 
   getFeaturedDestination(): void {
-
     if(this.item.RegionName == undefined) { return; }
     
     this.featuredDestinationService.getFeaturedDestination(this.item.RegionName.toLowerCase().replace(/[,\s]+|[,\s]+/g, '-'))
