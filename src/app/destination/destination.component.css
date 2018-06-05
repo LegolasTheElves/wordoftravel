@@ -1,11 +1,16 @@
 .hideCountry{
     display: none;
 }
+@media screen and (max-width: 520px) {
 .sub-header{
-    color: #133560;
+    color: #133561 !important;
     text-align: center;
     padding: 0px 50px;
     font-size: 12px;
     margin-top: -6px;
     line-height: 16px;
+}
+}
+.sub-header{
+    color: #133561 !important;
 }
