@@ -373,7 +373,8 @@
             </div>
             <div class="dropdown-menu" id="autocorrect-menu">
                 <div class="places-search"><span></span>Places</div>
-                <a class="dropdown-item" href="#" *ngFor="let places of nearmePlaces">{{places?.displayText}}</a>
+                <a class="dropdown-item" href="#" *ngFor="let places of nearmePlaces" (click)="selectedPlaces(places?._source.asciiName, places?._id)">
+                  {{places?.displayText}}</a>
             </div>
             <div class="clearfix"></div>
           </div>

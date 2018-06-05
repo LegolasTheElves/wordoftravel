@@ -19,6 +19,9 @@ declare let $: any;
 	styleUrls: ['./travel-search.component.css']
 })
 export class TravelSearchComponent implements OnInit {
+	//nearme
+	placeid: any;
+	places: any;
 	searchText: any;
 	// for suggestions
 	suggestions = [];
@@ -120,7 +123,7 @@ export class TravelSearchComponent implements OnInit {
 		  }
 		);
 	  }
-	
+	//Get nearme places
 	  getNearme(latitude, longitude) {
 		let lat = latitude;
 		let lon = longitude;
@@ -131,5 +134,13 @@ export class TravelSearchComponent implements OnInit {
 			  //console.log(this.nearmePlaces);
 			},
 			error => this.errorMessage = <any>error);
+	  }
+	  //redirect to searchpage
+	  selectedPlaces(item, id) {
+		this.places = item;
+		this.placeid = id;
+		let location = this.places.replace(/\s/g, '-');
+		let res = location.toLowerCase();
+		window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
 	  }
 }

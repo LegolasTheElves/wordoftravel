@@ -21,7 +21,9 @@ declare let $: any;
   styleUrls: ['./searchpage.component.css']
 })
 export class SearchpageComponent implements OnInit {
-
+ //nearme
+  placeid: any;
+  places: any;
   showPosition(arg0: any): any {
     throw new Error("Method not implemented.");
   }
@@ -205,5 +207,13 @@ export class SearchpageComponent implements OnInit {
         },
         error => this.errorMessage = <any>error);
   }
+  //redirect to searchpage
+  selectedPlaces(item, id) {
+		this.places = item;
+		this.placeid = id;
+		let location = this.places.replace(/\s/g, '-');
+		let res = location.toLowerCase();
+		window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
+	  }
 
 }
