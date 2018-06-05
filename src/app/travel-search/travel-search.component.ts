@@ -68,7 +68,7 @@ export class TravelSearchComponent implements OnInit {
 					return {
 						label: item.displayText,
 						id: item._id,
-						value: item.text,
+						value: item._source.asciiName,
 						group: "Places"
 					}
 				});
