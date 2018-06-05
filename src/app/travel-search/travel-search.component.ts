@@ -127,8 +127,8 @@ export class TravelSearchComponent implements OnInit {
 		this.searchService.searchNearme(lat, lon)
 		  .subscribe(
 			nearme => {
-			  this.nearmePlaces.push(nearme.hits['hits'][0]._source);
-			  console.log(this.nearmePlaces);
+			  this.nearmePlaces = nearme['hits']['hits'];
+			  //console.log(this.nearmePlaces);
 			},
 			error => this.errorMessage = <any>error);
 	  }
