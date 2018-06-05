@@ -203,7 +203,7 @@ export class SearchpageComponent implements OnInit {
       .subscribe(
         nearme => {
           this.nearmePlaces = nearme['hits']['hits'];
-          console.log(this.nearmePlaces);
+          //console.log(this.nearmePlaces);
         },
         error => this.errorMessage = <any>error);
   }

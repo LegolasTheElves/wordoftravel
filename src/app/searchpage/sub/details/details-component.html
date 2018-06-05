@@ -95,7 +95,7 @@
                 <div class="item-text-content">
                   <span *ngFor="let place of item.Places; let isLast=last">
                     <a href="/wordoftravel/destinations/{{place.LocationSlug}}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)"
-                      class="tags genric-btn default circle fz-12 btn-compact-modal">
+                      class="tags genric-btn default circle fz-12 btn-compact-modal" *ngIf="place.LocationType == 'City'">
                       {{place.LocationName}}{{isLast ? '' : ''}}</a>
                   </span>
                 </div>
@@ -125,12 +125,12 @@
               {{item.BlogDescription}}</div>
             <div class="item-content-places">
               <div class="item-text-places">TAGS:</div>
-            
+
             </div>
             <div class="item-content-links">
               <div class="item-text-tag">
                 <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal-topics" href="#">
-                    {{ tag | titlecase }}
+                  {{ tag | titlecase }}
                 </a>
               </div>
             </div>
@@ -248,17 +248,17 @@
 
 
               <div class="item-content-links">
-                  <div class="item-text-content">
-                    <span>
-                      <a *ngFor="let topic of item.Topics" class="tags genric-btn default circle fz-12 btn-compact-modal-topics">
-                        {{topic}}
-                      </a>
-                      <a *ngFor="let filter of item.FilterFeatures" class="tags genric-btn default circle fz-12 btn-compact-modal-topics">
-                        {{filter}}
-                      </a>
-                    </span>
-                  </div>
+                <div class="item-text-content">
+                  <span>
+                    <a *ngFor="let topic of item.Topics" class="tags genric-btn default circle fz-12 btn-compact-modal-topics">
+                      {{topic}}
+                    </a>
+                    <a *ngFor="let filter of item.FilterFeatures" class="tags genric-btn default circle fz-12 btn-compact-modal-topics">
+                      {{filter}}
+                    </a>
+                  </span>
                 </div>
+              </div>
 
               <div class="item-content-places">
                 <div class="item-text-places">PLACES:</div>
@@ -281,9 +281,9 @@
               <div class="item-content-links">
                 <div class="item-text-content">
                   <span *ngFor="let place of item.Places; let isLast=last">
-                    <a href="/wordoftravel/destinations/{{ place.LocationSlug | lowercase }}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)"
-                      class="tags genric-btn default circle fz-12 btn-compact-modal">
-                      {{place.LocationName}}{{isLast ? '' : ''}}</a>
+                      <a href="/wordoftravel/destinations/{{ place.LocationSlug | lowercase }}-{{place.GeoNamesID}}" id="confirm" (click)="selectedPlaces(place.LocationName)"
+                        class="tags genric-btn default circle fz-12 btn-compact-modal" *ngIf="place.LocationType == 'City'">
+                        {{place.LocationName}}{{isLast ? '' : ''}}</a>
                   </span>
                 </div>
               </div>
@@ -348,12 +348,12 @@
               <div class="item-text-places">TAGS:</div>
             </div>
             <div class="item-content-links">
-                <div class="item-text-tag mb-10">
-                  <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal-topics" href="#">
-                      {{ tag | titlecase}}
-                  </a>
-                </div>
+              <div class="item-text-tag mb-10">
+                <a *ngFor="let tag of item.BloggerTags" class="tags genric-btn default circle fz-12 btn-compact-modal-topics" href="#">
+                  {{ tag | titlecase}}
+                </a>
               </div>
+            </div>
             <div class="item-content-btn2">
               <a href="https://{{item.Blogger}}" class="btn-morefrombloggers">MORE FROM BLOGGER
                 <i class="fas fa-external-link-alt" size="1x" style="margin-left: 5px;font-weight: 500;font-size: 13px;color: #FFFFFF;"></i>
