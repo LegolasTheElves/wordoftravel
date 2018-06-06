@@ -103,3 +103,32 @@ $('html').on('click', function(e) {
       $('[data-original-title]').popover('hide');
     }
 });
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, positionError);
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+  
+  function showPosition(position) {
+    // Success, can use position.
+    //console.log("Your position is: " + position.coords.latitude);
+  }
+  function positionError(error) {
+    var x = document.getElementById("location");
+    if (error.PERMISSION_DENIED) {
+       
+      console.log("Error: permission denied");
+      // Your custom modal here.
+      x.innerHTML = "We are unable to show locations near you as you have disabled location sharing. Please re-enable and reload the page to use this feature.";
+      showError('Geolocation is not enabled. Please enable to use this feature.')
+    } else {
+      // Handle other kinds of errors.
+      console.log("Other kind of error: " + error);
+    }
+  }
+  function showError(message) {
+    // TODO
+  }
+  getLocation();
