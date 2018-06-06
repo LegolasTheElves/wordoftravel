@@ -114,11 +114,11 @@ function getLocation() {
   function showPosition(position) {
     // Success, can use position.
     //console.log("Your position is: " + position.coords.latitude);
+    $('#locationError').hide();
   }
   function positionError(error) {
-    var x = document.getElementById("location");
+    var x = document.getElementById("locationError");
     if (error.PERMISSION_DENIED) {
-       
       console.log("Error: permission denied");
       // Your custom modal here.
       x.innerHTML = "We are unable to show locations near you as you have disabled location sharing. Please re-enable and reload the page to use this feature.";
