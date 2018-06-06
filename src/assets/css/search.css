@@ -2427,6 +2427,9 @@ a.tooltips-readingtime span {
 
 @media screen and (max-width: 361px){
 
+  .text-option {
+    font-size: 10px;
+  }
   .btn-readfullpost {
     padding: 7px 67px;
   }
