@@ -138,12 +138,12 @@ export class SearchpageComponent implements OnInit {
               this.searchResult[i].Places[j].LocationSlug = this.searchResult[i].Places[j].LocationName.split(" ").join("-").toLowerCase();
             }
           }
-          this.searchByCurrent();
+          //this.searchByCurrent();
         },
         error => {
           this.errorMessage = <any>error;
           hideSplash();
-          this.searchByCurrent();
+          //this.searchByCurrent();
         });
   }
 

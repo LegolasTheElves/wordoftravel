@@ -50,7 +50,6 @@ export class TravelSearchComponent implements OnInit {
 		private ref: ChangeDetectorRef,
 	) { }
 	ngOnInit(): void {
-		this.searchByCurrent();
 		// typehead for pipe
 		this.suggestionTypeahead.pipe(
 			tap(() => this.suggestionsLoading = true),
@@ -111,9 +110,7 @@ export class TravelSearchComponent implements OnInit {
 			self.currentLocation = position;
 			this.lat = position.coords.latitude;
 			this.lon = position.coords.longitude;
-	
-			console.log(this.lat + '-' + this.lon);
-			
+			//console.log(this.lat + '-' + this.lon);
 			this.getNearme(this.lat,this.lon);
 			self.ref.detectChanges();
 		  },
