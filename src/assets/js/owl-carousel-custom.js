@@ -48,11 +48,10 @@ function owlRotator() {
               var $new = $(this);
               if ($new.hasClass('clicked')) {
                 $new.removeClass('clicked');
-              } else {
-                $this.parents('.owl-list').addClass('clicked');
+                return true;
               }
             });
-          
+            $this.parents('.owl-list').addClass('clicked');
         });
 
 
