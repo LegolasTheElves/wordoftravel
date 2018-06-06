@@ -346,6 +346,19 @@ button#btn-like-icon-search:hover {
 }
 
 @media only screen and (max-width: 600px){
+
+    .item-content-btn2 {
+        margin-bottom: 30px !important;
+        margin-top: 15px !important;
+    }
+
+    .item-content-text {
+        margin-bottom: 8px;
+    }
+   
+    #btn-like-icon-modal {
+        margin-right: 10px;
+    }
     .container{
         margin: none !important;
     }

@@ -53,7 +53,7 @@ function loadisotope() {
         date : function ($elem) {
           return Date.parse($($elem).find('#time').attr('class'));
         },
-        recommended : function ($elem) {
+        best : function ($elem) {
           return Date.parse($($elem).find('#recommended').attr('class'));
         }
 
@@ -117,6 +117,13 @@ function loadisotope() {
     }).smartresize();
 
     hideSplash();
+
+ //refine position
+    var $whatever = $(".filter img");
+    var rp = $whatever.offset().left
+    $('.filter-search').css('left', rp); 
+ //end refine position
+
   }); // end container image loaded 
 
   $('.test[data-toggle="popover"]').popover();
@@ -183,7 +190,7 @@ function loadisotope() {
 
   });
 
-
+ 
   //filter items
   $('.filter-search img.pointer').click(function() {
   $('.item').each(function () {
@@ -258,6 +265,9 @@ function loadisotope() {
   fsortValue2 = sortValue2.toLowerCase(); 
   if (fsortValue2 == 'date published') {
     fsortValue2 = 'date';
+  }
+  else if (fsortValue2 == 'best match') {
+    fsortValue2 = 'best';
   }
   if ($(window).width() >= 520){
   $container1.isotope({
@@ -392,7 +402,7 @@ $(document).ready(function () {
         $('.sort-by-filter a.rating-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
         $('.sort-by-filter a.date-popover').attr('style', 'color: #3098d4 !important; font-weight: 700');
         $('.sort-by-filter a.recommended-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
-      } else if (Selected == 'Recommended') {
+      } else if (Selected == 'Best Match') {
         $('.sort-by-filter a.rating-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
         $('.sort-by-filter a.date-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
         $('.sort-by-filter a.recommended-popover').attr('style', 'color: #3098d4 !important; font-weight: 700');
@@ -426,7 +436,7 @@ $(document).ready(function () {
         $('.sort-by-filter a.rating-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
         $('.sort-by-filter a.date-popover').attr('style', 'color: #3098d4 !important; font-weight: 700');
         $('.sort-by-filter a.recommended-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
-      } else if (Selected == 'Recommended') {
+      } else if (Selected == 'Best Match') {
         $('.sort-by-filter a.rating-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
         $('.sort-by-filter a.date-popover').attr('style', 'color: #FFFFFF; font-weight: 400');
         $('.sort-by-filter a.recommended-popover').attr('style', 'color: #3098d4 !important; font-weight: 700');
@@ -546,8 +556,8 @@ $(document).ready(function () {
   });
 
   $('.recommended-popover').click(function () {
-    $('input.container-filter').val('Recommended');
-    $('input.container-filter').text('Recommended');
+    $('input.container-filter').val('Best Match');
+    $('input.container-filter').text('Best Match');
     $(".sort-by-filter").animate({
       top: -245
     }, 200);

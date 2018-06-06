@@ -43,8 +43,8 @@
               <input type="radio" name="radio" value="date">
               <span class="checkmark"></span>
             </label>
-            <label class="container-filter">Recommended
-              <input type="radio" name="radio" value="recommended">
+            <label class="container-filter">Best Match
+              <input type="radio" name="radio" value="best">
               <span class="checkmark"></span>
             </label>
           </form>
@@ -72,7 +72,7 @@
               <a class="date-popover">Date Published</a>
             </div>
             <div class='filter-sort-search text-uppercase'>
-              <a class="recommended-popover">Recommended</a>
+              <a class="recommended-popover">Best Match</a>
             </div>
           </div>
         </div>
@@ -403,10 +403,13 @@
 <!--End of Search-->
 
 <div class="mb-60">
-    <div class="filter-search" id="filter-search" style="width:100%">
+    <div class="filter-search" id="filter-search">
         <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
       </div>
   <div id="container1">
+      <div class="filter" id="filter-search">
+          <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
+        </div>
     <a *ngFor="let result of searchResult">
       <div class="item w1 h1 {{result.FilterFeatures.toString().replace('.','')}}">
         <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>
