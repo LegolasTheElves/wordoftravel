@@ -345,15 +345,21 @@ button#btn-like-icon-search:hover {
     }
 }
 
+@media only screen and (max-width: 415px){
+    .item-content-text {
+        margin-bottom: 8px !important;
+    }
+}
+
 @media only screen and (max-width: 600px){
 
     .item-content-btn2 {
         margin-bottom: 35px !important;
-        margin-top: 15px !important;
+        margin-top: 25px !important;
     }
 
     .item-content-text {
-        margin-bottom: 8px;
+        margin-bottom: 17px;
     }
    
     #btn-like-icon-modal {
@@ -374,9 +380,7 @@ button#btn-like-icon-search:hover {
         padding:15px !important;
     }
 }
-@media only screen and (max-width: 412px){
 
-}
 
 @media only screen and (max-width: 376px){
     .icon-circle-search {
