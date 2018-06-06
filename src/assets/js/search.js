@@ -260,8 +260,8 @@ function loadisotope() {
 
 
   var filterValue = inclusives.length ? inclusives.join(', ') : '*';
-  var sortValue = $('input[name=radio]:checked', '#sortbyform').val();
-  var sortValue2 = $('input[class=container-filter]').val();
+  var sortValue = $('input[name=radio]:checked', '#sortbyform').val(); //desktop
+  var sortValue2 = $('input[class=container-filter]').val(); //mobile
   fsortValue2 = sortValue2.toLowerCase(); 
   if (fsortValue2 == 'date published') {
     fsortValue2 = 'date';
