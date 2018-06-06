@@ -103,14 +103,13 @@ $('html').on('click', function(e) {
       $('[data-original-title]').popover('hide');
     }
 });
-function getLocation() {
+/*function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, positionError);
     } else {
       alert("Geolocation is not supported by this browser.");
     }
   }
-  
   function showPosition(position) {
     // Success, can use position.
     //console.log("Your position is: " + position.coords.latitude);
@@ -131,4 +130,4 @@ function getLocation() {
   function showError(message) {
     // TODO
   }
-  getLocation();
+  getLocation();*/

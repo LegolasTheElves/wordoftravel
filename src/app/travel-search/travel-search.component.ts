@@ -23,6 +23,7 @@ export class TravelSearchComponent implements OnInit {
 	placeid: any;
 	places: any;
 	searchText: any;
+	errorDenied:any;
 	// for suggestions
 	suggestions = [];
 	suggestionsLoading = false;
@@ -90,7 +91,7 @@ export class TravelSearchComponent implements OnInit {
 			// TODO error handling
 			return
 		}
-		let location = selected.value.replace(/\s/g, '-');
+		let location = selected.value.replace(/[,\s]+|[,\s]+/g, '-');
 		var res = location.toLowerCase();
 		window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
 	}
@@ -116,6 +117,8 @@ export class TravelSearchComponent implements OnInit {
 		  },
 		  error => {
 			self.errorMsg = error;
+			this.errorDenied = "We are unable to show locations near you as you have disabled location sharing. Please re-enable and reload the page to use this feature.";
+			console.log(this.errorDenied);
 			self.ref.detectChanges();
 		  }
 		);

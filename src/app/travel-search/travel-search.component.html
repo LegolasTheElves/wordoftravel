@@ -49,7 +49,7 @@
                   </div>
                   <div class="two-button-down input-group-btn search-panel">
                     <div class="dropdown">
-                      <button type="button" class="pointer search-panel btn4 btn-default" (click)="searchByCurrent()" data-toggle="dropdown" id="nearme-button" onclick="getLocation()">
+                      <button type="button" class="pointer search-panel btn4 btn-default" (click)="searchByCurrent()" data-toggle="dropdown" id="nearme-button">
                         <span id="search_concept">NEAR ME</span>
                         <span class="searchdown">
                           <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
@@ -63,7 +63,7 @@
                 <div class="places-search"><span></span>Places</div>
                   <a class="dropdown-item" href="#" *ngFor="let places of nearmePlaces" (click)="selectedPlaces(places?._source.asciiName, places?._id)">
                     {{places?.displayText}}</a>
-                    <p id="locationError"></p>
+                    <p id="locationError">{{errorDenied}}</p>
               </div>
               <div class="clearfix"></div>
             </div>

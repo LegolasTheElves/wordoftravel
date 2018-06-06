@@ -21,6 +21,7 @@ declare let $: any;
   styleUrls: ['./searchpage.component.css']
 })
 export class SearchpageComponent implements OnInit {
+  errorDenied: string;
  //nearme
   placeid: any;
   places: any;
@@ -156,7 +157,7 @@ export class SearchpageComponent implements OnInit {
       return
     }
     this.getSearchResult();
-    let location = selected.value.replace(/\s/g, '-');
+    let location = selected.value.replace(/[,\s]+|[,\s]+/g, '-');
     var res = location.toLowerCase();
     window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
   }
@@ -191,6 +192,7 @@ export class SearchpageComponent implements OnInit {
       },
       error => {
         self.errorMsg = error;
+        this.errorDenied = "We are unable to show locations near you as you have disabled location sharing. Please re-enable and reload the page to use this feature.";
         self.ref.detectChanges();
       }
     );
