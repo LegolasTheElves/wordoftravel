@@ -535,7 +535,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
 
-  $('.subheadtext').text(function (index, text) {
+  $('.text-sub').text(function (index, text) {
     return text.replace(" .", '.');
   });
 
