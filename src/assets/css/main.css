@@ -5379,8 +5379,7 @@ hr.mb-80 {
 
 @media screen and (max-width: 415px) {
   .featured_destination3 {
-    /*width: 207px !important;*/
-    width: 297px !important;
+    width: 261px !important;
   }
 }
 
@@ -5405,13 +5404,13 @@ hr.mb-80 {
 
 @media (min-width: 364px) and (max-width: 376px) {
   .featured_destination3 {
-    width: 190px !important;
+    width: 235px !important;
   }
 }
 
 @media (min-width: 359px) and (max-width: 363px) {
   .featured_destination3 {
-    width: 179px !important;
+    width: 227px !important;
   }
 }
 
@@ -5546,4 +5545,25 @@ a.place-link:hover {
   line-height: 27px;
   font-size: 18px;
   font-weight: 500;
+}
+
+.buttondownhomesingle {
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 10%;
+  margin-left: 45%;
+  margin-right: 45%;
+  height: 17%;
+  color: white;
+  text-align: center;
 }
