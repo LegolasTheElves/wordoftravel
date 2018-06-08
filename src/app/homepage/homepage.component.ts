@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChildren } from '@angular/core';
 import { DestinationService } from '../destination/destination.service';
+import { CookieService } from 'ngx-cookie-service';
 declare function owlRotator();
 @Component({
   selector: 'app-homepage',
@@ -7,13 +8,17 @@ declare function owlRotator();
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  cookieValue = 'UNKNOWN';
   errorMessage: string;
   destinations: any;
   @ViewChildren('owlitem') items: any;
   selectedRegion:any;
   exploredestinations: boolean;
 
-  constructor(private destinationApiService: DestinationService) {
+  constructor(
+    private destinationApiService: DestinationService,
+    private cookieService: CookieService
+  ) {
     this.destinations = [];
 
     if(window.location.pathname.includes('explore-destinations')){
@@ -28,6 +33,8 @@ export class HomepageComponent implements OnInit {
     });
   }
   ngOnInit() {
+    this.cookieService.set( 'Cookie Warning', 'This web application uses cookies to store private data.' );
+    console.log(this.cookieValue = this.cookieService.get('Cookie Warning'));
     this.getDestinations();
   }
   

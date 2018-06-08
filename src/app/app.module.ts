@@ -40,7 +40,7 @@ import { ArticlesPageService } from './articlespage/articlespage.service';
 import { SingleArticlePageService } from './single-article-page/single-article-page.service';
 import { DestinationService } from './destination/destination.service';
 import { GeoLocationService } from './geo-location.service';
-
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -85,7 +85,8 @@ import { GeoLocationService } from './geo-location.service';
     ArticlesPageService,
     SingleArticlePageService,
     DestinationService,
-    GeoLocationService
+    GeoLocationService,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
