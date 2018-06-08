@@ -1,0 +1,71 @@
+<div class="row justify-content-center align-items-center content-margin">
+  <div class="col-md-12">
+    <div class="banner-content text-center">
+
+      <div class="row no-margin">
+        <div class="col-md-12 search-form-container">
+          <div class="input-group search">
+
+            <div class="input-group-btn search-panel text-center align-content-center">
+
+              <button class="search-panel btn1-search" type="button">
+                <object id="svg1" data="./assets/svg/btn_pin.svg" type="image/svg+xml" width="51" height="25"></object>
+              </button>
+            </div>
+
+
+            <ng-select #searchinput [items]="suggestions" (change)="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
+              [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="Where to go?" [clearable]=false
+              ng-value="selectedSuggestion" (keyup)='handleKeyup($event)' id="routerLink" [groupBy]="groupByFn" appendTo=".search-form-container"
+              [(ngModel)]="selectedSuggestion">
+            </ng-select>
+
+
+            <div class="input-group-btn search-panel text-center align-content-center">
+              <div class="dropdown">
+                <button class="pointer search-panel btn-search btn-default" type="button" id="search-button">
+                  <fa name="search" size="2x"></fa>
+                </button>
+              </div>
+            </div>
+
+            <div class="down-btn-mobile">
+              <div class="two-button-down input-group-btn search-panel">
+
+                <div class="dropdown">
+                  <button type="button" id="recent-button" class="search-panel btn3 btn-default">
+
+                    <span id="search_concept">RECENT</span>
+                    <span class="searchdown">
+                      <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="two-button-down input-group-btn search-panel">
+                <div class="dropdown">
+                  <button type="button" class="pointer search-panel btn4 btn-default" (click)="searchByCurrent()" data-toggle="dropdown" id="nearme-button">
+                    <span id="search_concept">NEAR ME</span>
+                    <span class="searchdown">
+                      <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-menu" id="autocorrect-menu">
+            <div class="places-search">
+              <span></span>Places</div>
+            <a class="dropdown-item" href="#" *ngFor="let places of nearmePlaces" (click)="selectedPlaces(places?._source.asciiName, places?._id)">
+              {{places?.displayText}}</a>
+            <p id="locationError" *ngIf="errorDenied">{{errorDenied}}</p>
+
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

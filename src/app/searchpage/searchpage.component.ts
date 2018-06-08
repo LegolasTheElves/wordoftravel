@@ -1,14 +1,11 @@
-import { Component, OnInit, ViewChildren, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChildren, ViewChild } from '@angular/core';
 import { SearchPageService } from './search-page.service';
 import { SearchPage } from './searchpage';
 
 import { ActivatedRoute, Router } from "@angular/router";
 import { SearchService } from '../travel-search/search.service';
-import { tap, distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operators';
-import { Subject } from 'rxjs/Subject';
 import { Meta, Title } from '@angular/platform-browser';
 import { NgSelectComponent } from '@ng-select/ng-select';
-import { GeoLocationService } from '../geo-location.service';
 
 declare function loadisotope();
 declare function hideSplash();
@@ -21,14 +18,6 @@ declare let $: any;
   styleUrls: ['./searchpage.component.css']
 })
 export class SearchpageComponent implements OnInit {
-  errorDenied: string;
- //nearme
-  placeid: any;
-  places: any;
-  showPosition(arg0: any): any {
-    throw new Error("Method not implemented.");
-  }
-
   @ViewChild('searchinput') public ngSelect: NgSelectComponent;
 
   errorMessage: string;
@@ -39,18 +28,8 @@ export class SearchpageComponent implements OnInit {
   searchText: any;
   widerSearch: string;
 
-  // for suggestions
-  suggestions = [];
-  suggestionsLoading = false;
-  suggestionTypeahead = new Subject<string>();
-  selectedSuggestion;
   selectedItem = {};
-  //geolocation
-  errorMsg: string;
-  currentLocation: Coordinates = null;
-  lat: any;
-  lon: any;
-  nearmePlaces = [];
+ 
 
   @ViewChildren('isotopeitems') items: any;
 
@@ -58,12 +37,9 @@ export class SearchpageComponent implements OnInit {
     private searchApiService: SearchPageService,
     private route: ActivatedRoute,
     private searchService: SearchService,
-    private cd: ChangeDetectorRef,
     private router: Router,
     private meta: Meta,
     private title: Title,
-    private geoLocationService: GeoLocationService,
-    private ref: ChangeDetectorRef,
   ) {
     //Title and Meta Description
     this.route.params.subscribe(params => {
@@ -82,39 +58,6 @@ export class SearchpageComponent implements OnInit {
   }
   ngOnInit() {
     this.getSearchResult();
-    // typehead for pipe
-    this.suggestionTypeahead.pipe(
-      tap(() => this.suggestionsLoading = true),
-      distinctUntilChanged(),
-      debounceTime(200),
-      switchMap(term => this.searchService.searchSuggestions(term)),
-    ).subscribe(res => {
-      if (
-        res.hasOwnProperty('suggest') &&
-        res.suggest.hasOwnProperty('asciiName-suggestion') &&
-        res.suggest['asciiName-suggestion'].length > 0 &&
-        res.suggest['asciiName-suggestion'][0].hasOwnProperty('options')
-      ) {
-        const value = $.map(res.suggest['asciiName-suggestion'][0].options, function (item) {
-          return {
-            label: item.displayText,
-            id: item._id,
-            value: item._source.asciiName,
-            group: "Places"
-          }
-        });
-        this.suggestions = value;
-        //GroupBy
-        this.groupByFn = (item) => item.group;
-      } else {
-        this.suggestions = [];
-      }
-      this.suggestionsLoading = false;
-      this.cd.markForCheck();
-    }, () => {
-      //this.suggestions = [];
-      //this.suggestionsLoading = false;
-    });
   }
   //Load isotope
   ngAfterViewInit() {
@@ -139,83 +82,17 @@ export class SearchpageComponent implements OnInit {
               this.searchResult[i].Places[j].LocationSlug = this.searchResult[i].Places[j].LocationName.split(" ").join("-").toLowerCase();
             }
           }
-          //this.searchByCurrent();
         },
         error => {
           this.errorMessage = <any>error;
           hideSplash();
-          //this.searchByCurrent();
         });
-  }
-
-  //Search in search page
-  onClickSearch() {
-    console.log("Clicked Search");
-    const selected = this.selectedSuggestion;
-    if (!selected) {
-      // TODO error handling
-      return
-    }
-    this.getSearchResult();
-    let location = selected.value.replace(/[,\s]+|[,\s]+/g, '-');
-    var res = location.toLowerCase();
-    window.location.href = "/wordoftravel/destinations/" + res + "-" + selected.id;
   }
   //Modal popup
   selectItem(item) {
     this.selectedItem = item;
   }
-
-  search() {
-    window.location.href = "/wordoftravel/destinations/" + this.searchText;
-  }
-
-  handleKeyup(event) {
-    this.searchText = event.target.value.toString();
-  }
-
   handleFocus(event) {
     this.ngSelect.placeholder = "";
   }
-
-  searchByCurrent() {
-    let self = this;
-    const accuracy = { enableHighAccuracy: true };
-    self.geoLocationService.getLocation(accuracy).subscribe(
-      position => {
-        self.currentLocation = position;
-        this.lat = position.coords.latitude;
-        this.lon = position.coords.longitude;
-        //get nearme places
-        this.getNearme(this.lat, this.lon);
-        self.ref.detectChanges();
-      },
-      error => {
-        self.errorMsg = error;
-        this.errorDenied = "We are unable to show locations near you as you have disabled location sharing. Please re-enable and reload the page to use this feature.";
-        self.ref.detectChanges();
-      }
-    );
-  }
-  //nearme method
-  getNearme(latitude, longitude) {
-    let lat = latitude;
-    let lon = longitude;
-    this.searchService.searchNearme(lat, lon)
-      .subscribe(
-        nearme => {
-          this.nearmePlaces = nearme['hits']['hits'];
-          //console.log(this.nearmePlaces);
-        },
-        error => this.errorMessage = <any>error);
-  }
-  //redirect to searchpage
-  selectedPlaces(item, id) {
-		this.places = item;
-		this.placeid = id;
-		let location = this.places.replace(/\s/g, '-');
-		let res = location.toLowerCase();
-		window.location.href = "/wordoftravel/destinations/" + res + "-" + this.placeid;
-	  }
-
 }

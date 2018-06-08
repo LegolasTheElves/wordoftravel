@@ -41,6 +41,7 @@ import { SingleArticlePageService } from './single-article-page/single-article-p
 import { DestinationService } from './destination/destination.service';
 import { GeoLocationService } from './geo-location.service';
 import { CookieService } from 'ngx-cookie-service';
+import { CommonSearchBarComponent } from './common-search-bar/common-search-bar.component';
 
 
 
@@ -65,7 +66,8 @@ import { CookieService } from 'ngx-cookie-service';
     SingleArticlePageComponent,
     SpecificDestinationComponent,
     ExploreDestinationsComponent,
-    OurStoryPageComponent
+    OurStoryPageComponent,
+    CommonSearchBarComponent
   ],
   imports: [
     BrowserModule,

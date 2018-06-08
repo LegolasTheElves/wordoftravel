@@ -35,19 +35,19 @@
           <div class="pop-title-search text-uppercase">Sort By</div>
           <div class="pop-radio-search">
             <form id="sortbyform">
-            <label class="container-filter">Rating
-              <input type="radio" name="radio" value="rating">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container-filter">Date Published
-              <input type="radio" name="radio" value="date">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container-filter">Best Match
-              <input type="radio" name="radio" checked="checked" value="best">
-              <span class="checkmark"></span>
-            </label>
-          </form>
+              <label class="container-filter">Rating
+                <input type="radio" name="radio" value="rating">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container-filter">Date Published
+                <input type="radio" name="radio" value="date">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container-filter">Best Match
+                <input type="radio" name="radio" checked="checked" value="best">
+                <span class="checkmark"></span>
+              </label>
+            </form>
           </div>
         </div>
 
@@ -108,7 +108,7 @@
 
 
 
-          <div class="pop-check-search first-column" >
+          <div class="pop-check-search first-column">
             <label class="container-filter-check title-check">
               <span class="">
                 <i class="far fa-money-bill checkmark-check-icon" size="2x" style="font-size:16px; color: #3098D4;"></i>
@@ -195,7 +195,7 @@
               <input type="checkbox" class="eatingnightlife" value=".eatingnightlife">
               <span class="checkmark-check"></span>
             </label>
-           
+
           </div>
 
           <!-- Duplicate left filter
@@ -314,105 +314,34 @@
 <app-header></app-header>
 <!--Search Area-->
 <div class="container mt-70">
-  <div class="row justify-content-center align-items-center content-margin">
-    <div class="col-md-12">
-      <div class="banner-content text-center">
-
-        <div class="row no-margin">
-          <div class="col-md-12 search-form-container">
-            <div class="input-group search">
-
-              <div class="input-group-btn search-panel text-center align-content-center">
-
-                <button class="search-panel btn1-search" type="button">
-                  <object id="svg1" data="./assets/svg/btn_pin.svg" type="image/svg+xml" width="51" height="25"></object>
-                </button>
-              </div>
-
-
-              <ng-select #searchinput [items]="suggestions" (change)="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
-                [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="{{searchName | titlecase}}"
-                [clearable]=false ng-value="selectedSuggestion" (keyup)='handleKeyup($event)' id="routerLink" [groupBy]="groupByFn"
-                appendTo=".search-form-container" (focus)="handleFocus($event)" [(ngModel)]="selectedSuggestion">
-              </ng-select>
-
-
-              <div class="input-group-btn search-panel text-center align-content-center">
-                <div class="dropdown">
-                  <button class="pointer search-panel btn-search btn-default" type="button" id="search-button">
-                    <fa name="search" size="2x"></fa>
-                  </button>
-                </div>
-              </div>
-
-              <div class="down-btn-mobile">
-                <div class="two-button-down input-group-btn search-panel">
-
-                  <div class="dropdown">
-                    <button type="button" id="recent-button" class="search-panel btn3 btn-default">
-
-                      <span id="search_concept">RECENT</span>
-                      <span class="searchdown">
-                        <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="two-button-down input-group-btn search-panel">
-                  <div class="dropdown">
-                    <button type="button" class="pointer search-panel btn4 btn-default" (click)="searchByCurrent()" data-toggle="dropdown" id="nearme-button">
-                      <span id="search_concept">NEAR ME</span>
-                      <span class="searchdown">
-                        <object id="svg1" data="./assets/svg/btn_dropdown.svg" type="image/svg+xml" width="12" height="8"></object>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown-menu" id="autocorrect-menu">
-                <div class="places-search"><span></span>Places</div>
-                <a class="dropdown-item" href="#" *ngFor="let places of nearmePlaces" (click)="selectedPlaces(places?._source.asciiName, places?._id)">
-                  {{places?.displayText}}</a>
-                  <p id="locationError" *ngIf="errorDenied">{{errorDenied}}</p>
-                  
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <app-common-search-bar></app-common-search-bar>
   <div class="row no-margin col-12">
     <div class="search-center">
       <div class="titlecolor1 search-title">POSTS ABOUT</div>
       <div class="titlecolor search-title">&nbsp;{{searchName | uppercase}}
       </div>
-
-
     </div>
-    <div class="subheadtext subhead-search"><span class="text-sub">Plan your trip to {{searchName | titlecase}}. Travel bloggers writing about {{searchName | titlecase}} share their experiences
-      and travel tips. </span>
+    <div class="subheadtext subhead-search">
+      <span class="text-sub">Plan your trip to {{searchName | titlecase}}. Travel bloggers writing about {{searchName | titlecase}} share their
+        experiences and travel tips. </span>
       <br/>
       <span class="wider-search">
         <i *ngIf="widerSearch" class="fal fa-info-circle" size="2x" style="font-size:16px; color: #3098D4;"></i> {{ widerSearch }}</span>
     </div>
 
   </div>
-  
+
 </div>
 <!--End of Search-->
 
 <div class="mb-60">
-    <div class="filter-search" id="filter-search">
-        <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
-      </div>
+  <div class="filter-search" id="filter-search">
+    <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="150">
+  </div>
   <div id="container1">
-      <div class="filter" id="filter-search">
-          <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="0">
-        </div>
+    <div class="filter" id="filter-search">
+      <img id="refine" class="pointer" src="./assets/img/button-refine-search-page.png" width="0">
+    </div>
     <a *ngFor="let result of searchResult">
       <div class="item w1 h1 {{result.FilterFeatures.toString().replace('.','')}}">
         <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>
@@ -426,7 +355,9 @@
                 <span class="text">Quite Recent</span>
               </a>
 
-              <div class="date-search"><div id="time" class="{{result.UpdatedDate}}" style="display: none"></div>{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date: 'yyyy'}}</div>
+              <div class="date-search">
+                <div id="time" class="{{result.UpdatedDate}}" style="display: none"></div>{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date:
+                'yyyy'}}</div>
             </div>
             <div class="content-title">
               <div class="title-search">
@@ -439,9 +370,10 @@
               <div class="profile-user">
                 <img src="{{result.BloggerImage}}" id="search-user-img">
                 <div class="text-wrap-user">{{(result.BlogTitle.length>21)? (result.BlogTitle | slice:0:21 | titlecase)+'..':(result.BlogTitle | titlecase)
-                  }}</div>
-                  <div style="display: none" id="recommended" class="1" *ngIf="result.OurFavourite == true"></div>
-                  <div style="display: none" id="recommended" class="999" *ngIf="result.OurFavourite == false"></div>
+                  }}
+                </div>
+                <div style="display: none" id="recommended" class="1" *ngIf="result.OurFavourite == true"></div>
+                <div style="display: none" id="recommended" class="999" *ngIf="result.OurFavourite == false"></div>
                 <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
                   <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
                 </button>
@@ -477,7 +409,7 @@
       <div id="OurFavoritePopover" class="inline-label">
         <div class="sign-up-report">
           This blogger is one of our
-          <br> handpicked favourites. 
+          <br> handpicked favourites.
           <a href="#" class="btn-signup-modal text-uppercase">FIND OUT MORE</a>
         </div>
       </div>
