@@ -42,7 +42,7 @@
   @media screen and (max-width: 520px) {
     .places-search {
       margin-left: 17px !important;
-      font-size: 18px;
+      font-size: 12px;
     }
     
     .places-search span{
@@ -50,7 +50,7 @@
     }
     
     .dropdown-menu a {
-      padding: 0px 45px 0px 55px;
+      padding: 0px 13px 0px 45px
     }
     }
   #locationError{

@@ -10,51 +10,53 @@
   background: #f0f0f0;
   border: 1px solid #f0f0f0;
 }
+
 .preload {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index:99999;
-  background:rgba(252, 252, 252, 1);
+  z-index: 99999;
+  background: rgba(252, 252, 252, 1);
   transition: 1s 0.4s;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.progstat{
-    margin: auto;
-    font-family: "Raleway";
-    letter-spacing: 1px;
-    position:absolute;
-    width: 100%;
-    text-align:center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #133560;
-  }
 
-  @media screen and (max-width: 520px) {
-    .progstat{
-      font-size: 20px;
-      width: 100% !important;
-      padding: 5rem;
-    }
-  }
+.progstat {
+  margin: auto;
+  font-family: "Raleway";
+  letter-spacing: 1px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #133560;
+}
 
-  @media screen and (max-width: 376px) {
-    .progstat{
-      padding: 2rem;
-    }
+@media screen and (max-width: 520px) {
+  .progstat {
+    font-size: 20px;
+    width: 100% !important;
+    padding: 5rem;
   }
+}
 
-  @media screen and (max-width: 415px) {
-    .progstat{
-      padding: 4rem;
-    }
+@media screen and (max-width: 376px) {
+  .progstat {
+    padding: 2rem;
   }
+}
 
-  #socialSharePopover{
-    display: none;
+@media screen and (max-width: 415px) {
+  .progstat {
+    padding: 4rem;
+  }
+}
+
+#socialSharePopover {
+  display: none;
 }
 
 .places-search {
@@ -71,7 +73,7 @@
   border-color: white;
 }
 
-.places-search span{
+.places-search span {
   padding-top: 1px;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -91,20 +93,20 @@
 }
 
 @media screen and (max-width: 520px) {
-.places-search {
-  margin-left: 17px !important;
-  font-size: 18px;
+  .places-search {
+    margin-left: 17px !important;
+    font-size: 12px;
+  }
+  .places-search span {
+    font-size: 19px;
+  }
+  .dropdown-menu a {
+    padding: 0px 20px 0px 38px
+    
+  }
 }
 
-.places-search span{
-  font-size: 19px;
-}
-
-.dropdown-menu a {
-  padding: 0px 45px 0px 55px;
-}
-}
-#locationError{
+#locationError {
   padding: 5px 10px 0px 30px;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
