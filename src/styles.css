@@ -23,7 +23,7 @@
 
 .ng-select .ng-select-container .ng-value-container .ng-input>input {
   color: #063160;
-  font-size: 22px !important;
+  font-size: 20px !important;
   font-family: "Raleway";
   font-weight: 700;
   width: auto !important;
@@ -41,7 +41,7 @@
 .ng-option-label {
   border-color: white;
   color: #063160;
-  font-size: 22px !important;
+  font-size: 20px !important;
   font-family: "Raleway";
   font-weight: 700;
   margin-left: 44px !important;
