@@ -15,7 +15,7 @@
 
 
             <ng-select #searchinput [items]="suggestions" (change)="onClickSearch()" bindLabel="text" autocommplete="off" [loading]="suggestionsLoading"
-              [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="Where to go?" [clearable]=false
+              [typeahead]="suggestionTypeahead" class="form-control suggestion" placeholder="Where to?" [clearable]=false
               ng-value="selectedSuggestion" (keyup)='handleKeyup($event)' id="routerLink" [groupBy]="groupByFn" appendTo=".search-form-container"
               [(ngModel)]="selectedSuggestion">
             </ng-select>
