@@ -2281,7 +2281,7 @@ h6 {
   text-align: left;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   color: #063160;
   border-color: white;
 }
@@ -5570,4 +5570,7 @@ a.place-link:hover {
 
 .menu-content {
   margin-bottom: 20px;
+}
+.menu-content1 {
+  margin-bottom: -40px;
 }
