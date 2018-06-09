@@ -58,7 +58,7 @@
             </span>
           </div>
           <div class="pop-radio-search">
-            <input value="Rating" type="text" class="container-filter" disabled>
+            <input value="Best Match" type="text" class="container-filter" disabled>
           </div>
         </div>
 
@@ -374,6 +374,7 @@
                 </div>
                 <div style="display: none" id="recommended" class="1" *ngIf="result.OurFavourite == true"></div>
                 <div style="display: none" id="recommended" class="999" *ngIf="result.OurFavourite == false"></div>
+                <div style="display: none" id="best">{{result._score}}</div>
                 <button data-toggle="popover" class="user-ourfavorite-item" href="#" *ngIf="result.OurFavourite == true">
                   <img src="./assets/svg/icon-result-account.svg" width="14" height="14" class="icon-profile-search-item">
                 </button>

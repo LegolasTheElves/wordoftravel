@@ -44,21 +44,23 @@ function loadisotope() {
       masonry: {
         columnWidth: colW
       },
+      sortBy: '#best',
+      sortAscending: false,
       getSortData: {
         rating: function($elem) {
-            return parseInt($elem.find(".ratinglike").text());
+          return parseInt($elem.find(".ratinglike").text());
         },
         date : function ($elem) {
           return Date.parse($($elem).find('#time').attr('class'));
         },
         best : function ($elem) {
-          return Date.parse($($elem).find('#recommended').attr('class'));
+          return parseInt($elem.find('#best').text());
         }
 
     }
     });
 
-    var $container2 =  $('#container2');
+    var $container2 =  $('#container2'); //refine position
       $container2.isotope({
         itemSelector: '.item',
         resizable: false,
@@ -189,9 +191,9 @@ function loadisotope() {
   });
 
  
-  //filter items
-  $('.filter-search img.pointer').click(function() {
-  $('.item').each(function () {
+  //filter items auto checked based on items result
+   /*$('.filter-search img.pointer, #filter-search img.pointer').click(function()  {
+   $('.item').each(function () {
     var $this = $(this);
     if ($this.hasClass('eatingcoffee')) {
       $(".eatingcoffee").attr( 'checked', true );
@@ -237,10 +239,10 @@ function loadisotope() {
     }
 
   });
-});
+}); */
  
 
- //filter when click
+ //filter/sort when click
   $(".btn-popapply").click(function(event) {
     event.preventDefault();
 
@@ -270,20 +272,12 @@ function loadisotope() {
   if ($(window).width() >= 520){
   $container1.isotope({
      filter: filterValue,
-     getSortData : {
-     rating : '.rating-like parseInt',
-     date : '.date-search'
-     },
      sortBy : sortValue 
     });
   }
   else {
     $container1.isotope({
       filter: filterValue,
-      getSortData : {
-      rating : '.rating-like parseInt',
-      date : '.date-search'
-      },
       sortBy : fsortValue2
      });
   }

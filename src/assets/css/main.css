@@ -5554,6 +5554,7 @@ a.place-link:hover {
 }
 
 .description-travel {
+  text-align: justify;
   color: #133560;
   line-height: 27px;
   font-size: 18px;
