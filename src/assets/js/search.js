@@ -161,22 +161,65 @@ function loadisotope() {
   });
 
   //date icon status 
-  $(".date-search #time").each(function (i, obj) {
-    var itemtime = $(this).attr('class');
-    var today=new Date(itemtime); 
+  $(".content-date").each(function (i, obj) {
+    $this = $(this);
+    var itemtime = $this.find('div.date-search div').attr('class');
+    var today=new Date(); 
     today.setHours(0, 0, 0, 0);
-    console.log(today);
-    var sevendays = new Date(today.setDate(today.getDate() - 7));
-    var sixty = new Date(today.setDate(today.getDate() - 60));
-    var morethansixty = new Date(today.setDate(today.getDate() - 60));
-    if (itemtime <= sevendays) {
-      console.log('sevendays')
+    var dateitem = new Date(itemtime); 
+
+    var itemdate = Date.parse(new Date(dateitem.getFullYear(), dateitem.getMonth(), dateitem.getDate() - 0));
+    var current = Date.parse(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 0));
+    var sevendays = Date.parse(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7));
+    var sixty = Date.parse(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 60));
+    
+    if (current > itemdate && itemdate > sevendays) {
+      $this.find('a#calendar-blue').show();
+      $this.find('a#calendar-purple').hide();
+      $this.find('a#calendar-gray').hide();  
     }
-    else if (itemtime <= s) {
-      console.log('sevendays')
+    else if (current > itemdate && itemdate < sevendays && itemdate > sixty) {
+      $this.find('a#calendar-blue').hide();
+      $this.find('a#calendar-purple').show();
+      $this.find('a#calendar-gray').hide();
+    }
+    else {
+      $this.find('a#calendar-blue').hide();
+      $this.find('a#calendar-purple').hide();
+      $this.find('a#calendar-gray').show();
     }
   });
 
+  //modal icon status
+  $("a#modal-click").click(function(event) {
+    event.preventDefault();
+
+    var itemtime = $(".item-content-date .date-search #time").attr('class');
+    var today=new Date(); 
+    today.setHours(0, 0, 0, 0);
+    var dateitem = new Date(itemtime); 
+
+    var itemdate = Date.parse(new Date(dateitem.getFullYear(), dateitem.getMonth(), dateitem.getDate() - 0));
+    var current = Date.parse(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 0));
+    var sevendays = Date.parse(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7));
+    var sixty = Date.parse(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 60));
+
+    if (current > itemdate && itemdate > sevendays) {
+      $('.item-content-date a#calendar-blue').show();
+      $('.item-content-date a#calendar-purple').hide();
+      $('.item-content-date a#calendar-gray').hide();  
+    }
+    else if (current > itemdate && itemdate < sevendays && itemdate > sixty) {
+      $('.item-content-date a#calendar-blue').hide();
+      $('.item-content-date a#calendar-purple').show();
+      $('.item-content-date a#calendar-gray').hide();
+    }
+    else {
+      $('.item-content-date a#calendar-blue').hide();
+      $('.item-content-date a#calendar-purple').hide();
+      $('.item-content-date a#calendar-gray').show();
+    }
+  });
 
   $(".user-ourfavorite-item[data-toggle=popover] img").each(function (i, obj) {
 

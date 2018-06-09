@@ -344,7 +344,7 @@
     </div>
     <a *ngFor="let result of searchResult">
       <div class="item w1 h1 {{result.FilterFeatures.toString().replace('.','')}}">
-        <a class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>
+        <a class="pointer" id="modal-click" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal" #isotopeitems>
           <img id="img-item-search" class="img-fluid img-search" src="{{result.ThumbnailImage}}">
         </a>
         <div class="wrapper">
@@ -364,13 +364,13 @@
               </a>
 
               <div class="date-search">
-                <div id="time" class="{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date:
-                  'yyyy'}}" style="display: none"></div>{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date:
+                <div id="time" class="{{result.UpdatedDate | date: 'yyyy'}} {{result.UpdatedDate | date:'MM'}} {{result.UpdatedDate | date:
+                  'dd'}}" style="display: none"></div>{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date:
                 'yyyy'}}</div>
             </div>
             <div class="content-title">
               <div class="title-search">
-                <a class="img-search" class="pointer" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal">
+                <a class="img-search" class="pointer" id="modal-click" (click)="selectItem(result)" data-toggle="modal" data-target="#search-item-modal">
                   {{result.Title | uppercase}}
                 </a>
               </div>
