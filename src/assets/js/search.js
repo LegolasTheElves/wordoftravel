@@ -44,8 +44,6 @@ function loadisotope() {
       masonry: {
         columnWidth: colW
       },
-      sortBy : 'rating',
-      sortAscending: false,
       getSortData: {
         rating: function($elem) {
             return parseInt($elem.find(".ratinglike").text());
