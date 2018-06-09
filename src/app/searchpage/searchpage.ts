@@ -8,6 +8,7 @@ export interface SearchPage {
     ImageExt: string,
     Tags: string[],
     _score: number,
+    _matchOrder: number,
     RatingLikes: number,
     OurFavourite: boolean,
     BloggerImage: string,

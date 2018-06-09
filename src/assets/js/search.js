@@ -44,8 +44,7 @@ function loadisotope() {
       masonry: {
         columnWidth: colW
       },
-      sortBy: '#best',
-      sortAscending: false,
+
       getSortData: {
         rating: function($elem) {
           return parseInt($elem.find(".ratinglike").text());
@@ -56,8 +55,7 @@ function loadisotope() {
         best : function ($elem) {
           return parseInt($elem.find('#best').text());
         }
-
-    }
+        },
     });
 
     var $container2 =  $('#container2'); //refine position
@@ -263,23 +261,68 @@ function loadisotope() {
   var sortValue = $('input[name=radio]:checked', '#sortbyform').val(); //desktop
   var sortValue2 = $('input[class=container-filter]').val(); //mobile
   fsortValue2 = sortValue2.toLowerCase(); 
-  if (fsortValue2 == 'date published') {
-    fsortValue2 = 'date';
-  }
-  else if (fsortValue2 == 'best match') {
-    fsortValue2 = 'best';
-  }
+ console.log(sortValue )
   if ($(window).width() >= 520){
-  $container1.isotope({
-     filter: filterValue,
-     sortBy : sortValue 
-    });
-  }
-  else {
+  if (sortValue == 'date') {
+   
     $container1.isotope({
       filter: filterValue,
-      sortBy : fsortValue2
+      sortBy : sortValue,
+      sortAscending: false
      });
+
+  }
+  else if (sortValue == 'best') {
+   
+    $container1.isotope({
+      filter: filterValue,
+      sortBy : sortValue,
+      sortAscending: true
+     });
+  }
+
+  else if (sortValue == 'rating') {
+
+    $container1.isotope({
+      filter: filterValue,
+      sortBy : sortValue,
+      sortAscending: false
+     });
+  }
+  }
+ 
+
+  else {
+
+    if (fsortValue2 == 'date published') {
+      fsortValue2 = 'date';
+  
+      $container1.isotope({
+        filter: filterValue,
+        sortBy : fsortValue2,
+        sortAscending: false
+       });
+  
+    }
+    else if (fsortValue2 == 'best match') {
+      fsortValue2 = 'best';
+  
+      $container1.isotope({
+        filter: filterValue,
+        sortBy : fsortValue2,
+        sortAscending: true
+       });
+    }
+  
+    else if (fsortValue2 == 'rating') {
+      $container1.isotope({
+        filter: filterValue,
+        sortBy : fsortValue2,
+        sortAscending: false
+       });
+    }
+
+ 
   }
 
 }); 

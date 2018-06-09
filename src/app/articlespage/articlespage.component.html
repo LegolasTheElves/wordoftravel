@@ -36,7 +36,7 @@
               <a href="#" (click)="selectedCategory(article.Category, article.ArticleName)">{{article.Title}}</a>
             </div>
             <div class="box-list-subheader"> 
-              <span class="genric-btn default circle fz-12 btn-compact-articlespage">{{article.Category | uppercase}} </span></div>
+              <span class="tags genric-btn default circle fz-12 btn-compact-travel">{{article.Category | lowercase}} </span></div>
             <div class="box-list-overview">
               {{(article.AbstractText.length>200)? (article.AbstractText | slice:0:200)+'...':(article.AbstractText) }}
             </div>

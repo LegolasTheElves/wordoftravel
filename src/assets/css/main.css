@@ -5588,3 +5588,10 @@ a.place-link:hover {
 .menu-content1 {
   margin-bottom: -40px;
 }
+
+.btn-compact-travel {
+  height: 20px;
+  line-height: unset;
+  margin: 5px 2px 1px -2px;
+  padding: 0px 7px;
+}
