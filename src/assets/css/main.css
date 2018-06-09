@@ -5415,6 +5415,11 @@ hr.mb-80 {
 }
 
 @media screen and (max-width: 580px) {
+  .is-sticky .default-header .navbar-nav .nav-item.active a {
+    font-weight: 600;
+    border-top: unset !important;
+    padding-top: 22px;
+  }
   .col-lg-5.col-md-12.mb-50 {
     margin-bottom: 25px;
   }
