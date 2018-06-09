@@ -5414,11 +5414,23 @@ hr.mb-80 {
   .featured_destination3 {
     width: 235px !important;
   }
+  a.tooltips span:after {
+    margin-left: -21px !important;
+  }
+  a:hover.tooltips span {
+    left: -14px !important;
+  }
 }
 
 @media (min-width: 359px) and (max-width: 363px) {
   .featured_destination3 {
     width: 227px !important;
+  }
+  a.tooltips span:after {
+    margin-left: -24px !important;
+  }
+  a:hover.tooltips span {
+    left: -8px !important;
   }
 }
 
