@@ -350,13 +350,22 @@
         <div class="wrapper">
           <div class="content-search">
             <div class="content-date">
-              <a class="tooltips" href="#">
+              <a class="tooltips" href="#" id="calendar-blue">
                 <object id="svg1" data="./assets/svg/icon-calendar-blue.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
-                <span class="text">Quite Recent</span>
+                <span class="text">New Post</span>
+              </a>
+              <a class="tooltips" href="#" id="calendar-gray">
+                <object id="svg1" data="./assets/svg/icon-calendar-gray.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
+                <span class="text">Older Post</span>
+              </a>
+              <a class="tooltips" href="#" id="calendar-purple">
+                <object id="svg1" data="./assets/svg/icon-calendar-purple.svg" type="image/svg+xml" width="51" height="25" class="icon-date-search"></object>
+                <span class="text">Recent Post</span>
               </a>
 
               <div class="date-search">
-                <div id="time" class="{{result.UpdatedDate}}" style="display: none"></div>{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date:
+                <div id="time" class="{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date:
+                  'yyyy'}}" style="display: none"></div>{{result.UpdatedDate | date: 'dd'}} {{result.UpdatedDate | date:'MMMM'}} {{result.UpdatedDate | date:
                 'yyyy'}}</div>
             </div>
             <div class="content-title">

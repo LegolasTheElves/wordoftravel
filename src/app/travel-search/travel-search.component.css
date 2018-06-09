@@ -46,13 +46,23 @@
     }
     
     .places-search span{
-      font-size: 19px;
+      font-size: 16px;
     }
     
     .dropdown-menu a {
-      padding: 0px 13px 0px 45px
+      padding: 0px 13px 0px 49px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     }
+
+    
+  @media screen and (max-width: 375px) {
+    .dropdown-menu a {
+      width: 297px !important;
+    }
+  }
   #locationError{
     padding: 5px 10px 0px 30px;
     -webkit-font-smoothing: antialiased;

@@ -160,6 +160,23 @@ function loadisotope() {
     $(this).attr('src', 'http://www.wordoftravel.com/images/posts/missing.png');
   });
 
+  //date icon status 
+  $(".date-search #time").each(function (i, obj) {
+    var itemtime = $(this).attr('class');
+    var today=new Date(itemtime); 
+    today.setHours(0, 0, 0, 0);
+    console.log(today);
+    var sevendays = new Date(today.setDate(today.getDate() - 7));
+    var sixty = new Date(today.setDate(today.getDate() - 60));
+    var morethansixty = new Date(today.setDate(today.getDate() - 60));
+    if (itemtime <= sevendays) {
+      console.log('sevendays')
+    }
+    else if (itemtime <= s) {
+      console.log('sevendays')
+    }
+  });
+
 
   $(".user-ourfavorite-item[data-toggle=popover] img").each(function (i, obj) {
 
