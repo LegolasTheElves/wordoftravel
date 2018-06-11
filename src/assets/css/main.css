@@ -2103,6 +2103,18 @@ h6 {
 }
 
 @media screen and (max-width: 992px) {
+  .menu-content-mob,  .mb-20-mob{
+    padding-bottom:0px;
+    margin-bottom:0px !important;
+  }
+  .pb-20-mob{
+    padding-bottom:0px;
+  }
+  .mt-30-mob{
+    margin-bottom: 0px !important;
+    margin-top: 30px !important;
+  }
+
   .navbar-nav {
     margin-top: 10px;
   }
@@ -2429,6 +2441,18 @@ h6 {
 }
 
 @media screen and (max-width: 575px) {
+  .menu-content-mob,  .mb-20-mob{
+    padding-bottom:0px;
+    margin-bottom:0px !important;
+  }
+  .pb-20-mob{
+    padding-bottom:0px;
+  }
+  .mt-30-mob{
+    margin-bottom: 0px !important;
+    margin-top: 30px !important;
+  }
+
   .info-area .info-content {
     margin-top: 30px;
   }
@@ -2563,6 +2587,17 @@ h6 {
 }
 
 @media screen and (max-width: 768px) {
+   .menu-content-mob,  .mb-20-mob{
+    padding-bottom:0px;
+    margin-bottom:0px !important;
+  }
+  .pb-20-mob{
+    padding-bottom:0px;
+  }
+  .mt-30-mob{
+    margin-bottom: 0px !important;
+    margin-top: 30px !important;
+  }
   .counter-left {
     text-align: center;
   }
