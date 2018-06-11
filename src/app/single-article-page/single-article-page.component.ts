@@ -58,7 +58,7 @@ export class SingleArticlePageComponent implements OnInit {
           let articleTitle = this.article.Title ;
           let res = articleTitle.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
           this.title.setTitle(res + " | wordoftravel");
-          this.meta.addTag({ name: 'description', content: "" + this.safeHtml + "" });
+          this.meta.updateTag({ name: 'description', content: "" + this.safeHtml + "" });
         },
         error => this.errorMessage = <any>error);
   }
