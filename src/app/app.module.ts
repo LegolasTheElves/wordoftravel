@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 //module
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -70,12 +71,12 @@ import { CommonSearchBarComponent } from './common-search-bar/common-search-bar.
     CommonSearchBarComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-		NgSelectModule,
-		AngularFontAwesomeModule,
+    NgSelectModule,
+    AngularFontAwesomeModule,
+    CommonModule
   ],
   providers: [
     TravelArticleService,
@@ -89,7 +90,6 @@ import { CommonSearchBarComponent } from './common-search-bar/common-search-bar.
     DestinationService,
     GeoLocationService,
     CookieService
-  ],
-  bootstrap: [AppComponent]
+  ]
 })
 export class AppModule { }
